@@ -30,10 +30,10 @@ public class EllipticalOrbit : MonoBehaviour
 
         float distanceBetweenSpheres = Vector3.Distance(transform.position, largeSphere.transform.position);
 
-        distanceBetweenSpheres = Mathf.Clamp(distanceBetweenSpheres, 0, 7);
-        alpha += 10 - distanceBetweenSpheres;
+        distanceBetweenSpheres = Mathf.Clamp(distanceBetweenSpheres, 0, 10);
+        alpha += 15 - distanceBetweenSpheres;
         X = x + (a * Mathf.Cos(alpha *.005f));
         Y= y + (b * Mathf.Sin(alpha *.005f));
-        this.gameObject.transform.position = new Vector3(X,0,Y);    
+        this.gameObject.transform.position = new Vector3(X,1,Y);    
     }
 }

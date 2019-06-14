@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class VariableController : MonoBehaviour
 {
-    public GameObject objectToControl, startPosition, endPosition;
+    public GameObject objectToControl, startPosition, endPosition, sphereToControl, lightToControl;
     private float variableToControl;
     private float distanceMeasure;
 
@@ -18,6 +18,8 @@ public class VariableController : MonoBehaviour
     void Update()
     {
         distanceMeasure = Vector3.Distance(transform.position, startPosition.transform.position);
-        objectToControl.GetComponent<EllipticalOrbit>().MagnitudeFraction = distanceMeasure * 2;
+        objectToControl.GetComponent<EllipticalOrbit>().MagnitudeFraction = distanceMeasure * 5;
+        sphereToControl.GetComponent<SphereCreator>().sphereSize = distanceMeasure * 5;
+        lightToControl.GetComponent<VariousLights>().lightSize = distanceMeasure;
     }
 }
