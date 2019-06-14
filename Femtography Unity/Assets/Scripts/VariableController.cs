@@ -18,8 +18,8 @@ public class VariableController : MonoBehaviour
     void Update()
     {
         distanceMeasure = Vector3.Distance(transform.position, startPosition.transform.position);
-        objectToControl.GetComponent<EllipticalOrbit>().MagnitudeFraction = distanceMeasure * 5;
-        sphereToControl.GetComponent<SphereCreator>().sphereSize = distanceMeasure * 5;
-        lightToControl.GetComponent<VariousLights>().lightSize = distanceMeasure;
+        objectToControl.GetComponent<EllipticalOrbit>().MagnitudeFraction = distanceMeasure * 15;
+        sphereToControl.GetComponent<SphereCreator>().sphereSize = distanceMeasure * 15;
+        lightToControl.GetComponent<VariousLights>().lightSize = distanceMeasure * 5;
     }
 }

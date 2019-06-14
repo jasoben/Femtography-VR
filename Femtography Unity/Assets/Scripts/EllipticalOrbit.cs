@@ -34,6 +34,7 @@ public class EllipticalOrbit : MonoBehaviour
         alpha += 15 - distanceBetweenSpheres;
         X = x + (a * Mathf.Cos(alpha *.005f));
         Y= y + (b * Mathf.Sin(alpha *.005f));
-        this.gameObject.transform.position = new Vector3(X,1,Y);    
+        Vector3 ellipseVector = new Vector3(X, 0, Y);
+        this.gameObject.transform.localPosition = ellipseVector;    
     }
 }
