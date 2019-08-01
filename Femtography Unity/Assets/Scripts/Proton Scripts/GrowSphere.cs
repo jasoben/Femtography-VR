@@ -8,10 +8,14 @@ public class GrowSphere : MonoBehaviour
     public float maxSphereSize = 10;
     public float containerSphereSize;
 
+    public GameObject opacityControlObject;
+
     // Start is called before the first frame update
     void Start()
     {
         sphereSize = 1;
+        opacityControlObject = GameObject.Find("OpacityControlObject");
+        ChangeColor();
 
    }
 
@@ -19,14 +23,18 @@ public class GrowSphere : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float redAmount = containerSphereSize / 10 / Mathf.Pow(maxSphereSize, 1);
-        float blueAmount = Mathf.Pow(maxSphereSize, 2) / 400;
-        Color newColor = new Color(redAmount, -1, blueAmount);
-        GetComponent<Renderer>().material.color = newColor;
-        GetComponent<Renderer>().material.SetColor("_EmissionColor", newColor);
+        ChangeColor();
         sphereSize += .1f;
         transform.localScale = new Vector3(sphereSize, sphereSize, sphereSize);
         if (sphereSize > maxSphereSize)
             Destroy(gameObject);
+    }
+    private void ChangeColor()
+    {
+        float redAmount = containerSphereSize / 10 / Mathf.Pow(maxSphereSize, 1);
+        float blueAmount = Mathf.Pow(maxSphereSize, 2) / 400;
+        float newOpacity = opacityControlObject.GetComponent<OpacityController>().GrowSphereOpacity;
+        Color newColor = new Color(redAmount, -1, blueAmount, newOpacity);
+        GetComponent<Renderer>().material.color = newColor;
     }
 }
