@@ -1,55 +1,58 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using FlexFramework.Excel;
 
 public class CreatePoints : MonoBehaviour
 {
-    public GameObject upPoint, leftPoint, forwardPoint;
-    private List<GameObject> QPoints;
-    private List<GameObject> LPoints;
-    private List<GameObject> RPoints;
-
+    public GameObject[] pointTypes;
+    private int availableNumber;
+    private int lastCheckedColumn;
+    public Document ThisData { get; set; }
+    private List<Vector3> pointLocations;
+    public ParseData thisParser;
+    
     // Start is called before the first frame update
     void Start()
     {
-        QPoints = new List<GameObject>();
-        LPoints = new List<GameObject>();
-        RPoints = new List<GameObject>();
-
-        GameObject[] qObjects = GameObject.FindGameObjectsWithTag("Q-Squared");
-        GameObject[] lObjects = GameObject.FindGameObjectsWithTag("L");
-        GameObject[] rObjects = GameObject.FindGameObjectsWithTag("R");
-        
-        foreach (GameObject thisObject in qObjects)
-        {
-            QPoints.Add(thisObject);
-        }
-        foreach (GameObject thisObject in lObjects)
-        {
-            LPoints.Add(thisObject);
-        }
-        foreach (GameObject thisObject in rObjects)
-        {
-            RPoints.Add(thisObject);
-        }
-
-        foreach (GameObject thisObject in QPoints)
-        {
-            Instantiate(upPoint, thisObject.transform.position, Quaternion.Euler(0,0,0));
-        }
-        foreach (GameObject thisObject in LPoints)
-        {
-            GameObject.Instantiate(leftPoint, thisObject.transform.position, Quaternion.Euler(-90,0,0));
-        }
-        foreach (GameObject thisObject in RPoints)
-        {
-            GameObject.Instantiate(forwardPoint, thisObject.transform.position, Quaternion.Euler(0,0,-90));
-        }
+        availableNumber = 0;
+        pointLocations = new List<Vector3>();
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    public void GenerateVectors()
+    {
+        for (int i = 0; i < ThisData.Count; i++)
+        {
+            pointLocations.Add(new Vector3(0,0,0));
+        }
+    }
+
+    public void CreateOrDestoryPoints(int column)
+    {
+        if (thisParser.toggles[column].GetComponent<Toggle>().isOn)
+        {
+            switch (availableNumber)
+            {
+                case 0:
+                    thisParser.toggles[column].GetComponentInChildren<Text>().color = Color.red;
+                    return;
+
+            }
+
+        }
+
+        
+    }
+
+    private void AssignValues()
+    {
+
     }
 }
