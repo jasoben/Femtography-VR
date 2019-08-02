@@ -35,15 +35,15 @@ public class CreatePoints : MonoBehaviour
 
         foreach (GameObject thisObject in QPoints)
         {
-            GameObject.Instantiate(upPoint, thisObject.transform.position, Quaternion.identity, thisObject.transform);
+            Instantiate(upPoint, thisObject.transform.position, Quaternion.Euler(0,0,0));
         }
         foreach (GameObject thisObject in LPoints)
         {
-            GameObject.Instantiate(leftPoint, thisObject.transform.position, Quaternion.identity, thisObject.transform);
+            GameObject.Instantiate(leftPoint, thisObject.transform.position, Quaternion.Euler(-90,0,0));
         }
         foreach (GameObject thisObject in RPoints)
         {
-            GameObject.Instantiate(forwardPoint, thisObject.transform.position, Quaternion.identity, thisObject.transform);
+            GameObject.Instantiate(forwardPoint, thisObject.transform.position, Quaternion.Euler(0,0,-90));
         }
     }
 
