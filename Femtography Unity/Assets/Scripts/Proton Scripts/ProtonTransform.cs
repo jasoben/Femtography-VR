@@ -40,4 +40,9 @@ public class ProtonTransform : MonoBehaviour
     {
         moveOrNot = true;
     }
+
+    public void StopMovingProton()
+    {
+        moveOrNot = false;
+    }
 }

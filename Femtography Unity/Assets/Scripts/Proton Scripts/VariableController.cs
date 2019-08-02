@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class VariableController : MonoBehaviour
 {
-    public GameObject objectToControl, startPosition, endPosition, sphereToControl, lightToControl;
-    private float variableToControl;
-    private float distanceMeasure;
+    public GameObject objectToControl, startPosition, endPosition;
+    private float distanceMeasure, totalDistance;
 
     // Start is called before the first frame update
     void Start()
     {
+        totalDistance = Vector3.Distance(startPosition.transform.position, endPosition.transform.position);
         
     }
 
@@ -18,8 +18,9 @@ public class VariableController : MonoBehaviour
     void Update()
     {
         distanceMeasure = Vector3.Distance(transform.position, startPosition.transform.position);
-        objectToControl.GetComponent<EllipticalOrbit>().MagnitudeFraction = distanceMeasure * 15;
-        sphereToControl.GetComponent<SphereCreator>().sphereSize = distanceMeasure * 15;
-        lightToControl.GetComponent<VariousLights>().lightSize = distanceMeasure * 5;
+        float ratioDistance = distanceMeasure / totalDistance;
+        objectToControl.GetComponent<OpacityController>().GrowSphereOpacity = 1 - ratioDistance;
+        objectToControl.GetComponent<OpacityController>().SpinSphereOpacity = ratioDistance;
+
     }
 }

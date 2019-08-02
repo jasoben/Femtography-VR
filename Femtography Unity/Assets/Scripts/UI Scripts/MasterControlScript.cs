@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class MasterControlScript : MonoBehaviour
 {
-    public UnityEvent launchEvent, collideEvent;
+    public UnityEvent launchEvent, collideEvent, pauseEvent;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +23,11 @@ public class MasterControlScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.S) && launchEvent != null)
         {
             launchEvent.Invoke();
+        }
+
+        else if (Input.GetKeyDown(KeyCode.P))
+        {
+            pauseEvent.Invoke();
         }
     }
 
