@@ -34,4 +34,13 @@ public class Flicker : MonoBehaviour
         electronLight.intensity = lightIntensity;
 
     }
+
+    public void ElectronDisapear()
+    {
+        Renderer[] theseRenderers = GetComponentsInChildren<Renderer>();
+        foreach (Renderer thisRenderer in theseRenderers)
+        {
+            thisRenderer.enabled = false;
+        }
+    }
 }
