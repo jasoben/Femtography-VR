@@ -35,6 +35,10 @@ public class ParseData : MonoBehaviour
             loadedData = Document.LoadAt(fileLocation);
             AssignToggleNames();
             pointCreator.ThisData = loadedData;
+            pointCreator.GenerateVectors();
+            object thisFloat = loadedData[1][0].Value;
+            float thisThing = ValueConverter.Convert<float>(thisFloat.ToString());
+            Debug.Log(thisThing.ToString());
         }
 
         else
@@ -50,7 +54,7 @@ public class ParseData : MonoBehaviour
 
     private void AssignToggleNames()
     {
-        for (int i = 0; i < loadedData[0].Count; i++)
+        for (int i = 0; i < loadedData[0].Count - 4; i++)
         {
             toggles[i].GetComponentInChildren<Text>().text = loadedData[0][i];
         }
