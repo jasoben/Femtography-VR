@@ -20,8 +20,14 @@ public class PhotonDetector : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        Instantiate(photonDetectedLight, collision.gameObject.transform.position, Quaternion.identity);
+        GameObject thisPhotonDetected = Instantiate(photonDetectedLight, collision.gameObject.transform.position, Quaternion.identity);
+        thisPhotonDetected.transform.rotation = collision.transform.rotation;
         Destroy(collision.gameObject);
+    }
+
+    public void TurnOnCollider()
+    {
+        GetComponent<MeshCollider>().enabled = true;
     }
     
 }

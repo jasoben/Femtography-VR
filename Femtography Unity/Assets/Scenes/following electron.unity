@@ -182,6 +182,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 254051834}
+        m_MethodName: TurnOnCollider
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   playEvent:
@@ -645,7 +656,7 @@ MeshCollider:
   m_GameObject: {fileID: 254051832}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 14
@@ -12826,6 +12837,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Electron
       objectReference: {fileID: 0}
+    - target: {fileID: 2040432842466344171, guid: a54bfb8de71a5774287bc0b8efbd2092,
+        type: 3}
+      propertyPath: MyPhoton
+      value: 
+      objectReference: {fileID: 199440425}
+    - target: {fileID: 2040432842466344171, guid: a54bfb8de71a5774287bc0b8efbd2092,
+        type: 3}
+      propertyPath: MyPhotonCollider
+      value: 
+      objectReference: {fileID: 474151272}
     - target: {fileID: 2040432842466344170, guid: a54bfb8de71a5774287bc0b8efbd2092,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12881,16 +12902,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2040432842466344171, guid: a54bfb8de71a5774287bc0b8efbd2092,
-        type: 3}
-      propertyPath: MyPhoton
-      value: 
-      objectReference: {fileID: 199440425}
-    - target: {fileID: 2040432842466344171, guid: a54bfb8de71a5774287bc0b8efbd2092,
-        type: 3}
-      propertyPath: MyPhotonCollider
-      value: 
-      objectReference: {fileID: 474151272}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a54bfb8de71a5774287bc0b8efbd2092, type: 3}
 --- !u!1001 &2488975622490352674

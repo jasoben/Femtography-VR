@@ -16,6 +16,7 @@ public class ElectronController : MonoBehaviour
         lightIntensity = .5f;
         lightIntensityDelta = 1;
         distanceToProton = 14;
+        lightIntensityDeltaCoefficient = .004f;
         proton = GameObject.Find("Proton");
         electronStartPosition = GameObject.Find("ElectronStartPosition");
         masterControlObject = GameObject.Find("MasterControlObject");
