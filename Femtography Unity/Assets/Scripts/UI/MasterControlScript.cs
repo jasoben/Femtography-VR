@@ -6,7 +6,7 @@ using UnityEngine.Events;
 public class MasterControlScript : MonoBehaviour
 {
     public UnityEvent launchEvent, collideEvent, playEvent, pauseEvent;
-    public GameObject proton, photon, electron, photonStartPosition, electronStartPosition;
+    public GameObject proton, photon, electron, photonStartPosition, electronStartPosition, photonCollider;
 
     // Start is called before the first frame update
     void Start()
@@ -63,6 +63,9 @@ public class MasterControlScript : MonoBehaviour
         Quaternion randomRotation = Quaternion.Euler(Random.Range(0, 360), Random.Range(0, 360), Random.Range(0, 360));
         GameObject newPhoton = Instantiate(photon, thePhotonStartPosition, randomRotation);
         newElectron.GetComponent<ElectronController>().MyPhoton = newPhoton;
+        GameObject newPhotonCollider = Instantiate(photonCollider, thePhotonStartPosition, randomRotation);
+        newElectron.GetComponent<ElectronController>().MyPhotonCollider = newPhotonCollider;
+
     }
 
 }

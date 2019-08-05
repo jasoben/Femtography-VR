@@ -211,6 +211,8 @@ MonoBehaviour:
     type: 3}
   photonStartPosition: {fileID: 1238939271}
   electronStartPosition: {fileID: 1893793794}
+  photonCollider: {fileID: 2488975622159078730, guid: 27b7987a069631841b655be8dd9bc716,
+    type: 3}
 --- !u!4 &7597829
 Transform:
   m_ObjectHideFlags: 0
@@ -333,7 +335,7 @@ GameObject:
   - component: {fileID: 64249916}
   - component: {fileID: 64249915}
   - component: {fileID: 64249914}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Max
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -533,7 +535,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 75480011}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ButtonStart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -564,7 +566,7 @@ GameObject:
   m_Component:
   - component: {fileID: 184429681}
   - component: {fileID: 184429680}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Text Objects
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -628,26 +630,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 8760124801396583667}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &199440431 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8760124801218385116, guid: fe16a844a01e05945ba1013b60efee8e,
-    type: 3}
-  m_PrefabInstance: {fileID: 8760124801396583667}
-  m_PrefabAsset: {fileID: 0}
---- !u!64 &199440432
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 199440431}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 0}
 --- !u!1 &254051832 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 3415f71811ea4d040b5d6b305c4be836,
@@ -668,6 +650,20 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 3415f71811ea4d040b5d6b305c4be836, type: 3}
+--- !u!114 &254051834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 254051832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2192dae3839f80e48a2e48cfafb09b62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  photonDetectedLight: {fileID: 6755162763274599632, guid: 3132fba34af47cf4d93adb181b883bf6,
+    type: 3}
 --- !u!1 &272888652
 GameObject:
   m_ObjectHideFlags: 0
@@ -677,7 +673,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 272888653}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ButtonFinish
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5408,7 +5404,7 @@ GameObject:
   - component: {fileID: 326391573}
   - component: {fileID: 326391572}
   - component: {fileID: 326391571}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Casing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5497,7 +5493,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 330280226}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: "Q\xB2 Controller Start Position"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5531,7 +5527,7 @@ GameObject:
   - component: {fileID: 330923077}
   - component: {fileID: 330923076}
   - component: {fileID: 330923075}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: 9 o'clock text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5738,7 +5734,7 @@ GameObject:
   - component: {fileID: 417389772}
   - component: {fileID: 417389771}
   - component: {fileID: 417389777}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: "Q\xB2 Controller"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5915,6 +5911,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highLightMaterial: {fileID: 2100000, guid: 707ace2965caa444288c8c5a2d1015ac, type: 2}
   fireHapticsOnHightlight: 1
+--- !u!1 &474151272 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2488975622159078730, guid: 27b7987a069631841b655be8dd9bc716,
+    type: 3}
+  m_PrefabInstance: {fileID: 2488975622490352674}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &512900099 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400004, guid: 49a0e923d39ec3c4c8bb97699e2f2903,
@@ -5937,7 +5939,7 @@ GameObject:
   - component: {fileID: 515520478}
   - component: {fileID: 515520476}
   - component: {fileID: 515520477}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6129,7 +6131,7 @@ GameObject:
   - component: {fileID: 630846131}
   - component: {fileID: 630846130}
   - component: {fileID: 630846129}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: 3 o'clock text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6418,7 +6420,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 3415f71811ea4d040b5d6b305c4be836, type: 3}
       propertyPath: m_Name
-      value: flipped-sphere
+      value: sensor
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 3415f71811ea4d040b5d6b305c4be836, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 3415f71811ea4d040b5d6b305c4be836, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3415f71811ea4d040b5d6b305c4be836, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6466,15 +6476,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3415f71811ea4d040b5d6b305c4be836, type: 3}
       propertyPath: m_LocalScale.x
-      value: 41959.613
+      value: 11646.73
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3415f71811ea4d040b5d6b305c4be836, type: 3}
       propertyPath: m_LocalScale.y
-      value: 41959.613
+      value: 11646.73
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3415f71811ea4d040b5d6b305c4be836, type: 3}
       propertyPath: m_LocalScale.z
-      value: 41959.613
+      value: 11646.73
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 3415f71811ea4d040b5d6b305c4be836, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -6606,7 +6616,7 @@ GameObject:
   - component: {fileID: 722367151}
   - component: {fileID: 722367150}
   - component: {fileID: 722367149}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: 6 o'clock text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6813,7 +6823,7 @@ GameObject:
   m_Component:
   - component: {fileID: 788379682}
   - component: {fileID: 788379681}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Player Vehicle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6941,7 +6951,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1040032731}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: "Q\xB2 Controller End Position"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7003,7 +7013,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1175708889}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Launch Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7073,6 +7083,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 49a0e923d39ec3c4c8bb97699e2f2903, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 49a0e923d39ec3c4c8bb97699e2f2903, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1354.6558
@@ -7124,6 +7138,14 @@ PrefabInstance:
     - target: {fileID: 5400000, guid: 49a0e923d39ec3c4c8bb97699e2f2903, type: 3}
       propertyPath: m_IsKinematic
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 49a0e923d39ec3c4c8bb97699e2f2903, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 49a0e923d39ec3c4c8bb97699e2f2903, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 2000000, guid: 49a0e923d39ec3c4c8bb97699e2f2903, type: 3}
       propertyPath: far clip plane
@@ -12186,7 +12208,7 @@ GameObject:
   - component: {fileID: 1747713240}
   - component: {fileID: 1747713239}
   - component: {fileID: 1747713238}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: 12 o'clock text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12505,7 +12527,7 @@ GameObject:
   - component: {fileID: 2102980772}
   - component: {fileID: 2102980771}
   - component: {fileID: 2102980770}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: "Q\xB2 Text"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12708,7 +12730,7 @@ GameObject:
   - component: {fileID: 2138480652}
   - component: {fileID: 2138480651}
   - component: {fileID: 2138480650}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Q-Squared-Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12861,16 +12883,85 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2040432842466344171, guid: a54bfb8de71a5774287bc0b8efbd2092,
         type: 3}
-      propertyPath: electronStartPosition
-      value: 
-      objectReference: {fileID: 1893793794}
-    - target: {fileID: 2040432842466344171, guid: a54bfb8de71a5774287bc0b8efbd2092,
-        type: 3}
       propertyPath: MyPhoton
       value: 
       objectReference: {fileID: 199440425}
+    - target: {fileID: 2040432842466344171, guid: a54bfb8de71a5774287bc0b8efbd2092,
+        type: 3}
+      propertyPath: MyPhotonCollider
+      value: 
+      objectReference: {fileID: 474151272}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a54bfb8de71a5774287bc0b8efbd2092, type: 3}
+--- !u!1001 &2488975622490352674
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2488975622159078730, guid: 27b7987a069631841b655be8dd9bc716,
+        type: 3}
+      propertyPath: m_Name
+      value: PhotonCollider
+      objectReference: {fileID: 0}
+    - target: {fileID: 2488975622159078734, guid: 27b7987a069631841b655be8dd9bc716,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1323.54
+      objectReference: {fileID: 0}
+    - target: {fileID: 2488975622159078734, guid: 27b7987a069631841b655be8dd9bc716,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.49
+      objectReference: {fileID: 0}
+    - target: {fileID: 2488975622159078734, guid: 27b7987a069631841b655be8dd9bc716,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.93
+      objectReference: {fileID: 0}
+    - target: {fileID: 2488975622159078734, guid: 27b7987a069631841b655be8dd9bc716,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.024044387
+      objectReference: {fileID: 0}
+    - target: {fileID: 2488975622159078734, guid: 27b7987a069631841b655be8dd9bc716,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.293529
+      objectReference: {fileID: 0}
+    - target: {fileID: 2488975622159078734, guid: 27b7987a069631841b655be8dd9bc716,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.35613176
+      objectReference: {fileID: 0}
+    - target: {fileID: 2488975622159078734, guid: 27b7987a069631841b655be8dd9bc716,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.8868105
+      objectReference: {fileID: 0}
+    - target: {fileID: 2488975622159078734, guid: 27b7987a069631841b655be8dd9bc716,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 2488975622159078734, guid: 27b7987a069631841b655be8dd9bc716,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 14.579
+      objectReference: {fileID: 0}
+    - target: {fileID: 2488975622159078734, guid: 27b7987a069631841b655be8dd9bc716,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 31.348001
+      objectReference: {fileID: 0}
+    - target: {fileID: 2488975622159078734, guid: 27b7987a069631841b655be8dd9bc716,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -39.648003
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 27b7987a069631841b655be8dd9bc716, type: 3}
 --- !u!1001 &3302657170365772400
 PrefabInstance:
   m_ObjectHideFlags: 0

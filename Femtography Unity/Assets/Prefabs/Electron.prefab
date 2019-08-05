@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   electronLight: {fileID: 2040432842861407316}
+  MyPhoton: {fileID: 0}
 --- !u!114 &8256114047352010598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140,7 +141,6 @@ GameObject:
   - component: {fileID: 2040432843133082339}
   - component: {fileID: 2040432843133082338}
   - component: {fileID: 2040432843133082341}
-  - component: {fileID: 2040432843133082340}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -207,16 +207,3 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!135 &2040432843133082340
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2040432843133082343}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}

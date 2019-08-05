@@ -31,5 +31,6 @@ public class PhotonController : MonoBehaviour
     {
         GetComponentInChildren<Renderer>().enabled = true;
         photonAnimator.Play("LaunchPhoton", 0, 0);
+        Destroy(gameObject, 8f);
     }
 }

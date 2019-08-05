@@ -7,7 +7,7 @@ public class ElectronController : MonoBehaviour
 
     public Light electronLight;
     private GameObject proton, electronStartPosition, masterControlObject;
-    public GameObject MyPhoton;
+    public GameObject MyPhoton, MyPhotonCollider;
     private float lightIntensity, lightIntensityDelta, distanceToProton, lightIntensityDeltaCoefficient;
 
     // Start is called before the first frame update
@@ -42,6 +42,7 @@ public class ElectronController : MonoBehaviour
         {
             masterControlObject.GetComponent<MasterControlScript>().collideEvent.Invoke();
             MyPhoton.GetComponent<PhotonController>().StartPhotonAnimation();
+            MyPhotonCollider.GetComponent<PhotonColliderLauncher>().LaunchPhotonCollider();
             Destroy(gameObject);
         }
             
