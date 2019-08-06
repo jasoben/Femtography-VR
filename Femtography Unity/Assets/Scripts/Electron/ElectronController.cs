@@ -1,59 +1,62 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ElectronController : MonoBehaviour
 {
 
     public Light electronLight;
     private GameObject proton, electronStartPosition, masterControlObject;
-    public GameObject MyPhoton, MyPhotonCollider;
-    private float lightIntensity, lightIntensityDelta, distanceToProton, lightIntensityDeltaCoefficient;
+    public GameObject photon, photonCollider;
+    private float distanceToProton;
+    private bool photonLaunched, protonFound;
+    public Particle particle, playerParticle;
+    public UnityEvent photonBullet;
 
     // Start is called before the first frame update
     void Start()
     {
-        lightIntensity = .5f;
-        lightIntensityDelta = 1;
-        distanceToProton = 14;
-        lightIntensityDeltaCoefficient = .004f;
-        proton = GameObject.Find("Proton");
-        electronStartPosition = GameObject.Find("ElectronStartPosition");
-        masterControlObject = GameObject.Find("MasterControlObject");
-        transform.position = electronStartPosition.transform.position;
+        particle.speed = 0; 
+        photonLaunched = false;
+        protonFound = false;
+        distanceToProton = 24;
+    }
+    public void FindProton()
+    {
+        proton = GameObject.FindWithTag("Proton");
+        protonFound = true;
     }
 
     // Update is called once per frame
     void Update()
     {
     
-        if (lightIntensity < 0.4f)
+        if (protonFound && (Vector3.Distance(transform.position, proton.transform.position) < distanceToProton && !photonLaunched) || (transform.position.z > 1000f - distanceToProton && !photonLaunched))
         {
-            lightIntensityDelta = 1;
+            LaunchPhoton();
+            DeflectElectron();
+            photonBullet.Invoke();
+            playerParticle.normalSpeed = 0;
         }
-        else if (lightIntensity > .6f)
-        {
-            lightIntensityDelta = -1;
-        }
-
-        lightIntensity += lightIntensityDelta * lightIntensityDeltaCoefficient;
-        electronLight.intensity = lightIntensity;
-
-        if (Vector3.Distance(transform.position, proton.transform.position) < distanceToProton)
-        {
-            masterControlObject.GetComponent<MasterControlScript>().collideEvent.Invoke();
-            MyPhoton.GetComponent<PhotonController>().StartPhotonAnimation();
-            MyPhotonCollider.GetComponent<PhotonColliderLauncher>().LaunchPhotonCollider();
-            Destroy(gameObject);
-        }
-            
-            
+                    
     }
 
-    public void LaunchElectron()
+    public void LaunchPhoton()
     {
-        GetComponent<TransformObject>().moveThisObject = true;
+        photonLaunched = true;
+        GameObject photonBullet = Instantiate(photon, transform.position, Quaternion.Euler(0,90,0));
+        GameObject photonBulletCollider = Instantiate(photonCollider, transform.position, transform.rotation);
+        photonBullet.GetComponent<PhotonController>().StartPhotonAnimation();
+        photonBulletCollider.GetComponent<PhotonColliderLauncher>().LaunchPhotonCollider();
     }
 
+    public void DeflectElectron()
+    {
+        float deflectionAngle = Random.Range(45f, 90f);
+        Quaternion newRotation = Quaternion.Euler(transform.rotation.eulerAngles.x, deflectionAngle, transform.rotation.eulerAngles.z);
+        transform.rotation = newRotation;
+        Destroy(gameObject, 4f);
+    }
              
 }

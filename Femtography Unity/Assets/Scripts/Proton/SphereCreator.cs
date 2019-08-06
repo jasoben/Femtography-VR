@@ -20,7 +20,7 @@ public class SphereCreator : MonoBehaviour
     void Update()
     {
 
-        if (PlayBackControl.isPlaying && CheckTiming())
+        if (CheckTiming())
         {
             float randomSphereSize = Random.Range(0, sphereSize);
             int sign = Random.Range(0, 100);

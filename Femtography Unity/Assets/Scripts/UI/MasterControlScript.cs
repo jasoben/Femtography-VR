@@ -5,67 +5,89 @@ using UnityEngine.Events;
 
 public class MasterControlScript : MonoBehaviour
 {
-    public UnityEvent launchEvent, collideEvent, playEvent, pauseEvent;
-    public GameObject proton, photon, electron, photonStartPosition, electronStartPosition, photonCollider;
+    public GameObject proton, photon, electron, photonCollider, sensor; 
+    public Transform photonStartPosition, electronStartPosition, protonStartPosition;
+    public Particle protonParticle, electronParticle, photonParticle, playerParticle, photonColliderParticle;
+    public UnityEvent StartPlaying, StopPlaying, LaunchNewElectron;
+    public float fallingTime, fallingDistance;
 
     // Start is called before the first frame update
     void Start()
     {
-        if (launchEvent == null)
-            launchEvent = new UnityEvent();
-        if (playEvent == null)
-            playEvent = new UnityEvent();
-        if (collideEvent == null)
-            collideEvent = new UnityEvent();
-        if (pauseEvent == null)
-            pauseEvent = new UnityEvent();
-
-        pauseEvent.AddListener(PauseEverything);
-        playEvent.AddListener(PlayEverything);
-        launchEvent.AddListener(LaunchElectron);
-        launchEvent.AddListener(PlayEverything);
+        electronParticle.normalSpeed = 1;
+        playerParticle.normalSpeed = 1;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.S) && launchEvent != null)
+        if (Input.GetKeyDown(KeyCode.S))
         {
-            playEvent.Invoke();
         }
 
-        else if (Input.GetKeyDown(KeyCode.P) && pauseEvent!=null)
+        if (Input.GetKeyDown(KeyCode.P))
         {
-            pauseEvent.Invoke();
         }
 
-        else if (Input.GetKeyDown(KeyCode.L))
+        if (Input.GetKeyDown(KeyCode.L))
         {
-            launchEvent.Invoke();
+            electronParticle.speed = 1;
+            playerParticle.speed = 1;
+        }
+
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            CreateNewObject(proton, protonStartPosition);
+            CreateNewObject(sensor, protonStartPosition);
+            CreateNewObject(electron, electronStartPosition);
         }
     }
 
     private void PauseEverything()
     {
-        PlayBackControl.StopPlaying();
     }
 
     private void PlayEverything()
     {
-        PlayBackControl.StartPlaying();
+    }
+
+    public void CreateNewProtonAndElectron()
+    {
+        CreateNewObject(proton, protonStartPosition);
+        CreateNewObject(electron, electronStartPosition);
+        electronParticle.normalSpeed = 5;
     }
 
     public void LaunchElectron()
     {
         Vector3 theElectronStartPosition = electronStartPosition.transform.position;
         GameObject newElectron = Instantiate(electron, theElectronStartPosition, Quaternion.identity);
-        Vector3 thePhotonStartPosition = photonStartPosition.transform.position;
-        Quaternion randomRotation = Quaternion.Euler(Random.Range(0, 360), Random.Range(0, 360), Random.Range(0, 360));
-        GameObject newPhoton = Instantiate(photon, thePhotonStartPosition, randomRotation);
-        newElectron.GetComponent<ElectronController>().MyPhoton = newPhoton;
-        GameObject newPhotonCollider = Instantiate(photonCollider, thePhotonStartPosition, randomRotation);
-        newElectron.GetComponent<ElectronController>().MyPhotonCollider = newPhotonCollider;
-
     }
+
+    public void CreateNewObject(GameObject newObject, Transform objectTransform)
+    {
+        Vector3 startPosition = objectTransform.position + new Vector3(0, fallingDistance, 0);
+        GameObject createdObject = Instantiate(newObject, startPosition, objectTransform.rotation);
+        StartCoroutine(MoveObject(createdObject));
+    }
+
+    private IEnumerator MoveObject(GameObject createdObject)
+    {
+        Vector3 destination = createdObject.transform.position - new Vector3(0, fallingDistance, 0);
+        Debug.Log(destination.ToString());
+        while (true)
+        {
+            createdObject.transform.position = Vector3.Slerp(createdObject.transform.position, destination, .03f);
+
+            if (Vector3.Distance(createdObject.transform.position, destination) < 1)
+            {
+                break;
+            }
+
+            float realFallingTime = fallingTime / fallingDistance;
+            yield return new WaitForSeconds(realFallingTime);
+        }
+    }
+
 
 }

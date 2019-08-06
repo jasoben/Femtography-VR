@@ -23,14 +23,11 @@ public class GrowSphere : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (PlayBackControl.isPlaying)
-        {
-            ChangeColor();
-            sphereSize += .1f / sphereGrowSpeed;
-            transform.localScale = new Vector3(sphereSize, sphereSize, sphereSize);
-            if (sphereSize > maxSphereSize)
-                Destroy(gameObject); 
-        }
+        ChangeColor();
+        sphereSize += .1f / sphereGrowSpeed;
+        transform.localScale = new Vector3(sphereSize, sphereSize, sphereSize);
+        if (sphereSize > maxSphereSize)
+            Destroy(gameObject); 
     }
     private void ChangeColor()
     {

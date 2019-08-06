@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PhotonDetector : MonoBehaviour
 {
     public GameObject photonDetectedLight;
+    public UnityEvent photonDetected; 
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +24,7 @@ public class PhotonDetector : MonoBehaviour
     {
         GameObject thisPhotonDetected = Instantiate(photonDetectedLight, collision.gameObject.transform.position, Quaternion.identity);
         thisPhotonDetected.transform.rotation = collision.transform.rotation;
+        photonDetected.Invoke();
         Destroy(collision.gameObject);
     }
 
