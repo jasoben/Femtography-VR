@@ -9,13 +9,12 @@ public class ProtonController : MonoBehaviour
     public GameObject photon, photonCollider;
     public UnityEvent collisionWithProton, protonCreated;
     public Particle particle;
+    public float minXAngle, maxXAngle, minYAngle, maxYAngle;
 
     // Start is called before the first frame update
     void Start()
     {
-        particle.speed = 0; 
         protonAnimator = GetComponentInChildren<Animator>();
-        protonCreated.Invoke();
     }
 
     // Update is called once per frame
@@ -27,11 +26,11 @@ public class ProtonController : MonoBehaviour
     public void DeformAndMoveProton()
     {
         protonAnimator.Play("DeformProton", 0, 0);
-        float newXAngle = Random.Range(315, 345);
-        float newYAngle = Random.Range(270, 315);
+        float newXAngle = Random.Range(minXAngle, maxXAngle);
+        float newYAngle = Random.Range(minYAngle, maxYAngle);
         Quaternion newRotation = Quaternion.Euler(newXAngle, newYAngle, transform.rotation.eulerAngles.z);
+        GetComponent<TransformObject>().KineticSpeed = 1;
         transform.rotation = newRotation;
-        particle.speed = 1f;
         Destroy(gameObject, 4f);
         Invoke("LaunchPhoton", .5f);
     }
@@ -40,6 +39,7 @@ public class ProtonController : MonoBehaviour
     {
         Destroy(collision.gameObject);
         gameObject.GetComponent<SphereCollider>().enabled = false;
+        DeformAndMoveProton();
         collisionWithProton.Invoke();
     }
 

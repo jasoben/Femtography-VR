@@ -22,6 +22,15 @@ public class testAnimation : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.P))
         {
             photonAnimator.Play("LaunchPhoton", 0, 0);
+            photonAnimator.speed = 1;
+        }
+        if (Input.GetKeyDown(KeyCode.U))
+        {
+            photonAnimator.speed = 0;
+        }
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            photonAnimator.speed = 1;
         }
     }
 }

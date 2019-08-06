@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2040432842466344171}
   - component: {fileID: 74199741}
   - component: {fileID: 74199742}
-  - component: {fileID: 59919640871340083}
+  - component: {fileID: 2142731523872142062}
   m_Layer: 0
   m_Name: Electron
   m_TagString: Untagged
@@ -112,7 +112,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &59919640871340083
+--- !u!114 &2142731523872142062
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -124,12 +124,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86dd175dc768941409f779cc3531c879, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 77a79cb7b1d3041409b9f38da049c4dc, type: 2}
+  Event: {fileID: 11400000, guid: c77c9c6290784844eb17cd33ac1e4218, type: 2}
   Response:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2040432842466344171}
-        m_MethodName: FindProton
+        m_MethodName: SetToFastLaunch
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

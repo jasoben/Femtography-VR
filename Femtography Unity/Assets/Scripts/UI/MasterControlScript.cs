@@ -5,15 +5,19 @@ using UnityEngine.Events;
 
 public class MasterControlScript : MonoBehaviour
 {
-    public GameObject proton, photon, electron, photonCollider, sensor; 
+    public GameObject proton, photon, electron, photonCollider, sensor, player;
+    private GameObject newProton, newElectron;
     public Transform photonStartPosition, electronStartPosition, protonStartPosition;
     public Particle protonParticle, electronParticle, photonParticle, playerParticle, photonColliderParticle;
     public UnityEvent StartPlaying, StopPlaying, LaunchNewElectron;
-    public float fallingTime, fallingDistance;
+    public float fallingTime, fallingDistance, fallingSlerp;
+    private bool hasFallen;
+    private BarrelState barrelState;
 
     // Start is called before the first frame update
     void Start()
     {
+        barrelState = BarrelState.empty;
         electronParticle.normalSpeed = 1;
         playerParticle.normalSpeed = 1;
     }
@@ -31,16 +35,23 @@ public class MasterControlScript : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.L))
         {
-            electronParticle.speed = 1;
-            playerParticle.speed = 1;
+            CreateNewProtonAndElectron();
+            StartCoroutine(SettleParticlesFastAndLaunch());
         }
 
         if (Input.GetKeyDown(KeyCode.I))
         {
-            CreateNewObject(proton, protonStartPosition);
+            CreateNewProtonAndElectron();
             CreateNewObject(sensor, protonStartPosition);
-            CreateNewObject(electron, electronStartPosition);
         }
+    }
+
+    private IEnumerator SettleParticlesFastAndLaunch()
+    {
+        fallingSlerp = 1f;
+        yield return new WaitUntil(() => hasFallen);
+        newElectron.GetComponent<TransformObject>().KineticSpeed = 1;
+        player.GetComponent<TransformObject>().KineticSpeed = 1;
     }
 
     private void PauseEverything()
@@ -53,34 +64,46 @@ public class MasterControlScript : MonoBehaviour
 
     public void CreateNewProtonAndElectron()
     {
-        CreateNewObject(proton, protonStartPosition);
-        CreateNewObject(electron, electronStartPosition);
-        electronParticle.normalSpeed = 5;
+        if (barrelState == BarrelState.empty)
+        {
+            barrelState = BarrelState.full;
+            newProton = CreateNewObject(proton, protonStartPosition);
+            newElectron = CreateNewObject(electron, electronStartPosition);
+            StartCoroutine(ConnectProtonAndElectron(newProton, newElectron));
+        }
     }
 
-    public void LaunchElectron()
+    public void BarrelIsEmpty()
     {
-        Vector3 theElectronStartPosition = electronStartPosition.transform.position;
-        GameObject newElectron = Instantiate(electron, theElectronStartPosition, Quaternion.identity);
+        barrelState = BarrelState.empty;
     }
 
-    public void CreateNewObject(GameObject newObject, Transform objectTransform)
+    private IEnumerator ConnectProtonAndElectron(GameObject newProton, GameObject newElectron)
     {
+        yield return new WaitWhile(() => newProton == null || newElectron == null);
+        newElectron.GetComponent<ElectronController>().Proton = newProton;
+    }
+
+    public GameObject CreateNewObject(GameObject objectType, Transform objectTransform)
+    {
+        fallingSlerp = .03f;
         Vector3 startPosition = objectTransform.position + new Vector3(0, fallingDistance, 0);
-        GameObject createdObject = Instantiate(newObject, startPosition, objectTransform.rotation);
+        GameObject createdObject = Instantiate(objectType, startPosition, objectTransform.rotation);
         StartCoroutine(MoveObject(createdObject));
+        return createdObject;
     }
 
     private IEnumerator MoveObject(GameObject createdObject)
     {
+        hasFallen = false;
         Vector3 destination = createdObject.transform.position - new Vector3(0, fallingDistance, 0);
-        Debug.Log(destination.ToString());
         while (true)
         {
-            createdObject.transform.position = Vector3.Slerp(createdObject.transform.position, destination, .03f);
+            createdObject.transform.position = Vector3.Slerp(createdObject.transform.position, destination, fallingSlerp);
 
             if (Vector3.Distance(createdObject.transform.position, destination) < 1)
             {
+                hasFallen = true;
                 break;
             }
 
@@ -88,6 +111,10 @@ public class MasterControlScript : MonoBehaviour
             yield return new WaitForSeconds(realFallingTime);
         }
     }
+}
 
-
+public enum BarrelState
+{
+    empty,
+    full
 }
