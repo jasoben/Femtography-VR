@@ -5,67 +5,110 @@ using UnityEngine.Events;
 
 public class MasterControlScript : MonoBehaviour
 {
-    public UnityEvent launchEvent, collideEvent, playEvent, pauseEvent;
-    public GameObject proton, photon, electron, photonStartPosition, electronStartPosition, photonCollider;
+    public GameObject proton, photon, electron, sensor, player;
+    private GameObject newProton, newElectron;
+    public Transform photonStartPosition, electronStartPosition, protonStartPosition;
+    public Particle protonParticle, electronParticle, photonParticle, playerParticle, photonColliderParticle;
+    public UnityEvent StartPlaying, StopPlaying;
+    public float fallingTime, fallingDistance, fallingSlerp;
+    private bool hasFallen;
+    private BarrelState barrelState;
 
     // Start is called before the first frame update
     void Start()
     {
-        if (launchEvent == null)
-            launchEvent = new UnityEvent();
-        if (playEvent == null)
-            playEvent = new UnityEvent();
-        if (collideEvent == null)
-            collideEvent = new UnityEvent();
-        if (pauseEvent == null)
-            pauseEvent = new UnityEvent();
-
-        pauseEvent.AddListener(PauseEverything);
-        playEvent.AddListener(PlayEverything);
-        launchEvent.AddListener(LaunchElectron);
-        launchEvent.AddListener(PlayEverything);
+        barrelState = BarrelState.empty;
+        electronParticle.normalSpeed = 1;
+        playerParticle.normalSpeed = 1;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.S) && launchEvent != null)
+
+        if (Input.GetKeyDown(KeyCode.P))
         {
-            playEvent.Invoke();
+            StartPlaying.Invoke();
+        }
+        if (Input.GetKeyDown(KeyCode.U))
+        {
+            StopPlaying.Invoke();
         }
 
-        else if (Input.GetKeyDown(KeyCode.P) && pauseEvent!=null)
+        if (Input.GetKeyDown(KeyCode.L))
         {
-            pauseEvent.Invoke();
+            CreateNewProtonAndElectron();
+            StartCoroutine(SettleParticlesFastAndLaunch());
         }
 
-        else if (Input.GetKeyDown(KeyCode.L))
+        if (Input.GetKeyDown(KeyCode.I))
         {
-            launchEvent.Invoke();
+            CreateNewProtonAndElectron();
+            CreateNewObject(sensor, protonStartPosition);
         }
     }
 
-    private void PauseEverything()
+    private IEnumerator SettleParticlesFastAndLaunch()
     {
-        PlayBackControl.StopPlaying();
+        fallingSlerp = 1f;
+        yield return new WaitUntil(() => hasFallen);
+        newElectron.GetComponent<TransformObject>().KineticSpeed = 1;
+        player.GetComponent<TransformObject>().KineticSpeed = 1;
     }
 
-    private void PlayEverything()
+    public void CreateNewProtonAndElectron()
     {
-        PlayBackControl.StartPlaying();
+        if (barrelState == BarrelState.empty)
+        {
+            barrelState = BarrelState.full;
+            newProton = CreateNewObject(proton, protonStartPosition);
+            newElectron = CreateNewObject(electron, electronStartPosition);
+            StartCoroutine(ConnectProtonAndElectron(newProton, newElectron));
+        }
     }
 
-    public void LaunchElectron()
+    public void BarrelIsEmpty()
     {
-        Vector3 theElectronStartPosition = electronStartPosition.transform.position;
-        GameObject newElectron = Instantiate(electron, theElectronStartPosition, Quaternion.identity);
-        Vector3 thePhotonStartPosition = photonStartPosition.transform.position;
-        Quaternion randomRotation = Quaternion.Euler(Random.Range(0, 360), Random.Range(0, 360), Random.Range(0, 360));
-        GameObject newPhoton = Instantiate(photon, thePhotonStartPosition, randomRotation);
-        newElectron.GetComponent<ElectronController>().MyPhoton = newPhoton;
-        GameObject newPhotonCollider = Instantiate(photonCollider, thePhotonStartPosition, randomRotation);
-        newElectron.GetComponent<ElectronController>().MyPhotonCollider = newPhotonCollider;
-
+        barrelState = BarrelState.empty;
     }
 
+    private IEnumerator ConnectProtonAndElectron(GameObject newProton, GameObject newElectron)
+    {
+        yield return new WaitWhile(() => newProton == null || newElectron == null);
+        newElectron.GetComponent<ElectronController>().Proton = newProton;
+    }
+
+    public GameObject CreateNewObject(GameObject objectType, Transform objectTransform)
+    {
+        fallingSlerp = .03f;
+        Vector3 startPosition = objectTransform.position + new Vector3(0, fallingDistance, 0);
+        GameObject createdObject = Instantiate(objectType, startPosition, objectTransform.rotation);
+        StartCoroutine(MoveObject(createdObject));
+        return createdObject;
+    }
+
+    private IEnumerator MoveObject(GameObject createdObject)
+    {
+        hasFallen = false;
+        Vector3 destination = createdObject.transform.position - new Vector3(0, fallingDistance, 0);
+        while (true)
+        {
+            createdObject.transform.position = Vector3.Slerp(createdObject.transform.position, destination, fallingSlerp);
+
+            if (Vector3.Distance(createdObject.transform.position, destination) < 1)
+            {
+                hasFallen = true;
+                break;
+            }
+
+            float realFallingTime = fallingTime / fallingDistance;
+            yield return new WaitForSeconds(realFallingTime);
+        }
+    }
+}
+
+public enum BarrelState
+{
+    empty,
+    full
 }

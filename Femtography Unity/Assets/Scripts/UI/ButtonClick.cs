@@ -16,7 +16,6 @@ public class ButtonClick : MonoBehaviour
     {
        if (Vector3.Distance(buttonPosition.transform.position, endPosition.transform.position) < Vector3.Distance(startPosition.transform.position, endPosition.transform.position))
         {
-            masterControlObject.GetComponent<MasterControlScript>().launchEvent.Invoke();
 
         }
     }

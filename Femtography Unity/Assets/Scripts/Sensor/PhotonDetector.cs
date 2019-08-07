@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PhotonDetector : MonoBehaviour
 {
     public GameObject photonDetectedLight;
+    public UnityEvent photonDetected; 
 
     // Start is called before the first frame update
     void Start()
@@ -18,11 +20,12 @@ public class PhotonDetector : MonoBehaviour
         
     }
 
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider other)
     {
-        GameObject thisPhotonDetected = Instantiate(photonDetectedLight, collision.gameObject.transform.position, Quaternion.identity);
-        thisPhotonDetected.transform.rotation = collision.transform.rotation;
-        Destroy(collision.gameObject);
+        GameObject thisPhotonDetected = Instantiate(photonDetectedLight, other.gameObject.transform.position, Quaternion.identity);
+        thisPhotonDetected.transform.rotation = other.transform.rotation;
+        photonDetected.Invoke();
+        Destroy(other.gameObject);
     }
 
     public void TurnOnCollider()

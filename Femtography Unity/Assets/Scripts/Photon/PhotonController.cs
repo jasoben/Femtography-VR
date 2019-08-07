@@ -5,21 +5,23 @@ using UnityEngine;
 public class PhotonController : MonoBehaviour
 {
 
-    private GameObject masterControlObject, photonStartPositionObject;
     public Animator photonAnimator;
+    public Particle particle;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        masterControlObject = GameObject.Find("MasterControlObject");
-        photonStartPositionObject = GameObject.Find("PhotonStartPosition");
-        GetComponentInChildren<Renderer>().enabled = false;
-        transform.position = photonStartPositionObject.transform.position;
+        photonAnimator.speed = particle.playbackSpeed.Value;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (Vector3.Distance(transform.position, new Vector3(0,0,1000)) > 200)
+        {
+            Destroy(gameObject);
+        }
     }
 
     public void MoveThePhoton()
@@ -29,8 +31,13 @@ public class PhotonController : MonoBehaviour
 
     public void StartPhotonAnimation()
     {
-        GetComponentInChildren<Renderer>().enabled = true;
         photonAnimator.Play("LaunchPhoton", 0, 0);
-        Destroy(gameObject, 8f);
     }
+
+    public void DestroyPhoton()
+    {
+        Destroy(gameObject);
+    }
+
+
 }
