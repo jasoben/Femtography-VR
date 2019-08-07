@@ -20,7 +20,6 @@ public class ProtonController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
     }
 
     public void DeformAndMoveProton()
@@ -31,14 +30,12 @@ public class ProtonController : MonoBehaviour
         Quaternion newRotation = Quaternion.Euler(newXAngle, newYAngle, transform.rotation.eulerAngles.z);
         GetComponent<TransformObject>().KineticSpeed = 1;
         transform.rotation = newRotation;
-        Destroy(gameObject, 4f);
-        Invoke("LaunchPhoton", .5f);
     }
 
     void OnCollisionEnter(Collision collision)
     {
         Destroy(collision.gameObject);
-        gameObject.GetComponent<SphereCollider>().enabled = false;
+        gameObject.GetComponent<SphereCollider>().isTrigger = true;
         DeformAndMoveProton();
         collisionWithProton.Invoke();
     }
@@ -56,5 +53,17 @@ public class ProtonController : MonoBehaviour
     public void DestroyProton()
     {
         Destroy(gameObject);
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "LaunchElectronTrigger")
+        {
+            LaunchPhoton();
+        }
+        if (other.tag == "DestructionTrigger")
+        {
+            Destroy(gameObject);
+        }
     }
 }

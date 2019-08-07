@@ -12,11 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faeadd71604e03f41815fae6a29f1466, type: 3}
   m_Name: RedQuark
   m_EditorClassIdentifier: 
-  particleMaterial: {fileID: 2100000, guid: 5aca3a290a1583e4ea4f439aa196770e, type: 2}
+  particleMaterial: {fileID: 2100000, guid: 0950ae6a83965b24fb646d909579f7fe, type: 2}
   particleOpqMaterial: {fileID: 2100000, guid: 0950ae6a83965b24fb646d909579f7fe, type: 2}
   particleFadeMaterial: {fileID: 2100000, guid: 5aca3a290a1583e4ea4f439aa196770e,
     type: 2}
-  opacity: 0
+  opacity:
+    UseConstant: 0
+    ConstantValue: 1
+    variable: {fileID: 11400000, guid: e002644c9083b4e42a7dc48def63aebb, type: 2}
   speed: 0
   normalSpeed: 0
   opacityChanged:

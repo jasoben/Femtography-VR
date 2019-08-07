@@ -13,6 +13,14 @@ MonoBehaviour:
   m_Name: Electron
   m_EditorClassIdentifier: 
   particleMaterial: {fileID: 2100000, guid: d416ef997c7c36547b9699b0b6ee9c9e, type: 2}
+  particleOpqMaterial: {fileID: 2100000, guid: d416ef997c7c36547b9699b0b6ee9c9e, type: 2}
+  particleFadeMaterial: {fileID: 2100000, guid: d416ef997c7c36547b9699b0b6ee9c9e,
+    type: 2}
   opacity: 1
   speed: 1
-  normalSpeed: 5
+  normalSpeed: 1
+  opacityChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null

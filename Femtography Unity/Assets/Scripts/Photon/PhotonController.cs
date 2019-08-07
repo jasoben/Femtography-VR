@@ -17,6 +17,10 @@ public class PhotonController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Vector3.Distance(transform.position, new Vector3(0,0,1000)) > 200)
+        {
+            Destroy(gameObject);
+        }
     }
 
     public void MoveThePhoton()
@@ -27,11 +31,12 @@ public class PhotonController : MonoBehaviour
     public void StartPhotonAnimation()
     {
         photonAnimator.Play("LaunchPhoton", 0, 0);
-        Destroy(gameObject, 8f);
     }
 
     public void DestroyPhoton()
     {
         Destroy(gameObject);
     }
+
+
 }

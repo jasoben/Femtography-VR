@@ -9,7 +9,7 @@ public class MasterControlScript : MonoBehaviour
     private GameObject newProton, newElectron;
     public Transform photonStartPosition, electronStartPosition, protonStartPosition;
     public Particle protonParticle, electronParticle, photonParticle, playerParticle, photonColliderParticle;
-    public UnityEvent StartPlaying, StopPlaying, LaunchNewElectron;
+    public UnityEvent StartPlaying, StopPlaying;
     public float fallingTime, fallingDistance, fallingSlerp;
     private bool hasFallen;
     private BarrelState barrelState;
@@ -25,12 +25,14 @@ public class MasterControlScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-        }
 
         if (Input.GetKeyDown(KeyCode.P))
         {
+            StartPlaying.Invoke();
+        }
+        if (Input.GetKeyDown(KeyCode.U))
+        {
+            StopPlaying.Invoke();
         }
 
         if (Input.GetKeyDown(KeyCode.L))
@@ -52,14 +54,6 @@ public class MasterControlScript : MonoBehaviour
         yield return new WaitUntil(() => hasFallen);
         newElectron.GetComponent<TransformObject>().KineticSpeed = 1;
         player.GetComponent<TransformObject>().KineticSpeed = 1;
-    }
-
-    private void PauseEverything()
-    {
-    }
-
-    private void PlayEverything()
-    {
     }
 
     public void CreateNewProtonAndElectron()

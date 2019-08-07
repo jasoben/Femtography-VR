@@ -16,7 +16,10 @@ MonoBehaviour:
   particleOpqMaterial: {fileID: 2100000, guid: cdf6004ca9dc90b47a4bdb145db1168f, type: 2}
   particleFadeMaterial: {fileID: 2100000, guid: 77f4d85be5dc67b429ac72e69fdf5d94,
     type: 2}
-  opacity: 0
+  opacity:
+    UseConstant: 0
+    ConstantValue: 1
+    variable: {fileID: 11400000, guid: e002644c9083b4e42a7dc48def63aebb, type: 2}
   speed: 0
   normalSpeed: 0
   opacityChanged:

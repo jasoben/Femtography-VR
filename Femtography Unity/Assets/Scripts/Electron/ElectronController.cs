@@ -54,12 +54,19 @@ public class ElectronController : MonoBehaviour
         float deflectionAngle = Random.Range(45f, 90f);
         Quaternion newRotation = Quaternion.Euler(transform.rotation.eulerAngles.x, deflectionAngle, transform.rotation.eulerAngles.z);
         transform.rotation = newRotation;
-        Destroy(gameObject, 4f);
     }
 
     public void SetToFastLaunch()
     {
-        particle.normalSpeed = 5;
+        particle.normalSpeed = 10;
     }
-             
+    void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "DestructionTrigger")
+        {
+            SetToFastLaunch();
+            Destroy(gameObject);
+        }
+    }
+
 }
