@@ -10,11 +10,20 @@ public class ProtonController : MonoBehaviour
     public UnityEvent collisionWithProton, protonCreated;
     public Particle particle;
     public float minXAngle, maxXAngle, minYAngle, maxYAngle;
+    public GlobalBool firstPlayThrough;
 
     // Start is called before the first frame update
     void Start()
     {
         protonAnimator = GetComponentInChildren<Animator>();
+        if (firstPlayThrough.boolValue)
+        {
+            particle.opacity.ConstantValue = 1f;
+        }
+        else
+        {
+            particle.opacity.ConstantValue = .2f;
+        }
     }
 
     // Update is called once per frame

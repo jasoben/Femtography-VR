@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 7597828}
   - component: {fileID: 8634136301916861288}
   - component: {fileID: 1324737475406901854}
+  - component: {fileID: 8962835932848623603}
   m_Layer: 0
   m_Name: MasterControlObject
   m_TagString: Untagged
@@ -52,10 +53,13 @@ MonoBehaviour:
   photon: {fileID: 8760124801218385114, guid: fe16a844a01e05945ba1013b60efee8e, type: 3}
   electron: {fileID: 2040432842466344173, guid: a54bfb8de71a5774287bc0b8efbd2092,
     type: 3}
-  photonCollider: {fileID: 2488975622159078730, guid: 27b7987a069631841b655be8dd9bc716,
-    type: 3}
   sensor: {fileID: 4522491474100278734, guid: 59a8d29541308ea4fb40ddbf87c116fa, type: 3}
   player: {fileID: 0}
+  quarks:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   photonStartPosition: {fileID: 0}
   electronStartPosition: {fileID: 0}
   protonStartPosition: {fileID: 0}
@@ -63,8 +67,6 @@ MonoBehaviour:
   electronParticle: {fileID: 11400000, guid: 0e364e0288417354cb8a7206ee771718, type: 2}
   photonParticle: {fileID: 11400000, guid: e7c1fd323ce1cee40b934cb60fd365bd, type: 2}
   playerParticle: {fileID: 11400000, guid: 2c413960227b5ea4daa652bdf629c584, type: 2}
-  photonColliderParticle: {fileID: 11400000, guid: 711b06c1dbe6d184aaeb1f35c2e89fb4,
-    type: 2}
   StartPlaying:
     m_PersistentCalls:
       m_Calls:
@@ -100,6 +102,11 @@ MonoBehaviour:
   fallingTime: 0.5
   fallingDistance: 100
   fallingSlerp: 0
+  firstPlayThrough: {fileID: 11400000, guid: 5f422cc68b8b5784998725bd2e80ee51, type: 2}
+  q2slider:
+    UseConstant: 0
+    ConstantValue: 0
+    variable: {fileID: 11400000, guid: e002644c9083b4e42a7dc48def63aebb, type: 2}
 --- !u!114 &810343680198333611
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -173,9 +180,8 @@ MonoBehaviour:
   particles:
   - {fileID: 11400000, guid: 0e364e0288417354cb8a7206ee771718, type: 2}
   - {fileID: 11400000, guid: a9de51837e4c7b04185b019d8da4d8e9, type: 2}
-  - {fileID: 11400000, guid: 711b06c1dbe6d184aaeb1f35c2e89fb4, type: 2}
-  - {fileID: 11400000, guid: e7c1fd323ce1cee40b934cb60fd365bd, type: 2}
   - {fileID: 11400000, guid: 2c413960227b5ea4daa652bdf629c584, type: 2}
+  - {fileID: 11400000, guid: e7c1fd323ce1cee40b934cb60fd365bd, type: 2}
   playbackSpeed:
     UseConstant: 0
     ConstantValue: 0
@@ -227,6 +233,35 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 7597828}
         m_MethodName: Pause
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &8962835932848623603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 810343680198333614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86dd175dc768941409f779cc3531c879, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: bda47f6391efea14191f99f4db1f7d29, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 810343680198333609}
+        m_MethodName: RevealTheQuarks
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

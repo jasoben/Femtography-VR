@@ -2,17 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class MasterControlScript : MonoBehaviour
 {
     public GameObject proton, photon, electron, sensor, player;
+    public List<GameObject> quarks;
     private GameObject newProton, newElectron;
     public Transform photonStartPosition, electronStartPosition, protonStartPosition;
-    public Particle protonParticle, electronParticle, photonParticle, playerParticle, photonColliderParticle;
+    public Particle protonParticle, electronParticle, photonParticle, playerParticle;
     public UnityEvent StartPlaying, StopPlaying;
     public float fallingTime, fallingDistance, fallingSlerp;
     private bool hasFallen;
     private BarrelState barrelState;
+    public GlobalBool firstPlayThrough;
+    public FloatReference q2slider;
+    private float particlesCreated;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +25,9 @@ public class MasterControlScript : MonoBehaviour
         barrelState = BarrelState.empty;
         electronParticle.normalSpeed = 1;
         playerParticle.normalSpeed = 1;
+        firstPlayThrough.boolValue = true;
+        particlesCreated = 0;
+        q2slider.variable.value = 0;
     }
 
     // Update is called once per frame
@@ -46,6 +54,47 @@ public class MasterControlScript : MonoBehaviour
             CreateNewProtonAndElectron();
             CreateNewObject(sensor, protonStartPosition);
         }
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene(0);
+        }
+    }
+
+    public void RevealTheQuarks()
+    {
+        foreach(GameObject quark in quarks)
+        {
+            quark.SetActive(true);
+        }
+    }
+
+    //methods for UI events
+    public void Initiate()
+    {
+        CreateNewProtonAndElectron();
+        CreateNewObject(sensor, protonStartPosition);
+    }
+
+    public void Launch()
+    {
+        CreateNewProtonAndElectron();
+        StartCoroutine(SettleParticlesFastAndLaunch());
+    }
+
+    public void ResetEverything()
+    {
+        SceneManager.LoadScene(0);
+    }
+
+    public void PlayEverything()
+    {
+        StartPlaying.Invoke();
+    }
+    
+    public void PauseEverything()
+    {
+        StopPlaying.Invoke();
     }
 
     private IEnumerator SettleParticlesFastAndLaunch()
@@ -60,6 +109,10 @@ public class MasterControlScript : MonoBehaviour
     {
         if (barrelState == BarrelState.empty)
         {
+            particlesCreated++;
+            if (particlesCreated > 1)
+                firstPlayThrough.boolValue = false;
+
             barrelState = BarrelState.full;
             newProton = CreateNewObject(proton, protonStartPosition);
             newElectron = CreateNewObject(electron, electronStartPosition);

@@ -1,0 +1,30 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class ButtonController : MonoBehaviour
+{
+    public GameObject playButton, pauseButton, initiateButton;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+    public void HideButton(GameObject thisButton)
+    {
+        thisButton.SetActive(false);
+    }
+
+    public void ShowButton(GameObject thisButton)
+    {
+        thisButton.SetActive(true);
+    }
+}

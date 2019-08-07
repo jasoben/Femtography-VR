@@ -4875,6 +4875,7 @@ MonoBehaviour:
   maxXAngle: 345
   minYAngle: 300
   maxYAngle: 345
+  firstPlayThrough: {fileID: 11400000, guid: 5f422cc68b8b5784998725bd2e80ee51, type: 2}
 --- !u!114 &1851126759
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5344,21 +5345,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7974178231925239618}
     m_Modifications:
-    - target: {fileID: 4069577236652929317, guid: 9d6d0ca0fc75a264cb067757eb55e195,
-        type: 3}
-      propertyPath: m_Name
-      value: BubblingSpheresObject
-      objectReference: {fileID: 0}
-    - target: {fileID: 4069577236652929317, guid: 9d6d0ca0fc75a264cb067757eb55e195,
-        type: 3}
-      propertyPath: m_Layer
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 4069577236652929317, guid: 9d6d0ca0fc75a264cb067757eb55e195,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4069577236652929319, guid: 9d6d0ca0fc75a264cb067757eb55e195,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5412,6 +5398,21 @@ PrefabInstance:
     - target: {fileID: 4069577236652929319, guid: 9d6d0ca0fc75a264cb067757eb55e195,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069577236652929317, guid: 9d6d0ca0fc75a264cb067757eb55e195,
+        type: 3}
+      propertyPath: m_Name
+      value: BubblingSpheresObject
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069577236652929317, guid: 9d6d0ca0fc75a264cb067757eb55e195,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069577236652929317, guid: 9d6d0ca0fc75a264cb067757eb55e195,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4069577236652929316, guid: 9d6d0ca0fc75a264cb067757eb55e195,
@@ -5559,16 +5560,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7974178231925239618}
     m_Modifications:
-    - target: {fileID: 6835654220325583376, guid: 6fb51c6a48b2eab4ab5f86c64377158c,
-        type: 3}
-      propertyPath: m_Name
-      value: OrbitalHaloObject
-      objectReference: {fileID: 0}
-    - target: {fileID: 6835654220325583376, guid: 6fb51c6a48b2eab4ab5f86c64377158c,
-        type: 3}
-      propertyPath: m_Layer
-      value: 12
-      objectReference: {fileID: 0}
     - target: {fileID: 6835654220325583379, guid: 6fb51c6a48b2eab4ab5f86c64377158c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5623,6 +5614,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835654220325583376, guid: 6fb51c6a48b2eab4ab5f86c64377158c,
+        type: 3}
+      propertyPath: m_Name
+      value: OrbitalHaloObject
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835654220325583376, guid: 6fb51c6a48b2eab4ab5f86c64377158c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 6835654220260436792, guid: 6fb51c6a48b2eab4ab5f86c64377158c,
         type: 3}

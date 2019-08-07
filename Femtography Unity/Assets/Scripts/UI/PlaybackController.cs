@@ -34,7 +34,7 @@ public class PlaybackController : MonoBehaviour
             if (hasParticleSystem)
             {
                 var main = particleSystem.main;
-                main.simulationSpeed = playbackSpeed.Value;
+                main.simulationSpeed = playbackSpeed.Value * 5;
                 particleSystem.Play();
             }
         }
@@ -46,7 +46,7 @@ public class PlaybackController : MonoBehaviour
         if (hasParticleSystem)
         {
             var main = particleSystem.main;
-            main.simulationSpeed = playbackSpeed.Value;
+            main.simulationSpeed = playbackSpeed.Value * 5;
             particleSystem.Play();
         }
         if (particles.Count > 0)
@@ -61,8 +61,8 @@ public class PlaybackController : MonoBehaviour
     {
         if (hasAnimation)
             animator.speed = 0;
-        if (hasParticleSystem)
-            particleSystem.Pause();
+        //if (hasParticleSystem)
+        //    particleSystem.Pause();
         if (particles.Count > 0)
         {
             foreach (Particle thisParticle in particles)

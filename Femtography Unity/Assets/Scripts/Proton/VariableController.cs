@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class VariableController : MonoBehaviour
 {
-    public GameObject objectToControl, startPosition, endPosition;
+    public GameObject startPosition, endPosition;
     private float distanceMeasure, totalDistance;
+    public FloatReference QSlider;
 
     // Start is called before the first frame update
     void Start()
@@ -19,8 +20,15 @@ public class VariableController : MonoBehaviour
     {
         distanceMeasure = Vector3.Distance(transform.position, startPosition.transform.position);
         float ratioDistance = distanceMeasure / totalDistance;
-        objectToControl.GetComponent<OpacityController>().GrowSphereOpacity = 1 - ratioDistance;
-        objectToControl.GetComponent<OpacityController>().SpinSphereOpacity = ratioDistance;
+        QSlider.variable.value = ratioDistance;
+    }
 
+    public void MoveToBottom()
+    {
+        transform.position = startPosition.transform.position;
+    }
+    public void MoveToTop()
+    {
+        transform.position = endPosition.transform.position;
     }
 }
