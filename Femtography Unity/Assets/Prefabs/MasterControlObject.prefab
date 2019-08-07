@@ -97,11 +97,6 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  LaunchNewElectron:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
   fallingTime: 0.5
   fallingDistance: 100
   fallingSlerp: 0
@@ -181,6 +176,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 711b06c1dbe6d184aaeb1f35c2e89fb4, type: 2}
   - {fileID: 11400000, guid: e7c1fd323ce1cee40b934cb60fd365bd, type: 2}
   - {fileID: 11400000, guid: 2c413960227b5ea4daa652bdf629c584, type: 2}
+  playbackSpeed:
+    UseConstant: 0
+    ConstantValue: 0
+    variable: {fileID: 11400000, guid: c13976bcb832ad14ea2881716f86cf7d, type: 2}
 --- !u!114 &8634136301916861288
 MonoBehaviour:
   m_ObjectHideFlags: 0

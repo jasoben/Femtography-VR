@@ -5,6 +5,8 @@ using UnityEngine;
 public class testAnimation : MonoBehaviour
 {
     public Animator cubeAnimator, photonAnimator;
+    public Particle particle;
+    public TransformObject photonCollider;
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +24,8 @@ public class testAnimation : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.P))
         {
             photonAnimator.Play("LaunchPhoton", 0, 0);
-            photonAnimator.speed = 1;
+            photonAnimator.speed = particle.normalSpeed * particle.playbackSpeed.Value;
+            photonCollider.StartKineticMotion();
         }
         if (Input.GetKeyDown(KeyCode.U))
         {
@@ -30,7 +33,7 @@ public class testAnimation : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.R))
         {
-            photonAnimator.speed = 1;
+            photonAnimator.speed = particle.normalSpeed * particle.playbackSpeed.Value;
         }
     }
 }

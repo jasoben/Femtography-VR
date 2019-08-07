@@ -2179,7 +2179,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 788379680}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 10, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 512900099}
@@ -2244,6 +2244,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   particles: []
+  playbackSpeed:
+    UseConstant: 1
+    ConstantValue: 0
+    variable: {fileID: 0}
 --- !u!114 &788379686
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3277,7 +3281,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2103131225}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1354.1558, y: -0.85372925, z: -2.842438}
+  m_LocalPosition: {x: 0, y: 10, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3466,5 +3470,14 @@ PrefabInstance:
       propertyPath: protonStartPosition
       value: 
       objectReference: {fileID: 146690698}
+    - target: {fileID: 7597828, guid: 632e41e39fee12e468109b1b9971e8e7, type: 3}
+      propertyPath: particles.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7597828, guid: 632e41e39fee12e468109b1b9971e8e7, type: 3}
+      propertyPath: particles.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 2c413960227b5ea4daa652bdf629c584,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 632e41e39fee12e468109b1b9971e8e7, type: 3}

@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class MasterControlScript : MonoBehaviour
 {
-    public GameObject proton, photon, electron, photonCollider, sensor, player;
+    public GameObject proton, photon, electron, sensor, player;
     private GameObject newProton, newElectron;
     public Transform photonStartPosition, electronStartPosition, protonStartPosition;
     public Particle protonParticle, electronParticle, photonParticle, playerParticle, photonColliderParticle;

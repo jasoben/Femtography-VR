@@ -10,14 +10,15 @@ public class TransformObject : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        particle.speed = 1;
+        particle.speed = particle.normalSpeed * particle.playbackSpeed.Value;
         KineticSpeed = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector3.Scale(transform.forward, new Vector3(0,0, particle.speed * particle.normalSpeed * KineticSpeed)));
+        particle.speed = particle.normalSpeed * particle.playbackSpeed.Value;
+        transform.Translate(Vector3.Scale(transform.forward, new Vector3(0,0, particle.speed * KineticSpeed)));
     }
 
     public void StartKineticMotion()

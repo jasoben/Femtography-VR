@@ -12,6 +12,7 @@ public class PhotonController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        photonAnimator.speed = particle.playbackSpeed.Value;
     }
 
     // Update is called once per frame

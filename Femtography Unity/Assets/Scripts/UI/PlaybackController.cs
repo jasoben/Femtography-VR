@@ -8,6 +8,7 @@ public class PlaybackController : MonoBehaviour
     private bool hasAnimation, hasParticleSystem;
     private Animator animator;
     private ParticleSystem particleSystem;
+    public FloatReference playbackSpeed;
 
     void Start()
     {
@@ -23,12 +24,31 @@ public class PlaybackController : MonoBehaviour
         }
 
     }
+
+    void Update()
+    {
+        if (playbackSpeed.Value > 0)
+        {
+            if (hasAnimation)
+                animator.speed = playbackSpeed.Value;
+            if (hasParticleSystem)
+            {
+                var main = particleSystem.main;
+                main.simulationSpeed = playbackSpeed.Value;
+                particleSystem.Play();
+            }
+        }
+    }
     public void Play()
     {
         if (hasAnimation)
-            animator.speed = 1;
+            animator.speed = playbackSpeed.Value;
         if (hasParticleSystem)
+        {
+            var main = particleSystem.main;
+            main.simulationSpeed = playbackSpeed.Value;
             particleSystem.Play();
+        }
         if (particles.Count > 0)
         {
             foreach (Particle thisParticle in particles)
@@ -51,5 +71,4 @@ public class PlaybackController : MonoBehaviour
             }
         }
     }
-        
 }

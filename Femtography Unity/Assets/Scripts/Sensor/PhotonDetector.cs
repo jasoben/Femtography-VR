@@ -20,12 +20,12 @@ public class PhotonDetector : MonoBehaviour
         
     }
 
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider other)
     {
-        GameObject thisPhotonDetected = Instantiate(photonDetectedLight, collision.gameObject.transform.position, Quaternion.identity);
-        thisPhotonDetected.transform.rotation = collision.transform.rotation;
+        GameObject thisPhotonDetected = Instantiate(photonDetectedLight, other.gameObject.transform.position, Quaternion.identity);
+        thisPhotonDetected.transform.rotation = other.transform.rotation;
         photonDetected.Invoke();
-        Destroy(collision.gameObject);
+        Destroy(other.gameObject);
     }
 
     public void TurnOnCollider()

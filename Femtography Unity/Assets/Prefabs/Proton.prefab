@@ -4763,6 +4763,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   particles: []
+  playbackSpeed:
+    UseConstant: 0
+    ConstantValue: 0
+    variable: {fileID: 11400000, guid: c13976bcb832ad14ea2881716f86cf7d, type: 2}
 --- !u!1 &7974178231925239619
 GameObject:
   m_ObjectHideFlags: 0
@@ -4814,7 +4818,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7974178231925239619}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 5.3
@@ -4990,6 +4994,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   particles: []
+  playbackSpeed:
+    UseConstant: 1
+    ConstantValue: 0
+    variable: {fileID: 0}
 --- !u!54 &1646908275711950237
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5078,21 +5086,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4398763731072913104, guid: 1406d2828e12c814f90cb2f9271e7e4d,
-        type: 3}
-      propertyPath: m_Layer
-      value: 12
-      objectReference: {fileID: 0}
     - target: {fileID: 3153130473170021831, guid: 1406d2828e12c814f90cb2f9271e7e4d,
         type: 3}
       propertyPath: m_Layer
       value: 12
       objectReference: {fileID: 0}
-    - target: {fileID: 330247877482237268, guid: 1406d2828e12c814f90cb2f9271e7e4d,
+    - target: {fileID: 4398763731072913104, guid: 1406d2828e12c814f90cb2f9271e7e4d,
         type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 55b0d074c3838ef47be60ac5d14db071, type: 2}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 8586249427303498638, guid: 1406d2828e12c814f90cb2f9271e7e4d,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
@@ -5103,6 +5106,11 @@ PrefabInstance:
       propertyPath: m_ConnectedAnchor.z
       value: 2.8199844
       objectReference: {fileID: 0}
+    - target: {fileID: 330247877482237268, guid: 1406d2828e12c814f90cb2f9271e7e4d,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 55b0d074c3838ef47be60ac5d14db071, type: 2}
     - target: {fileID: 948212697510717787, guid: 1406d2828e12c814f90cb2f9271e7e4d,
         type: 3}
       propertyPath: forceOnQuark.y
@@ -5188,12 +5196,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4398763731072913104, guid: 1406d2828e12c814f90cb2f9271e7e4d,
+    - target: {fileID: 3153130473170021831, guid: 1406d2828e12c814f90cb2f9271e7e4d,
         type: 3}
       propertyPath: m_Layer
       value: 12
       objectReference: {fileID: 0}
-    - target: {fileID: 3153130473170021831, guid: 1406d2828e12c814f90cb2f9271e7e4d,
+    - target: {fileID: 4398763731072913104, guid: 1406d2828e12c814f90cb2f9271e7e4d,
         type: 3}
       propertyPath: m_Layer
       value: 12
@@ -5501,21 +5509,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4398763731072913104, guid: 1406d2828e12c814f90cb2f9271e7e4d,
-        type: 3}
-      propertyPath: m_Layer
-      value: 12
-      objectReference: {fileID: 0}
     - target: {fileID: 3153130473170021831, guid: 1406d2828e12c814f90cb2f9271e7e4d,
         type: 3}
       propertyPath: m_Layer
       value: 12
       objectReference: {fileID: 0}
-    - target: {fileID: 330247877482237268, guid: 1406d2828e12c814f90cb2f9271e7e4d,
+    - target: {fileID: 4398763731072913104, guid: 1406d2828e12c814f90cb2f9271e7e4d,
         type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 5aca3a290a1583e4ea4f439aa196770e, type: 2}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 8586249427303498638, guid: 1406d2828e12c814f90cb2f9271e7e4d,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
@@ -5526,6 +5529,11 @@ PrefabInstance:
       propertyPath: m_ConnectedAnchor.z
       value: 2.820013
       objectReference: {fileID: 0}
+    - target: {fileID: 330247877482237268, guid: 1406d2828e12c814f90cb2f9271e7e4d,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5aca3a290a1583e4ea4f439aa196770e, type: 2}
     - target: {fileID: 948212697510717787, guid: 1406d2828e12c814f90cb2f9271e7e4d,
         type: 3}
       propertyPath: forceOnQuark.x

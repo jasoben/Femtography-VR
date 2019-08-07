@@ -4773,6 +4773,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   particles: []
+  playbackSpeed:
+    UseConstant: 0
+    ConstantValue: 0
+    variable: {fileID: 11400000, guid: c13976bcb832ad14ea2881716f86cf7d, type: 2}
 --- !u!1 &3096208915640226946
 GameObject:
   m_ObjectHideFlags: 0
@@ -9546,6 +9550,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   particles: []
+  playbackSpeed:
+    UseConstant: 0
+    ConstantValue: 0
+    variable: {fileID: 11400000, guid: c13976bcb832ad14ea2881716f86cf7d, type: 2}
 --- !u!1 &3738308587933847255
 GameObject:
   m_ObjectHideFlags: 0
@@ -9742,21 +9750,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2410828234464864766, guid: eef3244d228075f47b3ed2d36776a8b1,
-        type: 3}
-      propertyPath: m_Color.r
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2410828234464864766, guid: eef3244d228075f47b3ed2d36776a8b1,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 0.22399664
-      objectReference: {fileID: 0}
-    - target: {fileID: 2410828234464864766, guid: eef3244d228075f47b3ed2d36776a8b1,
-        type: 3}
-      propertyPath: m_Range
-      value: 5.5
-      objectReference: {fileID: 0}
     - target: {fileID: 1945065532323398168, guid: eef3244d228075f47b3ed2d36776a8b1,
         type: 3}
       propertyPath: particle
@@ -9772,6 +9765,21 @@ PrefabInstance:
         type: 3}
       propertyPath: intensityMultiplier
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2410828234464864766, guid: eef3244d228075f47b3ed2d36776a8b1,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2410828234464864766, guid: eef3244d228075f47b3ed2d36776a8b1,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.22399664
+      objectReference: {fileID: 0}
+    - target: {fileID: 2410828234464864766, guid: eef3244d228075f47b3ed2d36776a8b1,
+        type: 3}
+      propertyPath: m_Range
+      value: 5.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eef3244d228075f47b3ed2d36776a8b1, type: 3}

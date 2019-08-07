@@ -32,22 +32,22 @@ public class ProtonController : MonoBehaviour
         transform.rotation = newRotation;
     }
 
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider other)
     {
-        Destroy(collision.gameObject);
-        gameObject.GetComponent<SphereCollider>().isTrigger = true;
-        DeformAndMoveProton();
-        collisionWithProton.Invoke();
+        if (other.tag == "photonCollider")
+        {
+            Destroy(other.gameObject);
+            gameObject.layer = 14;
+            DeformAndMoveProton();
+            collisionWithProton.Invoke();
+        }
     }
 
     public void LaunchPhoton()
     {
         Quaternion newPhotonRotation = Quaternion.Euler(Random.Range(0, 360), Random.Range(0, 360), Random.Range(0, 360));
         GameObject newPhoton = Instantiate(photon, transform.position, newPhotonRotation);
-        Quaternion newPhotonColliderRotation = Quaternion.LookRotation(-newPhoton.transform.right, -newPhoton.transform.up);
-        GameObject newPhotonCollider = Instantiate(photonCollider, transform.position, newPhotonColliderRotation);
         newPhoton.GetComponent<PhotonController>().StartPhotonAnimation();
-        newPhotonCollider.GetComponent<PhotonColliderLauncher>().LaunchPhotonCollider();
     }
 
     public void DestroyProton()

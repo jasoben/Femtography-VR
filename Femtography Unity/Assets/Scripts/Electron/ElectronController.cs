@@ -44,9 +44,7 @@ public class ElectronController : MonoBehaviour
     {
         photonLaunched = true;
         GameObject photonBullet = Instantiate(photon, transform.position, Quaternion.Euler(0,90,0));
-        GameObject photonBulletCollider = Instantiate(photonCollider, transform.position, transform.rotation);
         photonBullet.GetComponent<PhotonController>().StartPhotonAnimation();
-        photonBulletCollider.GetComponent<PhotonColliderLauncher>().LaunchPhotonCollider();
     }
 
     public void DeflectElectron()
