@@ -4842,6 +4842,8 @@ MonoBehaviour:
   photon: {fileID: 8760124801218385114, guid: fe16a844a01e05945ba1013b60efee8e, type: 3}
   photonCollider: {fileID: 2488975622159078730, guid: 27b7987a069631841b655be8dd9bc716,
     type: 3}
+  protonLights: {fileID: 3491670223243745969}
+  protonShell: {fileID: 7974178231060884626}
   collisionWithProton:
     m_PersistentCalls:
       m_Calls:
@@ -5227,11 +5229,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7974178231925239618}
     m_Modifications:
-    - target: {fileID: 3738308587933847255, guid: ebb7669d807725644b7ffa95458c2002,
-        type: 3}
-      propertyPath: m_Name
-      value: GreenQuark
-      objectReference: {fileID: 0}
     - target: {fileID: 3364031614070728978, guid: ebb7669d807725644b7ffa95458c2002,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5287,6 +5284,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3738308587933847255, guid: ebb7669d807725644b7ffa95458c2002,
+        type: 3}
+      propertyPath: m_Name
+      value: GreenQuark
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ebb7669d807725644b7ffa95458c2002, type: 3}
 --- !u!4 &9021873509888950780 stripped
@@ -5302,11 +5304,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7974178231925239618}
     m_Modifications:
-    - target: {fileID: 3738308587933847255, guid: ebb7669d807725644b7ffa95458c2002,
-        type: 3}
-      propertyPath: m_Name
-      value: BlueQuark
-      objectReference: {fileID: 0}
     - target: {fileID: 3364031614070728978, guid: ebb7669d807725644b7ffa95458c2002,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5361,6 +5358,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3738308587933847255, guid: ebb7669d807725644b7ffa95458c2002,
+        type: 3}
+      propertyPath: m_Name
+      value: BlueQuark
       objectReference: {fileID: 0}
     - target: {fileID: 2764944426595927830, guid: ebb7669d807725644b7ffa95458c2002,
         type: 3}
@@ -5498,7 +5500,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: df2bf9cd4f94a6847ab56f2696c75100, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.00000023842
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: df2bf9cd4f94a6847ab56f2696c75100, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5538,15 +5540,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: df2bf9cd4f94a6847ab56f2696c75100, type: 3}
       propertyPath: m_LocalScale.x
-      value: 170.73222
+      value: 189.51277
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: df2bf9cd4f94a6847ab56f2696c75100, type: 3}
       propertyPath: m_LocalScale.y
-      value: 170.73222
+      value: 189.51277
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: df2bf9cd4f94a6847ab56f2696c75100, type: 3}
       propertyPath: m_LocalScale.z
-      value: 170.73212
+      value: 189.51265
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: df2bf9cd4f94a6847ab56f2696c75100, type: 3}
       propertyPath: m_Name
@@ -5928,6 +5930,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6fb51c6a48b2eab4ab5f86c64377158c, type: 3}
+--- !u!1 &3491670223243745969 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6835654220325583376, guid: 6fb51c6a48b2eab4ab5f86c64377158c,
+    type: 3}
+  m_PrefabInstance: {fileID: 7974178232178532513}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3491670223243745970 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6835654220325583379, guid: 6fb51c6a48b2eab4ab5f86c64377158c,
@@ -5941,11 +5949,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7974178231925239618}
     m_Modifications:
-    - target: {fileID: 3738308587933847255, guid: ebb7669d807725644b7ffa95458c2002,
-        type: 3}
-      propertyPath: m_Name
-      value: RedQuark
-      objectReference: {fileID: 0}
     - target: {fileID: 3364031614070728978, guid: ebb7669d807725644b7ffa95458c2002,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6000,6 +6003,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3738308587933847255, guid: ebb7669d807725644b7ffa95458c2002,
+        type: 3}
+      propertyPath: m_Name
+      value: RedQuark
       objectReference: {fileID: 0}
     - target: {fileID: 2764944426595927830, guid: ebb7669d807725644b7ffa95458c2002,
         type: 3}

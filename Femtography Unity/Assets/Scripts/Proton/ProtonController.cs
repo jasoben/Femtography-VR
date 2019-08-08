@@ -6,7 +6,7 @@ using UnityEngine.Events;
 public class ProtonController : MonoBehaviour
 {
     private Animator protonAnimator;
-    public GameObject photon, photonCollider;
+    public GameObject photon, photonCollider, protonLights, protonShell;
     public UnityEvent collisionWithProton, protonCreated;
     public Particle particle;
     public float minXAngle, maxXAngle, minYAngle, maxYAngle;
@@ -40,6 +40,8 @@ public class ProtonController : MonoBehaviour
         Quaternion newRotation = Quaternion.Euler(newXAngle, newYAngle, transform.rotation.eulerAngles.z);
         GetComponent<TransformObject>().KineticSpeed = 1;
         transform.rotation = newRotation;
+        protonShell.SetActive(false);
+        protonLights.SetActive(false);
     }
 
     void OnTriggerEnter(Collider other)
@@ -61,6 +63,9 @@ public class ProtonController : MonoBehaviour
         Quaternion newPhotonRotation = Quaternion.Euler(x, y, z);
         GameObject newPhoton = Instantiate(photon, transform.position, newPhotonRotation);
         newPhoton.GetComponent<PhotonController>().StartPhotonAnimation();
+        protonShell.SetActive(true);
+        protonLights.SetActive(true);
+
     }
 
     public void DestroyProton()

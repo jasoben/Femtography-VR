@@ -165,3 +165,18 @@ public enum BarrelState
     empty,
     full
 }
+
+
+//-39, 0, 83
+
+//55, 0, 82
+
+//57, 0, 104
+
+//-66, 0, 107
+
+//Console at teleport - 62,0,90 
+//Player is at -66,0,87
+
+//Console - 67,0,90
+

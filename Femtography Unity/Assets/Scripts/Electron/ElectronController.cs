@@ -21,6 +21,8 @@ public class ElectronController : MonoBehaviour
     public bool firstPlayThrough;
     public GlobalBool firstPlayThroughGlobal;
 
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -39,7 +41,7 @@ public class ElectronController : MonoBehaviour
             DeflectElectron();
             photonBullet.Invoke();
             if (firstPlayThrough)
-                Invoke("PauseTheSystemForFirstPlayThrough", .5f);
+                Invoke("PauseTheSystemForFirstPlayThrough", .2f);
             playerParticle.normalSpeed = 0;
         }
                     
@@ -54,7 +56,7 @@ public class ElectronController : MonoBehaviour
     public void LaunchPhoton()
     {
         photonLaunched = true;
-        GameObject photonBullet = Instantiate(photon, transform.position, Quaternion.Euler(0,90,0));
+        GameObject photonBullet = Instantiate(photon, transform.position, Quaternion.Euler(90,90,0));
         photonBullet.GetComponent<PhotonController>().StartPhotonAnimation();
     }
 
