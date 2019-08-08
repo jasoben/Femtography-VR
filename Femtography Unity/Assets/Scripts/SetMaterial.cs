@@ -11,16 +11,13 @@ public class SetMaterial : MonoBehaviour
     void Start()
     {
         opaqueOrNot = true;
-        //foreach(ParticleSystemRenderer thisPSR in GetComponentsInChildren<ParticleSystemRenderer>())
-        //{
-        //    thisPSR.material = particle.particleMaterial;
-        //}
         foreach(Renderer thisRenderer in GetComponentsInChildren<Renderer>())
         {
             thisRenderer.material = particle.particleMaterial;
         }
 
-        GetComponentInChildren<Light>().color = particle.particleOpqMaterial.color;
+        if (GetComponentInChildren<Light>() != null)
+            GetComponentInChildren<Light>().color = particle.particleOpqMaterial.color;
         
     }
     void Update()
@@ -42,10 +39,6 @@ public class SetMaterial : MonoBehaviour
     }
     void ChangeMaterial()
     {
-        //foreach(ParticleSystemRenderer thisPSR in GetComponentsInChildren<ParticleSystemRenderer>())
-        //{
-        //    thisPSR.material = particle.particleMaterial;
-        //}
         foreach(Renderer thisRenderer in GetComponentsInChildren<Renderer>())
         {
             thisRenderer.material = particle.particleMaterial;

@@ -11,6 +11,7 @@ public class ProtonController : MonoBehaviour
     public Particle particle;
     public float minXAngle, maxXAngle, minYAngle, maxYAngle;
     public GlobalBool firstPlayThrough;
+    public RandomAngle photonAngle;
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +23,7 @@ public class ProtonController : MonoBehaviour
         }
         else
         {
-            particle.opacity.ConstantValue = .2f;
+            particle.opacity.ConstantValue = .1f;
         }
     }
 
@@ -54,7 +55,10 @@ public class ProtonController : MonoBehaviour
 
     public void LaunchPhoton()
     {
-        Quaternion newPhotonRotation = Quaternion.Euler(Random.Range(0, 360), Random.Range(0, 360), Random.Range(0, 360));
+        float x = Random.Range(photonAngle.newAngleLowBound.x, photonAngle.newAngleHighBound.x);
+        float y = Random.Range(photonAngle.newAngleLowBound.y, photonAngle.newAngleHighBound.y);
+        float z = Random.Range(photonAngle.newAngleLowBound.z, photonAngle.newAngleHighBound.z);
+        Quaternion newPhotonRotation = Quaternion.Euler(x, y, z);
         GameObject newPhoton = Instantiate(photon, transform.position, newPhotonRotation);
         newPhoton.GetComponent<PhotonController>().StartPhotonAnimation();
     }
