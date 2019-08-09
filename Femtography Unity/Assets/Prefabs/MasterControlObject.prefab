@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 8634136301916861288}
   - component: {fileID: 1324737475406901854}
   - component: {fileID: 8962835932848623603}
+  - component: {fileID: 7652529257680795178}
   m_Layer: 0
   m_Name: MasterControlObject
   m_TagString: Untagged
@@ -132,6 +133,7 @@ MonoBehaviour:
   fallingDistance: 100
   fallingSlerp: 0
   firstPlayThrough: {fileID: 11400000, guid: 5f422cc68b8b5784998725bd2e80ee51, type: 2}
+  isPlaying: {fileID: 11400000, guid: 0a90e7b81bf1ab0489e1a40570cb9759, type: 2}
   q2slider:
     UseConstant: 0
     ConstantValue: 0
@@ -303,3 +305,15 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &7652529257680795178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 810343680198333614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8f658ff3063a894b84a7e5112156eea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
