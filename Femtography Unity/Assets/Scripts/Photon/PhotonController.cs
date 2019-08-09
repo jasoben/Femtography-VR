@@ -5,14 +5,16 @@ using UnityEngine;
 public class PhotonController : MonoBehaviour
 {
 
-    public Animator photonAnimator;
     public Particle particle;
-
+    public GameObject photon;
+    private float flipY;
+    public float flipAmount;
+    public GlobalBool isPlaying;
 
     // Start is called before the first frame update
     void Start()
     {
-        photonAnimator.speed = particle.playbackSpeed.Value;
+        flipY = 2.4f;
     }
 
     // Update is called once per frame
@@ -22,17 +24,20 @@ public class PhotonController : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        if (isPlaying.boolValue)
+        {
+            if (flipY > 2.35f)
+            {
+                flipAmount = -flipAmount;
+            } else if (flipY < -2.35f)
+            {
+                flipAmount = -flipAmount;
+            }
+            flipY += flipAmount;
+            photon.transform.localScale = new Vector3(2.4f, flipY, 1.2f);  
+        }
     }
 
-    public void MoveThePhoton()
-    {
-        transform.Translate(-26.6f, 0, 0, Space.Self);
-    }
-
-    public void StartPhotonAnimation()
-    {
-        photonAnimator.Play("LaunchPhoton", 0, 0);
-    }
 
     public void DestroyPhoton()
     {

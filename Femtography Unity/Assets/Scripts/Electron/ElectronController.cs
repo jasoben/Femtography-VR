@@ -53,8 +53,10 @@ public class ElectronController : MonoBehaviour
     public void LaunchPhoton()
     {
         photonLaunched = true;
-        GameObject photonBullet = Instantiate(photon, transform.position, Quaternion.Euler(90,90,0));
-        photonBullet.GetComponent<PhotonController>().StartPhotonAnimation();
+        GameObject photonBullet = Instantiate(photon, transform.position, Quaternion.Euler(0,0,90));
+        photonBullet.GetComponent<TransformObject>().KineticSpeed = 1;
+        Debug.Log(photonBullet.GetComponent<TransformObject>().KineticSpeed);
+        
     }
 
     public void DeflectElectron()

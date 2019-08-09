@@ -5,14 +5,17 @@ using UnityEngine;
 public class TransformObject : MonoBehaviour
 {
     public Particle particle;
-    public float KineticSpeed { get; set; }
+    public float KineticSpeed;
     public GlobalBool isPlaying;
 
     // Start is called before the first frame update
     void Start()
     {
         particle.speed = particle.normalSpeed * particle.playbackSpeed.Value;
-        KineticSpeed = 0;
+        if (KineticSpeed == 1)
+            KineticSpeed = 1;
+        else
+            KineticSpeed = 0;
     }
 
     // Update is called once per frame

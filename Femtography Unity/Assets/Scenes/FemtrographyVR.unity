@@ -265,7 +265,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 810343680199605165}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1766270610}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c204e05181c34b44d8988cf6d16e0d49, type: 3}
@@ -5048,7 +5048,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh72814
+  m_Name: pb_Mesh23920
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6096,6 +6096,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   particle: {fileID: 11400000, guid: 2c413960227b5ea4daa652bdf629c584, type: 2}
+  KineticSpeed: 0
   isPlaying: {fileID: 11400000, guid: 0a90e7b81bf1ab0489e1a40570cb9759, type: 2}
 --- !u!114 &788379684
 MonoBehaviour:
@@ -10320,70 +10321,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!1 &1766270610 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 810343680198333614, guid: 632e41e39fee12e468109b1b9971e8e7,
-    type: 3}
-  m_PrefabInstance: {fileID: 810343680199605165}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1766270611
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1766270610}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86dd175dc768941409f779cc3531c879, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 6544a190c42a42349836911ddb5900e3, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7597834}
-        m_MethodName: EnableQ2Slider
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!114 &1766270612
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1766270610}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86dd175dc768941409f779cc3531c879, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 474247fc70f1e574eb339756e222e288, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7597834}
-        m_MethodName: EnableTeleportButton
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1802035495
 GameObject:
   m_ObjectHideFlags: 0
@@ -11718,17 +11655,6 @@ PrefabInstance:
       objectReference: {fileID: 146690698}
     - target: {fileID: 810343680198333609, guid: 632e41e39fee12e468109b1b9971e8e7,
         type: 3}
-      propertyPath: playbackSpeed.UseConstant
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 810343680198333609, guid: 632e41e39fee12e468109b1b9971e8e7,
-        type: 3}
-      propertyPath: playbackSpeed.variable
-      value: 
-      objectReference: {fileID: 11400000, guid: c13976bcb832ad14ea2881716f86cf7d,
-        type: 2}
-    - target: {fileID: 810343680198333609, guid: 632e41e39fee12e468109b1b9971e8e7,
-        type: 3}
       propertyPath: q2CanvasSlider
       value: 
       objectReference: {fileID: 297233210}
@@ -11770,7 +11696,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 810343680199605165}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1766270610}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d8f658ff3063a894b84a7e5112156eea, type: 3}

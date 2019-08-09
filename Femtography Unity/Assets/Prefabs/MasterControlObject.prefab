@@ -17,6 +17,8 @@ GameObject:
   - component: {fileID: 1324737475406901854}
   - component: {fileID: 8962835932848623603}
   - component: {fileID: 7652529257680795178}
+  - component: {fileID: 1766270611}
+  - component: {fileID: 1766270612}
   m_Layer: 0
   m_Name: MasterControlObject
   m_TagString: Untagged
@@ -138,6 +140,17 @@ MonoBehaviour:
     UseConstant: 0
     ConstantValue: 0
     variable: {fileID: 11400000, guid: e002644c9083b4e42a7dc48def63aebb, type: 2}
+  playbackSpeed:
+    UseConstant: 0
+    ConstantValue: 0
+    variable: {fileID: 11400000, guid: c13976bcb832ad14ea2881716f86cf7d, type: 2}
+  q2CanvasSlider: {fileID: 0}
+  playbackCanvasSlider: {fileID: 0}
+  initialize: {fileID: 0}
+  launch: {fileID: 0}
+  teleport: {fileID: 0}
+  play: {fileID: 0}
+  pause: {fileID: 0}
 --- !u!114 &810343680198333611
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -317,3 +330,61 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8f658ff3063a894b84a7e5112156eea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1766270611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 810343680198333614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86dd175dc768941409f779cc3531c879, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 6544a190c42a42349836911ddb5900e3, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 810343680198333609}
+        m_MethodName: EnableQ2Slider
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &1766270612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 810343680198333614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86dd175dc768941409f779cc3531c879, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 474247fc70f1e574eb339756e222e288, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 810343680198333609}
+        m_MethodName: EnableTeleportButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
