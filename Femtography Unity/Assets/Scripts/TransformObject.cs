@@ -6,6 +6,7 @@ public class TransformObject : MonoBehaviour
 {
     public Particle particle;
     public float KineticSpeed { get; set; }
+    public GlobalBool isPlaying;
 
     // Start is called before the first frame update
     void Start()
@@ -18,7 +19,8 @@ public class TransformObject : MonoBehaviour
     void Update()
     {
         particle.speed = particle.normalSpeed * particle.playbackSpeed.Value;
-        transform.Translate(Vector3.Scale(transform.forward, new Vector3(0,0, particle.speed * KineticSpeed)));
+        if (isPlaying.boolValue)
+            transform.Translate(Vector3.Scale(transform.forward, new Vector3(0,0, particle.speed * KineticSpeed)));
     }
 
     public void StartKineticMotion()

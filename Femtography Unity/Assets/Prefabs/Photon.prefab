@@ -105,6 +105,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   particle: {fileID: 11400000, guid: e7c1fd323ce1cee40b934cb60fd365bd, type: 2}
+  isPlaying: {fileID: 11400000, guid: 0a90e7b81bf1ab0489e1a40570cb9759, type: 2}
 --- !u!114 &199440428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -209,6 +210,7 @@ MonoBehaviour:
     UseConstant: 0
     ConstantValue: 0
     variable: {fileID: 11400000, guid: c13976bcb832ad14ea2881716f86cf7d, type: 2}
+  isPlaying: {fileID: 11400000, guid: 0a90e7b81bf1ab0489e1a40570cb9759, type: 2}
 --- !u!136 &8248229844656684021
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -288,6 +290,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0

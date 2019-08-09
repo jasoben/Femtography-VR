@@ -6,7 +6,7 @@ public class VariableController : MonoBehaviour
 {
     public GameObject startPosition, endPosition;
     private float distanceMeasure, totalDistance;
-    public FloatReference QSlider;
+    public FloatReference Slider;
 
     // Start is called before the first frame update
     void Start()
@@ -20,7 +20,7 @@ public class VariableController : MonoBehaviour
     {
         distanceMeasure = Vector3.Distance(transform.position, startPosition.transform.position);
         float ratioDistance = distanceMeasure / totalDistance;
-        QSlider.variable.value = ratioDistance;
+        Slider.variable.value = ratioDistance;
     }
 
     public void MoveToBottom()

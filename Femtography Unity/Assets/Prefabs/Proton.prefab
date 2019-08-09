@@ -1393,6 +1393,7 @@ ParticleSystem:
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
   UVModule:
+    serializedVersion: 2
     enabled: 0
     mode: 0
     timeMode: 0
@@ -1510,7 +1511,7 @@ ParticleSystem:
     rowIndex: 0
     cycles: 1
     uvChannelMask: -1
-    randomRow: 1
+    rowMode: 1
     sprites:
     - sprite: {fileID: 0}
     flipU: 0
@@ -2321,8 +2322,61 @@ ParticleSystem:
     inWorldSpace: 0
     randomizePerFrame: 0
   ExternalForcesModule:
+    serializedVersion: 2
     enabled: 0
-    multiplier: 1
+    multiplierCurve:
+      serializedVersion: 2
+      minMaxState: 0
+      scalar: 1
+      minScalar: 1
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0.33333334
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0.33333334
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0.33333334
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0.33333334
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
     influenceFilter: 0
     influenceMask:
       serializedVersion: 2
@@ -4696,6 +4750,7 @@ ParticleSystemRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -4767,6 +4822,7 @@ MonoBehaviour:
     UseConstant: 0
     ConstantValue: 0
     variable: {fileID: 11400000, guid: c13976bcb832ad14ea2881716f86cf7d, type: 2}
+  isPlaying: {fileID: 11400000, guid: 0a90e7b81bf1ab0489e1a40570cb9759, type: 2}
 --- !u!1 &7974178231925239619
 GameObject:
   m_ObjectHideFlags: 0
@@ -4876,6 +4932,60 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  quarksRevealed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 6544a190c42a42349836911ddb5900e3, type: 2}
+        m_MethodName: Raise
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 4444c7e6d95a43c4ea743857f672b2dc, type: 2}
+        m_MethodName: Raise
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  secondPhotonLaunched:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: e58971e8755e1ca42b19e4b443927f2d, type: 2}
+        m_MethodName: Raise
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 4444c7e6d95a43c4ea743857f672b2dc, type: 2}
+        m_MethodName: Raise
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   particle: {fileID: 11400000, guid: a9de51837e4c7b04185b019d8da4d8e9, type: 2}
   minXAngle: 315
   maxXAngle: 345
@@ -4896,6 +5006,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   particle: {fileID: 11400000, guid: a9de51837e4c7b04185b019d8da4d8e9, type: 2}
+  isPlaying: {fileID: 11400000, guid: 0a90e7b81bf1ab0489e1a40570cb9759, type: 2}
 --- !u!114 &700100809303566249
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5003,9 +5114,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   particles: []
   playbackSpeed:
-    UseConstant: 1
+    UseConstant: 0
     ConstantValue: 0
-    variable: {fileID: 0}
+    variable: {fileID: 11400000, guid: c13976bcb832ad14ea2881716f86cf7d, type: 2}
+  isPlaying: {fileID: 11400000, guid: 0a90e7b81bf1ab0489e1a40570cb9759, type: 2}
 --- !u!54 &1646908275711950237
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5029,11 +5141,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7974178231925239618}
     m_Modifications:
-    - target: {fileID: 4069577236652929317, guid: 52bbd818b9083a74dae5405038550bea,
-        type: 3}
-      propertyPath: m_Name
-      value: QuarkAniquarkCloud
-      objectReference: {fileID: 0}
     - target: {fileID: 4069577236652929319, guid: 52bbd818b9083a74dae5405038550bea,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5088,6 +5195,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069577236652929317, guid: 52bbd818b9083a74dae5405038550bea,
+        type: 3}
+      propertyPath: m_Name
+      value: QuarkAniquarkCloud
       objectReference: {fileID: 0}
     - target: {fileID: 4069577236652929316, guid: 52bbd818b9083a74dae5405038550bea,
         type: 3}
@@ -5494,6 +5606,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7974178231925239618}
     m_Modifications:
+    - target: {fileID: 100000, guid: df2bf9cd4f94a6847ab56f2696c75100, type: 3}
+      propertyPath: m_Name
+      value: proton-deformed
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: df2bf9cd4f94a6847ab56f2696c75100, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: df2bf9cd4f94a6847ab56f2696c75100, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -5550,18 +5670,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 189.51265
       objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: df2bf9cd4f94a6847ab56f2696c75100, type: 3}
-      propertyPath: m_Name
-      value: proton-deformed
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: df2bf9cd4f94a6847ab56f2696c75100, type: 3}
-      propertyPath: m_Layer
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 100002, guid: df2bf9cd4f94a6847ab56f2696c75100, type: 3}
-      propertyPath: m_Layer
-      value: 12
-      objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: df2bf9cd4f94a6847ab56f2696c75100, type: 3}
       propertyPath: startTime
       value: 0.0416666679084301
@@ -5569,6 +5677,10 @@ PrefabInstance:
     - target: {fileID: 11400000, guid: df2bf9cd4f94a6847ab56f2696c75100, type: 3}
       propertyPath: endTime
       value: 1.4583333730697632
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: df2bf9cd4f94a6847ab56f2696c75100, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: df2bf9cd4f94a6847ab56f2696c75100, type: 3}
       propertyPath: m_Layer
@@ -5803,6 +5915,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7974178231925239618}
     m_Modifications:
+    - target: {fileID: 6835654220325583376, guid: 6fb51c6a48b2eab4ab5f86c64377158c,
+        type: 3}
+      propertyPath: m_Name
+      value: OrbitalHaloObject
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835654220325583376, guid: 6fb51c6a48b2eab4ab5f86c64377158c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 6835654220325583379, guid: 6fb51c6a48b2eab4ab5f86c64377158c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5857,16 +5979,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6835654220325583376, guid: 6fb51c6a48b2eab4ab5f86c64377158c,
-        type: 3}
-      propertyPath: m_Name
-      value: OrbitalHaloObject
-      objectReference: {fileID: 0}
-    - target: {fileID: 6835654220325583376, guid: 6fb51c6a48b2eab4ab5f86c64377158c,
-        type: 3}
-      propertyPath: m_Layer
-      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 6835654220260436792, guid: 6fb51c6a48b2eab4ab5f86c64377158c,
         type: 3}

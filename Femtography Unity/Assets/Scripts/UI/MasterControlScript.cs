@@ -11,7 +11,7 @@ public class MasterControlScript : MonoBehaviour
     private GameObject newProton, newElectron;
     public Transform photonStartPosition, electronStartPosition, protonStartPosition;
     public Particle protonParticle, electronParticle, photonParticle, playerParticle;
-    public UnityEvent StartPlaying, StopPlaying;
+    public UnityEvent StartPlaying, StopPlaying, basicInstructions, teleporterUnlocked;
     public float fallingTime, fallingDistance, fallingSlerp;
     private bool hasFallen;
     private BarrelState barrelState;
@@ -111,7 +111,14 @@ public class MasterControlScript : MonoBehaviour
         {
             particlesCreated++;
             if (particlesCreated > 1)
+            {
                 firstPlayThrough.boolValue = false;
+                if (particlesCreated < 3)
+                    basicInstructions.Invoke();
+                else if (particlesCreated > 4 && particlesCreated < 6)
+                    teleporterUnlocked.Invoke();
+
+            }
 
             barrelState = BarrelState.full;
             newProton = CreateNewObject(proton, protonStartPosition);

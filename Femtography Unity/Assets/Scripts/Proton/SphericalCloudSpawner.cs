@@ -17,7 +17,6 @@ public class SphericalCloudSpawner : MonoBehaviour
         for (int i = 0; i < initialSpawnCount; i++)
         {
             Vector3 randomLocation = Random.insideUnitSphere * objectSize;
-            Debug.Log(randomLocation.ToString());
             Quaternion randomRotation = Random.rotation;
             GameObject newObject = Instantiate(objectToSpawn, transform, true);
             newObject.GetComponent<RandomQuarkChooser>().ChooseRandomQuark();
@@ -33,7 +32,6 @@ public class SphericalCloudSpawner : MonoBehaviour
         if (CheckTiming())
         {
             Vector3 randomLocation = Random.insideUnitSphere * objectSize;
-            Debug.Log(randomLocation.ToString());
             Quaternion randomRotation = Random.rotation;
             GameObject newObject = Instantiate(objectToSpawn, transform, true);
             newObject.transform.position = transform.parent.position + randomLocation;

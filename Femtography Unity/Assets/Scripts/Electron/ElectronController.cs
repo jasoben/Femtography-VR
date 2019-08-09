@@ -18,7 +18,6 @@ public class ElectronController : MonoBehaviour
     private bool photonLaunched, protonFound;
     public Particle particle, playerParticle;
     public UnityEvent photonBullet, pauseEverything, revealQuarks;
-    public bool firstPlayThrough;
     public GlobalBool firstPlayThroughGlobal;
 
 
@@ -26,7 +25,6 @@ public class ElectronController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        firstPlayThrough = firstPlayThroughGlobal.boolValue;
         photonLaunched = false;
         distanceToProton = 24;
     }
@@ -34,13 +32,12 @@ public class ElectronController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-    
         if (proton != null && (Vector3.Distance(transform.position, proton.transform.position) < distanceToProton && !photonLaunched) || (transform.position.z > 1000f - distanceToProton && !photonLaunched))
         {
             LaunchPhoton();
             DeflectElectron();
             photonBullet.Invoke();
-            if (firstPlayThrough)
+            if (firstPlayThroughGlobal.boolValue)
                 Invoke("PauseTheSystemForFirstPlayThrough", .2f);
             playerParticle.normalSpeed = 0;
         }

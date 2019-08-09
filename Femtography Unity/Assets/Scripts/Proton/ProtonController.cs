@@ -7,7 +7,7 @@ public class ProtonController : MonoBehaviour
 {
     private Animator protonAnimator;
     public GameObject photon, photonCollider, protonLights, protonShell;
-    public UnityEvent collisionWithProton, protonCreated;
+    public UnityEvent collisionWithProton, protonCreated, quarksRevealed, secondPhotonLaunched;
     public Particle particle;
     public float minXAngle, maxXAngle, minYAngle, maxYAngle;
     public GlobalBool firstPlayThrough;
@@ -44,6 +44,14 @@ public class ProtonController : MonoBehaviour
         protonLights.SetActive(false);
     }
 
+    public void RevealQuarks()
+    {
+        if (firstPlayThrough.boolValue)
+        {
+            quarksRevealed.Invoke();
+        }
+    }
+
     void OnTriggerEnter(Collider other)
     {
         if (other.tag == "photonCollider")
@@ -65,7 +73,15 @@ public class ProtonController : MonoBehaviour
         newPhoton.GetComponent<PhotonController>().StartPhotonAnimation();
         protonShell.SetActive(true);
         protonLights.SetActive(true);
+        Invoke("SecondPhotonLaunched", .5f);
+    }
 
+    private void SecondPhotonLaunched()
+    {
+        if (firstPlayThrough.boolValue)
+        {
+            secondPhotonLaunched.Invoke();
+        }
     }
 
     public void DestroyProton()
@@ -75,6 +91,10 @@ public class ProtonController : MonoBehaviour
 
     void OnTriggerExit(Collider other)
     {
+        if (other.tag == "IntermediateTrigger")
+        {
+            RevealQuarks(); 
+        }
         if (other.tag == "LaunchElectronTrigger")
         {
             LaunchPhoton();
