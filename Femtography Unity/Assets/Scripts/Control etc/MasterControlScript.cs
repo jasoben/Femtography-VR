@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MasterControlScript : MonoBehaviour
 {
@@ -17,11 +18,20 @@ public class MasterControlScript : MonoBehaviour
     private BarrelState barrelState;
     public GlobalBool firstPlayThrough, isPlaying;
     public FloatReference q2slider;
+    public FloatReference playbackSpeed;
+    public Slider q2CanvasSlider, playbackCanvasSlider;
+    public Button initialize, launch, teleport, play, pause;
     private float particlesCreated;
 
     // Start is called before the first frame update
     void Start()
     {
+        launch.interactable = false;
+        teleport.interactable = false;
+        play.interactable = false;
+        pause.interactable = false;
+        q2CanvasSlider.interactable = false;
+
         barrelState = BarrelState.empty;
         electronParticle.normalSpeed = 1;
         playerParticle.normalSpeed = 1;
@@ -34,6 +44,9 @@ public class MasterControlScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        playbackSpeed.variable.value = playbackCanvasSlider.value;
+        q2slider.variable.value = q2CanvasSlider.value;
 
         if (Input.GetKeyDown(KeyCode.P))
         {
@@ -73,14 +86,28 @@ public class MasterControlScript : MonoBehaviour
     //methods for UI events
     public void Initiate()
     {
+        initialize.interactable = false;
+        launch.interactable = true;
         CreateNewProtonAndElectron();
         CreateNewObject(sensor, protonStartPosition);
     }
 
     public void Launch()
     {
+        play.interactable = true;
+        pause.interactable = true;
         CreateNewProtonAndElectron();
         StartCoroutine(SettleParticlesFastAndLaunch());
+    }
+
+    public void EnableQ2Slider()
+    {
+        q2CanvasSlider.interactable = true;
+    }
+
+    public void EnableTeleportButton()
+    {
+        teleport.interactable = true;
     }
 
     public void ResetEverything()
