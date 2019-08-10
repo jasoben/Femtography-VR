@@ -6,7 +6,8 @@ using UnityEngine.Events;
 public class PhotonDetector : MonoBehaviour
 {
     public GameObject photonDetectedLight;
-    public UnityEvent photonDetected; 
+    public UnityEvent photonDetected, pauseEverything;
+    public GlobalBool firstPlay;
 
     // Start is called before the first frame update
     void Start()
@@ -22,22 +23,23 @@ public class PhotonDetector : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("particle detected");
         GameObject particleDetected = Instantiate(photonDetectedLight, other.gameObject.transform.position, Quaternion.identity);
         particleDetected.transform.rotation = other.transform.rotation;
 
-        if (other.tag == "photons")
+        if  (other.tag == "photonCollider")
         {
             photonDetected.Invoke();
+            //if (firstPlay.boolValue)
+            //    pauseEverything.Invoke();
             particleDetected.GetComponent<Renderer>().material.color = Color.white;
             particleDetected.GetComponent<Renderer>().material.SetColor("_EmissionColor", Color.white);
         }
-        if (other.tag == "Proton")
+        else if (other.tag == "Proton")
         {
             particleDetected.GetComponent<Renderer>().material.color = Color.red;
             particleDetected.GetComponent<Renderer>().material.SetColor("_EmissionColor", Color.red);
         }   
-        if (other.tag == "electron")
+        else if (other.tag == "electron")
         {
             particleDetected.GetComponent<Renderer>().material.color = Color.yellow;
             particleDetected.GetComponent<Renderer>().material.SetColor("_EmissionColor", Color.yellow);

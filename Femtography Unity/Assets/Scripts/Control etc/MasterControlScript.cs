@@ -12,7 +12,7 @@ public class MasterControlScript : MonoBehaviour
     private GameObject newProton, newElectron;
     public Transform photonStartPosition, electronStartPosition, protonStartPosition;
     public Particle protonParticle, electronParticle, photonParticle, playerParticle;
-    public UnityEvent StartPlaying, StopPlaying, basicInstructions, teleporterUnlocked;
+    public UnityEvent StartPlaying, StopPlaying, basicInstructions, teleporterUnlocked, dimProton;
     public float fallingTime, fallingDistance, fallingSlerp;
     private bool hasFallen;
     private BarrelState barrelState;
@@ -41,6 +41,8 @@ public class MasterControlScript : MonoBehaviour
         particlesCreated = 0;
         q2slider.variable.value = 0;
         initializePointer.GetComponent<PointerMover>().MakeVisible();
+        play.interactable = false;
+        pause.interactable = false;
         electronStartPositionVector.vectorValue = electronStartPosition.position;
     }
 
@@ -99,6 +101,7 @@ public class MasterControlScript : MonoBehaviour
     {
         play.interactable = true;
         pause.interactable = true;
+        sensor.GetComponent<MeshCollider>().enabled = false;
         CreateNewProtonAndElectron();
         StartCoroutine(SettleParticlesFastAndLaunch());
     }
@@ -117,6 +120,16 @@ public class MasterControlScript : MonoBehaviour
     {
         SceneManager.LoadScene(0);
     }
+    public void ShowPlayPointer()
+    {
+        play.interactable = true;
+        pause.interactable = false;
+    }
+    public void HidePlayPointer()
+    {
+        play.interactable = false;
+        pause.interactable = true;
+    }
 
     public void PlayEverything()
     {
@@ -126,6 +139,12 @@ public class MasterControlScript : MonoBehaviour
     public void PauseEverything()
     {
         StopPlaying.Invoke();
+    }
+
+    public void ReloadText()
+    {
+        particlesCreated = 0;
+        firstPlayThrough.boolValue = true;
     }
 
     private IEnumerator SettleParticlesFastAndLaunch()
@@ -145,8 +164,8 @@ public class MasterControlScript : MonoBehaviour
             {
                 firstPlayThrough.boolValue = false;
                 if (particlesCreated < 3)
-                    basicInstructions.Invoke();
-                else if (particlesCreated > 4 && particlesCreated < 6)
+                    dimProton.Invoke();
+                else if (particlesCreated > 3 && particlesCreated < 5)
                     teleporterUnlocked.Invoke();
 
             }

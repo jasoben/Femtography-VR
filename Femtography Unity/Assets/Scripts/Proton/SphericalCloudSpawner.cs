@@ -9,12 +9,14 @@ public class SphericalCloudSpawner : MonoBehaviour
     private float x, y, z;
     private float creationTimer;
     public float creationTime, initialSpawnCount;
+    public FloatReference Q2;
 
     // Start is called before the first frame update
     void Start()
     {
         creationTimer = 0;
-        for (int i = 0; i < initialSpawnCount; i++)
+        int spawnCount = (int)(Q2.Value * initialSpawnCount);
+        for (int i = 0; i < spawnCount; i++)
         {
             Vector3 randomLocation = Random.insideUnitSphere * objectSize;
             Quaternion randomRotation = Random.rotation;
@@ -29,6 +31,7 @@ public class SphericalCloudSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (CheckTiming())
         {
             Vector3 randomLocation = Random.insideUnitSphere * objectSize;
@@ -42,7 +45,7 @@ public class SphericalCloudSpawner : MonoBehaviour
     private bool CheckTiming()
     {
         creationTimer++;
-        if (creationTimer / 60 >= creationTime)
+        if (creationTimer * Q2.Value / 60  >= creationTime)
         {
             creationTimer = 0;
             return true;

@@ -59,14 +59,14 @@ public class ElectronController : MonoBehaviour
 
     public void DeflectElectron()
     {
-        float deflectionAngle = Random.Range(40f, 45f);
+        float deflectionAngle = 45f;
         Quaternion newRotation = Quaternion.Euler(transform.rotation.eulerAngles.x, deflectionAngle, transform.rotation.eulerAngles.z);
         transform.rotation = newRotation;
     }
 
     public void SetToFastLaunch()
     {
-        startPosition.vectorValue = new Vector3(0, 0, 850);
+        startPosition.vectorValue = new Vector3(0, 0, 750);
     }
     void OnTriggerExit(Collider other)
     {
