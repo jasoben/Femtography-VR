@@ -45,7 +45,7 @@ public class MasterControlScript : MonoBehaviour
     void Update()
     {
 
-        //playbackSpeed.variable.value = playbackCanvasSlider.value;
+        playbackSpeed.variable.value = playbackCanvasSlider.value;
         q2slider.variable.value = q2CanvasSlider.value;
 
         if (Input.GetKeyDown(KeyCode.P))

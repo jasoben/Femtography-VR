@@ -55,10 +55,6 @@ MonoBehaviour:
   photon: {fileID: 8760124801218385114, guid: fe16a844a01e05945ba1013b60efee8e, type: 3}
   photonCollider: {fileID: 2488975622159078730, guid: 27b7987a069631841b655be8dd9bc716,
     type: 3}
-  distanceToProtonReference:
-    UseConstant: 0
-    ConstantValue: 0
-    variable: {fileID: 11400000, guid: ff8b02d74e2845548a728696b6a5bbf4, type: 2}
   particle: {fileID: 11400000, guid: 0e364e0288417354cb8a7206ee771718, type: 2}
   playerParticle: {fileID: 11400000, guid: 2c413960227b5ea4daa652bdf629c584, type: 2}
   photonBullet:
@@ -111,7 +107,6 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   firstPlayThroughGlobal: {fileID: 11400000, guid: 5f422cc68b8b5784998725bd2e80ee51,
     type: 2}
-  photonLaunchVector: {fileID: 11400000, guid: 19cb5489053d3e040884e2eb44615e00, type: 2}
 --- !u!114 &74199741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -125,7 +120,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   particle: {fileID: 11400000, guid: 0e364e0288417354cb8a7206ee771718, type: 2}
-  KineticSpeed: 0
   isPlaying: {fileID: 11400000, guid: 0a90e7b81bf1ab0489e1a40570cb9759, type: 2}
 --- !u!114 &74199742
 MonoBehaviour:
