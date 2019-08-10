@@ -22,10 +22,27 @@ public class PhotonDetector : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        GameObject thisPhotonDetected = Instantiate(photonDetectedLight, other.gameObject.transform.position, Quaternion.identity);
-        thisPhotonDetected.transform.rotation = other.transform.rotation;
-        photonDetected.Invoke();
-        Destroy(other.gameObject);
+        Debug.Log("particle detected");
+        GameObject particleDetected = Instantiate(photonDetectedLight, other.gameObject.transform.position, Quaternion.identity);
+        particleDetected.transform.rotation = other.transform.rotation;
+
+        if (other.tag == "photons")
+        {
+            photonDetected.Invoke();
+            particleDetected.GetComponent<Renderer>().material.color = Color.white;
+            particleDetected.GetComponent<Renderer>().material.SetColor("_EmissionColor", Color.white);
+        }
+        if (other.tag == "Proton")
+        {
+            particleDetected.GetComponent<Renderer>().material.color = Color.red;
+            particleDetected.GetComponent<Renderer>().material.SetColor("_EmissionColor", Color.red);
+        }   
+        if (other.tag == "electron")
+        {
+            particleDetected.GetComponent<Renderer>().material.color = Color.yellow;
+            particleDetected.GetComponent<Renderer>().material.SetColor("_EmissionColor", Color.yellow);
+        }
+
     }
 
     public void TurnOnCollider()

@@ -22,6 +22,7 @@ public class MasterControlScript : MonoBehaviour
     public Slider q2CanvasSlider, playbackCanvasSlider;
     public Button initialize, launch, teleport, play, pause;
     private float particlesCreated;
+    public VectorConstant electronStartPositionVector;
 
     // Start is called before the first frame update
     void Start()
@@ -40,6 +41,7 @@ public class MasterControlScript : MonoBehaviour
         particlesCreated = 0;
         q2slider.variable.value = 0;
         initializePointer.GetComponent<PointerMover>().MakeVisible();
+        electronStartPositionVector.vectorValue = electronStartPosition.position;
     }
 
     // Update is called once per frame
@@ -67,7 +69,7 @@ public class MasterControlScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.I))
         {
             CreateNewProtonAndElectron();
-            CreateNewObject(sensor, protonStartPosition);
+            CreateNewObject(sensor, protonStartPosition.position, protonStartPosition);
         }
 
         if (Input.GetKeyDown(KeyCode.R))
@@ -90,7 +92,7 @@ public class MasterControlScript : MonoBehaviour
         initialize.interactable = false;
         launch.interactable = true;
         CreateNewProtonAndElectron();
-        CreateNewObject(sensor, protonStartPosition);
+        CreateNewObject(sensor, protonStartPosition.position, protonStartPosition);
     }
 
     public void Launch()
@@ -150,8 +152,8 @@ public class MasterControlScript : MonoBehaviour
             }
 
             barrelState = BarrelState.full;
-            newProton = CreateNewObject(proton, protonStartPosition);
-            newElectron = CreateNewObject(electron, electronStartPosition);
+            newProton = CreateNewObject(proton, protonStartPosition.position, protonStartPosition);
+            newElectron = CreateNewObject(electron, electronStartPositionVector.vectorValue, electronStartPosition);
             StartCoroutine(ConnectProtonAndElectron(newProton, newElectron));
         }
     }
@@ -167,10 +169,10 @@ public class MasterControlScript : MonoBehaviour
         newElectron.GetComponent<ElectronController>().Proton = newProton;
     }
 
-    public GameObject CreateNewObject(GameObject objectType, Transform objectTransform)
+    public GameObject CreateNewObject(GameObject objectType, Vector3 objectTransformPosition, Transform objectTransform)
     {
         fallingSlerp = .03f;
-        Vector3 startPosition = objectTransform.position + new Vector3(0, fallingDistance, 0);
+        Vector3 startPosition = objectTransformPosition + new Vector3(0, fallingDistance, 0);
         GameObject createdObject = Instantiate(objectType, startPosition, objectTransform.rotation);
         StartCoroutine(MoveObject(createdObject));
         return createdObject;

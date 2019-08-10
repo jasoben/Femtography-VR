@@ -9,7 +9,7 @@ public class PointerMover : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        thisRenderer = GetComponent<Renderer>();
+        thisRenderer = GetComponentInChildren<Renderer>();
         thisRenderer.enabled = false;
     }
 

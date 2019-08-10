@@ -71,7 +71,7 @@ public class ProtonController : MonoBehaviour
         float y = Random.Range(photonAngle.newAngleLowBound.y, photonAngle.newAngleHighBound.y);
         float z = Random.Range(photonAngle.newAngleLowBound.z, photonAngle.newAngleHighBound.z);
         Quaternion newPhotonRotation = Quaternion.Euler(x, y, z);
-        GameObject newPhoton = Instantiate(photon, transform.position, newPhotonRotation);
+        GameObject newPhoton = Instantiate(photon, transform.position + new Vector3(0,0,24), newPhotonRotation);
         newPhoton.GetComponent<TransformObject>().KineticSpeed = 1;
         protonShell.enabled = true;
         protonLights.SetActive(true);

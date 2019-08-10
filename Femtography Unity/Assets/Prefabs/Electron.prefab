@@ -16,9 +16,9 @@ GameObject:
   - component: {fileID: 223031339745565418}
   - component: {fileID: 6427449714554098045}
   - component: {fileID: 7854175976721461854}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Electron
-  m_TagString: Untagged
+  m_TagString: electron
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -55,6 +55,10 @@ MonoBehaviour:
   photon: {fileID: 8760124801218385114, guid: fe16a844a01e05945ba1013b60efee8e, type: 3}
   photonCollider: {fileID: 2488975622159078730, guid: 27b7987a069631841b655be8dd9bc716,
     type: 3}
+  distanceToProtonReference:
+    UseConstant: 0
+    ConstantValue: 0
+    variable: {fileID: 11400000, guid: 6dc3dc8b230f666469b1a666f25d30d3, type: 2}
   particle: {fileID: 11400000, guid: 0e364e0288417354cb8a7206ee771718, type: 2}
   playerParticle: {fileID: 11400000, guid: 2c413960227b5ea4daa652bdf629c584, type: 2}
   photonBullet:
@@ -107,6 +111,8 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   firstPlayThroughGlobal: {fileID: 11400000, guid: 5f422cc68b8b5784998725bd2e80ee51,
     type: 2}
+  photonLaunchVector: {fileID: 11400000, guid: 5d0dfdb4f70678c4d9148c7f079f816c, type: 2}
+  startPosition: {fileID: 11400000, guid: 94b02b2b3705733488232bdb275a139d, type: 2}
 --- !u!114 &74199741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -120,6 +126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   particle: {fileID: 11400000, guid: 0e364e0288417354cb8a7206ee771718, type: 2}
+  KineticSpeed: 0
   isPlaying: {fileID: 11400000, guid: 0a90e7b81bf1ab0489e1a40570cb9759, type: 2}
 --- !u!114 &74199742
 MonoBehaviour:
@@ -236,7 +243,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2040432842861407317}
   - component: {fileID: 2040432842861407316}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -328,7 +335,7 @@ GameObject:
   - component: {fileID: 2040432843133082339}
   - component: {fileID: 2040432843133082338}
   - component: {fileID: 2040432843133082341}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
