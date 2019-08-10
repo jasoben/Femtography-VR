@@ -5,20 +5,26 @@ using UnityEngine;
 public class ResolutionController : MonoBehaviour
 {
     public FloatReference resolution;
-    public GameObject lightObject;
-    public Light spotLight;
-    public float multiplier, position;
+    public List<Material> resolutionStages;
+    public GameObject photoFilm;
+    private int particlesHit;
 
     // Start is called before the first frame update
     void Start()
     {
-        multiplier = 25;
-        position = 55;
+        particlesHit = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-        lightObject.transform.localPosition = new Vector3(0, position - resolution.Value * multiplier, 0);
+        photoFilm.GetComponent<Renderer>().material = resolutionStages[(int)(4 * resolution.Value)];
+        float ratio = particlesHit / 10f;
+        photoFilm.GetComponent<Renderer>().material.SetColor("_Color", new Color(1, 1, 1, ratio));
+    }
+
+    public void IncreaseParticles()
+    {
+        particlesHit++;
     }
 }
