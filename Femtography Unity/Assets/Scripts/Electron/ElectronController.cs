@@ -14,24 +14,24 @@ public class ElectronController : MonoBehaviour
         set { proton = value; }
     }
     public GameObject photon, photonCollider;
-    private float distanceToProton;
+    public FloatReference distanceToProtonReference;
     private bool photonLaunched, protonFound;
     public Particle particle, playerParticle;
     public UnityEvent photonBullet, pauseEverything, revealQuarks;
     public GlobalBool firstPlayThroughGlobal;
-
-
+    public VectorConstant photonLaunchVector;
+    private float distanceToProton;
 
     // Start is called before the first frame update
     void Start()
     {
         photonLaunched = false;
-        distanceToProton = 24;
     }
 
     // Update is called once per frame
     void Update()
     {
+        distanceToProton = distanceToProtonReference.Value * 60;
         if (proton != null && (Vector3.Distance(transform.position, proton.transform.position) < distanceToProton && !photonLaunched) || (transform.position.z > 1000f - distanceToProton && !photonLaunched))
         {
             LaunchPhoton();
@@ -53,7 +53,7 @@ public class ElectronController : MonoBehaviour
     public void LaunchPhoton()
     {
         photonLaunched = true;
-        GameObject photonBullet = Instantiate(photon, transform.position, Quaternion.Euler(0,0,90));
+        GameObject photonBullet = Instantiate(photon, transform.position + photonLaunchVector.vectorValue, Quaternion.Euler(0,0,90));
         photonBullet.GetComponent<TransformObject>().KineticSpeed = 1;
         Debug.Log(photonBullet.GetComponent<TransformObject>().KineticSpeed);
         
