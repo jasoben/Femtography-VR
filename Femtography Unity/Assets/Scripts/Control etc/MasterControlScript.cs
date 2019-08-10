@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class MasterControlScript : MonoBehaviour
 {
-    public GameObject proton, photon, electron, sensor, player;
+    public GameObject proton, photon, electron, sensor, player, initializePointer;
     public List<GameObject> quarks;
     private GameObject newProton, newElectron;
     public Transform photonStartPosition, electronStartPosition, protonStartPosition;
@@ -39,6 +39,7 @@ public class MasterControlScript : MonoBehaviour
         isPlaying.boolValue = true;
         particlesCreated = 0;
         q2slider.variable.value = 0;
+        initializePointer.GetComponent<PointerMover>().MakeVisible();
     }
 
     // Update is called once per frame
