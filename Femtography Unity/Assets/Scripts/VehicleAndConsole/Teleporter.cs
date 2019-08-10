@@ -35,6 +35,7 @@ public class Teleporter : MonoBehaviour
 
     public void GotoNextLocation()
     {
+        GetComponent<AudioSource>().PlayDelayed(.8f);
         computerGlass.SetActive(false);
         currentLocation++;
         if (currentLocation > teleportLocations.Count - 1)

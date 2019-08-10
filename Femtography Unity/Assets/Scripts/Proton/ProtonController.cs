@@ -13,6 +13,7 @@ public class ProtonController : MonoBehaviour
     public float minXAngle, maxXAngle, minYAngle, maxYAngle;
     public GlobalBool firstPlayThrough;
     public RandomAngle photonAngle;
+    public AudioSource collision;
 
     // Start is called before the first frame update
     void Start()
@@ -44,6 +45,9 @@ public class ProtonController : MonoBehaviour
         transform.rotation = newRotation;
         protonShell.enabled = false;
         protonLights.SetActive(false);
+        collision.time = .5f;
+        collision.Play();
+
     }
 
     public void RevealQuarks()
