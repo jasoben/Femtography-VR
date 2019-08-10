@@ -67,6 +67,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -136,11 +137,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7855858992830911844}
     m_Modifications:
-    - target: {fileID: 6039788107107555329, guid: eef3244d228075f47b3ed2d36776a8b1,
-        type: 3}
-      propertyPath: m_Name
-      value: QuarkLight
-      objectReference: {fileID: 0}
     - target: {fileID: 8323748485532867798, guid: eef3244d228075f47b3ed2d36776a8b1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -199,17 +195,22 @@ PrefabInstance:
     - target: {fileID: 8323748485532867798, guid: eef3244d228075f47b3ed2d36776a8b1,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 233.9253
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8323748485532867798, guid: eef3244d228075f47b3ed2d36776a8b1,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 233.9253
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8323748485532867798, guid: eef3244d228075f47b3ed2d36776a8b1,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 233.9253
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6039788107107555329, guid: eef3244d228075f47b3ed2d36776a8b1,
+        type: 3}
+      propertyPath: m_Name
+      value: QuarkLight
       objectReference: {fileID: 0}
     - target: {fileID: 1945065532323398168, guid: eef3244d228075f47b3ed2d36776a8b1,
         type: 3}
@@ -240,7 +241,7 @@ PrefabInstance:
     - target: {fileID: 2410828234464864766, guid: eef3244d228075f47b3ed2d36776a8b1,
         type: 3}
       propertyPath: m_Range
-      value: 6.08
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eef3244d228075f47b3ed2d36776a8b1, type: 3}
