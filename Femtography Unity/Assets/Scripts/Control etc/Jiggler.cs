@@ -6,12 +6,12 @@ public class Jiggler : MonoBehaviour
 {
     public float jiggleAmount, lerpAmount;
     private Vector3 newRandomLocation;
-    public FloatReference playbackSpeed;
+    public FloatReference playbackSpeed, q2;
     public bool insideSphere;
     // Start is called before the first frame update
     void Start()
     {
-        newRandomLocation = (insideSphere ? Random.insideUnitSphere : Random.onUnitSphere) * jiggleAmount;
+        newRandomLocation = (insideSphere ? Random.insideUnitSphere : Random.onUnitSphere) * jiggleAmount * q2.Value;
     }
 
     // Update is called once per frame
@@ -23,7 +23,7 @@ public class Jiggler : MonoBehaviour
         }
         else
         {
-            newRandomLocation = (insideSphere ? Random.insideUnitSphere : Random.onUnitSphere) * jiggleAmount;
+            newRandomLocation = (insideSphere ? Random.insideUnitSphere : Random.onUnitSphere) * jiggleAmount * (q2.Value+.2f);
         }
     }
 }

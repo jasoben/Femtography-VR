@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 9108058702746633525}
   - component: {fileID: 1170327864513006609}
   - component: {fileID: 7037682952113739288}
+  - component: {fileID: 7694028653893695043}
   m_Layer: 0
   m_Name: InnerQuark
   m_TagString: Untagged
@@ -28,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 3099151142764686804}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 20, y: 20, z: 20}
   m_Children:
   - {fileID: 8405987303521071678}
   m_Father: {fileID: 3364031614070728978}
@@ -67,6 +68,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -97,7 +99,24 @@ MonoBehaviour:
     UseConstant: 0
     ConstantValue: 0
     variable: {fileID: 11400000, guid: c13976bcb832ad14ea2881716f86cf7d, type: 2}
+  q2:
+    UseConstant: 0
+    ConstantValue: 0
+    variable: {fileID: 11400000, guid: e002644c9083b4e42a7dc48def63aebb, type: 2}
   insideSphere: 0
+--- !u!114 &7694028653893695043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3099151142764686804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac947ca0d1480774880de8d418577f6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particle: {fileID: 0}
 --- !u!1 &3738308587933847255
 GameObject:
   m_ObjectHideFlags: 0
@@ -240,7 +259,7 @@ PrefabInstance:
     - target: {fileID: 2410828234464864766, guid: eef3244d228075f47b3ed2d36776a8b1,
         type: 3}
       propertyPath: m_Range
-      value: 6.08
+      value: 5.12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eef3244d228075f47b3ed2d36776a8b1, type: 3}
