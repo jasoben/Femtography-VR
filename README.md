@@ -1,6 +1,6 @@
 # UVA SIWIF Simulation of Deeply Virtual Compton Scattering
 
-This simulation is designed to run on Oculus hardware. Currently this includes Oculus Quest and Oculus Rift. Oculus Go support and Vive support coming soon!
+This simulation is designed to run on Oculus hardware. Currently this includes Oculus Quest and Oculus Rift. (Oculus Go support and Vive support coming soon!)
 
 ## Oculus Rift
 
