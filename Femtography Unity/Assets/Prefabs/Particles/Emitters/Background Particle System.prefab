@@ -3758,8 +3758,7 @@ ParticleSystem:
     enabled: 1
     subEmitters:
     - serializedVersion: 3
-      emitter: {fileID: 301240648711150203, guid: 3ee018859ec0d784b8df84857523c5c5,
-        type: 3}
+      emitter: {fileID: 6825397222223099786}
       type: 0
       properties: 0
       emitProbability: 1
@@ -4767,6 +4766,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: ParticleCreated
       objectReference: {fileID: 0}
+    - target: {fileID: 301240648711150203, guid: 3ee018859ec0d784b8df84857523c5c5,
+        type: 3}
+      propertyPath: LightsModule.light
+      value: 
+      objectReference: {fileID: 7870689708588790113, guid: 79f3c1796d467e54d9263f2d835480a8,
+        type: 3}
     - target: {fileID: 4595835851809091323, guid: 3ee018859ec0d784b8df84857523c5c5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4822,11 +4827,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2346712966916568029, guid: 3ee018859ec0d784b8df84857523c5c5,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 86e0d8ca20953c741ba3f8565de29f32, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ee018859ec0d784b8df84857523c5c5, type: 3}
 --- !u!4 &7300658260217447178 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4595835851809091323, guid: 3ee018859ec0d784b8df84857523c5c5,
+    type: 3}
+  m_PrefabInstance: {fileID: 6527570024618372593}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &6825397222223099786 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 301240648711150203, guid: 3ee018859ec0d784b8df84857523c5c5,
     type: 3}
   m_PrefabInstance: {fileID: 6527570024618372593}
   m_PrefabAsset: {fileID: 0}
