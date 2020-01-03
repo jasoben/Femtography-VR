@@ -5,17 +5,11 @@ using UnityEngine;
 public class TestVisualSwitcher : MonoBehaviour
 {
     public GameObject objectOne, objectTwo;
-    GameObject currentObject;
     public float viewVectorAngle, moduloAngle;
-
-    bool switchObject, canISwitch;
 
     // Start is called before the first frame update
     void Start()
     {
-        canISwitch = true;
-        switchObject = true;
-        currentObject = objectOne;
     }
 
     // Update is called once per frame
@@ -25,43 +19,39 @@ public class TestVisualSwitcher : MonoBehaviour
         Vector3 objectForward = transform.forward;
         viewVectorAngle = Vector3.Angle(gazeDirection, objectForward);
 
-        if (Mathf.Floor(viewVectorAngle) % moduloAngle == 0 && canISwitch)
+        if (Mathf.Floor(viewVectorAngle / moduloAngle) % 2 == 0)
         {
-            canISwitch = false;
-            SwitchObject();
-        } else if (Mathf.Floor(viewVectorAngle) % moduloAngle != 0)
+            ChangeOpacity(objectOne);
+        } else if (Mathf.Floor(viewVectorAngle / moduloAngle) % 2 != 0)
         {
-            canISwitch = true;
-        }
-        
-        if (Mathf.Floor(viewVectorAngle + 5) % moduloAngle == 0)
-        {
-            var block = new MaterialPropertyBlock();
-            Color currentColor = currentObject.GetComponent<Renderer>().material.color;
-            currentColor.a = .1f;
-            block.SetColor("_BaseColor", currentColor);
-            currentObject.GetComponent<Renderer>().SetPropertyBlock(block);
+            ChangeOpacity(objectTwo);
         }
     }
 
-    void SwitchObject()
+    void ChangeOpacity(GameObject currentObject)
     {
-        switchObject = !switchObject;
+        var block = new MaterialPropertyBlock();
+        Color currentColor = currentObject.GetComponent<Renderer>().material.color;
 
-        currentObject.SetActive(false);
-
-        switch (switchObject)
+        for (int i = 0; i < 11; i++)
         {
-            case true:
-                currentObject = objectOne;
-                break;
-            case false:
-                currentObject = objectTwo;
-                break;
+            if (Mathf.Floor(viewVectorAngle + i) % moduloAngle == 0)
+            {
+                currentColor.a = i * .1f;
+            }
+        }
+            
+        for (int i = 10; i > -1; i--)
+        {
+            if (Mathf.Floor(viewVectorAngle - i) % moduloAngle == 0)
+            {
+                currentColor.a = i * .1f;
+            }
         }
 
-        currentObject.SetActive(true);
-
-
+        block.SetColor("_BaseColor", currentColor);
+        currentObject.GetComponent<Renderer>().SetPropertyBlock(block);
+            
     }
+
 }
