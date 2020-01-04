@@ -7,9 +7,20 @@ public class TestVisualSwitcher : MonoBehaviour
     public GameObject objectOne, objectTwo;
     public float viewVectorAngle, moduloAngle;
 
+    Renderer objectOneRenderer, objectTwoRenderer;
+    MaterialPropertyBlock objectOnePropertyBlock, objectTwoPropertyBlock;
+    Color objectOneColor, objectTwoColor;
+
     // Start is called before the first frame update
     void Start()
     {
+        objectOneRenderer = objectOne.GetComponent<Renderer>();
+        objectTwoRenderer = objectTwo.GetComponent<Renderer>();
+        objectOneColor = objectOneRenderer.material.GetColor("_BaseColor");
+        objectTwoColor = objectTwoRenderer.material.GetColor("_BaseColor");
+        objectOnePropertyBlock = new MaterialPropertyBlock();
+        objectTwoPropertyBlock = new MaterialPropertyBlock();
+
     }
 
     // Update is called once per frame
@@ -22,7 +33,9 @@ public class TestVisualSwitcher : MonoBehaviour
         if (Mathf.Floor(viewVectorAngle / moduloAngle) % 2 == 0)
         {
             ChangeOpacity(objectOne);
-        } else if (Mathf.Floor(viewVectorAngle / moduloAngle) % 2 != 0)
+        } 
+        
+        else if (Mathf.Floor((viewVectorAngle) / moduloAngle) % 2 != 0)
         {
             ChangeOpacity(objectTwo);
         }
@@ -30,27 +43,53 @@ public class TestVisualSwitcher : MonoBehaviour
 
     void ChangeOpacity(GameObject currentObject)
     {
-        var block = new MaterialPropertyBlock();
-        Color currentColor = currentObject.GetComponent<Renderer>().material.color;
-
-        for (int i = 0; i < 11; i++)
+        Color currentColor, otherColor;
+        
+        if (currentObject == objectOne)
         {
-            if (Mathf.Floor(viewVectorAngle + i) % moduloAngle == 0)
-            {
-                currentColor.a = i * .1f;
-            }
-        }
-            
-        for (int i = 10; i > -1; i--)
+            currentColor = objectOneColor;
+            otherColor = objectTwoColor;
+        } else
         {
-            if (Mathf.Floor(viewVectorAngle - i) % moduloAngle == 0)
-            {
-                currentColor.a = i * .1f;
-            }
+            currentColor = objectTwoColor;
+            otherColor = objectOneColor;
         }
 
-        block.SetColor("_BaseColor", currentColor);
-        currentObject.GetComponent<Renderer>().SetPropertyBlock(block);
+        float currentAngle = viewVectorAngle % moduloAngle;
+
+        if (currentAngle < 11)
+        {
+            currentColor.a = ((currentAngle / 2) + 5) * .1f;
+            otherColor.a = (10 - ((currentAngle / 2) + 5)) * .1f;
+        } 
+
+        float oppositeCurrentAngle = moduloAngle - currentAngle;
+
+        if (oppositeCurrentAngle < 11)
+        {
+            currentColor.a = ((oppositeCurrentAngle / 2) + 5) * .1f;
+            otherColor.a = (10 - ((oppositeCurrentAngle / 2) + 5)) * .1f;
+        } 
+        
+        else if (currentAngle >= 11 && oppositeCurrentAngle >= 11)
+        {
+            currentColor.a = 1f;
+            otherColor.a = 0f;
+        }
+
+        if (currentObject == objectOne)
+        {
+            objectOnePropertyBlock.SetColor("_BaseColor", currentColor);
+            objectTwoPropertyBlock.SetColor("_BaseColor", otherColor);
+        }
+        else
+        {
+            objectTwoPropertyBlock.SetColor("_BaseColor", currentColor);
+            objectOnePropertyBlock.SetColor("_BaseColor", otherColor);
+        }
+
+        objectOneRenderer.SetPropertyBlock(objectOnePropertyBlock);
+        objectTwoRenderer.SetPropertyBlock(objectTwoPropertyBlock);
             
     }
 
