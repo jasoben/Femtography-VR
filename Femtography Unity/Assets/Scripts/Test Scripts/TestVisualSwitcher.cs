@@ -6,18 +6,16 @@ public class TestVisualSwitcher : MonoBehaviour
 {
     public GameObject objectOne, objectTwo;
     public float viewVectorAngle, moduloAngle;
+    public string propertyToChange;
 
     Renderer objectOneRenderer, objectTwoRenderer;
     MaterialPropertyBlock objectOnePropertyBlock, objectTwoPropertyBlock;
-    Color objectOneColor, objectTwoColor;
 
     // Start is called before the first frame update
     void Start()
     {
         objectOneRenderer = objectOne.GetComponent<Renderer>();
         objectTwoRenderer = objectTwo.GetComponent<Renderer>();
-        objectOneColor = objectOneRenderer.material.GetColor("_BaseColor");
-        objectTwoColor = objectTwoRenderer.material.GetColor("_BaseColor");
         objectOnePropertyBlock = new MaterialPropertyBlock();
         objectTwoPropertyBlock = new MaterialPropertyBlock();
 
@@ -43,49 +41,39 @@ public class TestVisualSwitcher : MonoBehaviour
 
     void ChangeOpacity(GameObject currentObject)
     {
-        Color currentColor, otherColor;
+        float currentOpacity = 1, otherOpacity = 1;
         
-        if (currentObject == objectOne)
-        {
-            currentColor = objectOneColor;
-            otherColor = objectTwoColor;
-        } else
-        {
-            currentColor = objectTwoColor;
-            otherColor = objectOneColor;
-        }
-
         float currentAngle = viewVectorAngle % moduloAngle;
 
         if (currentAngle < 11)
         {
-            currentColor.a = ((currentAngle / 2) + 5) * .1f;
-            otherColor.a = (10 - ((currentAngle / 2) + 5)) * .1f;
+            currentOpacity = ((currentAngle / 2) + 5) * .1f;
+            otherOpacity = (10 - ((currentAngle / 2) + 5)) * .1f;
         } 
 
         float oppositeCurrentAngle = moduloAngle - currentAngle;
 
         if (oppositeCurrentAngle < 11)
         {
-            currentColor.a = ((oppositeCurrentAngle / 2) + 5) * .1f;
-            otherColor.a = (10 - ((oppositeCurrentAngle / 2) + 5)) * .1f;
+            currentOpacity = ((oppositeCurrentAngle / 2) + 5) * .1f;
+            otherOpacity = (10 - ((oppositeCurrentAngle / 2) + 5)) * .1f;
         } 
         
         else if (currentAngle >= 11 && oppositeCurrentAngle >= 11)
         {
-            currentColor.a = 1f;
-            otherColor.a = 0f;
+            currentOpacity = 1f;
+            otherOpacity = 0f;
         }
 
         if (currentObject == objectOne)
         {
-            objectOnePropertyBlock.SetColor("_BaseColor", currentColor);
-            objectTwoPropertyBlock.SetColor("_BaseColor", otherColor);
+            objectOnePropertyBlock.SetFloat(propertyToChange, currentOpacity);
+            objectTwoPropertyBlock.SetFloat(propertyToChange, otherOpacity);
         }
         else
         {
-            objectTwoPropertyBlock.SetColor("_BaseColor", currentColor);
-            objectOnePropertyBlock.SetColor("_BaseColor", otherColor);
+            objectTwoPropertyBlock.SetFloat(propertyToChange, currentOpacity);
+            objectOnePropertyBlock.SetFloat(propertyToChange, otherOpacity);
         }
 
         objectOneRenderer.SetPropertyBlock(objectOnePropertyBlock);
