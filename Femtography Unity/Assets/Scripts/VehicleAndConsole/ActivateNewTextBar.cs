@@ -32,8 +32,6 @@ public class ActivateNewTextBar : MonoBehaviour
         {
             float newX = newTextBar.transform.localScale.x;
             newTextBar.transform.localScale = new Vector3(newX + growthRate, .143f, 1);
-            Debug.Log(growing.ToString());
-                Debug.Log(newX.ToString());
             if (newX > 1 && growing)
             {
                 growing = false;

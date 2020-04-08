@@ -10,13 +10,14 @@ GameObject:
   m_Component:
   - component: {fileID: 5021555490216778837}
   - component: {fileID: 3792544547085788534}
+  - component: {fileID: 1317511761}
   m_Layer: 0
   m_Name: 2D Quarks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5021555490216778837
 Transform:
   m_ObjectHideFlags: 0
@@ -49,10 +50,40 @@ MonoBehaviour:
     UseConstant: 0
     ConstantValue: 0
     variable: {fileID: 11400000, guid: e002644c9083b4e42a7dc48def63aebb, type: 2}
-  lightObject: {fileID: 0}
-  spotLight: {fileID: 0}
-  multiplier: 0
-  position: 0
+  resolutionStages:
+  - {fileID: 2100000, guid: aa2286d93801fa549bf7688d6bfaf02c, type: 2}
+  - {fileID: 2100000, guid: 4955f2da3ead21d48882b56d69ece95b, type: 2}
+  - {fileID: 2100000, guid: f532868c5f4670e49a07481d5c7a6805, type: 2}
+  - {fileID: 2100000, guid: c9c8290bf42445448b6035d385332a7b, type: 2}
+  - {fileID: 2100000, guid: ecf2119af78e25248a1abbab50bf111f, type: 2}
+  photoFilm: {fileID: 7486493016737888329}
+--- !u!114 &1317511761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5754508740649845406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86dd175dc768941409f779cc3531c879, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: c77c9c6290784844eb17cd33ac1e4218, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3792544547085788534}
+        m_MethodName: IncreaseParticles
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5764082830081255430
 GameObject:
   m_ObjectHideFlags: 0
@@ -92,10 +123,11 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5764082830081255430}
   m_Enabled: 1
-  serializedVersion: 9
+  serializedVersion: 10
   m_Type: 1
+  m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.41
+  m_Intensity: 1.21
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -132,12 +164,12 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 8192
   m_RenderingLayerMask: 1
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
+  m_BounceIntensity: 2.24
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
@@ -199,6 +231,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
