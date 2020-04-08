@@ -43,6 +43,7 @@ public class PhotonDetector : MonoBehaviour
         {
             particleDetected.GetComponent<Renderer>().material.color = Color.yellow;
             particleDetected.GetComponent<Renderer>().material.SetColor("_EmissionColor", Color.yellow);
+            Destroy(other.gameObject);
         }
 
     }

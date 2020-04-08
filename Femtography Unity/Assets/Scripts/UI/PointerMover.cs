@@ -18,7 +18,8 @@ public class PointerMover : MonoBehaviour
 
     public void MakeVisible()
     {
-        thisRenderer.enabled = true;
+        if (thisRenderer != null)
+            thisRenderer.enabled = true;
     }
 
     public void MakeInvisible()
