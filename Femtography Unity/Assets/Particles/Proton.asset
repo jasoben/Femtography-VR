@@ -15,7 +15,7 @@ MonoBehaviour:
   particleMaterial: {fileID: 2100000, guid: 87b874e46fe9a4b45a9ce62b2d8e9120, type: 2}
   opacity:
     UseConstant: 1
-    ConstantValue: 1
+    ConstantValue: 0.1
     variable: {fileID: 0}
   playbackSpeed:
     UseConstant: 0
@@ -26,3 +26,7 @@ MonoBehaviour:
   opacityChanged:
     m_PersistentCalls:
       m_Calls: []
+  transparentShader: {fileID: -6465566751694194690, guid: 662008cbb7e0e224890ac423feea73bd,
+    type: 3}
+  opaqueShader: {fileID: -6465566751694194690, guid: 1a19d4a4bc27aa348ac98bb866322bd3,
+    type: 3}

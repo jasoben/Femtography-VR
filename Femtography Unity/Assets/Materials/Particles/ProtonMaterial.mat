@@ -21,7 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: ProtonMaterial
-  m_Shader: {fileID: -6465566751694194690, guid: 1a19d4a4bc27aa348ac98bb866322bd3,
+  m_Shader: {fileID: -6465566751694194690, guid: 662008cbb7e0e224890ac423feea73bd,
     type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -63,11 +63,12 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - Emitter: 0
+    - HoleOpacity: 1.2
     - Jiggle: 10
     - JiggleAmount: 0.01
-    - Opacity: 0.28
-    - Vector1_8912F910: 8
-    - Vector1_B8D3AE94: 8
+    - Opacity: 1
+    - Vector1_8912F910: 5.74
+    - Vector1_B8D3AE94: 2.98
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -90,8 +91,8 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - Color_6E7273DD: {r: 0.6697668, g: 0.8207547, b: 0.7997258, a: 0}
-    - RandomSeed: {r: 94, g: 58, b: 50, a: 53}
+    - Color_6E7273DD: {r: 0.122641504, g: 0.122641504, b: 0.122641504, a: 0}
+    - RandomSeed: {r: 19, g: 72, b: 74, a: 76}
     - _BaseColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}

@@ -11,11 +11,11 @@ public class Particle : ScriptableObject
     public float speed, normalSpeed;
     public UnityEvent opacityChanged;
     private float bufferSpeed;
+    public Shader transparentShader, opaqueShader;
 
     void OnEnable()
     {
         particleMaterial.SetVector("RandomSeed", new Vector4(Random.Range(0, 100), Random.Range(0, 100), Random.Range(0, 100), Random.Range(0, 100)));
-        particleMaterial.SetFloat("Opacity", 1);
     }
 
     public void Pause()

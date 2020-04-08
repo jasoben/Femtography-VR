@@ -13,7 +13,7 @@ public class MasterControlScript : MonoBehaviour
     private GameObject newProton, newElectron;
     public Transform photonStartPosition, electronStartPosition, protonStartPosition;
     public Particle protonParticle, electronParticle, photonParticle, playerParticle;
-    public UnityEvent StartPlaying, StopPlaying, basicInstructions, teleporterUnlocked, dimProton, launchElectron;
+    public UnityEvent StartPlaying, StopPlaying, basicInstructions, teleporterUnlocked, dimProton, launchElectron, initializeEvent;
     public float fallingTime, fallingDistance, fallingSlerp;
     private bool hasFallen;
     private BarrelState barrelState;
@@ -67,6 +67,11 @@ public class MasterControlScript : MonoBehaviour
         {
             CreateNewProtonAndElectron();
             StartCoroutine(SettleParticlesFastAndLaunch());
+            if (particlesCreated < 2)
+            {
+                Debug.Log("stuff");
+                initializeEvent.Invoke();
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.I))

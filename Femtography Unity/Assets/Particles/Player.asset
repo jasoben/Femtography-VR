@@ -12,10 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faeadd71604e03f41815fae6a29f1466, type: 3}
   m_Name: Player
   m_EditorClassIdentifier: 
-  particleMaterial: {fileID: 2100000, guid: 55b0d074c3838ef47be60ac5d14db071, type: 2}
-  particleOpqMaterial: {fileID: 2100000, guid: 8bd1bd211c83b374fb1a4b6484c66e32, type: 2}
-  particleFadeMaterial: {fileID: 2100000, guid: 55b0d074c3838ef47be60ac5d14db071,
-    type: 2}
+  particleMaterial: {fileID: 2100000, guid: 4bc3e632817e2f940bc587be3eed18f5, type: 2}
   opacity:
     UseConstant: 1
     ConstantValue: 0
@@ -29,5 +26,7 @@ MonoBehaviour:
   opacityChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+  transparentShader: {fileID: -6465566751694194690, guid: 662008cbb7e0e224890ac423feea73bd,
+    type: 3}
+  opaqueShader: {fileID: -6465566751694194690, guid: 1a19d4a4bc27aa348ac98bb866322bd3,
+    type: 3}
