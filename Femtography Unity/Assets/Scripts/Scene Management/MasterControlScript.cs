@@ -9,10 +9,11 @@ public class MasterControlScript : MonoBehaviour
 {
     public GameObject proton, photon, electron, sensor, player, initializePointer;
     public List<GameObject> quarks;
+    public bool enable2DQuarks;
     private GameObject newProton, newElectron;
     public Transform photonStartPosition, electronStartPosition, protonStartPosition;
     public Particle protonParticle, electronParticle, photonParticle, playerParticle;
-    public UnityEvent StartPlaying, StopPlaying, basicInstructions, teleporterUnlocked, dimProton;
+    public UnityEvent StartPlaying, StopPlaying, basicInstructions, teleporterUnlocked, dimProton, launchElectron;
     public float fallingTime, fallingDistance, fallingSlerp;
     private bool hasFallen;
     private BarrelState barrelState;
@@ -82,9 +83,13 @@ public class MasterControlScript : MonoBehaviour
 
     public void RevealTheQuarks()
     {
-        foreach(GameObject quark in quarks)
+
+        if (enable2DQuarks)
         {
-            quark.SetActive(true);
+            foreach (GameObject quark in quarks)
+            {
+                quark.SetActive(true);
+            }
         }
     }
 
@@ -153,6 +158,7 @@ public class MasterControlScript : MonoBehaviour
         yield return new WaitUntil(() => hasFallen);
         newElectron.GetComponent<TransformObject>().KineticSpeed = 1;
         player.GetComponent<TransformObject>().KineticSpeed = 1;
+        launchElectron.Invoke();
     }
 
     public void CreateNewProtonAndElectron()

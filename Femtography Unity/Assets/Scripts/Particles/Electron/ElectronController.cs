@@ -13,7 +13,7 @@ public class ElectronController : MonoBehaviour
         get { return proton; }
         set { proton = value; }
     }
-    public GameObject photon, photonCollider;
+    public GameObject photon, photonCollider, labelText;
     public FloatReference distanceToProtonReference;
     private bool photonLaunched, protonFound;
     public Particle particle, playerParticle;
@@ -55,6 +55,11 @@ public class ElectronController : MonoBehaviour
         photonLaunched = true;
         GameObject photonBullet = Instantiate(photon, transform.position + photonLaunchVector.vectorValue, Quaternion.Euler(0, 0, 90));
         photonBullet.GetComponent<TransformObject>().KineticSpeed = 1;
+    }
+
+    public void HideLabel()
+    {
+        labelText.SetActive(false); 
     }
 
     public void DeflectElectron()

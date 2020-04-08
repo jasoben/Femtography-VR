@@ -42,7 +42,6 @@ public class ActivateNewTextBar : MonoBehaviour
                 newTextBar.transform.localScale = new Vector3(0, .143f, 1);
                 growthRate = -growthRate;
                 newTextBar.SetActive(false);
-                Debug.Log("Done");
                 break;
             }
             yield return new WaitForEndOfFrame();
