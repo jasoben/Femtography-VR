@@ -81,7 +81,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2075622747770860306}
-  - component: {fileID: 1831078078164427345}
   - component: {fileID: 7593396600127503488}
   m_Layer: 0
   m_Name: InnerQuarkPair
@@ -106,25 +105,6 @@ Transform:
   m_Father: {fileID: 4145514984677074341}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1831078078164427345
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3046005611062126158}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdcc2c13a4dd8484ea340101d94fc293, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jiggleAmount: 1.5
-  lerpAmount: 0.1
-  playbackSpeed:
-    UseConstant: 0
-    ConstantValue: 0
-    variable: {fileID: 11400000, guid: c13976bcb832ad14ea2881716f86cf7d, type: 2}
-  insideSphere: 1
 --- !u!114 &7593396600127503488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -193,10 +173,11 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 68fb413263e66f948a79f2027353e98a, type: 2}
+  - {fileID: 2100000, guid: 21ac38a98b02f68419cd0c1568a72715, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -285,10 +266,11 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: cdf6004ca9dc90b47a4bdb145db1168f, type: 2}
+  - {fileID: 2100000, guid: 71ec56b4cd877cf449ed2da1f54efb96, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
