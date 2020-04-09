@@ -24,7 +24,11 @@ public class PhotonDetector : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         GameObject particleDetected = Instantiate(photonDetectedLight, other.gameObject.transform.position, Quaternion.identity);
-        particleDetected.transform.rotation = other.transform.rotation;
+        Vector3 towardsCenter = gameObject.transform.position - GetComponent<MeshCollider>().ClosestPoint(other.transform.position);
+        Vector3 upDirection = new Vector3(0, 0, 1100) - GetComponent<MeshCollider>().ClosestPoint(other.transform.position);
+        Quaternion thisRotation = Quaternion.LookRotation(towardsCenter, upDirection);
+        particleDetected.transform.rotation = thisRotation;
+        
 
         if  (other.tag == "photonCollider")
         {
@@ -67,4 +71,8 @@ public class PhotonDetector : MonoBehaviour
         GetComponent<MeshCollider>().enabled = true;
     }
     
+    public void TurnOffCollider()
+    {
+        GetComponent<MeshCollider>().enabled = false;
+    }
 }

@@ -11,7 +11,7 @@ public class MasterControlScript : MonoBehaviour
     public List<GameObject> quarks;
     public bool enable2DQuarks;
     private GameObject newProton, newElectron;
-    public Transform photonStartPosition, electronStartPosition, protonStartPosition;
+    public Transform photonStartPosition, electronStartPosition, protonStartPosition, sensorStartPosition;
     public Particle protonParticle, electronParticle, photonParticle, playerParticle;
     public UnityEvent StartPlaying, StopPlaying, basicInstructions, teleporterUnlocked, dimProton, launchElectron, initializeEvent;
     public float fallingTime, fallingDistance, fallingSlerp;
@@ -45,12 +45,12 @@ public class MasterControlScript : MonoBehaviour
         play.interactable = false;
         pause.interactable = false;
         electronStartPositionVector.vectorValue = electronStartPosition.position;
+        playbackCanvasSlider.value = 1.5f;
     }
 
     // Update is called once per frame
     void Update()
     {
-
         playbackSpeed.variable.value = playbackCanvasSlider.value;
         q2slider.variable.value = q2CanvasSlider.value;
 
@@ -76,12 +76,29 @@ public class MasterControlScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.I))
         {
             CreateNewProtonAndElectron();
-            CreateNewObject(sensor, protonStartPosition.position, protonStartPosition);
+            CreateNewObject(sensor, sensorStartPosition.position, sensorStartPosition);
         }
 
         if (Input.GetKeyDown(KeyCode.R))
         {
             SceneManager.LoadScene(0);
+        }
+
+        if (Input.GetKey(KeyCode.Y))
+        {
+            q2CanvasSlider.value += .01f;
+        }
+        if (Input.GetKey(KeyCode.H))
+        {
+            q2CanvasSlider.value -= .01f;
+        }
+        if (Input.GetKey(KeyCode.T))
+        {
+            playbackCanvasSlider.value += .01f;
+        }
+        if (Input.GetKey(KeyCode.G))
+        {
+            playbackCanvasSlider.value -= .01f;
         }
     }
 
