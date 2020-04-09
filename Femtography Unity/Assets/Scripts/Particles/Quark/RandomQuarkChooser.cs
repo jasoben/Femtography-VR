@@ -15,6 +15,8 @@ public class RandomQuarkChooser : MonoBehaviour
         int randomPair = Random.Range(0, 3);
         transform.GetChild(0).GetChild(0).GetComponent<SetMaterial>().particle = theseParticlePairs[randomPair].particles[0];
         transform.GetChild(0).GetChild(1).GetComponent<SetMaterial>().particle = theseParticlePairs[randomPair].particles[1];
+        transform.GetChild(0).GetChild(0).GetComponent<SetMaterial>().SwitchShaderOpaque();
+        transform.GetChild(0).GetChild(1).GetComponent<SetMaterial>().SwitchShaderOpaque();
     }
 }
 [System.Serializable]

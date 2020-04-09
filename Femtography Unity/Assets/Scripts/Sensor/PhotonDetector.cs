@@ -36,13 +36,28 @@ public class PhotonDetector : MonoBehaviour
         }
         else if (other.tag == "Proton")
         {
+            particleDetected.transform.localScale = new Vector3(20, 20, 1);
+            particleDetected.transform.Translate(new Vector3(0,0,10), Space.Self);
             particleDetected.GetComponent<Renderer>().material.color = Color.red;
             particleDetected.GetComponent<Renderer>().material.SetColor("_EmissionColor", Color.red);
+            other.gameObject.GetComponent<Renderer>().enabled = false;
+            
+            Renderer[] theseRenderers = other.gameObject.GetComponentsInChildren<Renderer>();
+            foreach (Renderer thisRenderer in theseRenderers)
+            {
+                thisRenderer.enabled = false;
+            }
         }   
         else if (other.tag == "electron")
         {
             particleDetected.GetComponent<Renderer>().material.color = Color.yellow;
             particleDetected.GetComponent<Renderer>().material.SetColor("_EmissionColor", Color.yellow);
+            
+            Renderer[] theseRenderers = other.gameObject.GetComponentsInChildren<Renderer>();
+            foreach (Renderer thisRenderer in theseRenderers)
+            {
+                thisRenderer.enabled = false;
+            }
         }
 
     }

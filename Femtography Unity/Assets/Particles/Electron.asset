@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faeadd71604e03f41815fae6a29f1466, type: 3}
   m_Name: Electron
   m_EditorClassIdentifier: 
-  particleMaterial: {fileID: 2100000, guid: d416ef997c7c36547b9699b0b6ee9c9e, type: 2}
+  particleMaterialOpaque: {fileID: 2100000, guid: d416ef997c7c36547b9699b0b6ee9c9e,
+    type: 2}
+  particleMaterialTransparent: {fileID: 2100000, guid: d416ef997c7c36547b9699b0b6ee9c9e,
+    type: 2}
   opacity:
     UseConstant: 1
     ConstantValue: 0
@@ -26,7 +29,3 @@ MonoBehaviour:
   opacityChanged:
     m_PersistentCalls:
       m_Calls: []
-  transparentShader: {fileID: -6465566751694194690, guid: 662008cbb7e0e224890ac423feea73bd,
-    type: 3}
-  opaqueShader: {fileID: -6465566751694194690, guid: 1a19d4a4bc27aa348ac98bb866322bd3,
-    type: 3}

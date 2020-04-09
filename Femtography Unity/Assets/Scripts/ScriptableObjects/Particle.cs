@@ -6,16 +6,15 @@ using UnityEngine.Events;
 [CreateAssetMenu]
 public class Particle : ScriptableObject
 {
-    public Material particleMaterial;
+    public Material particleMaterialOpaque, particleMaterialTransparent;
     public FloatReference opacity, playbackSpeed;
     public float speed, normalSpeed;
     public UnityEvent opacityChanged;
     private float bufferSpeed;
-    public Shader transparentShader, opaqueShader;
 
     void OnEnable()
     {
-        particleMaterial.SetVector("RandomSeed", new Vector4(Random.Range(0, 100), Random.Range(0, 100), Random.Range(0, 100), Random.Range(0, 100)));
+        particleMaterialTransparent.SetVector("RandomSeed", new Vector4(Random.Range(0, 100), Random.Range(0, 100), Random.Range(0, 100), Random.Range(0, 100)));
     }
 
     public void Pause()

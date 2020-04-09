@@ -5,21 +5,19 @@ using UnityEngine.Events;
 
 public class ProtonController : MonoBehaviour
 {
-    private Animator protonAnimator;
-    public Renderer protonShell;
-    public GameObject photon, photonCollider, protonLights;
+    public GameObject photon, photonCollider, protonLights, idText;
+    public GameObject[] quarks;
     public UnityEvent collisionWithProton, protonCreated, quarksRevealed, secondPhotonLaunched;
     public Particle particle;
     public float minXAngle, maxXAngle, minYAngle, maxYAngle;
     public GlobalBool firstPlayThrough;
     public RandomAngle photonAngle;
     public AudioSource collision;
+    public FloatReference q2;
 
     // Start is called before the first frame update
     void Start()
     {
-        protonShell = GetComponent<Renderer>();
-        protonAnimator = GetComponent<Animator>();
         if (firstPlayThrough.boolValue)
         {
             particle.opacity.ConstantValue = 1f;
@@ -28,22 +26,42 @@ public class ProtonController : MonoBehaviour
         {
             particle.opacity.ConstantValue = .1f;
         }
+        
+        idText.GetComponent<MeshRenderer>().enabled = false;
     }
+
+    public void ShowText()
+    {
+        idText.GetComponent<MeshRenderer>().enabled = true;
+    }
+
 
     // Update is called once per frame
     void Update()
     {
+        if (q2.Value > .2f)
+        {
+            foreach (GameObject quark in quarks)
+            {
+                quark.SetActive(false);
+            }
+        }
+        else
+        {
+            foreach (GameObject quark in quarks)
+            {
+                quark.SetActive(true);
+            }
+        }
     }
 
     public void DeformAndMoveProton()
     {
-        protonAnimator.Play("DeformProton", 0, 0);
         float newXAngle = Random.Range(minXAngle, maxXAngle);
         float newYAngle = Random.Range(minYAngle, maxYAngle);
         Quaternion newRotation = Quaternion.Euler(newXAngle, newYAngle, transform.rotation.eulerAngles.z);
         GetComponent<TransformObject>().KineticSpeed = 1;
         transform.rotation = newRotation;
-        protonShell.enabled = false;
         protonLights.SetActive(false);
         collision.time = .5f;
         collision.Play();
@@ -77,7 +95,6 @@ public class ProtonController : MonoBehaviour
         Quaternion newPhotonRotation = Quaternion.Euler(x, y, z);
         GameObject newPhoton = Instantiate(photon, transform.position + new Vector3(0,0,24), newPhotonRotation);
         newPhoton.GetComponent<TransformObject>().KineticSpeed = 1;
-        protonShell.enabled = true;
         protonLights.SetActive(true);
         Invoke("SecondPhotonLaunched", .5f);
     }

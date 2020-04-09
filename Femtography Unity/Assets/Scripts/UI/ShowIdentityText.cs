@@ -19,4 +19,5 @@ public class ShowIdentityText : MonoBehaviour
             gameObject.SetActive(false);
         transform.rotation = Quaternion.LookRotation((transform.position - console.transform.position), Vector3.up);
     }
+
 }

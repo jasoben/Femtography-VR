@@ -10,22 +10,24 @@ public class SetMaterial : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        particleMaterial = particle.particleMaterialTransparent;
     }
     void Update()
     {
-        particleMaterial = particle.particleMaterial;
         GetComponent<Renderer>().material = particleMaterial;
     }
 
     public void SwitchShaderTransparent()
     {
-        particleMaterial.shader = particle.transparentShader;
-        particleMaterial.renderQueue = 4000;
+        particleMaterial = particle.particleMaterialOpaque;
+        particleMaterial.SetFloat("Opacity", .2f);
+        particleMaterial.SetFloat("HoleOpacity", .2f);
     }
 
     public void SwitchShaderOpaque()
     {
-        particleMaterial.shader = particle.opaqueShader;
-        particleMaterial.renderQueue = 3000;
+        particleMaterial = particle.particleMaterialOpaque;
+        particleMaterial.SetFloat("Opacity", 1f);
+        particleMaterial.SetFloat("HoleOpacity", .8f);
     }
 }

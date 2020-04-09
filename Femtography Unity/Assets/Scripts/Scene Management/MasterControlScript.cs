@@ -69,7 +69,6 @@ public class MasterControlScript : MonoBehaviour
             StartCoroutine(SettleParticlesFastAndLaunch());
             if (particlesCreated < 2)
             {
-                Debug.Log("stuff");
                 initializeEvent.Invoke();
             }
         }
