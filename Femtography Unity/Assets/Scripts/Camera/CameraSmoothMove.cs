@@ -132,7 +132,7 @@ public class CameraSmoothMove : MonoBehaviour
 
         if (Input.GetKeyUp(KeyCode.M))
         {
-            GetComponent<MouseLook>().enabled = !GetComponent<MouseLook>().enabled;
+            //GetComponent<MouseLook>().enabled = !GetComponent<MouseLook>().enabled;
         }
         gameObject.transform.Translate(cameraMoveDirection);
     }
