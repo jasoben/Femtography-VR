@@ -16,6 +16,7 @@ public class TestMeshCollisionSensor : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         GetComponent<Renderer>().SetPropertyBlock(materialPropertyBlock);
+        Debug.Log("stuff");
     }
 
     private void OnCollisionEnter(Collision collision)
