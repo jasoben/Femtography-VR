@@ -59,6 +59,7 @@ MonoBehaviour:
   photonCollider: {fileID: 2488975622159078730, guid: 27b7987a069631841b655be8dd9bc716,
     type: 3}
   labelText: {fileID: 4952053725460844950}
+  electronMaterial: {fileID: 2100000, guid: d416ef997c7c36547b9699b0b6ee9c9e, type: 2}
   distanceToProtonReference:
     UseConstant: 0
     ConstantValue: 0
@@ -362,7 +363,7 @@ GameObject:
   - component: {fileID: 2040432843133082338}
   - component: {fileID: 2040432843133082341}
   m_Layer: 12
-  m_Name: Sphere
+  m_Name: PhysicalParticle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -631,6 +632,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []

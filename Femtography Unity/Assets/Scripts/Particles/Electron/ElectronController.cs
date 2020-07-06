@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class ElectronController : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class ElectronController : MonoBehaviour
         set { proton = value; }
     }
     public GameObject photon, photonCollider, labelText;
+    public Material electronMaterial;
+
     public FloatReference distanceToProtonReference;
     private bool photonLaunched, protonFound;
     public Particle particle, playerParticle;
@@ -41,6 +44,12 @@ public class ElectronController : MonoBehaviour
                 Invoke("PauseTheSystemForFirstPlayThrough", .2f);
             playerParticle.normalSpeed = 0;
         }
+
+        // Change the visual "spin" speed of the electron based on playback speed
+
+        //electronMaterial.SetFloat("Speed_", particle.speed);
+
+        DebugUI.ShowText("particle speed", playerParticle.speed.ToString());
 
     }
 
