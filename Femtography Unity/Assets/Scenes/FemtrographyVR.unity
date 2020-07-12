@@ -949,7 +949,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-87790
+  m_Name: pb_Mesh-1314
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1580,6 +1580,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1114507217}
     m_Modifications:
+    - target: {fileID: 7597828, guid: 632e41e39fee12e468109b1b9971e8e7, type: 3}
+      propertyPath: playbackSpeed.variableSlider
+      value: 
+      objectReference: {fileID: 11400000, guid: c13976bcb832ad14ea2881716f86cf7d,
+        type: 2}
     - target: {fileID: 1067376062, guid: 632e41e39fee12e468109b1b9971e8e7, type: 3}
       propertyPath: m_PlayOnAwake
       value: 0
@@ -1895,6 +1900,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player Vehicle
       objectReference: {fileID: 0}
+    - target: {fileID: 4805049509398700073, guid: b9623f000689cf943b5158810deff7c8,
+        type: 3}
+      propertyPath: m_MaxValue
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4805049509398700073, guid: b9623f000689cf943b5158810deff7c8,
+        type: 3}
+      propertyPath: m_Value
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4805049509435485553, guid: b9623f000689cf943b5158810deff7c8,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -1940,7 +1955,8 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4805049509387008962, guid: b9623f000689cf943b5158810deff7c8, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b9623f000689cf943b5158810deff7c8, type: 3}
 --- !u!1 &4805049509699699699 stripped
 GameObject:

@@ -8,13 +8,19 @@ public class FloatReference
     public bool UseConstant = true;
     [Range(0,1)]
     public float ConstantValue;
-    public VariableSlider variable;
+    public VariableSlider variableSlider;
 
     public float Value
     {
         get
         {
-            return UseConstant ? ConstantValue : variable.value;
+            return UseConstant ? ConstantValue : variableSlider.value;
+        }
+
+        set 
+        {
+            ConstantValue = value;
+            variableSlider.value = value;
         }
     }
 }

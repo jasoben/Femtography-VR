@@ -66,6 +66,7 @@ MonoBehaviour:
   photonStartPosition: {fileID: 0}
   electronStartPosition: {fileID: 0}
   protonStartPosition: {fileID: 0}
+  sensorStartPosition: {fileID: 0}
   protonParticle: {fileID: 11400000, guid: a9de51837e4c7b04185b019d8da4d8e9, type: 2}
   electronParticle: {fileID: 11400000, guid: 0e364e0288417354cb8a7206ee771718, type: 2}
   photonParticle: {fileID: 11400000, guid: e7c1fd323ce1cee40b934cb60fd365bd, type: 2}
@@ -143,6 +144,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  initializeEvent:
+    m_PersistentCalls:
+      m_Calls: []
   fallingTime: 0.5
   fallingDistance: 100
   fallingSlerp: 0
@@ -151,11 +155,11 @@ MonoBehaviour:
   q2slider:
     UseConstant: 0
     ConstantValue: 0
-    variable: {fileID: 11400000, guid: e002644c9083b4e42a7dc48def63aebb, type: 2}
+    variableSlider: {fileID: 11400000, guid: e002644c9083b4e42a7dc48def63aebb, type: 2}
   playbackSpeed:
     UseConstant: 0
     ConstantValue: 0
-    variable: {fileID: 11400000, guid: c13976bcb832ad14ea2881716f86cf7d, type: 2}
+    variableSlider: {fileID: 11400000, guid: c13976bcb832ad14ea2881716f86cf7d, type: 2}
   q2CanvasSlider: {fileID: 0}
   playbackCanvasSlider: {fileID: 0}
   initialize: {fileID: 0}
@@ -231,16 +235,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d6d4472693b7644c85ea70294d4c3c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particles:
-  - {fileID: 11400000, guid: 0e364e0288417354cb8a7206ee771718, type: 2}
-  - {fileID: 11400000, guid: a9de51837e4c7b04185b019d8da4d8e9, type: 2}
-  - {fileID: 11400000, guid: 2c413960227b5ea4daa652bdf629c584, type: 2}
-  - {fileID: 11400000, guid: e7c1fd323ce1cee40b934cb60fd365bd, type: 2}
   playbackSpeed:
     UseConstant: 0
     ConstantValue: 0
-    variable: {fileID: 11400000, guid: c13976bcb832ad14ea2881716f86cf7d, type: 2}
-  isPlaying: {fileID: 11400000, guid: 0a90e7b81bf1ab0489e1a40570cb9759, type: 2}
+    variableSlider: {fileID: 11400000, guid: c13976bcb832ad14ea2881716f86cf7d, type: 2}
 --- !u!114 &8634136301916861288
 MonoBehaviour:
   m_ObjectHideFlags: 0

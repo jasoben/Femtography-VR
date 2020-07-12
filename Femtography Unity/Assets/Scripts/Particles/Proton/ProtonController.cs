@@ -60,12 +60,10 @@ public class ProtonController : MonoBehaviour
         float newXAngle = Random.Range(minXAngle, maxXAngle);
         float newYAngle = Random.Range(minYAngle, maxYAngle);
         Quaternion newRotation = Quaternion.Euler(newXAngle, newYAngle, transform.rotation.eulerAngles.z);
-        GetComponent<TransformObject>().KineticSpeed = 1;
         transform.rotation = newRotation;
         protonLights.SetActive(false);
         collision.time = .5f;
         collision.Play();
-
     }
 
     public void RevealQuarks()
@@ -94,7 +92,6 @@ public class ProtonController : MonoBehaviour
         float z = Random.Range(photonAngle.newAngleLowBound.z, photonAngle.newAngleHighBound.z);
         Quaternion newPhotonRotation = Quaternion.Euler(x, y, z);
         GameObject newPhoton = Instantiate(photon, transform.position + new Vector3(0,0,24), newPhotonRotation);
-        newPhoton.GetComponent<TransformObject>().KineticSpeed = 1;
         protonLights.SetActive(true);
         Invoke("SecondPhotonLaunched", .5f);
     }

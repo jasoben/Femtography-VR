@@ -20,7 +20,7 @@ public class VariableController : MonoBehaviour
     {
         distanceMeasure = Vector3.Distance(transform.position, startPosition.transform.position);
         float ratioDistance = distanceMeasure / totalDistance;
-        Slider.variable.value = ratioDistance;
+        Slider.variableSlider.value = ratioDistance;
     }
 
     public void MoveToBottom()

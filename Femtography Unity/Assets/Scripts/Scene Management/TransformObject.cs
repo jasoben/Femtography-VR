@@ -5,30 +5,36 @@ using UnityEngine;
 public class TransformObject : MonoBehaviour
 {
     public Particle particle;
-    public float KineticSpeed;
-    public GlobalBool isPlaying;
+    public bool IsTransformActive { get; set; }
+    public bool CanBeMoved { get; set; } = true;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        particle.speed = particle.normalSpeed * particle.playbackSpeed.Value;
-        if (KineticSpeed == 1)
-            KineticSpeed = 1;
-        else
-            KineticSpeed = 0;
+        MovementController.TransformObjects.Add(this);
     }
 
     // Update is called once per frame
     void Update()
     {
-        particle.speed = particle.normalSpeed * particle.playbackSpeed.Value;
-        if (isPlaying.boolValue)
-            transform.Translate(Vector3.Scale(transform.forward, new Vector3(0,0, particle.speed * KineticSpeed)));
+        if (IsTransformActive && CanBeMoved)
+            transform.Translate(Vector3.Scale(transform.forward, new Vector3(0,0, particle.transformSpeed * particle.playbackSpeed.Value)));
     }
 
-    public void StartKineticMotion()
+    public void StartMoving()
     {
-        KineticSpeed = 1;
+        IsTransformActive = true;
+    }
+    public void StopMoving()
+    {
+        IsTransformActive = false;
     }
 
+    public void NoLongerMoveable()
+    {
+        CanBeMoved = false;
+    }
+    public void MakeMoveable()
+    {
+        CanBeMoved = true;
+    }
 }

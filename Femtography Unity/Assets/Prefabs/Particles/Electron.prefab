@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 74199742}
   - component: {fileID: 3390933139277610254}
   - component: {fileID: -7831158973131212673}
-  - component: {fileID: 223031339745565418}
   - component: {fileID: 6427449714554098045}
   - component: {fileID: 7854175976721461854}
   - component: {fileID: 8063007402729071211}
@@ -60,10 +59,6 @@ MonoBehaviour:
     type: 3}
   labelText: {fileID: 4952053725460844950}
   electronMaterial: {fileID: 2100000, guid: d416ef997c7c36547b9699b0b6ee9c9e, type: 2}
-  distanceToProtonReference:
-    UseConstant: 0
-    ConstantValue: 0
-    variable: {fileID: 11400000, guid: 6dc3dc8b230f666469b1a666f25d30d3, type: 2}
   particle: {fileID: 11400000, guid: 0e364e0288417354cb8a7206ee771718, type: 2}
   playerParticle: {fileID: 11400000, guid: 2c413960227b5ea4daa652bdf629c584, type: 2}
   photonBullet:
@@ -112,6 +107,7 @@ MonoBehaviour:
     type: 2}
   photonLaunchVector: {fileID: 11400000, guid: 5d0dfdb4f70678c4d9148c7f079f816c, type: 2}
   startPosition: {fileID: 11400000, guid: 94b02b2b3705733488232bdb275a139d, type: 2}
+  distanceFromProtonToLaunchPhoton: 100
 --- !u!114 &74199741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -125,8 +121,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   particle: {fileID: 11400000, guid: 0e364e0288417354cb8a7206ee771718, type: 2}
-  KineticSpeed: 0
-  isPlaying: {fileID: 11400000, guid: 0a90e7b81bf1ab0489e1a40570cb9759, type: 2}
 --- !u!114 &74199742
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -143,7 +137,7 @@ MonoBehaviour:
   Response:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 223031339745565418}
+      - m_Target: {fileID: 0}
         m_MethodName: Pause
         m_Mode: 1
         m_Arguments:
@@ -170,7 +164,7 @@ MonoBehaviour:
   Response:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 223031339745565418}
+      - m_Target: {fileID: 0}
         m_MethodName: Play
         m_Mode: 1
         m_Arguments:
@@ -208,24 +202,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &223031339745565418
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2040432842466344173}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d6d4472693b7644c85ea70294d4c3c0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  particles: []
-  playbackSpeed:
-    UseConstant: 0
-    ConstantValue: 0
-    variable: {fileID: 11400000, guid: c13976bcb832ad14ea2881716f86cf7d, type: 2}
-  isPlaying: {fileID: 11400000, guid: 0a90e7b81bf1ab0489e1a40570cb9759, type: 2}
+      - m_Target: {fileID: 74199741}
+        m_MethodName: StartMoving
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!135 &6427449714554098045
 SphereCollider:
   m_ObjectHideFlags: 0

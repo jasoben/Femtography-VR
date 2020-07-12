@@ -110,6 +110,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -5020,7 +5021,6 @@ GameObject:
   - component: {fileID: 700100809303566249}
   - component: {fileID: 8163844460292997781}
   - component: {fileID: 6561448634806383052}
-  - component: {fileID: 3360241624329039118}
   - component: {fileID: 1646908275711950237}
   - component: {fileID: 1320181753191807846}
   - component: {fileID: 7878898281666651800}
@@ -5181,7 +5181,7 @@ MonoBehaviour:
   q2:
     UseConstant: 0
     ConstantValue: 0
-    variable: {fileID: 11400000, guid: e002644c9083b4e42a7dc48def63aebb, type: 2}
+    variableSlider: {fileID: 11400000, guid: e002644c9083b4e42a7dc48def63aebb, type: 2}
 --- !u!114 &1851126759
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5195,8 +5195,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   particle: {fileID: 11400000, guid: a9de51837e4c7b04185b019d8da4d8e9, type: 2}
-  KineticSpeed: 0
-  isPlaying: {fileID: 11400000, guid: 0a90e7b81bf1ab0489e1a40570cb9759, type: 2}
 --- !u!114 &700100809303566249
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5213,7 +5211,7 @@ MonoBehaviour:
   Response:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3360241624329039118}
+      - m_Target: {fileID: 0}
         m_MethodName: Pause
         m_Mode: 1
         m_Arguments:
@@ -5251,7 +5249,7 @@ MonoBehaviour:
   Response:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3360241624329039118}
+      - m_Target: {fileID: 0}
         m_MethodName: Play
         m_Mode: 1
         m_Arguments:
@@ -5286,24 +5284,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   particle: {fileID: 11400000, guid: a9de51837e4c7b04185b019d8da4d8e9, type: 2}
---- !u!114 &3360241624329039118
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7974178231925239619}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d6d4472693b7644c85ea70294d4c3c0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  particles: []
-  playbackSpeed:
-    UseConstant: 0
-    ConstantValue: 0
-    variable: {fileID: 11400000, guid: c13976bcb832ad14ea2881716f86cf7d, type: 2}
-  isPlaying: {fileID: 11400000, guid: 0a90e7b81bf1ab0489e1a40570cb9759, type: 2}
 --- !u!54 &1646908275711950237
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5574,6 +5554,12 @@ PrefabInstance:
     - target: {fileID: 4069577236652929316, guid: 52bbd818b9083a74dae5405038550bea,
         type: 3}
       propertyPath: Q2.variable
+      value: 
+      objectReference: {fileID: 11400000, guid: e002644c9083b4e42a7dc48def63aebb,
+        type: 2}
+    - target: {fileID: 4069577236652929316, guid: 52bbd818b9083a74dae5405038550bea,
+        type: 3}
+      propertyPath: Q2.variableSlider
       value: 
       objectReference: {fileID: 11400000, guid: e002644c9083b4e42a7dc48def63aebb,
         type: 2}

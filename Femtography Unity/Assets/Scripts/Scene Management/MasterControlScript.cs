@@ -35,24 +35,22 @@ public class MasterControlScript : MonoBehaviour
         q2CanvasSlider.interactable = false;
 
         barrelState = BarrelState.empty;
-        electronParticle.normalSpeed = 1;
-        playerParticle.normalSpeed = 1;
         firstPlayThrough.boolValue = true;
         isPlaying.boolValue = true;
         particlesCreated = 0;
-        q2slider.variable.value = 0;
+        q2slider.variableSlider.value = 0;
         initializePointer.GetComponent<PointerMover>().MakeVisible();
         play.interactable = false;
         pause.interactable = false;
         electronStartPositionVector.vectorValue = electronStartPosition.position;
-        playbackCanvasSlider.value = 1.5f;
+        playbackSpeed.Value = 1;
     }
 
     // Update is called once per frame
     void Update()
     {
-        playbackSpeed.variable.value = playbackCanvasSlider.value;
-        q2slider.variable.value = q2CanvasSlider.value;
+        //playbackSpeed.variableSlider.value = playbackCanvasSlider.value;
+        //q2slider.variableSlider.value = q2CanvasSlider.value;
 
         if (Input.GetKeyDown(KeyCode.P))
         {
@@ -177,8 +175,6 @@ public class MasterControlScript : MonoBehaviour
     {
         fallingSlerp = 1f;
         yield return new WaitUntil(() => hasFallen);
-        newElectron.GetComponent<TransformObject>().KineticSpeed = 1;
-        player.GetComponent<TransformObject>().KineticSpeed = 1;
         launchElectron.Invoke();
     }
 

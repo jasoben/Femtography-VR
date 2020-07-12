@@ -24,8 +24,6 @@ public class testAnimation : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.P))
         {
             photonAnimator.Play("LaunchPhoton", 0, 0);
-            photonAnimator.speed = particle.normalSpeed * particle.playbackSpeed.Value;
-            photonCollider.StartKineticMotion();
         }
         if (Input.GetKeyDown(KeyCode.U))
         {
@@ -33,7 +31,6 @@ public class testAnimation : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.R))
         {
-            photonAnimator.speed = particle.normalSpeed * particle.playbackSpeed.Value;
         }
     }
 }

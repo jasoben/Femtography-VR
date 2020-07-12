@@ -17,13 +17,12 @@ public class ElectronController : MonoBehaviour
     public GameObject photon, photonCollider, labelText;
     public Material electronMaterial;
 
-    public FloatReference distanceToProtonReference;
     private bool photonLaunched, protonFound;
     public Particle particle, playerParticle;
     public UnityEvent photonBullet, pauseEverything, revealQuarks;
     public GlobalBool firstPlayThroughGlobal;
     public VectorConstant photonLaunchVector, startPosition;
-    private float distanceToProton;
+    public float distanceFromProtonToLaunchPhoton;
 
     // Start is called before the first frame update
     void Start()
@@ -34,22 +33,20 @@ public class ElectronController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        distanceToProton = distanceToProtonReference.Value * 60;
-        if (proton != null && (Vector3.Distance(transform.position, proton.transform.position) < distanceToProton && !photonLaunched) || (transform.position.z > 1000f - distanceToProton && !photonLaunched))
+        if (proton != null && (Vector3.Distance(transform.position, proton.transform.position) < distanceFromProtonToLaunchPhoton && !photonLaunched))
         {
             LaunchPhoton();
             DeflectElectron();
             photonBullet.Invoke();
             if (firstPlayThroughGlobal.boolValue)
                 Invoke("PauseTheSystemForFirstPlayThrough", .2f);
-            playerParticle.normalSpeed = 0;
         }
 
         // Change the visual "spin" speed of the electron based on playback speed
 
         //electronMaterial.SetFloat("Speed_", particle.speed);
 
-        DebugUI.ShowText("particle speed", playerParticle.speed.ToString());
+        DebugUI.ShowText("particle speed", playerParticle.playbackSpeed.Value.ToString());
 
     }
 
@@ -63,7 +60,6 @@ public class ElectronController : MonoBehaviour
     {
         photonLaunched = true;
         GameObject photonBullet = Instantiate(photon, transform.position + photonLaunchVector.vectorValue, Quaternion.Euler(0, 0, 90));
-        photonBullet.GetComponent<TransformObject>().KineticSpeed = 1;
     }
 
     public void HideLabel()

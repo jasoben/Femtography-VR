@@ -11,17 +11,9 @@ public class ThePlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        particle.speed = 0; 
-        particle.normalSpeed = 1;
         if (XRDevice.isPresent)
             VRorNot.boolValue = true;
         else
             VRorNot.boolValue = false;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
