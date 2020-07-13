@@ -12,15 +12,12 @@ public class PhotonController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GetComponent<TransformObject>().StartMoving();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Vector3.Distance(transform.position, new Vector3(0,0,1000)) > 200)
-        {
-            Destroy(gameObject);
-        }
     }
 
 

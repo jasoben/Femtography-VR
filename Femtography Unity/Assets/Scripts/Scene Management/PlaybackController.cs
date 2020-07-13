@@ -9,6 +9,7 @@ public class PlaybackController : MonoBehaviour
 
     void Start()
     {
+        savedSpeed = 1;
     }
 
     void Update()
@@ -16,7 +17,7 @@ public class PlaybackController : MonoBehaviour
     }
     public void Play()
     {
-        
+        playbackSpeed.Value = savedSpeed;
     }
     public void Pause()
     {

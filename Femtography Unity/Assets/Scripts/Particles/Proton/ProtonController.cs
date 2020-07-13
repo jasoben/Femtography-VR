@@ -12,7 +12,7 @@ public class ProtonController : MonoBehaviour
     public float minXAngle, maxXAngle, minYAngle, maxYAngle;
     public GlobalBool firstPlayThrough;
     public RandomAngle photonAngle;
-    public AudioSource collision;
+    public AudioSource collisionSound;
     public FloatReference q2;
 
     // Start is called before the first frame update
@@ -55,15 +55,15 @@ public class ProtonController : MonoBehaviour
         }
     }
 
-    public void DeformAndMoveProton()
+    public void DeformAndRotateProtonAndPlayCollisionSound()
     {
         float newXAngle = Random.Range(minXAngle, maxXAngle);
         float newYAngle = Random.Range(minYAngle, maxYAngle);
         Quaternion newRotation = Quaternion.Euler(newXAngle, newYAngle, transform.rotation.eulerAngles.z);
         transform.rotation = newRotation;
         protonLights.SetActive(false);
-        collision.time = .5f;
-        collision.Play();
+        collisionSound.time = .5f;
+        collisionSound.Play();
     }
 
     public void RevealQuarks()
@@ -80,7 +80,7 @@ public class ProtonController : MonoBehaviour
         {
             Destroy(other.gameObject);
             gameObject.layer = 14;
-            DeformAndMoveProton();
+            DeformAndRotateProtonAndPlayCollisionSound();
             collisionWithProton.Invoke();
         }
     }
