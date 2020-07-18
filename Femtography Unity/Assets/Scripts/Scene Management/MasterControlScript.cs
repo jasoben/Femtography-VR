@@ -13,7 +13,7 @@ public class MasterControlScript : MonoBehaviour
     private GameObject newProton, newElectron;
     public Transform photonStartPosition, electronStartPosition, protonStartPosition, sensorStartPosition;
     public Particle protonParticle, electronParticle, photonParticle, playerParticle;
-    public UnityEvent StartPlaying, StopPlaying, basicInstructions, teleporterUnlocked, dimProton, launchElectron, initializeEvent;
+    public UnityEvent StartPlaying, StopPlaying, basicInstructions, teleporterUnlocked, dimProton, launchElectron, initializeEvent, showMenu;
     public float fallingTime, fallingDistance, fallingSlerp;
     private bool hasFallen;
     private BarrelState barrelState;
@@ -63,18 +63,12 @@ public class MasterControlScript : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.L))
         {
-            CreateNewProtonAndElectron();
-            StartCoroutine(SettleParticlesFastAndLaunch());
-            if (particlesCreated < 2)
-            {
-                initializeEvent.Invoke();
-            }
+            launchElectron.Invoke();
         }
 
         if (Input.GetKeyDown(KeyCode.I))
         {
-            CreateNewProtonAndElectron();
-            CreateNewObject(sensor, sensorStartPosition.position, sensorStartPosition);
+            initializeEvent.Invoke();
         }
 
         if (Input.GetKeyDown(KeyCode.R))
@@ -98,7 +92,12 @@ public class MasterControlScript : MonoBehaviour
         {
             playbackCanvasSlider.value -= .01f;
         }
+        if (Input.GetKey(KeyCode.M))
+        {
+            showMenu.Invoke();
+        }
     }
+    
 
     public void RevealTheQuarks()
     {
