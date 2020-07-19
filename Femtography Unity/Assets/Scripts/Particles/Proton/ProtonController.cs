@@ -76,7 +76,7 @@ public class ProtonController : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "photonCollider")
+        if (other.tag == "photon")
         {
             Destroy(other.gameObject);
             gameObject.layer = 14;

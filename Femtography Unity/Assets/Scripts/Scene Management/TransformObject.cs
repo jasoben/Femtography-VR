@@ -5,7 +5,7 @@ using UnityEngine;
 public class TransformObject : MonoBehaviour
 {
     public Particle particle;
-    public bool IsTransformActive { get; set; }
+    public bool IsTransformActive { get; set; } = false;
     public bool CanBeMoved { get; set; } = true;
 
     private void Start()

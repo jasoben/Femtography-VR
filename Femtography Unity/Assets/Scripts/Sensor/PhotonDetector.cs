@@ -28,9 +28,11 @@ public class PhotonDetector : MonoBehaviour
         Vector3 upDirection = new Vector3(0, 0, 1100) - GetComponent<MeshCollider>().ClosestPoint(other.transform.position);
         Quaternion thisRotation = Quaternion.LookRotation(towardsCenter, upDirection);
         particleDetected.transform.rotation = thisRotation;
-        
 
-        if  (other.tag == "photonCollider")
+        Debug.Log(other.tag);
+        Debug.Break();
+
+        if  (other.tag == "photon")
         {
             photonDetected.Invoke();
             //if (firstPlay.boolValue)

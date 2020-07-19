@@ -1,5 +1,7 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
@@ -158,13 +160,25 @@ public class MasterControlScript : MonoBehaviour
 
     private IEnumerator SettleParticlesFastAndLaunch()
     {
+        newElectron.GetComponent<TransformObject>().CanBeMoved = false;
         fallingSlerp = 1f;
         yield return new WaitUntil(() => hasFallen);
-        launchElectron.Invoke();
+        newElectron.GetComponent<TransformObject>().CanBeMoved = true;
     }
 
     public void CreateNewProtonAndElectron()
     {
+        StackTrace st = new StackTrace();
+        for (int i = 0; i < 20; i++)
+        { 
+            StackFrame sf = st.GetFrame(i);
+            if (sf != null)
+            {
+                UnityEngine.Debug.Log(sf.GetMethod().ToString());
+                //UnityEngine.Debug.Break();
+            }
+        }
+
         if (barrelState == BarrelState.empty)
         {
             particlesCreated++;
@@ -212,6 +226,8 @@ public class MasterControlScript : MonoBehaviour
         while (true)
         {
             createdObject.transform.position = Vector3.Slerp(createdObject.transform.position, destination, fallingSlerp);
+
+            UnityEngine.Debug.Log(Vector3.Distance(createdObject.transform.position, destination));
 
             if (Vector3.Distance(createdObject.transform.position, destination) < 1)
             {
