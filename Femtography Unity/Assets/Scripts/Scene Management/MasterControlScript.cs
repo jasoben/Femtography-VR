@@ -13,37 +13,31 @@ public class MasterControlScript : MonoBehaviour
     private GameObject newProton, newElectron;
     public Transform photonStartPosition, electronStartPosition, protonStartPosition, sensorStartPosition;
     public Particle protonParticle, electronParticle, photonParticle, playerParticle;
-    public UnityEvent StartPlaying, StopPlaying, basicInstructions, teleporterUnlocked, dimProton, launchElectron, initializeEvent, showMenu;
+    public UnityEvent StartPlaying, 
+        StopPlaying, basicInstructions, teleporterUnlocked, 
+        dimProton, launchElectron, initializeEvent, showMenu, reset;
     public float fallingTime, fallingDistance, fallingSlerp;
     private bool hasFallen;
     private BarrelState barrelState;
     public GlobalBool firstPlayThrough, isPlaying;
     public FloatReference q2slider;
     public FloatReference playbackSpeed;
-    public Slider q2CanvasSlider, playbackCanvasSlider;
-    public Button initialize, launch, teleport, play, pause;
     private float particlesCreated;
     public VectorConstant electronStartPositionVector;
 
     // Start is called before the first frame update
     void Start()
     {
-        launch.interactable = false;
-        teleport.interactable = false;
-        play.interactable = false;
-        pause.interactable = false;
-        q2CanvasSlider.interactable = false;
-
         barrelState = BarrelState.empty;
         firstPlayThrough.boolValue = true;
         isPlaying.boolValue = true;
         particlesCreated = 0;
         q2slider.variableSlider.value = 0;
         initializePointer.GetComponent<PointerMover>().MakeVisible();
-        play.interactable = false;
-        pause.interactable = false;
         electronStartPositionVector.vectorValue = electronStartPosition.position;
         playbackSpeed.Value = 1;
+
+        reset.Invoke();
     }
 
     // Update is called once per frame
@@ -78,19 +72,19 @@ public class MasterControlScript : MonoBehaviour
 
         if (Input.GetKey(KeyCode.Y))
         {
-            q2CanvasSlider.value += .01f;
+            //q2CanvasSlider.value += .01f;
         }
         if (Input.GetKey(KeyCode.H))
         {
-            q2CanvasSlider.value -= .01f;
+            //q2CanvasSlider.value -= .01f;
         }
         if (Input.GetKey(KeyCode.T))
         {
-            playbackCanvasSlider.value += .01f;
+            //playbackCanvasSlider.value += .01f;
         }
         if (Input.GetKey(KeyCode.G))
         {
-            playbackCanvasSlider.value -= .01f;
+            //playbackCanvasSlider.value -= .01f;
         }
         if (Input.GetKey(KeyCode.M))
         {
@@ -114,16 +108,12 @@ public class MasterControlScript : MonoBehaviour
     //methods for UI events
     public void Initiate()
     {
-        initialize.interactable = false;
-        launch.interactable = true;
         CreateNewProtonAndElectron();
         CreateNewObject(sensor, protonStartPosition.position, protonStartPosition);
     }
 
     public void Launch()
     {
-        play.interactable = true;
-        pause.interactable = true;
         sensor.GetComponent<MeshCollider>().enabled = false;
         CreateNewProtonAndElectron();
         StartCoroutine(SettleParticlesFastAndLaunch());
@@ -131,12 +121,12 @@ public class MasterControlScript : MonoBehaviour
 
     public void EnableQ2Slider()
     {
-        q2CanvasSlider.interactable = true;
+        //q2CanvasSlider.interactable = true;
     }
 
     public void EnableTeleportButton()
     {
-        teleport.interactable = true;
+        //teleport.interactable = true;
     }
 
     public void ResetEverything()
@@ -145,13 +135,9 @@ public class MasterControlScript : MonoBehaviour
     }
     public void ShowPlayPointer()
     {
-        play.interactable = true;
-        pause.interactable = false;
     }
     public void HidePlayPointer()
     {
-        play.interactable = false;
-        pause.interactable = true;
     }
 
     public void PlayEverything()
