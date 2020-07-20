@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
@@ -9,11 +8,11 @@ using UnityEngine.UI;
 
 public class MasterControlScript : MonoBehaviour
 {
-    public GameObject proton, photon, electron, sensor, player, initializePointer;
+    public GameObject proton, photon, electron, detector, player, initializePointer;
     public List<GameObject> quarks;
     public bool enable2DQuarks;
     private GameObject newProton, newElectron;
-    public Transform photonStartPosition, electronStartPosition, protonStartPosition, sensorStartPosition;
+    public Transform photonStartPosition, electronStartPosition, protonStartPosition, detectorStartPosition;
     public Particle protonParticle, electronParticle, photonParticle, playerParticle;
     public UnityEvent StartPlaying, 
         StopPlaying, basicInstructions, teleporterUnlocked, 
@@ -111,12 +110,13 @@ public class MasterControlScript : MonoBehaviour
     public void Initiate()
     {
         CreateNewProtonAndElectron();
-        CreateNewObject(sensor, protonStartPosition.position, protonStartPosition);
+        GameObject newDetector = CreateNewObject(detector, detectorStartPosition.position, detectorStartPosition);
+        newDetector.transform.rotation = detectorStartPosition.transform.rotation;
     }
 
     public void Launch()
     {
-        sensor.GetComponent<MeshCollider>().enabled = false;
+        detector.GetComponent<MeshCollider>().enabled = false;
         CreateNewProtonAndElectron();
         StartCoroutine(SettleParticlesFastAndLaunch());
     }
@@ -168,17 +168,6 @@ public class MasterControlScript : MonoBehaviour
 
     public void CreateNewProtonAndElectron()
     {
-        StackTrace st = new StackTrace();
-        for (int i = 0; i < 20; i++)
-        { 
-            StackFrame sf = st.GetFrame(i);
-            if (sf != null)
-            {
-                UnityEngine.Debug.Log(sf.GetMethod().ToString());
-                //UnityEngine.Debug.Break();
-            }
-        }
-
         if (barrelState == BarrelState.empty)
         {
             particlesCreated++;
@@ -226,8 +215,6 @@ public class MasterControlScript : MonoBehaviour
         while (true)
         {
             createdObject.transform.position = Vector3.Slerp(createdObject.transform.position, destination, fallingSlerp);
-
-            UnityEngine.Debug.Log(Vector3.Distance(createdObject.transform.position, destination));
 
             if (Vector3.Distance(createdObject.transform.position, destination) < 1)
             {

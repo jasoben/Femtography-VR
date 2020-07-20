@@ -16,7 +16,6 @@ public class DetectorMeshCollisionSensor : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.tag);
         GetComponent<Renderer>().material = detected;
         detectionSound.Play();
         StartCoroutine("ResetColor");

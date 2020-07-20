@@ -10,12 +10,21 @@ public class PhotonController : MonoBehaviour
     public GameObject photon;
     public GlobalBool isPlaying;
 
+    public UnityEvent photonCollisionWithDetector;
+
     // Start is called before the first frame update
     void Start()
     {
         GetComponent<TransformObject>().StartMoving();
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "detector")
+        {
+            photonCollisionWithDetector.Invoke();
+        }
+    }
 
     // Update is called once per frame
     void Update()
