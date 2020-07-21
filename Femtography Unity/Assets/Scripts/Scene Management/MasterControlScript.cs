@@ -20,7 +20,7 @@ public class MasterControlScript : MonoBehaviour
     public float fallingTime, fallingDistance, fallingSlerp;
     private bool hasFallen;
     private BarrelState barrelState;
-    public GlobalBool firstPlayThrough, isPlaying;
+    public GlobalBool firstPlayThrough, isPlaying, showLabel;
     public FloatReference q2slider;
     public FloatReference playbackSpeed;
     private float particlesCreated;
@@ -37,6 +37,7 @@ public class MasterControlScript : MonoBehaviour
         initializePointer.GetComponent<PointerMover>().MakeVisible();
         electronStartPositionVector.vectorValue = electronStartPosition.position;
         playbackSpeed.Value = 1;
+        showLabel.boolValue = true;
 
         reset.Invoke();
     }

@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class ProtonController : MonoBehaviour
 {
-    public GameObject photon, photonCollider, protonLights, idText;
+    public GameObject photon, photonCollider, protonLights;
     public GameObject[] quarks;
     public UnityEvent collisionWithProton, protonCreated, quarksRevealed, secondPhotonLaunched;
     public Particle particle;
@@ -27,14 +27,7 @@ public class ProtonController : MonoBehaviour
             particle.opacity.ConstantValue = .1f;
         }
         
-        idText.GetComponent<MeshRenderer>().enabled = false;
     }
-
-    public void ShowText()
-    {
-        idText.GetComponent<MeshRenderer>().enabled = true;
-    }
-
 
     // Update is called once per frame
     void Update()

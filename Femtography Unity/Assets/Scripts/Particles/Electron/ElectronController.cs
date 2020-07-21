@@ -20,7 +20,7 @@ public class ElectronController : MonoBehaviour
     private bool photonLaunched, protonFound;
     public Particle particle, playerParticle;
     public UnityEvent photonBullet, pauseEverything, revealQuarks;
-    public GlobalBool firstPlayThroughGlobal;
+    public GlobalBool firstPlayThroughGlobal, vehicleFollowElectron, vehicleInPosition;
     public VectorConstant photonLaunchVector, startPosition;
     public float distanceFromProtonToLaunchPhoton;
 
@@ -80,9 +80,15 @@ public class ElectronController : MonoBehaviour
     }
     void OnTriggerExit(Collider other)
     {
+        if (other.tag == "VehiclePositionTrigger")
+        {
+            if (vehicleFollowElectron.boolValue && vehicleInPosition.boolValue)
+            {
+                SetToFastLaunch();
+            }            
+        }
         if (other.tag == "DestructionTrigger")
         {
-            SetToFastLaunch();
             Destroy(gameObject);
         }
     }

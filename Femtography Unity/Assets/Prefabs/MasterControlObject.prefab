@@ -58,7 +58,8 @@ MonoBehaviour:
   photon: {fileID: 8760124801218385114, guid: 842993b5ab418c3438eac196a854a315, type: 3}
   electron: {fileID: 2040432842466344173, guid: a54bfb8de71a5774287bc0b8efbd2092,
     type: 3}
-  sensor: {fileID: 4522491474100278734, guid: 59a8d29541308ea4fb40ddbf87c116fa, type: 3}
+  detector: {fileID: 4522491474100278734, guid: 59a8d29541308ea4fb40ddbf87c116fa,
+    type: 3}
   player: {fileID: 0}
   initializePointer: {fileID: 0}
   quarks:
@@ -67,7 +68,7 @@ MonoBehaviour:
   photonStartPosition: {fileID: 0}
   electronStartPosition: {fileID: 0}
   protonStartPosition: {fileID: 0}
-  sensorStartPosition: {fileID: 0}
+  detectorStartPosition: {fileID: 0}
   protonParticle: {fileID: 11400000, guid: a9de51837e4c7b04185b019d8da4d8e9, type: 2}
   electronParticle: {fileID: 11400000, guid: 0e364e0288417354cb8a7206ee771718, type: 2}
   photonParticle: {fileID: 11400000, guid: e7c1fd323ce1cee40b934cb60fd365bd, type: 2}
@@ -203,6 +204,7 @@ MonoBehaviour:
   fallingSlerp: 0
   firstPlayThrough: {fileID: 11400000, guid: 5f422cc68b8b5784998725bd2e80ee51, type: 2}
   isPlaying: {fileID: 11400000, guid: 0a90e7b81bf1ab0489e1a40570cb9759, type: 2}
+  showLabel: {fileID: 11400000, guid: 9c4cb6f7f89bc9544a0ee86309d048a6, type: 2}
   q2slider:
     UseConstant: 0
     ConstantValue: 0

@@ -6,4 +6,9 @@ using UnityEngine;
 public class GlobalBool : ScriptableObject
 {
     public bool boolValue = true;
+
+    public void SetBool(bool newValue)
+    {
+        boolValue = newValue;
+    }
 }
