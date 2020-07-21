@@ -14,6 +14,8 @@ public class CustomCameraSettings : MonoBehaviour
             customDistances[i] = 500; 
         }
 
+        customDistances[10] = 3000; // Special consideration for the "detector" object
+
         Camera.main.layerCullDistances = customDistances;
     }
 

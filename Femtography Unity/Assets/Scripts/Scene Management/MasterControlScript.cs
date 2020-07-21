@@ -109,9 +109,9 @@ public class MasterControlScript : MonoBehaviour
     //methods for UI events
     public void Initiate()
     {
-        CreateNewProtonAndElectron();
         GameObject newDetector = CreateNewObject(detector, detectorStartPosition.position, detectorStartPosition);
         newDetector.transform.rotation = detectorStartPosition.transform.rotation;
+        CreateNewProtonAndElectron();
     }
 
     public void Launch()
