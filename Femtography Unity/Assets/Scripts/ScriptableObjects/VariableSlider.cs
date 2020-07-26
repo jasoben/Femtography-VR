@@ -8,4 +8,9 @@ public class VariableSlider : ScriptableObject
 {
     [Range(0,1)]
     public float value;
+
+    public void SetValue(float thisValue)
+    {
+        value = thisValue;
+    }
 }

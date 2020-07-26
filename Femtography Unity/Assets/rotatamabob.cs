@@ -4,22 +4,20 @@ using UnityEngine;
 
 public class rotatamabob : MonoBehaviour
 {
-    public GameObject camera;
-    // Start is called before the first frame update
-    private Vector3 forwardPhoton;
+    GameObject mainCamera;
     
     void Start()
     {
-        camera = Camera.main.gameObject;
+        mainCamera = Camera.main.gameObject;
     }
 
     // Update is called once per frame
     void Update()
     {
-        Vector3 fromTo = camera.transform.position - gameObject.transform.position;
-        Vector3 projectedVector = Vector3.ProjectOnPlane(fromTo, gameObject.transform.forward);
-        float angle = Vector3.Dot(projectedVector, gameObject.transform.up);
-        gameObject.transform.Rotate(gameObject.transform.forward, angle, Space.World);
+        Vector3 fromTo = mainCamera.transform.position - gameObject.transform.position;
+        Vector3 projectedVector = Vector3.ProjectOnPlane(fromTo, gameObject.transform.up);
+        float angle = Vector3.Dot(projectedVector, gameObject.transform.right);
+        gameObject.transform.Rotate(gameObject.transform.up, angle, Space.World);
         
     }
 }

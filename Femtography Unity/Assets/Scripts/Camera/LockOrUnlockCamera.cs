@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityStandardAssets.Utility;
 
 public class LockOrUnlockCamera : MonoBehaviour
@@ -30,9 +31,11 @@ public class LockOrUnlockCamera : MonoBehaviour
     {
         GetComponent<SimpleMouseRotator>().enabled = false;
         transform.rotation = Quaternion.identity;
+        GetComponent<PhysicsRaycaster>().enabled = false;
     }
     void UnLockCamera()
     {
         GetComponent<SimpleMouseRotator>().enabled = true;
+        GetComponent<PhysicsRaycaster>().enabled = true;
     }
 }

@@ -62,4 +62,17 @@ public class ShowMenu : MonoBehaviour
                 yield return new WaitForEndOfFrame();
         }
     }
+
+    public void Highlight()
+    {
+        transmuteMaterialPropertyBlock.SetFloat("Gray_", .12f);
+        GetComponent<Renderer>().SetPropertyBlock(transmuteMaterialPropertyBlock);
+    }
+
+    public void UnHighlight()
+    {
+        transmuteMaterialPropertyBlock.SetFloat("Gray_", .08f);
+        GetComponent<Renderer>().SetPropertyBlock(transmuteMaterialPropertyBlock);
+    }
+
 }

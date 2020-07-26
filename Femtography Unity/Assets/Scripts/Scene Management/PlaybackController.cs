@@ -21,7 +21,8 @@ public class PlaybackController : MonoBehaviour
     }
     public void Pause()
     {
-        savedSpeed = playbackSpeed.Value;
+        if (playbackSpeed.Value > 0)
+            savedSpeed = playbackSpeed.Value;
         playbackSpeed.Value = 0;
     }
 }

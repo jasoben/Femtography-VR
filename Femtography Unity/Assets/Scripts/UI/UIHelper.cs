@@ -53,6 +53,9 @@ public class UIHelper : MonoBehaviour
         if (button != null)
             button.interactable = menuManagerObject.isActive; 
         highlightButton = menuManagerObject.isFlashing;
+
+        if (gameObject.name == "Play")
+            DebugUI.ShowText("Play is active: ", menuManagerObject.isActive.ToString());
     }
 
 }
