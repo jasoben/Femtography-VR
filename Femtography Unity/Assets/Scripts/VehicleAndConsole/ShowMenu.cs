@@ -10,7 +10,7 @@ public class ShowMenu : MonoBehaviour
     public float startWidth, endWidth, shiftSpeed;
     MaterialPropertyBlock transmuteMaterialPropertyBlock;
     bool isTransmuting, openOrClose;
-    public UnityEvent menuStateChanged;
+    public UnityEvent openMenu, closeMenu;
 
     // Start is called before the first frame update
     void Start()
@@ -34,7 +34,7 @@ public class ShowMenu : MonoBehaviour
         float currentWidth = startWidth;
         if (openOrClose) // If it's open, we reverse the procedure
         {
-            menuStateChanged.Invoke();
+            closeMenu.Invoke();
             Console.SetActive(false);
             currentWidth = endWidth;
             newShiftSpeed = -shiftSpeed;
@@ -49,7 +49,7 @@ public class ShowMenu : MonoBehaviour
                 Console.SetActive(true);
                 openOrClose = true;
                 isTransmuting = false;
-                menuStateChanged.Invoke();
+                openMenu.Invoke();
                 yield break;
             } 
             else if (openOrClose && currentWidth > startWidth)

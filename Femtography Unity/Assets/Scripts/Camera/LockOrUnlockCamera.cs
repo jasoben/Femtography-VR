@@ -6,7 +6,6 @@ using UnityStandardAssets.Utility;
 
 public class LockOrUnlockCamera : MonoBehaviour
 {
-    bool isLocked;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,13 +17,12 @@ public class LockOrUnlockCamera : MonoBehaviour
     {
         
     }
-    public void LockOrUnlock()
+    public void LockOrUnlock(bool isLocked)
     {
         if (isLocked)
-            UnLockCamera();
-        else
             LockCamera();
-        isLocked = !isLocked;
+        else
+            UnLockCamera();
     }
 
     void LockCamera()
