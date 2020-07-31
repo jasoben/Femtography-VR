@@ -1381,25 +1381,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
---- !u!1 &1822026887 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1886396922, guid: b9623f000689cf943b5158810deff7c8,
-    type: 3}
-  m_PrefabInstance: {fileID: 4805049509699699687}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1822026891
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1822026887}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3cb6036c44010624782bb10ab096fcb4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  menuManagerObject: {fileID: 11400000, guid: b9bc314bc365d284c88795f5befdb5ee, type: 2}
 --- !u!1 &1838065916
 GameObject:
   m_ObjectHideFlags: 0
@@ -1887,6 +1868,39 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 190bd204fc962f8478b6b2f525e9482d, type: 2}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: d3c66a4693c4024428bed735f5925748, type: 2}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 7b736e6bcd9badc46a51076bb5ff8cc5, type: 2}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &2126987825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2240,19 +2254,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1540002603, guid: b9623f000689cf943b5158810deff7c8, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 11400000, guid: 253ac8605a82a0f49a5947966a12a432,
-        type: 2}
-    - target: {fileID: 1540002603, guid: b9623f000689cf943b5158810deff7c8, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Raise
-      objectReference: {fileID: 0}
-    - target: {fileID: 1886396924, guid: b9623f000689cf943b5158810deff7c8, type: 3}
-      propertyPath: m_IsOn
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4805049509387008965, guid: b9623f000689cf943b5158810deff7c8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2308,37 +2309,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4805049509387008966, guid: b9623f000689cf943b5158810deff7c8,
-        type: 3}
-      propertyPath: disableFollowToggle.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4805049509387008966, guid: b9623f000689cf943b5158810deff7c8,
-        type: 3}
-      propertyPath: disableFollowToggle.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4805049509387008966, guid: b9623f000689cf943b5158810deff7c8,
-        type: 3}
-      propertyPath: disableFollowToggle.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4805049509387008966, guid: b9623f000689cf943b5158810deff7c8,
-        type: 3}
-      propertyPath: disableFollowToggle.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 11400000, guid: 9ca35bfb1d44fdc4babc472e7978e6ca,
-        type: 2}
-    - target: {fileID: 4805049509387008966, guid: b9623f000689cf943b5158810deff7c8,
-        type: 3}
-      propertyPath: disableFollowToggle.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Raise
-      objectReference: {fileID: 0}
-    - target: {fileID: 4805049509387008966, guid: b9623f000689cf943b5158810deff7c8,
-        type: 3}
-      propertyPath: disableFollowToggle.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 4805049509387008967, guid: b9623f000689cf943b5158810deff7c8,
         type: 3}
       propertyPath: m_Name
@@ -2379,8 +2349,7 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 570098012124463043, guid: b9623f000689cf943b5158810deff7c8, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9623f000689cf943b5158810deff7c8, type: 3}
 --- !u!1 &4805049509699699699 stripped
 GameObject:

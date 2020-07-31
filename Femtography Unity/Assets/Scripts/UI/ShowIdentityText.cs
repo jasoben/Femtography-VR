@@ -6,18 +6,18 @@ public class ShowIdentityText : MonoBehaviour
 {
     public GlobalBool showText;
     private GameObject console;
+    private MeshRenderer meshRenderer;
     // Start is called before the first frame update
     void Start()
     {
-        GetComponent<MeshRenderer>().enabled = false;
-        //console = GameObject.Find("Console");
+        meshRenderer = GetComponent<MeshRenderer>();
+        meshRenderer.enabled = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        GetComponent<MeshRenderer>().enabled = showText.boolValue;
-        //transform.rotation = Quaternion.LookRotation((transform.position - console.transform.position), Vector3.up);
+        meshRenderer.enabled = showText.boolValue;
     }
 
 }
