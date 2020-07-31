@@ -19,7 +19,7 @@ public class ElectronController : MonoBehaviour
 
     private bool photonLaunched, protonFound;
     public Particle particle, playerParticle;
-    public UnityEvent photonBullet, pauseEverything, revealQuarks;
+    public UnityEvent photonBullet, pauseEverything, revealQuarks, loadNewElectron;
     public GlobalBool firstPlayThroughGlobal, vehicleFollowElectron, vehicleInPosition;
     public VectorConstant photonLaunchVector, startPosition;
     public float distanceFromProtonToLaunchPhoton;
@@ -33,7 +33,10 @@ public class ElectronController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (proton != null && (Vector3.Distance(transform.position, proton.transform.position) < distanceFromProtonToLaunchPhoton && !photonLaunched))
+        if (proton != null && 
+            (Vector3.Distance(transform.position, proton.transform.position) < distanceFromProtonToLaunchPhoton && 
+            !photonLaunched) && 
+            vehicleFollowElectron.boolValue == true)
         {
             LaunchPhoton();
             DeflectElectron();
@@ -41,6 +44,16 @@ public class ElectronController : MonoBehaviour
             if (firstPlayThroughGlobal.boolValue)
                 Invoke("PauseTheSystemForFirstPlayThrough", .2f);
         }
+        else if (proton != null && 
+            Vector3.Distance(transform.position, proton.transform.position) < (distanceFromProtonToLaunchPhoton + 15) &&
+            vehicleFollowElectron.boolValue == false) // If we aren't following the electron, we don't want the whole cascade 
+            // of events to happen, so we check a bit further out from the proton and reset the system before all those events
+            // can trigger.
+        {
+            loadNewElectron.Invoke();
+            Destroy(gameObject);
+        }
+
 
         // Change the visual "spin" speed of the electron based on playback speed
 

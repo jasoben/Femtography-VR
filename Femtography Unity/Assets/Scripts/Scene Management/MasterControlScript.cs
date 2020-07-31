@@ -8,24 +8,44 @@ using UnityEngine.UI;
 
 public class MasterControlScript : MonoBehaviour
 {
-    public GameObject proton, photon, electron, detector, player, initializePointer;
+    [Header("Game Objects")]
+    [Space(10)]
+    public GameObject proton;
+    public GameObject photon, electron, detector, player, initializePointer;
     public List<GameObject> quarks;
-    public bool enable2DQuarks;
     private GameObject newProton, newElectron;
-    public Transform photonStartPosition, electronStartPosition, protonStartPosition, detectorStartPosition;
-    public Particle protonParticle, electronParticle, photonParticle, playerParticle;
-    public UnityEvent StartPlaying, 
-        StopPlaying, basicInstructions, teleporterUnlocked, 
-        dimProton, launchElectron, initializeEvent, showMenu, reset;
-    public float fallingTime, fallingDistance, fallingSlerp;
+
+    [Header("Start Positions")]
+    [Space(10)]
+    public Transform photonStartPosition;
+    public Transform electronStartPosition, protonStartPosition, detectorStartPosition;
+
+    [Header("Particles")]
+    [Space(10)]
+    public Particle protonParticle;
+    public Particle electronParticle, photonParticle, playerParticle;
+
+    [Header("Float Values and References")]
+    public float fallingTime;
+    public float fallingDistance, fallingSlerp;
+    public FloatReference q2slider, playbackSpeed;
     private bool hasFallen;
     private BarrelState barrelState;
-    public GlobalBool firstPlayThrough, isPlaying, showLabel;
-    public FloatReference q2slider;
-    public FloatReference playbackSpeed;
+
+    [Header("Bools")]
+    public GlobalBool firstPlayThrough;
+    public GlobalBool isPlaying, showLabel;
+    public bool enable2DQuarks;
+
     private float particlesCreated;
+
+    [Header("Vector Constants")]
     public VectorConstant electronStartPositionVector;
 
+    [Header("Events")]
+    public UnityEvent StartPlaying; 
+    public UnityEvent StopPlaying, basicInstructions, teleporterUnlocked, 
+        dimProton, launchElectron, initializeEvent, showMenu, reset;
     // Start is called before the first frame update
     void Start()
     {

@@ -10,7 +10,7 @@ public class ProtonController : MonoBehaviour
     public UnityEvent collisionWithProton, protonCreated, quarksRevealed, secondPhotonLaunched;
     public Particle particle;
     public float minXAngle, maxXAngle, minYAngle, maxYAngle;
-    public GlobalBool firstPlayThrough;
+    public GlobalBool firstPlayThrough, vehicleFollowingElectron;
     public RandomAngle photonAngle;
     public AudioSource collisionSound;
     public FloatReference q2;
@@ -100,6 +100,15 @@ public class ProtonController : MonoBehaviour
     public void DestroyProton()
     {
         Destroy(gameObject);
+    }
+
+    public void DestroyIfNotFollowing() // if we aren't following the electron, we want to delete the proton 
+        // when the system resets, otherwise we let it live until it hits the detector.
+    {
+        if (vehicleFollowingElectron.boolValue == false)
+        {
+            DestroyProton();
+        }
     }
 
     void OnTriggerExit(Collider other)

@@ -7,26 +7,32 @@ public class UIHelper : MonoBehaviour
 {
     public bool highlightButton { get; set; }
     Color originalColor, flashingColor, newColor;
-    float flashSpeed = .005f;
-    float flashLerp = 0;
-    int upOrDown;
+    ColorBlock toggleColorBlock;
     public MenuManagerObject menuManagerObject;// Sometimes the menu is active and sometimes it isn't, so we enable
     // and disable objects through ScriptableObject data instead of directly. See the "MenuManager" under "Control Objects" 
     // in the hierarchy.
     Button button;
     Image image;
+    Toggle toggle;
 
     // Start is called before the first frame update
     void Start()
     {
         if (GetComponent<Image>() != null)
             originalColor = GetComponent<Image>().color;
+        else
+            originalColor = Color.white;
         flashingColor = Color.gray;
         newColor = new Color();
         if (GetComponent<Button>() != null)
             button = GetComponent<Button>();
         if (GetComponent<Image>() != null)
             image = GetComponent<Image>();
+        if (GetComponent<Toggle>() != null)
+        {
+            toggle = GetComponent<Toggle>();
+            toggleColorBlock = toggle.colors;
+        }
     }
 
     // Update is called once per frame
@@ -34,24 +40,22 @@ public class UIHelper : MonoBehaviour
     {
         if (highlightButton)
         {
-            newColor = Color.Lerp(originalColor, flashingColor, flashLerp);
-            image.color = newColor;
-
-            //Change the lerp value between the colors to produce a flashing effect
-            if (flashLerp > 1)
+            newColor = Color.Lerp(originalColor, flashingColor, FlashingController.FlashLerp);
+            if (image != null)
+                image.color = newColor;
+            if (toggle != null)
             {
-                upOrDown = -1;
-            }             
-            else if (flashLerp <= 0)
-            {
-                upOrDown = 1;
+                toggleColorBlock.normalColor = newColor;
+                toggle.colors = toggleColorBlock;
+                toggle.transform.Find("Label").gameObject.GetComponent<Text>().color = newColor;
             }
-
-            flashLerp += flashSpeed * upOrDown;
         }
 
         if (button != null)
-            button.interactable = menuManagerObject.isActive; 
+            button.interactable = menuManagerObject.isActive;
+        else if (toggle != null)
+            toggle.interactable = menuManagerObject.isActive;
+
         highlightButton = menuManagerObject.isFlashing;
 
         if (gameObject.name == "Play")
