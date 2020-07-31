@@ -6,10 +6,11 @@ using UnityStandardAssets.Utility;
 
 public class LockOrUnlockCamera : MonoBehaviour
 {
+    SimpleMouseRotator simpleMouseRotator;
     // Start is called before the first frame update
     void Start()
     {
-        
+        simpleMouseRotator = GetComponent<SimpleMouseRotator>();
     }
 
     // Update is called once per frame
@@ -27,13 +28,11 @@ public class LockOrUnlockCamera : MonoBehaviour
 
     void LockCamera()
     {
-        GetComponent<SimpleMouseRotator>().enabled = false;
+        simpleMouseRotator.enabled = false;
         transform.rotation = Quaternion.identity;
-        GetComponent<PhysicsRaycaster>().enabled = false;
     }
     void UnLockCamera()
     {
-        GetComponent<SimpleMouseRotator>().enabled = true;
-        GetComponent<PhysicsRaycaster>().enabled = true;
+        simpleMouseRotator.enabled = true;
     }
 }

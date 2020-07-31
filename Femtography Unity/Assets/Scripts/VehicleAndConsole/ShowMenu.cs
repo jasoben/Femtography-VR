@@ -6,11 +6,12 @@ using UnityStandardAssets.Utility;
 
 public class ShowMenu : MonoBehaviour
 {
-    public GameObject Console;
+    public GameObject Console, Display;
     public float startWidth, endWidth, shiftSpeed;
     MaterialPropertyBlock transmuteMaterialPropertyBlock;
     bool isTransmuting, openOrClose;
     public UnityEvent openMenu, closeMenu;
+    Renderer renderer;
 
     // Start is called before the first frame update
     void Start()
@@ -18,7 +19,8 @@ public class ShowMenu : MonoBehaviour
         Console.SetActive(false);
         transmuteMaterialPropertyBlock = new MaterialPropertyBlock();
         transmuteMaterialPropertyBlock.SetFloat("Width", startWidth);
-        GetComponent<Renderer>().SetPropertyBlock(transmuteMaterialPropertyBlock);
+        renderer = Display.GetComponent<Renderer>();
+        renderer.SetPropertyBlock(transmuteMaterialPropertyBlock);
     }
 
     public void ShowOrHideTheMenu()
@@ -43,7 +45,7 @@ public class ShowMenu : MonoBehaviour
         {
             currentWidth -= newShiftSpeed; 
             transmuteMaterialPropertyBlock.SetFloat("Width", currentWidth);
-            GetComponent<Renderer>().SetPropertyBlock(transmuteMaterialPropertyBlock);
+            renderer.SetPropertyBlock(transmuteMaterialPropertyBlock);
             if (!openOrClose && currentWidth < endWidth)
             {
                 Console.SetActive(true);
@@ -66,13 +68,13 @@ public class ShowMenu : MonoBehaviour
     public void Highlight()
     {
         transmuteMaterialPropertyBlock.SetFloat("Gray_", .12f);
-        GetComponent<Renderer>().SetPropertyBlock(transmuteMaterialPropertyBlock);
+        renderer.SetPropertyBlock(transmuteMaterialPropertyBlock);
     }
 
     public void UnHighlight()
     {
         transmuteMaterialPropertyBlock.SetFloat("Gray_", .08f);
-        GetComponent<Renderer>().SetPropertyBlock(transmuteMaterialPropertyBlock);
+        renderer.SetPropertyBlock(transmuteMaterialPropertyBlock);
     }
 
 }
