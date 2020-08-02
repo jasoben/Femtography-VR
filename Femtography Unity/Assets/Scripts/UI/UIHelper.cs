@@ -90,14 +90,10 @@ public class UIHelper : MonoBehaviour
             DebugUI.ShowText("Play is active: ", menuManagerObject.isActive.ToString());
     }
 
-
-    private void OnMouseEnter()
+    public void ToggleOnOrOff(bool onOrOff)
     {
-        transform.Find("Tooltip").GetComponent<ToggleTooltip>().ShowToolTip();
-    }
-    private void OnMouseExit()
-    {
-        transform.Find("Tooltip").GetComponent<ToggleTooltip>().HideToolTip();
+        if (toggle.interactable)
+            toggle.isOn = onOrOff;
     }
 
 }

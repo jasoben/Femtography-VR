@@ -91,10 +91,7 @@ public class ProtonController : MonoBehaviour
 
     private void SecondPhotonLaunched()
     {
-        if (firstPlayThrough.boolValue)
-        {
-            secondPhotonLaunched.Invoke();
-        }
+        secondPhotonLaunched.Invoke();
     }
 
     public void DestroyProton()

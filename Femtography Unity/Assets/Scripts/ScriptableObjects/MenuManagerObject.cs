@@ -16,12 +16,11 @@ public class MenuManagerObject : ScriptableObject
     public void SetActive(bool isNowActive)
     {
         isActive = isNowActive;
-        if (!isNowActive)
-            isFlashing = false;
     }
 
     public void SetFlashing(bool isNowFlashing)
     {
         isFlashing = isNowFlashing;
     }
+
 }
