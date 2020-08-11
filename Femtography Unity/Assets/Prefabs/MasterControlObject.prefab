@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 1274656022}
   - component: {fileID: 1274656032}
   - component: {fileID: 5974283032936105704}
+  - component: {fileID: 1499636325}
   m_Layer: 0
   m_Name: MasterControlObject
   m_TagString: Untagged
@@ -65,7 +66,6 @@ MonoBehaviour:
   initializePointer: {fileID: 0}
   quarks:
   - {fileID: 0}
-  enable2DQuarks: 0
   photonStartPosition: {fileID: 0}
   electronStartPosition: {fileID: 0}
   protonStartPosition: {fileID: 0}
@@ -74,6 +74,23 @@ MonoBehaviour:
   electronParticle: {fileID: 11400000, guid: 0e364e0288417354cb8a7206ee771718, type: 2}
   photonParticle: {fileID: 11400000, guid: e7c1fd323ce1cee40b934cb60fd365bd, type: 2}
   playerParticle: {fileID: 11400000, guid: 2c413960227b5ea4daa652bdf629c584, type: 2}
+  fallingTime: 0.5
+  fallingDistance: 100
+  fallingSlerp: 0
+  q2slider:
+    UseConstant: 0
+    ConstantValue: 0
+    variableSlider: {fileID: 11400000, guid: e002644c9083b4e42a7dc48def63aebb, type: 2}
+  playbackSpeed:
+    UseConstant: 0
+    ConstantValue: 1
+    variableSlider: {fileID: 11400000, guid: c13976bcb832ad14ea2881716f86cf7d, type: 2}
+  firstPlayThrough: {fileID: 11400000, guid: 5f422cc68b8b5784998725bd2e80ee51, type: 2}
+  isPlaying: {fileID: 11400000, guid: 0a90e7b81bf1ab0489e1a40570cb9759, type: 2}
+  showLabel: {fileID: 11400000, guid: 9c4cb6f7f89bc9544a0ee86309d048a6, type: 2}
+  enable2DQuarks: 0
+  electronStartPositionVector: {fileID: 11400000, guid: 94b02b2b3705733488232bdb275a139d,
+    type: 2}
   StartPlaying:
     m_PersistentCalls:
       m_Calls:
@@ -200,22 +217,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  fallingTime: 0.5
-  fallingDistance: 100
-  fallingSlerp: 0
-  firstPlayThrough: {fileID: 11400000, guid: 5f422cc68b8b5784998725bd2e80ee51, type: 2}
-  isPlaying: {fileID: 11400000, guid: 0a90e7b81bf1ab0489e1a40570cb9759, type: 2}
-  showLabel: {fileID: 11400000, guid: 9c4cb6f7f89bc9544a0ee86309d048a6, type: 2}
-  q2slider:
-    UseConstant: 0
-    ConstantValue: 0
-    variableSlider: {fileID: 11400000, guid: e002644c9083b4e42a7dc48def63aebb, type: 2}
-  playbackSpeed:
-    UseConstant: 0
-    ConstantValue: 1
-    variableSlider: {fileID: 11400000, guid: c13976bcb832ad14ea2881716f86cf7d, type: 2}
-  electronStartPositionVector: {fileID: 11400000, guid: 94b02b2b3705733488232bdb275a139d,
-    type: 2}
 --- !u!114 &810343680198333611
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -228,7 +229,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86dd175dc768941409f779cc3531c879, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: c77c9c6290784844eb17cd33ac1e4218, type: 2}
+  multiEventListener: 0
+  Event: {fileID: 11400000, guid: aecdbb5e0126e1d4a9862490cc0f3591, type: 2}
+  Events: []
   Response:
     m_PersistentCalls:
       m_Calls:
@@ -255,7 +258,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86dd175dc768941409f779cc3531c879, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  multiEventListener: 0
   Event: {fileID: 11400000, guid: dcdeb438fb6324d4eb823e2ff03cb015, type: 2}
+  Events: []
   Response:
     m_PersistentCalls:
       m_Calls:
@@ -282,7 +287,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86dd175dc768941409f779cc3531c879, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  multiEventListener: 0
   Event: {fileID: 11400000, guid: e2415f63e7051644a868d50eb58adb85, type: 2}
+  Events: []
   Response:
     m_PersistentCalls:
       m_Calls:
@@ -309,7 +316,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86dd175dc768941409f779cc3531c879, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  multiEventListener: 0
   Event: {fileID: 11400000, guid: 4444c7e6d95a43c4ea743857f672b2dc, type: 2}
+  Events: []
   Response:
     m_PersistentCalls:
       m_Calls:
@@ -336,7 +345,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86dd175dc768941409f779cc3531c879, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  multiEventListener: 0
   Event: {fileID: 11400000, guid: bda47f6391efea14191f99f4db1f7d29, type: 2}
+  Events: []
   Response:
     m_PersistentCalls:
       m_Calls:
@@ -375,7 +386,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86dd175dc768941409f779cc3531c879, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  multiEventListener: 0
   Event: {fileID: 11400000, guid: 6544a190c42a42349836911ddb5900e3, type: 2}
+  Events: []
   Response:
     m_PersistentCalls:
       m_Calls:
@@ -402,7 +415,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86dd175dc768941409f779cc3531c879, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  multiEventListener: 0
   Event: {fileID: 11400000, guid: 474247fc70f1e574eb339756e222e288, type: 2}
+  Events: []
   Response:
     m_PersistentCalls:
       m_Calls:
@@ -525,13 +540,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86dd175dc768941409f779cc3531c879, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  multiEventListener: 0
   Event: {fileID: 11400000, guid: 5e4c2c8d0744fe349bb18aa0a894405a, type: 2}
+  Events: []
   Response:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 810343680198333609}
         m_MethodName: Launch
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 6d6f536e7978263439cd8cc26a827da9, type: 2}
+        m_MethodName: SetBool
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -552,13 +580,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86dd175dc768941409f779cc3531c879, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  multiEventListener: 0
   Event: {fileID: 11400000, guid: b4c49553f3cb2834cb1b4a1ba5715e4e, type: 2}
+  Events: []
   Response:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 810343680198333609}
         m_MethodName: Initiate
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 6d6f536e7978263439cd8cc26a827da9, type: 2}
+        m_MethodName: SetBool
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: af2b6b6c243fc5c40a3606161d51a74b, type: 2}
+        m_MethodName: SetBool
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -579,7 +631,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86dd175dc768941409f779cc3531c879, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  multiEventListener: 0
   Event: {fileID: 11400000, guid: 6aa4ef91bbbb1e24db6772bb2da5fb6d, type: 2}
+  Events: []
   Response:
     m_PersistentCalls:
       m_Calls:
@@ -604,4 +658,44 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1499636325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 810343680198333614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86dd175dc768941409f779cc3531c879, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  multiEventListener: 0
+  Event: {fileID: 11400000, guid: 34eaca9d8c48d3940b40ecf8946be5aa, type: 2}
+  Events: []
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 154e373d0e6cd0c49ba5aa0bf67442c6, type: 2}
+        m_MethodName: SetBool
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 6d6f536e7978263439cd8cc26a827da9, type: 2}
+        m_MethodName: SetBool
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
         m_CallState: 2

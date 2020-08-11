@@ -4808,9 +4808,7 @@ GameObject:
   - component: {fileID: 8611041044409273974}
   - component: {fileID: 4966388782928411838}
   - component: {fileID: 1520440361298942637}
-  - component: {fileID: 6343566435552094511}
   - component: {fileID: 1545292730251975422}
-  - component: {fileID: 2602702721157696392}
   m_Layer: 12
   m_Name: Proton
   m_TagString: Proton
@@ -4930,13 +4928,29 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  protonDestroyed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: aecdbb5e0126e1d4a9862490cc0f3591, type: 2}
+        m_MethodName: Raise
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   particle: {fileID: 11400000, guid: a9de51837e4c7b04185b019d8da4d8e9, type: 2}
   minXAngle: 315
   maxXAngle: 345
   minYAngle: 300
   maxYAngle: 345
   firstPlayThrough: {fileID: 11400000, guid: 5f422cc68b8b5784998725bd2e80ee51, type: 2}
-  vehicleFollowingElectron: {fileID: 11400000, guid: 154e373d0e6cd0c49ba5aa0bf67442c6,
+  vehicleFollowingParticles: {fileID: 11400000, guid: 154e373d0e6cd0c49ba5aa0bf67442c6,
+    type: 2}
+  vehicleInFinalPosition: {fileID: 11400000, guid: af2b6b6c243fc5c40a3606161d51a74b,
     type: 2}
   photonAngle: {fileID: 11400000, guid: 0d60074c62fcb0f46996f3fc15fe0b41, type: 2}
   collisionSound: {fileID: 8611041044409273974}
@@ -4969,7 +4983,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86dd175dc768941409f779cc3531c879, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  multiEventListener: 0
   Event: {fileID: 11400000, guid: 4444c7e6d95a43c4ea743857f672b2dc, type: 2}
+  Events: []
   Response:
     m_PersistentCalls:
       m_Calls:
@@ -5007,7 +5023,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86dd175dc768941409f779cc3531c879, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  multiEventListener: 0
   Event: {fileID: 11400000, guid: e2415f63e7051644a868d50eb58adb85, type: 2}
+  Events: []
   Response:
     m_PersistentCalls:
       m_Calls:
@@ -5217,7 +5235,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86dd175dc768941409f779cc3531c879, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  multiEventListener: 0
   Event: {fileID: 11400000, guid: e58971e8755e1ca42b19e4b443927f2d, type: 2}
+  Events: []
   Response:
     m_PersistentCalls:
       m_Calls:
@@ -5244,39 +5264,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86dd175dc768941409f779cc3531c879, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  multiEventListener: 0
   Event: {fileID: 11400000, guid: b4c49553f3cb2834cb1b4a1ba5715e4e, type: 2}
+  Events: []
   Response:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 6561448634806383052}
         m_MethodName: SwitchShaderOpaque
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &6343566435552094511
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7974178231925239619}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86dd175dc768941409f779cc3531c879, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 4e44e1bc3c6aa7e43b08b62e475d15bf, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1851126760}
-        m_MethodName: ShowText
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5298,39 +5293,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86dd175dc768941409f779cc3531c879, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  multiEventListener: 0
   Event: {fileID: 11400000, guid: dcdeb438fb6324d4eb823e2ff03cb015, type: 2}
+  Events: []
   Response:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1851126759}
         m_MethodName: StartMoving
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &2602702721157696392
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7974178231925239619}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86dd175dc768941409f779cc3531c879, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 6aa4ef91bbbb1e24db6772bb2da5fb6d, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1851126760}
-        m_MethodName: DestroyIfNotFollowing
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

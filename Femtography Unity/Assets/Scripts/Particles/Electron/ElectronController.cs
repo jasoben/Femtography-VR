@@ -20,7 +20,7 @@ public class ElectronController : MonoBehaviour
     private bool photonLaunched, protonFound;
     public Particle particle, playerParticle;
     public UnityEvent photonBullet, pauseEverything, revealQuarks, loadNewElectron;
-    public GlobalBool firstPlayThroughGlobal, vehicleFollowElectron, vehicleInPosition;
+    public GlobalBool firstPlayThroughGlobal, vehicleFollowParticles, vehicleInPosition;
     public VectorConstant photonLaunchVector, startPosition;
     public float distanceFromProtonToLaunchPhoton;
 
@@ -35,8 +35,12 @@ public class ElectronController : MonoBehaviour
     {
         if (proton != null && 
             (Vector3.Distance(transform.position, proton.transform.position) < distanceFromProtonToLaunchPhoton && 
-            !photonLaunched) && 
-            vehicleFollowElectron.boolValue == true)
+                !photonLaunched) && 
+            (vehicleFollowParticles.boolValue == true || 
+                (vehicleFollowParticles.boolValue == false && vehicleInPosition.boolValue == true)
+            ) // Either we're following OR
+                // we are not following, but we're in the "final position" to observe the results
+           )
         {
             LaunchPhoton();
             DeflectElectron();
@@ -46,11 +50,13 @@ public class ElectronController : MonoBehaviour
         }
         else if (proton != null && 
             Vector3.Distance(transform.position, proton.transform.position) < (distanceFromProtonToLaunchPhoton + 15) &&
-            vehicleFollowElectron.boolValue == false) // If we aren't following the electron, we don't want the whole cascade 
+            vehicleFollowParticles.boolValue == false &&
+            vehicleInPosition.boolValue == false) // If we aren't following the electron and our vehicle is still at the "start gate", 
+            // we don't want the whole cascade of events to happen b/c we're not there to see them.
             // of events to happen, so we check a bit further out from the proton and reset the system before all those events
             // can trigger.
         {
-            loadNewElectron.Invoke();
+            Proton.GetComponent<ProtonController>().DestroyProton(); // We destroy the proton, which resets the system
             Destroy(gameObject);
         }
 
@@ -95,7 +101,7 @@ public class ElectronController : MonoBehaviour
     {
         if (other.tag == "VehiclePositionTrigger")
         {
-            if (vehicleFollowElectron.boolValue && vehicleInPosition.boolValue)
+            if (vehicleFollowParticles.boolValue && vehicleInPosition.boolValue)
             {
                 SetToFastLaunch();
             }            

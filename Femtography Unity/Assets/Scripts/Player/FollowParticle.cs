@@ -68,14 +68,14 @@ public class FollowParticle : MonoBehaviour
 
     IEnumerator WaitThenStartFollow()
     {
-        yield return new WaitForSeconds(.3f);
+        yield return new WaitForSeconds(.2f);
         while (true)
         {
             Vector3 newPosition = Particle.transform.position + FollowOffsetPosition;
             transform.position = Vector3.Lerp(transform.position, newPosition, .05f);
             Vector3 directionTowardsParticle = Particle.transform.position - transform.position;
             Quaternion lookAtParticle = Quaternion.LookRotation(directionTowardsParticle);
-            transform.rotation = Quaternion.Lerp(transform.rotation, lookAtParticle, .05f);
+            transform.rotation = Quaternion.Lerp(transform.rotation, lookAtParticle, .1f);
             yield return new WaitForFixedUpdate();
         }
     }

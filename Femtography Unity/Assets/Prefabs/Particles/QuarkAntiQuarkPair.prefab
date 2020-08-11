@@ -49,7 +49,7 @@ MonoBehaviour:
   Q2:
     UseConstant: 0
     ConstantValue: 0
-    variable: {fileID: 11400000, guid: e002644c9083b4e42a7dc48def63aebb, type: 2}
+    variableSlider: {fileID: 11400000, guid: e002644c9083b4e42a7dc48def63aebb, type: 2}
 --- !u!114 &1681521986773331342
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -117,7 +117,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1fa83c42c575dd4cb2d9bcb7af678b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  growSpeed: 0.004
+  normalGrowSpeed: 0.004
+  playbackSpeed:
+    UseConstant: 0
+    ConstantValue: 0
+    variableSlider: {fileID: 11400000, guid: c13976bcb832ad14ea2881716f86cf7d, type: 2}
 --- !u!1 &6275623134881361397
 GameObject:
   m_ObjectHideFlags: 0

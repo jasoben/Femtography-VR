@@ -7,6 +7,7 @@ public class DetectorMeshCollisionSensor : MonoBehaviour
 
     public Material undetected, detected;
     AudioSource detectionSound;
+    public FloatReference playbackSpeed;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,8 +34,16 @@ public class DetectorMeshCollisionSensor : MonoBehaviour
 
     IEnumerator ResetColor()
     {
-        yield return new WaitForSeconds(1.5f);
-        GetComponent<Renderer>().material = undetected;
-        yield break;
+        float elapsedTime = 0;
+        while (true)
+        {
+            yield return new WaitForSeconds(.01f);
+            elapsedTime += .01f * playbackSpeed.Value;
+            if (elapsedTime > 1.5f)
+            {
+                GetComponent<Renderer>().material = undetected;
+                yield break;
+            }
+        }
     }
 }
