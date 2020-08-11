@@ -11,6 +11,10 @@ public class FollowParticle : MonoBehaviour
     public GlobalBool isFollowingParticles;
     public float moveSpeed;
 
+    public GameEvent vehicleBackAtStart;
+
+    public FloatReference playBackSpeed;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,22 +31,25 @@ public class FollowParticle : MonoBehaviour
     {
         while (true)
         {
-            Vector3 newPos = Vector3.MoveTowards(transform.position, playerFinalPosition.transform.position, moveSpeed);
+            // We adjust for playbackspeed in the following lerps
+            Vector3 newPos = Vector3.MoveTowards(transform.position, playerFinalPosition.transform.position, moveSpeed * playBackSpeed.Value);
             transform.position = newPos;
 
-            Quaternion newRot = Quaternion.Lerp(transform.rotation, Quaternion.identity, .01f);
+            Quaternion newRot = Quaternion.Lerp(transform.rotation, Quaternion.identity, .05f * playBackSpeed.Value);
             transform.rotation = newRot;
 
-            if (Vector3.Distance(transform.position, playerFinalPosition.transform.position) < 1)
+            if ((Vector3.Distance(transform.position, playerFinalPosition.transform.position) < 1) &&
+                Quaternion.Angle(transform.rotation, Quaternion.identity) < 1)
+            {
+                vehicleBackAtStart.Raise();
                 yield break;
-            else
+            } else
                 yield return new WaitForFixedUpdate();
         }
     }
 
     public void SetParticle(string particleTag)
     {
-        Debug.Log(particleTag);
         StopAllCoroutines();
         if (particleTag != "null")
         {

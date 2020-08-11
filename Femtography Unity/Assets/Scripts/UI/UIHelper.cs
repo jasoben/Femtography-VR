@@ -38,7 +38,7 @@ public class UIHelper : MonoBehaviour
 
         toggleTooltip = GetComponentInChildren<ToggleTooltip>();
 
-        // We define these events in code since we have so many objects that use them, and it would be inefficient to set them all
+        // We define these OnPointer events in code since we have so many objects that use them, and it would be inefficient to set them all
         // up manually since they do the same thing.
 
         gameObject.AddComponent<EventTrigger>();
@@ -85,9 +85,6 @@ public class UIHelper : MonoBehaviour
             toggle.interactable = menuManagerObject.isActive;
 
         highlightButton = menuManagerObject.isFlashing;
-
-        if (gameObject.name == "Play")
-            DebugUI.ShowText("Play is active: ", menuManagerObject.isActive.ToString());
     }
 
     public void ToggleOnOrOff(bool onOrOff)

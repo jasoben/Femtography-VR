@@ -886,78 +886,6 @@ Transform:
   m_Father: {fileID: 167037810}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!1 &831954336 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1886396922, guid: b9623f000689cf943b5158810deff7c8,
-    type: 3}
-  m_PrefabInstance: {fileID: 4805049509699699687}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &831954338 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1822026891, guid: b9623f000689cf943b5158810deff7c8,
-    type: 3}
-  m_PrefabInstance: {fileID: 4805049509699699687}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 831954336}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3cb6036c44010624782bb10ab096fcb4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &831954341
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 831954336}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86dd175dc768941409f779cc3531c879, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 81ffd2d5e0f6c2f4c937f36fa25162a7, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 831954338}
-        m_MethodName: ToggleOnOrOff
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
---- !u!114 &831954342
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 831954336}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86dd175dc768941409f779cc3531c879, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 98b2783c44f4a804d9b45ec480b4c212, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 831954338}
-        m_MethodName: ToggleOnOrOff
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &878786506
 GameObject:
   m_ObjectHideFlags: 0
@@ -1428,7 +1356,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86dd175dc768941409f779cc3531c879, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  multiEventListener: 0
   Event: {fileID: 11400000, guid: 34eaca9d8c48d3940b40ecf8946be5aa, type: 2}
+  Events: []
   Response:
     m_PersistentCalls:
       m_Calls:
@@ -1496,6 +1426,7 @@ GameObject:
   - component: {fileID: 1838065920}
   - component: {fileID: 1838065919}
   - component: {fileID: 1838065918}
+  - component: {fileID: 1838065921}
   m_Layer: 0
   m_Name: PlaybackController
   m_TagString: Untagged
@@ -1529,7 +1460,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86dd175dc768941409f779cc3531c879, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  multiEventListener: 0
   Event: {fileID: 11400000, guid: 4444c7e6d95a43c4ea743857f672b2dc, type: 2}
+  Events: []
   Response:
     m_PersistentCalls:
       m_Calls:
@@ -1556,7 +1489,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86dd175dc768941409f779cc3531c879, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  multiEventListener: 0
   Event: {fileID: 11400000, guid: e2415f63e7051644a868d50eb58adb85, type: 2}
+  Events: []
   Response:
     m_PersistentCalls:
       m_Calls:
@@ -1587,6 +1522,41 @@ MonoBehaviour:
     UseConstant: 0
     ConstantValue: 0
     variableSlider: {fileID: 11400000, guid: c13976bcb832ad14ea2881716f86cf7d, type: 2}
+  pauseAtEvents: {fileID: 11400000, guid: d695f710700533d4aaf7b952d5707d65, type: 2}
+  pauseEverything: {fileID: 11400000, guid: 4444c7e6d95a43c4ea743857f672b2dc, type: 2}
+--- !u!114 &1838065921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1838065916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86dd175dc768941409f779cc3531c879, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  multiEventListener: 1
+  Event: {fileID: 0}
+  Events:
+  - {fileID: 11400000, guid: dcdeb438fb6324d4eb823e2ff03cb015, type: 2}
+  - {fileID: 11400000, guid: 4e44e1bc3c6aa7e43b08b62e475d15bf, type: 2}
+  - {fileID: 11400000, guid: c77c9c6290784844eb17cd33ac1e4218, type: 2}
+  - {fileID: 11400000, guid: e58971e8755e1ca42b19e4b443927f2d, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1838065920}
+        m_MethodName: PauseAtEvents
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1893793794
 GameObject:
   m_ObjectHideFlags: 0
@@ -1874,7 +1844,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86dd175dc768941409f779cc3531c879, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  multiEventListener: 0
   Event: {fileID: 11400000, guid: 6aa4ef91bbbb1e24db6772bb2da5fb6d, type: 2}
+  Events: []
   Response:
     m_PersistentCalls:
       m_Calls:
@@ -1934,7 +1906,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86dd175dc768941409f779cc3531c879, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  multiEventListener: 0
   Event: {fileID: 11400000, guid: 34eaca9d8c48d3940b40ecf8946be5aa, type: 2}
+  Events: []
   Response:
     m_PersistentCalls:
       m_Calls:
@@ -2027,7 +2001,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86dd175dc768941409f779cc3531c879, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  multiEventListener: 0
   Event: {fileID: 11400000, guid: b4c49553f3cb2834cb1b4a1ba5715e4e, type: 2}
+  Events: []
   Response:
     m_PersistentCalls:
       m_Calls:
@@ -2087,7 +2063,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86dd175dc768941409f779cc3531c879, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  multiEventListener: 0
   Event: {fileID: 11400000, guid: 5e4c2c8d0744fe349bb18aa0a894405a, type: 2}
+  Events: []
   Response:
     m_PersistentCalls:
       m_Calls:
@@ -2147,7 +2125,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86dd175dc768941409f779cc3531c879, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  multiEventListener: 0
   Event: {fileID: 11400000, guid: 4444c7e6d95a43c4ea743857f672b2dc, type: 2}
+  Events: []
   Response:
     m_PersistentCalls:
       m_Calls:
@@ -2185,7 +2165,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86dd175dc768941409f779cc3531c879, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  multiEventListener: 0
   Event: {fileID: 11400000, guid: e2415f63e7051644a868d50eb58adb85, type: 2}
+  Events: []
   Response:
     m_PersistentCalls:
       m_Calls:
@@ -2223,7 +2205,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86dd175dc768941409f779cc3531c879, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  multiEventListener: 0
   Event: {fileID: 11400000, guid: 9ca35bfb1d44fdc4babc472e7978e6ca, type: 2}
+  Events: []
   Response:
     m_PersistentCalls:
       m_Calls:
@@ -2569,6 +2553,17 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6326304661534513379, guid: b9623f000689cf943b5158810deff7c8,
+        type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 11400000, guid: d695f710700533d4aaf7b952d5707d65,
+        type: 2}
+    - target: {fileID: 6326304661534513379, guid: b9623f000689cf943b5158810deff7c8,
+        type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetBool
+      objectReference: {fileID: 0}
     - target: {fileID: 9183650939756167469, guid: b9623f000689cf943b5158810deff7c8,
         type: 3}
       propertyPath: playerFinalPosition
@@ -2576,14 +2571,20 @@ PrefabInstance:
       objectReference: {fileID: 1547965095}
     - target: {fileID: 9183650939756167469, guid: b9623f000689cf943b5158810deff7c8,
         type: 3}
-      propertyPath: moveSpeed
-      value: 4
+      propertyPath: vehicleBackAtStart
+      value: 
+      objectReference: {fileID: 11400000, guid: 7d3511ccdc7166e4f9a94aa759653674,
+        type: 2}
+    - target: {fileID: 9183650939756167469, guid: b9623f000689cf943b5158810deff7c8,
+        type: 3}
+      propertyPath: playBackSpeed.UseConstant
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9183650939756167469, guid: b9623f000689cf943b5158810deff7c8,
         type: 3}
-      propertyPath: isFollowingParticles
+      propertyPath: playBackSpeed.variableSlider
       value: 
-      objectReference: {fileID: 11400000, guid: 154e373d0e6cd0c49ba5aa0bf67442c6,
+      objectReference: {fileID: 11400000, guid: c13976bcb832ad14ea2881716f86cf7d,
         type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9623f000689cf943b5158810deff7c8, type: 3}

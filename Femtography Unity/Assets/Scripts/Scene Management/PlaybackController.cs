@@ -6,10 +6,13 @@ public class PlaybackController : MonoBehaviour
 {
     public FloatReference playbackSpeed;
     private float savedSpeed;
+    public GlobalBool pauseAtEvents;
+    public GameEvent pauseEverything;
 
     void Start()
     {
         savedSpeed = 1;
+        pauseAtEvents.boolValue = true;
     }
 
     void Update()
@@ -24,5 +27,13 @@ public class PlaybackController : MonoBehaviour
         if (playbackSpeed.Value > 0)
             savedSpeed = playbackSpeed.Value;
         playbackSpeed.Value = 0;
+    }
+
+    public void PauseAtEvents()
+    {
+        if (pauseAtEvents.boolValue)
+        {
+            pauseEverything.Raise();
+        }
     }
 }

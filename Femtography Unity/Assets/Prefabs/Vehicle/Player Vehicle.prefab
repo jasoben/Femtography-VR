@@ -927,6 +927,8 @@ GameObject:
   - component: {fileID: 6151234729609156398}
   - component: {fileID: 1886396924}
   - component: {fileID: 1822026891}
+  - component: {fileID: 831954341}
+  - component: {fileID: 831954342}
   m_Layer: 5
   m_Name: FollowToggle
   m_TagString: Untagged
@@ -1041,6 +1043,60 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuManagerObject: {fileID: 11400000, guid: b9bc314bc365d284c88795f5befdb5ee, type: 2}
+--- !u!114 &831954341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1886396922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86dd175dc768941409f779cc3531c879, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 81ffd2d5e0f6c2f4c937f36fa25162a7, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1822026891}
+        m_MethodName: ToggleOnOrOff
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+--- !u!114 &831954342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1886396922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86dd175dc768941409f779cc3531c879, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 98b2783c44f4a804d9b45ec480b4c212, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1822026891}
+        m_MethodName: ToggleOnOrOff
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1923001061
 GameObject:
   m_ObjectHideFlags: 0
@@ -2265,6 +2321,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4805049509387008965}
+  - component: {fileID: 5980508779870238424}
   - component: {fileID: 4805049509387008966}
   - component: {fileID: 9183650939756167469}
   - component: {fileID: 4805049509387008964}
@@ -2311,6 +2368,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5980508779870238424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4805049509387008967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cb0a23437ea58441aaf178636b60edb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  developmentNotes: The menu is on a world-bound canvas under "Display"
 --- !u!114 &4805049509387008966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2356,8 +2426,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerFinalPosition: {fileID: 0}
   FollowOffsetPosition: {x: 0, y: 0, z: 0}
-  isFollowingParticles: {fileID: 0}
-  moveSpeed: 0
+  isFollowingParticles: {fileID: 11400000, guid: 154e373d0e6cd0c49ba5aa0bf67442c6,
+    type: 2}
+  moveSpeed: 4
 --- !u!114 &4805049509387008964
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8416,15 +8487,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d9be1d005d271e4bbf30da967bee795, type: 3}
---- !u!4 &4805049509683816080 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8846522092562867127, guid: 5d9be1d005d271e4bbf30da967bee795,
-    type: 3}
-  m_PrefabInstance: {fileID: 4065589288103085351}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &4805049509683816081 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8846522092562867126, guid: 5d9be1d005d271e4bbf30da967bee795,
+    type: 3}
+  m_PrefabInstance: {fileID: 4065589288103085351}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4805049509683816080 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8846522092562867127, guid: 5d9be1d005d271e4bbf30da967bee795,
     type: 3}
   m_PrefabInstance: {fileID: 4065589288103085351}
   m_PrefabAsset: {fileID: 0}
@@ -8591,15 +8662,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d9be1d005d271e4bbf30da967bee795, type: 3}
---- !u!4 &4065589288534548208 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8846522092562867127, guid: 5d9be1d005d271e4bbf30da967bee795,
-    type: 3}
-  m_PrefabInstance: {fileID: 4805049509290114375}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &4065589288534548209 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8846522092562867126, guid: 5d9be1d005d271e4bbf30da967bee795,
+    type: 3}
+  m_PrefabInstance: {fileID: 4805049509290114375}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4065589288534548208 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8846522092562867127, guid: 5d9be1d005d271e4bbf30da967bee795,
     type: 3}
   m_PrefabInstance: {fileID: 4805049509290114375}
   m_PrefabAsset: {fileID: 0}
