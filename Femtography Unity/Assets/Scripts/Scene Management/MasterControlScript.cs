@@ -60,6 +60,7 @@ public class MasterControlScript : MonoBehaviour
         showLabel.boolValue = true;
 
         reset.Invoke();
+        Time.timeScale = 1f;
     }
 
     // Update is called once per frame

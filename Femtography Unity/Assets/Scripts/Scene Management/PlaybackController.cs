@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -36,4 +37,14 @@ public class PlaybackController : MonoBehaviour
             pauseEverything.Raise();
         }
     }
+
+    public void ChangePlayBackSpeed(float speedValue)
+    {
+        savedSpeed = speedValue;
+        if (playbackSpeed.Value == 0)
+        {
+            savedSpeed = speedValue;
+        } else playbackSpeed.Value = speedValue;
+    }
+
 }
