@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -7,20 +8,25 @@ using UnityStandardAssets.Utility;
 public class ShowMenu : MonoBehaviour
 {
     public GameObject Console, Display;
-    public float startWidth, endWidth, shiftSpeed;
-    MaterialPropertyBlock transmuteMaterialPropertyBlock;
-    bool isTransmuting, openOrClose;
+    public float startWidth, endWidth, shiftSpeed, startAlpha, endAlpha, highlightAmount, unHighlightAmount, highlightSpeed;
+    float currentHightlightAmount;
+    MaterialPropertyBlock displayTubePropertyBlock, spherePropertyBlock;
+    bool isTransmuting, openOrClose, highLighting;
     public UnityEvent openMenu, closeMenu;
-    Renderer renderer;
+    Renderer displayTubeRenderer, sphereRenderer;
 
     // Start is called before the first frame update
     void Start()
     {
         Console.SetActive(false);
-        transmuteMaterialPropertyBlock = new MaterialPropertyBlock();
-        transmuteMaterialPropertyBlock.SetFloat("Width", startWidth);
-        renderer = Display.GetComponent<Renderer>();
-        renderer.SetPropertyBlock(transmuteMaterialPropertyBlock);
+        currentHightlightAmount = unHighlightAmount;
+        displayTubePropertyBlock = new MaterialPropertyBlock();
+        spherePropertyBlock = new MaterialPropertyBlock();
+        displayTubePropertyBlock.SetFloat("Width", startWidth);
+        displayTubePropertyBlock.SetFloat("Alpha_", startAlpha);
+        displayTubeRenderer = Display.GetComponent<Renderer>();
+        sphereRenderer = GetComponent<Renderer>();
+        displayTubeRenderer.SetPropertyBlock(displayTubePropertyBlock);
     }
 
     public void ShowOrHideTheMenu()
@@ -34,18 +40,25 @@ public class ShowMenu : MonoBehaviour
         isTransmuting = true;
         float newShiftSpeed = shiftSpeed;
         float currentWidth = startWidth;
+        float currentAlpha = startAlpha;
         if (openOrClose) // If it's open, we reverse the procedure
         {
             closeMenu.Invoke();
             Console.SetActive(false);
             currentWidth = endWidth;
+            currentAlpha = endAlpha;
             newShiftSpeed = -shiftSpeed;
         }
+
+        float alphaShiftSpeed = (-newShiftSpeed / (startWidth - endWidth)) * (endAlpha - startAlpha); // Adjust alpha shift speed between start and end alpha to match shift speed 
+        // between arbitrary widths, and also reverse it
         while (true)
         {
             currentWidth -= newShiftSpeed; 
-            transmuteMaterialPropertyBlock.SetFloat("Width", currentWidth);
-            renderer.SetPropertyBlock(transmuteMaterialPropertyBlock);
+            currentAlpha -= alphaShiftSpeed;
+            displayTubePropertyBlock.SetFloat("Width", currentWidth);
+            displayTubePropertyBlock.SetFloat("Alpha_", currentAlpha);
+            displayTubeRenderer.SetPropertyBlock(displayTubePropertyBlock);
             if (!openOrClose && currentWidth < endWidth)
             {
                 Console.SetActive(true);
@@ -67,14 +80,33 @@ public class ShowMenu : MonoBehaviour
 
     public void Highlight()
     {
-        transmuteMaterialPropertyBlock.SetFloat("Gray_", .12f);
-        renderer.SetPropertyBlock(transmuteMaterialPropertyBlock);
+        highLighting = true;
     }
 
     public void UnHighlight()
     {
-        transmuteMaterialPropertyBlock.SetFloat("Gray_", .08f);
-        renderer.SetPropertyBlock(transmuteMaterialPropertyBlock);
+        highLighting = false;
     }
 
+    void SetSphereHighlight()
+    {
+        spherePropertyBlock.SetFloat("Gray_", currentHightlightAmount);
+        sphereRenderer.SetPropertyBlock(spherePropertyBlock);
+    }
+
+    private void Update()
+    {
+        if (highLighting && currentHightlightAmount < highlightAmount)
+        {
+            currentHightlightAmount += highlightSpeed;
+            SetSphereHighlight();
+        }
+        else if (!highLighting && currentHightlightAmount > unHighlightAmount)
+        {
+            currentHightlightAmount -= highlightSpeed;
+            SetSphereHighlight();
+        }
+
+        
+    }
 }
