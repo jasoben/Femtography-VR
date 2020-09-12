@@ -17,6 +17,12 @@ public class DestroyEverything : MonoBehaviour
     }
     void OnTriggerExit(Collider other)
     {
-        Destroy(other.gameObject);
+        if (other.gameObject.tag == "Proton")
+        {
+            other.GetComponent<ProtonController>().DestroyProton();
+        } else
+        {
+            Destroy(other.gameObject);
+        }
     }
 }

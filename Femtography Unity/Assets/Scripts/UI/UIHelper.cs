@@ -7,8 +7,8 @@ using UnityEngine.EventSystems;
 public class UIHelper : MonoBehaviour
 {
     public bool highlightButton { get; set; }
-    Color originalColor, flashingColor, newColor;
-    ColorBlock toggleColorBlock;
+    Color baseColor, flashingColor, newColor, regularColor, highlightColor;
+    ColorBlock toggleColorBlock, buttonColorBlock;
     public MenuManagerObject menuManagerObject;// Sometimes the menu is active and sometimes it isn't, so we enable
     // and disable objects through ScriptableObject data instead of directly. See the "MenuManager" under "Control Objects" 
     // in the hierarchy.
@@ -21,9 +21,9 @@ public class UIHelper : MonoBehaviour
     void Start()
     {
         if (GetComponent<Image>() != null)
-            originalColor = GetComponent<Image>().color;
+            baseColor = GetComponent<Image>().color;
         else
-            originalColor = Color.white;
+            baseColor = Color.white;
         flashingColor = Color.gray;
         newColor = new Color();
         if (GetComponent<Button>() != null)
@@ -34,6 +34,18 @@ public class UIHelper : MonoBehaviour
         {
             toggle = GetComponent<Toggle>();
             toggleColorBlock = toggle.colors;
+        }
+
+        highlightColor = new Color(255/255f, 241/255f, 0);
+        regularColor = new Color(124/255f, 144/255f, 191/255f, 1);
+        //regularColor = Color.blue;
+
+
+        if (button != null)
+        {
+            buttonColorBlock = GetComponent<Button>().colors;
+            buttonColorBlock.normalColor = regularColor;
+            GetComponent<Button>().colors = buttonColorBlock;
         }
 
         toggleTooltip = GetComponentInChildren<ToggleTooltip>();
@@ -53,6 +65,9 @@ public class UIHelper : MonoBehaviour
         pointerExitEntry.callback.AddListener((data) => { OnPointerExitDelegate((PointerEventData)data); });
         trigger.triggers.Add(pointerExitEntry);
     }
+    private void OnEnable()
+    {
+    }
 
     public void OnPointerEnterDelegate(PointerEventData data)
     {
@@ -68,7 +83,7 @@ public class UIHelper : MonoBehaviour
     {
         if (highlightButton)
         {
-            newColor = Color.Lerp(originalColor, flashingColor, FlashingController.FlashLerp);
+            newColor = Color.Lerp(highlightColor, flashingColor, FlashingController.FlashLerp);
             if (image != null)
                 image.color = newColor;
             if (toggle != null)
@@ -76,6 +91,29 @@ public class UIHelper : MonoBehaviour
                 toggleColorBlock.normalColor = newColor;
                 toggle.colors = toggleColorBlock;
                 toggle.transform.Find("Label").gameObject.GetComponent<Text>().color = newColor;
+            }
+            if (button != null)
+            {
+                buttonColorBlock = GetComponent<Button>().colors;
+                buttonColorBlock.normalColor = highlightColor;
+                GetComponent<Button>().colors = buttonColorBlock;
+            }
+        }
+        else if (!highlightButton)
+        {
+            if (image != null)
+                image.color = baseColor;
+            if (toggle != null)
+            {
+                toggleColorBlock.normalColor = baseColor;
+                toggle.colors = toggleColorBlock;
+                toggle.transform.Find("Label").gameObject.GetComponent<Text>().color = baseColor;
+            }
+            if (button != null)
+            {
+                buttonColorBlock = GetComponent<Button>().colors;
+                buttonColorBlock.normalColor = regularColor;
+                GetComponent<Button>().colors = buttonColorBlock;
             }
         }
 

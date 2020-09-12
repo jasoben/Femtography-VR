@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class DetectorMeshCollisionSensor : MonoBehaviour
 {
+    // This class shows aesthetic signals that the particles have been detected.
+    // Any events or methods for detection occur on the particles themselves, not on the detector.
 
     public Material undetected, detected;
     AudioSource detectionSound;

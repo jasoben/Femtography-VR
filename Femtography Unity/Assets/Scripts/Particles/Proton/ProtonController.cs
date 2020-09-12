@@ -96,8 +96,8 @@ public class ProtonController : MonoBehaviour
 
     public void DestroyProton()
     {
-        Destroy(gameObject);
         protonDestroyed.Invoke();
+        Destroy(gameObject);
     }
 
     public void DestroyIfNotFollowing() // if we aren't following the electron and we're still at the "start gate", 
@@ -107,7 +107,6 @@ public class ProtonController : MonoBehaviour
         if (vehicleFollowingParticles.boolValue == false && vehicleInFinalPosition.boolValue == false)
         {
             DestroyProton();
-            protonDestroyed.Invoke();
         }
     }
 
