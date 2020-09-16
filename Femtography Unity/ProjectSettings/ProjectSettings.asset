@@ -125,7 +125,8 @@ PlayerSettings:
     16:9: 1
     Others: 1
   bundleVersion: 1.0
-  preloadedAssets: []
+  preloadedAssets:
+  - {fileID: 0}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -170,6 +171,7 @@ PlayerSettings:
   applicationIdentifier:
     Android: com.UVAFemtography.DVCSsimulation
     Standalone: com.UVAFemtography.DVCSsimulation
+    WebGL: com.UVAFemtography.DVCSsimulation
   buildNumber:
     Standalone: 1
   AndroidBundleVersionCode: 1
@@ -428,9 +430,7 @@ PlayerSettings:
     - Oculus
   - m_BuildTarget: Android
     m_Enabled: 0
-    m_Devices:
-    - OpenVR
-    - Oculus
+    m_Devices: []
   openGLRequireES31: 0
   openGLRequireES31AEP: 0
   openGLRequireES32: 0

@@ -29,7 +29,7 @@ public class LockOrUnlockCamera : MonoBehaviour
     void LockCamera()
     {
         simpleMouseRotator.enabled = false;
-        transform.rotation = Quaternion.identity;
+        transform.rotation = transform.parent.transform.rotation; // Set the forward rotation to the vehicles rotation
     }
     void UnLockCamera()
     {
