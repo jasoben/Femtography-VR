@@ -1,42 +1,37 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Teleporter : MonoBehaviour
 {
-    public GameObject player, console, computerGlass;
+    public GameObject playerVehicle;
     public List<GameObject> teleportLocations;
-    public List<GameObject> consoleLocations;
-    private int currentLocation;
-    private List<ParticleSystem> particleSystems;
-    public float newConsoleSpin, distanceAmount;
-
+    private int currentLocation, previousLocation;
+    public Material teleportMaterial;
+    public UnityEvent teleporterActivated, teleportFinished;
+    public MenuManagerObject teleporter; 
+    
     // Start is called before the first frame update
     void Start()
     {
-        particleSystems = new List<ParticleSystem>();
         currentLocation = 0;
-        for (int i =0; i < teleportLocations.Count; i++)
-        {
-            particleSystems.Add(teleportLocations[i].GetComponent<ParticleSystem>());
-            particleSystems[i].Stop();
-        }
+        teleportMaterial.SetFloat("Transparency_", 5);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.T))
+        if (Input.GetKeyDown(KeyCode.T) && teleporter.isActive)
         {
-            GotoNextLocation();
+            teleporterActivated.Invoke();
         }
-
     }
 
     public void GotoNextLocation()
     {
         GetComponent<AudioSource>().PlayDelayed(.8f);
-        computerGlass.SetActive(false);
+        previousLocation = currentLocation;
         currentLocation++;
         if (currentLocation > teleportLocations.Count - 1)
         {
@@ -48,36 +43,35 @@ public class Teleporter : MonoBehaviour
 
     private void ActivateNextPortal()
     {
-        particleSystems[currentLocation].Play();
+        teleportLocations[previousLocation].SetActive(true);
+        teleportLocations[currentLocation].SetActive(true);
+        StartCoroutine(RunTeleporterAnimation());
+    }
+
+    IEnumerator RunTeleporterAnimation()
+    {
+        float newTransparency = 5;
+        while (true)
+        {
+            newTransparency -= .03f;
+            teleportMaterial.SetFloat("Transparency_", newTransparency);
+            if (newTransparency < .5f)
+            {
+                yield break;
+            } else
+                yield return new WaitForEndOfFrame();
+        }
     }
 
     private void ActivateThisPortal()
     {
-        int previousLocation = currentLocation - 1;
-        if (previousLocation == -1)
-            previousLocation = teleportLocations.Count - 1;
-        particleSystems[previousLocation].Play();
-        Invoke("MoveToNextPortal", .5f);
+        playerVehicle.transform.position = teleportLocations[currentLocation].transform.position;
+        playerVehicle.transform.rotation = teleportLocations[currentLocation].transform.rotation;
+        teleportLocations[currentLocation].SetActive(false);
+        teleportLocations[previousLocation].SetActive(false);
+        teleportFinished.Invoke();
     }
 
-    private void MoveToNextPortal()
-    {
-        player.transform.position = teleportLocations[currentLocation].transform.position;
-        console.transform.position = consoleLocations[currentLocation].transform.position;
-        player.transform.rotation = teleportLocations[currentLocation].transform.rotation;
-        console.transform.rotation = consoleLocations[currentLocation].transform.rotation;
-        if (currentLocation == 0)
-            computerGlass.SetActive(true);
-        Invoke("ShutDownPortals", .5f);
-    }
-
-    private void ShutDownPortals()
-    {
-        foreach (ParticleSystem thisParticleSystem in particleSystems)
-        {
-            thisParticleSystem.Stop();
-        }
-    }
 
 
 

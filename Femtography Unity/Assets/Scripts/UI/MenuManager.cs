@@ -5,8 +5,8 @@ using UnityEngine.Events;
 
 public class MenuManager : MonoBehaviour
 {
-    public GlobalBool isVehicleInFinalPosition, isFirstElectron, isFollowingParticles;
-    public UnityEvent setFollow, setUnFollow;
+    public GlobalBool isVehicleInFinalPosition, isFirstElectron, isFollowingParticles, mouseLookBool;
+    public UnityEvent setFollow, setUnFollow, mouseLookOn, mouseLookOff;
     public MenuManagerObject followToggle;
     
     public void EnableFollowToggle()
@@ -30,6 +30,17 @@ public class MenuManager : MonoBehaviour
                 setUnFollow.Invoke();
             else if (!isFollowingParticles.boolValue)
                 setFollow.Invoke();
+        }
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            if (mouseLookBool.boolValue)
+            {
+                mouseLookOff.Invoke();
+            }
+            else if (!mouseLookBool.boolValue)
+            {
+                mouseLookOn.Invoke();
+            }
         }
     }
 }

@@ -34,7 +34,8 @@ public class ToggleTooltip : MonoBehaviour
     }
     public void HideToolTip()
     {
-        image.enabled = false;
+        if (image != null)
+            image.enabled = false;
         text.enabled = false;
     }
 }

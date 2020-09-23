@@ -109,7 +109,7 @@ public class MasterControlScript : MonoBehaviour
         {
             //playbackCanvasSlider.value -= .01f;
         }
-        if (Input.GetKey(KeyCode.M))
+        if (Input.GetKey(KeyCode.Space))
         {
             showMenu.Invoke();
         }
