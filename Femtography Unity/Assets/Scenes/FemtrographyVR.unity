@@ -72,7 +72,7 @@ LightmapSettings:
     m_FinalGatherRayCount: 256
     m_ReflectionCompression: 2
     m_MixedBakeMode: 1
-    m_BakeBackend: 1
+    m_BakeBackend: 2
     m_PVRSampling: 1
     m_PVRDirectSampleCount: 32
     m_PVRSampleCount: 500
@@ -266,17 +266,17 @@ PrefabInstance:
     - target: {fileID: 7192403218386534211, guid: 0da8e323f9827c44f8991fd1105aac53,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 3000
+      value: 2600
       objectReference: {fileID: 0}
     - target: {fileID: 7192403218386534211, guid: 0da8e323f9827c44f8991fd1105aac53,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 3000
+      value: 2600
       objectReference: {fileID: 0}
     - target: {fileID: 7192403218386534211, guid: 0da8e323f9827c44f8991fd1105aac53,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 3000
+      value: 2600
       objectReference: {fileID: 0}
     - target: {fileID: 7192403218386534212, guid: 0da8e323f9827c44f8991fd1105aac53,
         type: 3}
@@ -1279,7 +1279,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 0
+  m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1567,6 +1567,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!20 &774488443 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 144426125, guid: b9623f000689cf943b5158810deff7c8,
+    type: 3}
+  m_PrefabInstance: {fileID: 4805049509699699687}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &788379680 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4805049509387008967, guid: b9623f000689cf943b5158810deff7c8,
@@ -1955,6 +1961,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 3c350e409588c7e42abe8be22cedb54b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c350e409588c7e42abe8be22cedb54b, type: 3}
@@ -3217,7 +3228,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2056307275}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
@@ -3319,7 +3330,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 2
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 774488443}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -3338,7 +3349,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2072890085}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 214.1}
+  m_LocalPosition: {x: 0, y: 0, z: 269.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 632473031}
@@ -4797,6 +4808,27 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 144426122, guid: b9623f000689cf943b5158810deff7c8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 10.57
+      objectReference: {fileID: 0}
+    - target: {fileID: 144426125, guid: b9623f000689cf943b5158810deff7c8, type: 3}
+      propertyPath: far clip plane
+      value: 1300
+      objectReference: {fileID: 0}
+    - target: {fileID: 465909856, guid: b9623f000689cf943b5158810deff7c8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 465909856, guid: b9623f000689cf943b5158810deff7c8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 11.219999
+      objectReference: {fileID: 0}
+    - target: {fileID: 205949524979325484, guid: b9623f000689cf943b5158810deff7c8,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 12.7
+      objectReference: {fileID: 0}
     - target: {fileID: 4805049509387008965, guid: b9623f000689cf943b5158810deff7c8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4928,11 +4960,21 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: MakeVisible
       objectReference: {fileID: 0}
+    - target: {fileID: 4982193326960904199, guid: b9623f000689cf943b5158810deff7c8,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.63
+      objectReference: {fileID: 0}
     - target: {fileID: 8293614739048035840, guid: b9623f000689cf943b5158810deff7c8,
         type: 3}
       propertyPath: m_Text
       value: Teleport to a new vantage point (locked until you follow one full collision
         cycle)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8781162042600773001, guid: b9623f000689cf943b5158810deff7c8,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 11.05
       objectReference: {fileID: 0}
     - target: {fileID: 9183650939756167469, guid: b9623f000689cf943b5158810deff7c8,
         type: 3}
