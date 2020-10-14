@@ -89,7 +89,7 @@ public class MasterControlScript : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.R))
         {
-            SceneManager.LoadScene(0);
+            ResetTheProgram();
         }
 
         if (Input.GetKey(KeyCode.Y))
@@ -112,6 +112,11 @@ public class MasterControlScript : MonoBehaviour
         {
             showMenu.Invoke();
         }
+    }
+
+    public void ResetTheProgram()
+    {
+        SceneManager.LoadScene(0, LoadSceneMode.Single);
     }
     
 

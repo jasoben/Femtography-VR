@@ -65,7 +65,7 @@ public class ElectronController : MonoBehaviour
 
         //electronMaterial.SetFloat("Speed_", particle.speed);
 
-        DebugUI.ShowText("particle speed", playerParticle.playbackSpeed.Value.ToString());
+        //DebugUI.ShowText("particle speed", playerParticle.playbackSpeed.Value.ToString());
 
     }
 
@@ -95,7 +95,7 @@ public class ElectronController : MonoBehaviour
 
     public void SetToFastLaunch()
     {
-        startPosition.vectorValue = new Vector3(0, 0, 750);
+        startPosition.vectorValue = new Vector3(0, 0, 250);
     }
     void OnTriggerExit(Collider other)
     {

@@ -24,7 +24,8 @@ public class FollowParticle : MonoBehaviour
     public void ReturnToPosition()
     {
         StopAllCoroutines();
-        StartCoroutine(ReturnToPosCoroutine());
+        if (isFollowingParticles.boolValue)
+            StartCoroutine(ReturnToPosCoroutine());
     }
 
     IEnumerator ReturnToPosCoroutine()

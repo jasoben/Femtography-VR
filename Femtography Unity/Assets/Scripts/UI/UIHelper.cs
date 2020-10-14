@@ -67,6 +67,8 @@ public class UIHelper : MonoBehaviour
     }
     private void OnEnable()
     {
+        if (toggle != null && toggle.isActiveAndEnabled)
+            toggle.isOn = menuManagerObject.isOn;
     }
 
     public void OnPointerEnterDelegate(PointerEventData data)

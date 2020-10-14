@@ -14,6 +14,7 @@ public class ProtonController : MonoBehaviour
     public RandomAngle photonAngle;
     public AudioSource collisionSound;
     public FloatReference q2;
+    MaterialPropertyBlock protonMaterialPropertyBlock;
 
     // Start is called before the first frame update
     void Start()
@@ -26,7 +27,8 @@ public class ProtonController : MonoBehaviour
         {
             particle.opacity.ConstantValue = .1f;
         }
-        
+
+        particle.transformSpeed = 1.5f;
     }
 
     // Update is called once per frame
@@ -45,6 +47,27 @@ public class ProtonController : MonoBehaviour
             {
                 quark.SetActive(true);
             }
+        }
+    }
+
+    public void AdjustTransformSpeed(float adjustment)
+    {
+        particle.transformSpeed += adjustment;
+    }
+
+    public void AdjustJiggleSpeed(float adjustment)
+    {
+        protonMaterialPropertyBlock = new MaterialPropertyBlock();
+        float jiggleSpeed = GetComponent<Renderer>().material.GetFloat("Jiggle");
+        float jiggleAmount = GetComponent<Renderer>().material.GetFloat("JiggleAmount");
+        jiggleSpeed = jiggleSpeed * adjustment;
+        jiggleAmount = jiggleAmount * adjustment / 10;
+        protonMaterialPropertyBlock.SetFloat("Jiggle", jiggleSpeed);
+        protonMaterialPropertyBlock.SetFloat("JiggleAmount", jiggleAmount);
+        GetComponent<Renderer>().SetPropertyBlock(protonMaterialPropertyBlock);
+        foreach (Renderer renderer in GetComponentsInChildren<Renderer>())
+        {
+            renderer.SetPropertyBlock(protonMaterialPropertyBlock);
         }
     }
 
@@ -86,7 +109,8 @@ public class ProtonController : MonoBehaviour
         Quaternion newPhotonRotation = Quaternion.Euler(x, y, z);
         GameObject newPhoton = Instantiate(photon, transform.position + new Vector3(0,0,24), newPhotonRotation);
         protonLights.SetActive(true);
-        Invoke("SecondPhotonLaunched", .5f);
+        secondPhotonLaunched.Invoke();
+        //Invoke("SecondPhotonLaunched", .5f);
     }
 
     private void SecondPhotonLaunched()

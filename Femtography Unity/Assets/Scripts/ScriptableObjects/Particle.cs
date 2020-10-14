@@ -10,5 +10,4 @@ public class Particle : ScriptableObject
     public FloatReference opacity, playbackSpeed;
     public float transformSpeed;
     public UnityEvent opacityChanged;
-
 }

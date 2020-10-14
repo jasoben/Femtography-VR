@@ -55,7 +55,7 @@ public class Teleporter : MonoBehaviour
         {
             newTransparency -= .03f;
             teleportMaterial.SetFloat("Transparency_", newTransparency);
-            if (newTransparency < .5f)
+            if (newTransparency < 1f)
             {
                 yield break;
             } else
