@@ -8,7 +8,7 @@ public class CloudCreator : MonoBehaviour
     public float spawnTime;
     public float spawnDistance;
     // Start is called before the first frame update
-    void Start()
+    void OnEnable()
     {
         StartCoroutine(CloudCreatorCoroutine());
     }
@@ -25,7 +25,8 @@ public class CloudCreator : MonoBehaviour
 
     void StartCoroutine()
     {
-        StartCoroutine(CloudCreatorCoroutine());
+        if (gameObject.activeSelf)
+            StartCoroutine(CloudCreatorCoroutine());
     }
 
 
