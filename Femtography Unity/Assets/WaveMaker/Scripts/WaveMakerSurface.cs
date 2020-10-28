@@ -156,6 +156,7 @@ namespace WaveMaker
         BoxCollider _collider;
 
         Mesh mesh;
+        public Mesh Mesh_ { get { return mesh; } }
         Vector3[] vertices;
 
         /// <summary>
