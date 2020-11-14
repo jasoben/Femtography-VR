@@ -18,6 +18,10 @@ public class MeshVertexTracker : MonoBehaviour
     public float zMovementAmount;
     public GameObject recalibratingText;
 
+    Matrix4x4 meshConversionMatrix; // We use this to convert the mesh verts from local space to world space
+
+    public float amplitudeScale;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,23 +29,32 @@ public class MeshVertexTracker : MonoBehaviour
         StartCoroutine(FindHighestVerts());
     }
 
+    // We need to wait until the mesh object is initialized on the Wavemaker object before we define our 
+    // region.
+
     IEnumerator CheckInit()
     {
         while(true)
         {
-            if (!waveMakerSurface.Initialize())
+            if (!waveMakerSurface.Initialized)
             {
+                Debug.Log("Waiting");
                 yield return new WaitForEndOfFrame();
             }
             else
             {
+                Debug.Log("Initialized");
                 mesh = waveMakerSurface.Mesh_;
+                meshConversionMatrix = waveMakerSurface.transform.localToWorldMatrix;
                 regionDefined = DefineRegion();
                 yield break;
             }
         }
     }
 
+    // This defines the region of the mesh that we are looking at to register vertices (we don't want 
+    // to look at the whole mesh because it would be too expensive)
+    
     bool DefineRegion()
     {
         zPos = transform.position.z;
@@ -50,10 +63,15 @@ public class MeshVertexTracker : MonoBehaviour
 
         mesh = waveMakerSurface.Mesh_; // The mesh is constantly updated, so we need to keep it updated here
 
+        Vector3 worldPositionOfMeshVert ;
         for (int i = 0; i < mesh.vertices.Length; i++)
         {
-            if (Mathf.Abs(zPos - mesh.vertices[i].z) < bufferSize)
+            worldPositionOfMeshVert = meshConversionMatrix.MultiplyPoint3x4(mesh.vertices[i]);
+
+            if (Mathf.Abs(zPos - worldPositionOfMeshVert.z) < bufferSize) // the buffersize refers to the "depth" of the region
+                // that we want to use when looking for the mesh vertices.
             {
+                Debug.Log(worldPositionOfMeshVert);
                 nearbyVertices.Add(i);
             }
         }
@@ -66,6 +84,7 @@ public class MeshVertexTracker : MonoBehaviour
 
         return true;
     }
+
     // Update is called once per frame
     void Update()
     {
@@ -80,6 +99,7 @@ public class MeshVertexTracker : MonoBehaviour
                 Invoke("DefineRegion", .1f);
         }
 
+        // This will move the "screen" forward or backwards depending on which direction we want to go
         if (Input.GetKey(KeyCode.F))
         {
             transform.position += new Vector3(0, 0, zMovementAmount);
@@ -94,6 +114,7 @@ public class MeshVertexTracker : MonoBehaviour
         }
     }
 
+    //Search for the peak vertices
     IEnumerator FindHighestVerts()
     {
         while (true)
@@ -102,23 +123,22 @@ public class MeshVertexTracker : MonoBehaviour
             {
                 foreach (int nearbyVertex in nearbyVertices)
                 {
-                    if (vertices[nearbyVertex].y > highestVerts[nearbyVertex].y) 
+                    if (vertices[nearbyVertex].y > highestVerts[nearbyVertex].y)
                     {
                         highestVerts[nearbyVertex] = vertices[nearbyVertex];
                     }
-                    if (vertices[nearbyVertex].y < lowestVerts[nearbyVertex].y)
-                    {
-                        lowestVerts[nearbyVertex] = vertices[nearbyVertex];
-                    }
+                    //if (vertices[nearbyVertex].y < lowestVerts[nearbyVertex].y)
+                    //{
+                    //    lowestVerts[nearbyVertex] = vertices[nearbyVertex];
+                    //}
                 }
-
 
                 yield return new WaitForSecondsRealtime(.5f);
 
                 mesh = waveMakerSurface.Mesh_;
                 vertices = mesh.vertices;
-
-            }
+            } else
+                yield return new WaitForEndOfFrame();
         }
     }
     private void OnDrawGizmos()
@@ -127,13 +147,20 @@ public class MeshVertexTracker : MonoBehaviour
         {
             mesh = waveMakerSurface.Mesh_;
             vertices = mesh.vertices;
+
+            Vector3 worldPosVert;
+            Vector3 worldPosHighestVert;
             foreach (int vertexNumber in nearbyVertices)
             {
+                worldPosVert = meshConversionMatrix.MultiplyPoint3x4(vertices[vertexNumber]);
+                worldPosHighestVert = Vector3.Scale(meshConversionMatrix.MultiplyPoint3x4(highestVerts[vertexNumber]), 
+                    new Vector3(1,amplitudeScale,1));
+                
                 Gizmos.color = Color.green;
-                Gizmos.DrawSphere(vertices[vertexNumber], .2f);
+                Gizmos.DrawSphere(worldPosVert, .2f);
 
                 Gizmos.color = Color.red;
-                Gizmos.DrawSphere(highestVerts[vertexNumber], .2f);
+                Gizmos.DrawSphere(worldPosHighestVert, .2f);
 
                 Gizmos.color = Color.yellow;
                 Gizmos.DrawSphere(lowestVerts[vertexNumber], .2f);

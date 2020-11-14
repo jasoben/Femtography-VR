@@ -150,6 +150,7 @@ namespace WaveMaker
         #region PRIVATE MEMBERS
 
         bool _initialized = false;
+        public bool Initialized { get { return _initialized; } }
 
         MeshRenderer _meshRenderer;
         MeshFilter _meshFilter;
