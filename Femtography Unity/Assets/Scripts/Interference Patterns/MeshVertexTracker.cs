@@ -6,9 +6,11 @@ using WaveMaker;
 
 public class MeshVertexTracker : MonoBehaviour
 {
-    Vector3[] vertices, highestVerts, lowestVerts;
+    Vector3[] vertices, highestVerts, lowestVerts, lineOfHighVerts;
     public WaveMakerSurface waveMakerSurface;
     Mesh mesh;
+
+    LineRenderer lineRenderer;
 
     List<int> nearbyVertices = new List<int>();
     bool regionDefined;
@@ -27,6 +29,8 @@ public class MeshVertexTracker : MonoBehaviour
     {
         StartCoroutine(CheckInit());
         StartCoroutine(FindHighestVerts());
+
+        lineRenderer = GetComponent<LineRenderer>();
     }
 
     // We need to wait until the mesh object is initialized on the Wavemaker object before we define our 
@@ -38,12 +42,10 @@ public class MeshVertexTracker : MonoBehaviour
         {
             if (!waveMakerSurface.Initialized)
             {
-                Debug.Log("Waiting");
                 yield return new WaitForEndOfFrame();
             }
             else
             {
-                Debug.Log("Initialized");
                 mesh = waveMakerSurface.Mesh_;
                 meshConversionMatrix = waveMakerSurface.transform.localToWorldMatrix;
                 regionDefined = DefineRegion();
@@ -71,7 +73,6 @@ public class MeshVertexTracker : MonoBehaviour
             if (Mathf.Abs(zPos - worldPositionOfMeshVert.z) < bufferSize) // the buffersize refers to the "depth" of the region
                 // that we want to use when looking for the mesh vertices.
             {
-                Debug.Log(worldPositionOfMeshVert);
                 nearbyVertices.Add(i);
             }
         }
@@ -81,6 +82,9 @@ public class MeshVertexTracker : MonoBehaviour
         lowestVerts = new Vector3[vertices.Length];
 
         recalibratingText.SetActive(false);
+
+        lineOfHighVerts = new Vector3[nearbyVertices.Count];
+        lineRenderer.positionCount = nearbyVertices.Count;
 
         return true;
     }
@@ -133,14 +137,27 @@ public class MeshVertexTracker : MonoBehaviour
                     //}
                 }
 
-                yield return new WaitForSecondsRealtime(.5f);
 
+                Vector3 worldPosVert;
+                int i = 0;
+                foreach (int vertexNumber in nearbyVertices)
+                {
+                    worldPosVert = meshConversionMatrix.MultiplyPoint3x4(vertices[vertexNumber]);
+                    lineOfHighVerts[i] = Vector3.Scale(meshConversionMatrix.MultiplyPoint3x4(highestVerts[vertexNumber]),
+                        new Vector3(1, amplitudeScale, 1));
+                    i++; 
+                }
                 mesh = waveMakerSurface.Mesh_;
                 vertices = mesh.vertices;
+
+                lineRenderer.SetPositions(lineOfHighVerts);
+
+                yield return new WaitForSecondsRealtime(1);
             } else
                 yield return new WaitForEndOfFrame();
         }
     }
+    /*
     private void OnDrawGizmos()
     {
         if (regionDefined)
@@ -167,6 +184,7 @@ public class MeshVertexTracker : MonoBehaviour
             }
         }
     }
+    */
 
     private void OnValidate()
     {
