@@ -6,10 +6,12 @@ public class RotateAroundObject : MonoBehaviour
 {
     public GameObject centerObject;
     public float rotateAmount;
+    float adjustedRotateAmount;
 
     // Start is called before the first frame update
     void Start()
     {
+        adjustedRotateAmount = rotateAmount;
     }
 
     // Update is called once per frame
@@ -17,12 +19,33 @@ public class RotateAroundObject : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Q))
         {
-            transform.RotateAround(centerObject.transform.position, Vector3.up, rotateAmount);
-        }
-        else if (Input.GetKey(KeyCode.E))
+            transform.RotateAround(centerObject.transform.position, Vector3.up, adjustedRotateAmount);
+            IncreaseRotateAmount();
+        } else if (Input.GetKey(KeyCode.E))
         {
-            transform.RotateAround(centerObject.transform.position, Vector3.up, -rotateAmount);
+            transform.RotateAround(centerObject.transform.position, Vector3.up, -adjustedRotateAmount);
+            IncreaseRotateAmount();
         }
-        
+
+        if (Input.GetKey(KeyCode.W))
+        {
+            transform.RotateAround(centerObject.transform.position, transform.right, adjustedRotateAmount);
+            IncreaseRotateAmount();
+        } else if (Input.GetKey(KeyCode.S))
+        {
+            transform.RotateAround(centerObject.transform.position, transform.right, -adjustedRotateAmount);
+            IncreaseRotateAmount();
+        }
+
+        if (Input.GetKeyUp(KeyCode.Q) || Input.GetKeyUp(KeyCode.E) || Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.S))
+            adjustedRotateAmount = rotateAmount;
+
+        transform.LookAt(centerObject.transform.position);
+
+    }
+
+    void IncreaseRotateAmount()
+    {
+        adjustedRotateAmount += .001f;
     }
 }
