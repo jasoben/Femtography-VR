@@ -1043,6 +1043,97 @@ Transform:
   m_Father: {fileID: 2043732158}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: -90.00001, z: 0}
+--- !u!1 &477498062
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 477498063}
+  - component: {fileID: 477498065}
+  - component: {fileID: 477498064}
+  - component: {fileID: 477498066}
+  m_Layer: 5
+  m_Name: Explanation Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &477498063
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 477498062}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1040586567}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 258, y: -108}
+  m_SizeDelta: {x: 500, y: 200}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &477498064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 477498062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 18
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: New Text
+--- !u!222 &477498065
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 477498062}
+  m_CullTransparentMesh: 0
+--- !u!114 &477498066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 477498062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b821d70ca56e4594e9561921a19c01d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &517186554
 GameObject:
   m_ObjectHideFlags: 0
@@ -1097,6 +1188,133 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1699219157073114697}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &613503130
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 613503131}
+  - component: {fileID: 613503132}
+  - component: {fileID: 613503133}
+  - component: {fileID: 613503134}
+  m_Layer: 0
+  m_Name: TutorialController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &613503131
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 613503130}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1114507217}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &613503132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 613503130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86dd175dc768941409f779cc3531c879, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  multiEventListener: 0
+  activateBoolOnOrOff: 0
+  checkWhetherToActivate: {fileID: 0}
+  Event: {fileID: 11400000, guid: 0a4230f108da6954bab1452367e84ed4, type: 2}
+  Events: []
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 477498066}
+        m_MethodName: ChooseText
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &613503133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 613503130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86dd175dc768941409f779cc3531c879, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  multiEventListener: 0
+  activateBoolOnOrOff: 0
+  checkWhetherToActivate: {fileID: 0}
+  Event: {fileID: 11400000, guid: b4c49553f3cb2834cb1b4a1ba5715e4e, type: 2}
+  Events: []
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 477498066}
+        m_MethodName: NextText
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &613503134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 613503130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86dd175dc768941409f779cc3531c879, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  multiEventListener: 0
+  activateBoolOnOrOff: 0
+  checkWhetherToActivate: {fileID: 11400000, guid: af2b6b6c243fc5c40a3606161d51a74b,
+    type: 2}
+  Event: {fileID: 11400000, guid: 5e4c2c8d0744fe349bb18aa0a894405a, type: 2}
+  Events: []
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 477498066}
+        m_MethodName: NextText
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &625319828
 GameObject:
   m_ObjectHideFlags: 0
@@ -1289,6 +1507,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   multiEventListener: 0
+  activateBoolOnOrOff: 0
+  checkWhetherToActivate: {fileID: 0}
   Event: {fileID: 11400000, guid: 55b8f15e019003e4cb3e0ee8c7ea6389, type: 2}
   Events: []
   Response:
@@ -1397,6 +1617,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   multiEventListener: 0
+  activateBoolOnOrOff: 0
+  checkWhetherToActivate: {fileID: 0}
   Event: {fileID: 11400000, guid: 253ac8605a82a0f49a5947966a12a432, type: 2}
   Events: []
   Response:
@@ -1405,6 +1627,17 @@ MonoBehaviour:
       - m_Target: {fileID: 632473030}
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 0a4230f108da6954bab1452367e84ed4, type: 2}
+        m_MethodName: Raise
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2308,7 +2541,7 @@ GameObject:
   - component: {fileID: 1040586564}
   - component: {fileID: 1040586568}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: ScreenCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2387,6 +2620,7 @@ RectTransform:
   m_Children:
   - {fileID: 1013242734}
   - {fileID: 75151428}
+  - {fileID: 477498063}
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2408,6 +2642,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   multiEventListener: 0
+  activateBoolOnOrOff: 0
+  checkWhetherToActivate: {fileID: 0}
   Event: {fileID: 11400000, guid: c77c9c6290784844eb17cd33ac1e4218, type: 2}
   Events: []
   Response:
@@ -2455,6 +2691,7 @@ Transform:
   - {fileID: 1178674861}
   - {fileID: 2126987822}
   - {fileID: 1838065917}
+  - {fileID: 613503131}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3265,6 +3502,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   multiEventListener: 0
+  activateBoolOnOrOff: 0
+  checkWhetherToActivate: {fileID: 0}
   Event: {fileID: 11400000, guid: 4444c7e6d95a43c4ea743857f672b2dc, type: 2}
   Events: []
   Response:
@@ -3294,6 +3533,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   multiEventListener: 0
+  activateBoolOnOrOff: 0
+  checkWhetherToActivate: {fileID: 0}
   Event: {fileID: 11400000, guid: e2415f63e7051644a868d50eb58adb85, type: 2}
   Events: []
   Response:
@@ -3341,6 +3582,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   multiEventListener: 1
+  activateBoolOnOrOff: 0
+  checkWhetherToActivate: {fileID: 0}
   Event: {fileID: 0}
   Events:
   - {fileID: 11400000, guid: dcdeb438fb6324d4eb823e2ff03cb015, type: 2}
@@ -3726,7 +3969,7 @@ GameObject:
   - component: {fileID: 2072890087}
   - component: {fileID: 2072890086}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: WorldCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3910,6 +4153,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   multiEventListener: 0
+  activateBoolOnOrOff: 0
+  checkWhetherToActivate: {fileID: 0}
   Event: {fileID: 11400000, guid: 6aa4ef91bbbb1e24db6772bb2da5fb6d, type: 2}
   Events: []
   Response:
@@ -3983,6 +4228,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   multiEventListener: 0
+  activateBoolOnOrOff: 0
+  checkWhetherToActivate: {fileID: 0}
   Event: {fileID: 11400000, guid: 34eaca9d8c48d3940b40ecf8946be5aa, type: 2}
   Events: []
   Response:
@@ -4089,6 +4336,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   multiEventListener: 0
+  activateBoolOnOrOff: 0
+  checkWhetherToActivate: {fileID: 0}
   Event: {fileID: 11400000, guid: b4c49553f3cb2834cb1b4a1ba5715e4e, type: 2}
   Events: []
   Response:
@@ -4173,6 +4422,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   multiEventListener: 0
+  activateBoolOnOrOff: 0
+  checkWhetherToActivate: {fileID: 0}
   Event: {fileID: 11400000, guid: 5e4c2c8d0744fe349bb18aa0a894405a, type: 2}
   Events: []
   Response:
@@ -4235,6 +4486,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   multiEventListener: 0
+  activateBoolOnOrOff: 0
+  checkWhetherToActivate: {fileID: 0}
   Event: {fileID: 11400000, guid: 4444c7e6d95a43c4ea743857f672b2dc, type: 2}
   Events: []
   Response:
@@ -4286,6 +4539,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   multiEventListener: 0
+  activateBoolOnOrOff: 0
+  checkWhetherToActivate: {fileID: 0}
   Event: {fileID: 11400000, guid: e2415f63e7051644a868d50eb58adb85, type: 2}
   Events: []
   Response:
@@ -4337,6 +4592,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   multiEventListener: 0
+  activateBoolOnOrOff: 0
+  checkWhetherToActivate: {fileID: 0}
   Event: {fileID: 11400000, guid: 9ca35bfb1d44fdc4babc472e7978e6ca, type: 2}
   Events: []
   Response:
@@ -4512,6 +4769,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   multiEventListener: 0
+  activateBoolOnOrOff: 0
+  checkWhetherToActivate: {fileID: 0}
   Event: {fileID: 11400000, guid: 7d3511ccdc7166e4f9a94aa759653674, type: 2}
   Events: []
   Response:
@@ -4563,6 +4822,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   multiEventListener: 0
+  activateBoolOnOrOff: 0
+  checkWhetherToActivate: {fileID: 0}
   Event: {fileID: 11400000, guid: 4e44e1bc3c6aa7e43b08b62e475d15bf, type: 2}
   Events: []
   Response:
@@ -4592,6 +4853,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   multiEventListener: 0
+  activateBoolOnOrOff: 0
+  checkWhetherToActivate: {fileID: 0}
   Event: {fileID: 11400000, guid: 9eb2c19df5dbdf5498af1a5c538d1283, type: 2}
   Events: []
   Response:
@@ -4621,6 +4884,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   multiEventListener: 0
+  activateBoolOnOrOff: 0
+  checkWhetherToActivate: {fileID: 0}
   Event: {fileID: 11400000, guid: ff683abc15d243f4094a13e05b09762e, type: 2}
   Events: []
   Response:
@@ -4650,6 +4915,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   multiEventListener: 0
+  activateBoolOnOrOff: 0
+  checkWhetherToActivate: {fileID: 0}
   Event: {fileID: 11400000, guid: 55b8f15e019003e4cb3e0ee8c7ea6389, type: 2}
   Events: []
   Response:
@@ -4690,6 +4957,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   multiEventListener: 0
+  activateBoolOnOrOff: 0
+  checkWhetherToActivate: {fileID: 0}
   Event: {fileID: 11400000, guid: 98b2783c44f4a804d9b45ec480b4c212, type: 2}
   Events: []
   Response:
@@ -4730,6 +4999,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   multiEventListener: 0
+  activateBoolOnOrOff: 0
+  checkWhetherToActivate: {fileID: 0}
   Event: {fileID: 11400000, guid: 81ffd2d5e0f6c2f4c937f36fa25162a7, type: 2}
   Events: []
   Response:
@@ -4770,6 +5041,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   multiEventListener: 0
+  activateBoolOnOrOff: 0
+  checkWhetherToActivate: {fileID: 0}
   Event: {fileID: 11400000, guid: 7d57a7e356fa3a94eb086ba8001ddb89, type: 2}
   Events: []
   Response:
@@ -4810,6 +5083,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   multiEventListener: 0
+  activateBoolOnOrOff: 0
+  checkWhetherToActivate: {fileID: 0}
   Event: {fileID: 11400000, guid: ba5a6fdd2320da84984c60bb4d4ec11e, type: 2}
   Events: []
   Response:
@@ -4850,6 +5125,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   multiEventListener: 0
+  activateBoolOnOrOff: 0
+  checkWhetherToActivate: {fileID: 0}
   Event: {fileID: 11400000, guid: a6350f677a1828c459aac7dadf90dc85, type: 2}
   Events: []
   Response:
@@ -4890,6 +5167,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   multiEventListener: 0
+  activateBoolOnOrOff: 0
+  checkWhetherToActivate: {fileID: 0}
   Event: {fileID: 11400000, guid: a71c2983d7fbcdf47ab0b4db0c9aebc1, type: 2}
   Events: []
   Response:
