@@ -11,7 +11,7 @@ public class MasterControlScript : MonoBehaviour
     [Header("Game Objects")]
     [Space(10)]
     public GameObject proton;
-    public GameObject photon, electron, detector, player, initializePointer;
+    public GameObject photon, electron, detector, player; // initializePointer;
     public List<GameObject> quarks;
     private GameObject newProton, newElectron;
 
@@ -54,7 +54,7 @@ public class MasterControlScript : MonoBehaviour
         isPlaying.boolValue = true;
         particlesCreated = 0;
         q2slider.variableSlider.value = 0;
-        initializePointer.GetComponent<PointerMover>().MakeVisible();
+        //initializePointer.GetComponent<PointerMover>().MakeVisible();
         electronStartPositionVector.vectorValue = electronStartPosition.position;
         playbackSpeed.Value = 1;
         showLabel.boolValue = true;
