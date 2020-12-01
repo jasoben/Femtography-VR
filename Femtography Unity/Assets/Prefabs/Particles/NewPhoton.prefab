@@ -1,5 +1,18 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &4916317782937186187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 699233595633477375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47977236f91c3454796e75043a8ec886, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  showText: {fileID: 11400000, guid: 9c4cb6f7f89bc9544a0ee86309d048a6, type: 2}
 --- !u!1 &3744573584604697663
 GameObject:
   m_ObjectHideFlags: 0
@@ -92,19 +105,6 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &4916317782937186187
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 699233595633477375}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47977236f91c3454796e75043a8ec886, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  showText: {fileID: 11400000, guid: 9c4cb6f7f89bc9544a0ee86309d048a6, type: 2}
 --- !u!114 &1910317482448171147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -118,6 +118,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   multiEventListener: 0
+  activateBoolOnOrOff: 0
+  checkWhetherToActivate: {fileID: 0}
   Event: {fileID: 11400000, guid: 6aa4ef91bbbb1e24db6772bb2da5fb6d, type: 2}
   Events: []
   Response:
@@ -147,6 +149,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   multiEventListener: 0
+  activateBoolOnOrOff: 0
+  checkWhetherToActivate: {fileID: 0}
   Event: {fileID: 11400000, guid: e58971e8755e1ca42b19e4b443927f2d, type: 2}
   Events: []
   Response:
@@ -272,6 +276,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   multiEventListener: 0
+  activateBoolOnOrOff: 0
+  checkWhetherToActivate: {fileID: 0}
   Event: {fileID: 11400000, guid: dcdeb438fb6324d4eb823e2ff03cb015, type: 2}
   Events: []
   Response:
@@ -758,7 +764,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 221e74172aba543469fe461f088e4a15, type: 2}
+      objectReference: {fileID: 2100000, guid: 3f5f4f02091d83b4dbfd2130049efc9c, type: 2}
     - target: {fileID: 919132149155446097, guid: 05292c990b8c3f4419bfe3bb49f4d3a7,
         type: 3}
       propertyPath: m_Name

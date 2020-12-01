@@ -153,6 +153,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   multiEventListener: 0
+  activateBoolOnOrOff: 0
+  checkWhetherToActivate: {fileID: 0}
   Event: {fileID: 11400000, guid: 4444c7e6d95a43c4ea743857f672b2dc, type: 2}
   Events: []
   Response:
@@ -182,6 +184,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   multiEventListener: 0
+  activateBoolOnOrOff: 0
+  checkWhetherToActivate: {fileID: 0}
   Event: {fileID: 11400000, guid: e2415f63e7051644a868d50eb58adb85, type: 2}
   Events: []
   Response:
@@ -211,6 +215,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   multiEventListener: 0
+  activateBoolOnOrOff: 0
+  checkWhetherToActivate: {fileID: 0}
   Event: {fileID: 11400000, guid: 5e4c2c8d0744fe349bb18aa0a894405a, type: 2}
   Events: []
   Response:
@@ -537,19 +543,6 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &897947009531699237
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8359117481003633518}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a464eebfd4619940bbdf8f557417e48, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotationAxis: {x: 0, y: 0.5, z: 0}
 --- !u!114 &2085596192472108379
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -563,6 +556,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   showText: {fileID: 11400000, guid: 9c4cb6f7f89bc9544a0ee86309d048a6, type: 2}
+--- !u!114 &897947009531699237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8359117481003633518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a464eebfd4619940bbdf8f557417e48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationAxis: {x: 0, y: 0.5, z: 0}
 --- !u!1001 &3332795278568947417
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -794,7 +800,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 221e74172aba543469fe461f088e4a15, type: 2}
+      objectReference: {fileID: 2100000, guid: d2f6c531e7c2bef439396e5dc94a8911, type: 2}
     - target: {fileID: 919132149155446097, guid: 7c697ae0ac5470244b8fe95c9b76a462,
         type: 3}
       propertyPath: m_Name

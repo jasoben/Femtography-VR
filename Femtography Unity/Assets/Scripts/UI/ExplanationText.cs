@@ -22,8 +22,6 @@ public class ExplanationText : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha8))
-            currentText++;
         if (currentText == explanationTexts.Count)
             currentText = 0;
         uiText.text = explanationTexts[currentText].explanation;
@@ -32,10 +30,27 @@ public class ExplanationText : MonoBehaviour
     public void NextText()
     {
         currentText++;
+        ApplyTextColors();
     }
-    public void ChooseText(int whichNumber)
+    public void ChooseTextNumber(int whichNumber)
     {
         currentText = whichNumber;
+        ApplyTextColors();
+    }
+    public void ChooseTextTitle(string textTitle)
+    {
+        foreach(ParsedExplanationText thisExplanation in explanationTexts)
+        {
+            if (thisExplanation.title == textTitle)
+                currentText = explanationTexts.IndexOf(thisExplanation);
+        }
+        ApplyTextColors();
+    }
+    void ApplyTextColors()
+    {
+        explanationTexts[currentText].explanation = explanationTexts[currentText].explanation.Replace("electron", "<color=orange>electron</color>");
+        explanationTexts[currentText].explanation = explanationTexts[currentText].explanation.Replace("photon", "<color=yellow>photon</color>");
+        explanationTexts[currentText].explanation = explanationTexts[currentText].explanation.Replace("proton", "<color=cyan>proton</color>");
     }
 }
 

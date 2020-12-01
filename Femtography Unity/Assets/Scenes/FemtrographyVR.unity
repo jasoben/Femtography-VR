@@ -3807,6 +3807,9 @@ GameObject:
   - component: {fileID: 613503132}
   - component: {fileID: 613503133}
   - component: {fileID: 613503134}
+  - component: {fileID: 613503135}
+  - component: {fileID: 613503137}
+  - component: {fileID: 613503136}
   m_Layer: 0
   m_Name: TutorialController
   m_TagString: Untagged
@@ -3849,7 +3852,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 477498066}
-        m_MethodName: ChooseText
+        m_MethodName: ChooseTextNumber
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3912,14 +3915,107 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 477498066}
-        m_MethodName: NextText
-        m_Mode: 1
+        m_MethodName: ChooseTextTitle
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 1
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: FirstElectronFired
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &613503135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 613503130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86dd175dc768941409f779cc3531c879, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  multiEventListener: 0
+  activateBoolOnOrOff: 0
+  checkWhetherToActivate: {fileID: 0}
+  Event: {fileID: 11400000, guid: 4e44e1bc3c6aa7e43b08b62e475d15bf, type: 2}
+  Events: []
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 477498066}
+        m_MethodName: ChooseTextTitle
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: DriveByPhoton
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &613503136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 613503130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86dd175dc768941409f779cc3531c879, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  multiEventListener: 0
+  activateBoolOnOrOff: 0
+  checkWhetherToActivate: {fileID: 0}
+  Event: {fileID: 11400000, guid: e58971e8755e1ca42b19e4b443927f2d, type: 2}
+  Events: []
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 477498066}
+        m_MethodName: ChooseTextTitle
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: SecondPhotonReleased
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &613503137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 613503130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86dd175dc768941409f779cc3531c879, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  multiEventListener: 0
+  activateBoolOnOrOff: 0
+  checkWhetherToActivate: {fileID: 0}
+  Event: {fileID: 11400000, guid: dcdeb438fb6324d4eb823e2ff03cb015, type: 2}
+  Events: []
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 477498066}
+        m_MethodName: ChooseTextTitle
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: CollisionWithProton
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &625319828
