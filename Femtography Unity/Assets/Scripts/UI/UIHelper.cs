@@ -12,7 +12,6 @@ public class UIHelper : MonoBehaviour
     public MenuManagerObject menuManagerObject;// Sometimes the menu is active and sometimes it isn't, so we enable
     // and disable objects through ScriptableObject data instead of directly. See the "MenuManager" under "Control Objects" 
     // in the hierarchy.
-    Button button;
     Image image;
     Toggle toggle;
     ToggleTooltip toggleTooltip;
@@ -26,8 +25,6 @@ public class UIHelper : MonoBehaviour
             baseColor = Color.white;
         flashingColor = Color.gray;
         newColor = new Color();
-        if (GetComponent<Button>() != null)
-            button = GetComponent<Button>();
         if (GetComponent<Image>() != null)
             image = GetComponent<Image>();
         if (GetComponent<Toggle>() != null)
@@ -36,17 +33,9 @@ public class UIHelper : MonoBehaviour
             toggleColorBlock = toggle.colors;
         }
 
-        highlightColor = new Color(255/255f, 241/255f, 0);
-        regularColor = new Color(124/255f, 144/255f, 191/255f, 1);
+        highlightColor = new Color(255/255f, 241/255f, 0, .7f);
+        regularColor = new Color(124/255f, 144/255f, 191/255f, .7f);
         //regularColor = Color.blue;
-
-
-        if (button != null)
-        {
-            buttonColorBlock = GetComponent<Button>().colors;
-            buttonColorBlock.normalColor = regularColor;
-            GetComponent<Button>().colors = buttonColorBlock;
-        }
 
         toggleTooltip = GetComponentInChildren<ToggleTooltip>();
 
@@ -94,12 +83,6 @@ public class UIHelper : MonoBehaviour
                 toggle.colors = toggleColorBlock;
                 toggle.transform.Find("Label").gameObject.GetComponent<Text>().color = newColor;
             }
-            if (button != null)
-            {
-                buttonColorBlock = GetComponent<Button>().colors;
-                buttonColorBlock.normalColor = highlightColor;
-                GetComponent<Button>().colors = buttonColorBlock;
-            }
         }
         else if (!highlightButton)
         {
@@ -111,17 +94,9 @@ public class UIHelper : MonoBehaviour
                 toggle.colors = toggleColorBlock;
                 toggle.transform.Find("Label").gameObject.GetComponent<Text>().color = baseColor;
             }
-            if (button != null)
-            {
-                buttonColorBlock = GetComponent<Button>().colors;
-                buttonColorBlock.normalColor = regularColor;
-                GetComponent<Button>().colors = buttonColorBlock;
-            }
         }
 
-        if (button != null)
-            button.interactable = menuManagerObject.isActive;
-        else if (toggle != null)
+        if (toggle != null)
             toggle.interactable = menuManagerObject.isActive;
 
         highlightButton = menuManagerObject.isFlashing;
