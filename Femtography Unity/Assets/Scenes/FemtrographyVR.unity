@@ -8340,6 +8340,7 @@ GameObject:
   - component: {fileID: 1273731426}
   - component: {fileID: 1273731425}
   - component: {fileID: 1273731424}
+  - component: {fileID: 1273731429}
   m_Layer: 5
   m_Name: Initialize
   m_TagString: Untagged
@@ -8488,6 +8489,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   developmentNotes: Do not add any events etc. to this object-- most menu events
     are handled globally by the Menu Manager Object under "Control Objects"
+--- !u!114 &1273731429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1273731422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52b614eb29028a747887016ae4fe6a28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wiggleAmountX: 0.005
+  wiggleAmountY: 0.005
+  totalWiggleSpanY: 0.5
+  totalWiggleSpanX: 0.7
 --- !u!1001 &1275979689
 PrefabInstance:
   m_ObjectHideFlags: 0
