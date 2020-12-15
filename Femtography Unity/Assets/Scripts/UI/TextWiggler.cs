@@ -6,12 +6,12 @@ public class TextWiggler : MonoBehaviour
 {
     // This wiggles UI text around a bit to preserve the appearance of the liquid display
 
-    float wiggleAmountX = .005f, wiggleAmountY = .005f, totalWiggleSpanY = .5f, totalWiggleSpanX = .7f, 
-    currentPositionX = 0, currentPositionY = 0;
+    float wiggleAmountX = .000005f, wiggleAmountY = .000005f, totalWiggleSpanY = .0005f, totalWiggleSpanX = .0007f, currentPositionX, currentPositionY;
     // Start is called before the first frame update
     void Start()
     {
-        
+        currentPositionX = Random.Range(-.01f, .01f);
+        currentPositionY = Random.Range(-.01f, .01f);
     }
 
     // Update is called once per frame
@@ -24,10 +24,14 @@ public class TextWiggler : MonoBehaviour
         if (Mathf.Abs(currentPositionX) > totalWiggleSpanX)
         {
             wiggleAmountX = -wiggleAmountX;
+            if (wiggleAmountX > 0)
+                wiggleAmountX = Random.Range(.000003f, .000007f);
         }
         if (Mathf.Abs(currentPositionY) > totalWiggleSpanY)
         {
             wiggleAmountY = -wiggleAmountY;
+            if (wiggleAmountY > 0)
+                wiggleAmountY = Random.Range(.000003f, .000007f);
         }
     }
 }
