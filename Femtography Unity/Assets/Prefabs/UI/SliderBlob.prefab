@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2001349223282622110}
   - component: {fileID: 2001349223282622111}
   - component: {fileID: 2001349223282622108}
+  - component: {fileID: -2988275883379953496}
   m_Layer: 0
   m_Name: SliderBlob
   m_TagString: Untagged
@@ -59,7 +60,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3e44780132b69a043b1bcbbc0a719157, type: 2}
+  - {fileID: 2100000, guid: 3c99fe890ff9c8f4c812a100f6864415, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -93,3 +94,23 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-2988275883379953496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2001349223282622109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04f94a41b594ff244b572947adf14073, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UIText: {fileID: 0}
+  regularTextColor: {r: 0.8516615, g: 0.8330811, b: 0.9150943, a: 0.64705884}
+  highlightTextColor: {r: 0, g: 0, b: 0, a: 1}
+  regularButtonColor: {r: 0.6, g: 0.54509807, b: 0.8980393, a: 0.33333334}
+  highlightButtonColor: {r: 0.9245283, g: 0.7075694, b: 0.056692798, a: 1}
+  regularAlphaAmount: 0.3
+  highlightAlphaAmount: 1
+  fadeSpeed: 0.003

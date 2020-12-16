@@ -1,18 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &1435666268
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6450270871453423790}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04f94a41b594ff244b572947adf14073, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mouseOverMaterial: {fileID: 2100000, guid: d2f6c531e7c2bef439396e5dc94a8911, type: 2}
 --- !u!65 &2194289163791873125
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26,6 +13,26 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.0000033, y: 2, z: 2.0000005}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1435666268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6450270871453423790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04f94a41b594ff244b572947adf14073, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UIText: {fileID: 0}
+  regularTextColor: {r: 0.8516615, g: 0.8330811, b: 0.9150943, a: 0.64705884}
+  highlightTextColor: {r: 0, g: 0, b: 0, a: 1}
+  regularButtonColor: {r: 0.6, g: 0.54509807, b: 0.8980393, a: 0.33333334}
+  highlightButtonColor: {r: 0.9245283, g: 0.7075694, b: 0.056692798, a: 1}
+  regularAlphaAmount: 0.3
+  highlightAlphaAmount: 1
+  fadeSpeed: 0.003
 --- !u!1001 &6143647661251290623
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -102,11 +109,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3e44780132b69a043b1bcbbc0a719157, type: 2}
+      objectReference: {fileID: 2100000, guid: 3c99fe890ff9c8f4c812a100f6864415, type: 2}
     - target: {fileID: 919132149155446097, guid: 136034b2b9bf1ad4897477bbb1498ee3,
         type: 3}
       propertyPath: m_Name
-      value: button
+      value: GlowyButton
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 136034b2b9bf1ad4897477bbb1498ee3,
         type: 3}
