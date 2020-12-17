@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class PhysicalButton : MonoBehaviour
 {
-    public Text UIText;
+    public GameObject UITextOrImage, UIHotKey;
     public Color regularTextColor, highlightTextColor, regularButtonColor, highlightButtonColor;
 
     private Color startFadeButtonColor, endFadeButtonColor, startFadeTextColor, endFadeTextColor,
@@ -18,11 +18,13 @@ public class PhysicalButton : MonoBehaviour
 
     float fadeCounter = 0;
 
-    public float fadeSpeed;
+    public float fadeSpeed, clickDistance;
 
-    bool canFadeIn = true, canFadeOut, isFadingIn;
+    bool canFadeIn = true, canFadeOut, isFadingIn, clicked;
 
-    IEnumerator FadeInCoroutine, FadeOutCoroutine;
+    IEnumerator FadeInCoroutine, FadeOutCoroutine, clickCoroutine;
+
+    public Vector3 originalUITextOrImagePosition, clickedUITextOrImagePosition, originalUIHotKeyPosition, clickUIHotKeyPosition;
 
     // Start is called before the first frame update
     void Start()
@@ -32,8 +34,24 @@ public class PhysicalButton : MonoBehaviour
         currentFadingTextColor = regularTextColor;
         currentAlpha = regularAlphaAmount;
 
-        if (UIText != null)
-            UIText.color = regularTextColor;
+        if (UITextOrImage != null)
+        {
+            if (UITextOrImage.GetComponent<Text>() != null)
+                UITextOrImage.GetComponent<Text>().color = regularTextColor;
+            if (UITextOrImage.GetComponent<Image>() != null)
+                UITextOrImage.GetComponent<Image>().color = regularTextColor;
+            originalUITextOrImagePosition = UITextOrImage.transform.localPosition;
+            clickedUITextOrImagePosition = originalUITextOrImagePosition + new Vector3(0, 0, 3f);
+        }
+        if (UIHotKey != null)
+        {
+            if (UIHotKey.GetComponent<Text>() != null)
+                UIHotKey.GetComponent<Text>().color = regularTextColor;
+            originalUIHotKeyPosition = UIHotKey.transform.localPosition;
+            clickUIHotKeyPosition = originalUIHotKeyPosition + new Vector3(0, 0, 3f);
+        }
+
+
     }
 
     // Update is called once per frame
@@ -79,8 +97,15 @@ public class PhysicalButton : MonoBehaviour
             shiftingColor.SetFloat("Alpha_", currentAlpha);
 
             GetComponent<Renderer>().SetPropertyBlock(shiftingColor);
-            if (UIText != null)
-                UIText.color = currentFadingTextColor;
+            if (UITextOrImage != null)
+            {
+                if (UITextOrImage.GetComponent<Text>() != null)
+                    UITextOrImage.GetComponent<Text>().color = currentFadingTextColor;
+                if (UITextOrImage.GetComponent<Image>() != null)
+                    UITextOrImage.GetComponent<Image>().color = currentFadingTextColor;
+            }
+            if (UIHotKey != null)
+                UIHotKey.GetComponent<Text>().color = currentFadingTextColor;
 
             fadeCounter += fadeSpeed;
 
@@ -89,6 +114,34 @@ public class PhysicalButton : MonoBehaviour
                 yield break;
             } else
                 yield return new WaitForEndOfFrame();
+        }
+    }
+    
+    IEnumerator ClickUI()
+    {
+        float clickAmount = 0;
+        while (true)
+        {
+            if (clicked)
+            {
+                UITextOrImage.transform.position = Vector3.Lerp(UITextOrImage.transform.position, UITextOrImage.transform.parent.TransformPoint(clickedUITextOrImagePosition), clickAmount);// since the button is a
+                if (UIHotKey != null)
+                    UIHotKey.transform.position = Vector3.Lerp(UIHotKey.transform.position, UIHotKey.transform.parent.TransformPoint(clickUIHotKeyPosition), clickAmount);
+            } else
+            {
+                UITextOrImage.transform.position = Vector3.Lerp(UITextOrImage.transform.position, UITextOrImage.transform.parent.TransformPoint(originalUITextOrImagePosition), clickAmount);// since the button is a
+                if (UIHotKey != null)
+                    UIHotKey.transform.position = Vector3.Lerp(UIHotKey.transform.position, UIHotKey.transform.parent.TransformPoint(originalUIHotKeyPosition), clickAmount);
+            }
+            // child of the text object, we only need to move the text and the underline, which is not a child
+            clickAmount += .05f;
+
+            if (clickAmount > 1)
+            {
+                yield break;
+            }
+
+            yield return new WaitForEndOfFrame();
         }
     }
 
@@ -107,5 +160,22 @@ public class PhysicalButton : MonoBehaviour
         if (FadeInCoroutine != null)
             StopCoroutine(FadeInCoroutine);
         StartCoroutine(FadeOutCoroutine);
+    }
+
+    private void OnMouseDown()
+    {
+        clicked = true;
+        if (clickCoroutine != null)
+            StopCoroutine(clickCoroutine);
+        clickCoroutine = ClickUI();
+        StartCoroutine(clickCoroutine);
+    }
+    private void OnMouseUp()
+    {
+        clicked = false;
+        if (clickCoroutine != null)
+            StopCoroutine(clickCoroutine);
+        clickCoroutine = ClickUI();
+        StartCoroutine(clickCoroutine);
     }
 }
