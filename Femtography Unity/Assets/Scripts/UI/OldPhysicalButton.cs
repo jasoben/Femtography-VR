@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class OtherPhysicalButton : MonoBehaviour
+public class OldPhysicalButton : MonoBehaviour
 {
     public GameObject UITextOrImage, UIHotKey;
     public Color regularTextColor, highlightTextColor, regularButtonColor, highlightButtonColor;

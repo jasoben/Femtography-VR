@@ -6,7 +6,7 @@ public class UIWiggler : MonoBehaviour
 {
     // This wiggles UI around a bit to preserve the appearance of the liquid display
 
-    float wiggleAmountX = .00001f, wiggleAmountY = .00001f, totalWiggleSpanY = .005f, totalWiggleSpanX = .007f, currentPositionX, currentPositionY;
+    float wiggleAmountX = .00002f, wiggleAmountY = .00002f, totalWiggleSpanY = .005f, totalWiggleSpanX = .007f, currentPositionX, currentPositionY;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,13 +25,13 @@ public class UIWiggler : MonoBehaviour
         {
             wiggleAmountX = -wiggleAmountX;
             if (wiggleAmountX > 0)
-                wiggleAmountX = Random.Range(.000005f, .00001f);
+                wiggleAmountX = Random.Range(.000005f, .00002f);
         }
         if (Mathf.Abs(currentPositionY) > totalWiggleSpanY)
         {
             wiggleAmountY = -wiggleAmountY;
             if (wiggleAmountY > 0)
-                wiggleAmountY = Random.Range(.000005f, .00001f);
+                wiggleAmountY = Random.Range(.000005f, .00002f);
         }
     }
 }
