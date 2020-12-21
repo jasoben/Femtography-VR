@@ -41,6 +41,9 @@ public class ShowMenu : MonoBehaviour
         float newShiftSpeed = shiftSpeed;
         float currentWidth = startWidth;
         float currentAlpha = startAlpha;
+
+        GetComponent<PhysicalButton>().regularAlphaAmount = .02f;
+
         if (openOrClose) // If it's open, we reverse the procedure
         {
             closeMenu.Invoke();
@@ -48,7 +51,9 @@ public class ShowMenu : MonoBehaviour
             currentWidth = endWidth;
             currentAlpha = endAlpha;
             newShiftSpeed = -shiftSpeed;
+            GetComponent<PhysicalButton>().regularAlphaAmount = .2f;
         }
+
 
         float alphaShiftSpeed = (-newShiftSpeed / (startWidth - endWidth)) * (endAlpha - startAlpha); // Adjust alpha shift speed between start and end alpha to match shift speed 
         // between arbitrary widths, and also reverse it
@@ -65,12 +70,14 @@ public class ShowMenu : MonoBehaviour
                 openOrClose = true;
                 isTransmuting = false;
                 openMenu.Invoke();
+                GetComponent<PhysicalButton>().SetAlpha();
                 yield break;
             } 
             else if (openOrClose && currentWidth > startWidth)
             {
                 openOrClose = false;
                 isTransmuting = false;
+                GetComponent<PhysicalButton>().SetAlpha();
                 yield break;
             }
             else
@@ -78,35 +85,9 @@ public class ShowMenu : MonoBehaviour
         }
     }
 
-    public void Highlight()
-    {
-        highLighting = true;
-    }
-
-    public void UnHighlight()
-    {
-        highLighting = false;
-    }
-
-    void SetSphereHighlight()
-    {
-        spherePropertyBlock.SetFloat("Gray_", currentHightlightAmount);
-        sphereRenderer.SetPropertyBlock(spherePropertyBlock);
-    }
 
     private void Update()
     {
-        if (highLighting && currentHightlightAmount < highlightAmount)
-        {
-            currentHightlightAmount += highlightSpeed;
-            SetSphereHighlight();
-        }
-        else if (!highLighting && currentHightlightAmount > unHighlightAmount)
-        {
-            currentHightlightAmount -= highlightSpeed;
-            SetSphereHighlight();
-        }
-
         
     }
 }
