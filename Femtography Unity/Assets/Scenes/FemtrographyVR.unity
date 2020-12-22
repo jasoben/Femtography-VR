@@ -2123,6 +2123,50 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 263768026}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &264558677
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 264558678}
+  - component: {fileID: 264558679}
+  m_Layer: 2
+  m_Name: LightMovementBounds
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &264558678
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 264558677}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1596374284}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &264558679
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 264558677}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0, y: 30.4, z: 5.3}
+  m_Center: {x: 0, y: 15.893533, z: 0.18097416}
 --- !u!1001 &269258998
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3363,10 +3407,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52b614eb29028a747887016ae4fe6a28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wiggleSpan: {x: 0, y: 0, z: 0}
-  wiggleAmount: {x: 0, y: 0, z: 0}
-  wiggleRange: {x: 0, y: 0, z: 0}
+  wiggleRange: 0
+  wiggleSpeed: 0
   wiggleCoefficient: 0
+  useSphere: 1
+  boundingBox: {fileID: 0}
 --- !u!4 &436195190 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5965061146367459860, guid: f9fcb5c964dbb844881a3bb65d3cc243,
@@ -3741,10 +3786,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52b614eb29028a747887016ae4fe6a28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wiggleSpan: {x: 0, y: 0, z: 0}
-  wiggleAmount: {x: 0, y: 0, z: 0}
-  wiggleRange: {x: 0, y: 0, z: 0}
+  wiggleRange: 0
+  wiggleSpeed: 0
   wiggleCoefficient: 0
+  useSphere: 1
+  boundingBox: {fileID: 0}
 --- !u!1 &475814548
 GameObject:
   m_ObjectHideFlags: 0
@@ -3920,10 +3966,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52b614eb29028a747887016ae4fe6a28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wiggleSpan: {x: 0, y: 0, z: 0}
-  wiggleAmount: {x: 0, y: 0, z: 0}
-  wiggleRange: {x: 0, y: 0, z: 0}
+  wiggleRange: 0
+  wiggleSpeed: 0
   wiggleCoefficient: 0
+  useSphere: 1
+  boundingBox: {fileID: 0}
 --- !u!1 &477498062
 GameObject:
   m_ObjectHideFlags: 0
@@ -6425,10 +6472,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52b614eb29028a747887016ae4fe6a28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wiggleSpan: {x: 0, y: 0, z: 0}
-  wiggleAmount: {x: 0, y: 0, z: 0}
-  wiggleRange: {x: 0, y: 0, z: 0}
+  wiggleRange: 0
+  wiggleSpeed: 0
   wiggleCoefficient: 0
+  useSphere: 1
+  boundingBox: {fileID: 0}
 --- !u!1 &669114036
 GameObject:
   m_ObjectHideFlags: 0
@@ -7164,10 +7212,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52b614eb29028a747887016ae4fe6a28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wiggleSpan: {x: 0, y: 0, z: 0}
-  wiggleAmount: {x: 0, y: 0, z: 0}
-  wiggleRange: {x: 0, y: 0, z: 0}
+  wiggleRange: 0
+  wiggleSpeed: 0
   wiggleCoefficient: 0
+  useSphere: 1
+  boundingBox: {fileID: 0}
 --- !u!224 &800077899 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2831210308778667112, guid: a4c19f72e80f2c944ab3a2b298623fe3,
@@ -7702,10 +7751,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52b614eb29028a747887016ae4fe6a28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wiggleSpan: {x: 0, y: 0, z: 0}
-  wiggleAmount: {x: 0, y: 0, z: 0}
-  wiggleRange: {x: 0, y: 0, z: 0}
+  wiggleRange: 0
+  wiggleSpeed: 0
   wiggleCoefficient: 0
+  useSphere: 1
+  boundingBox: {fileID: 0}
 --- !u!1 &904379678
 GameObject:
   m_ObjectHideFlags: 0
@@ -9585,10 +9635,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52b614eb29028a747887016ae4fe6a28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wiggleSpan: {x: 0, y: 0, z: 0}
-  wiggleAmount: {x: 0, y: 0, z: 0}
-  wiggleRange: {x: 0, y: 0, z: 0}
+  wiggleRange: 0
+  wiggleSpeed: 0
   wiggleCoefficient: 0
+  useSphere: 1
+  boundingBox: {fileID: 0}
 --- !u!1001 &1148526562
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10214,10 +10265,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52b614eb29028a747887016ae4fe6a28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wiggleSpan: {x: 0, y: 0, z: 0}
-  wiggleAmount: {x: 0, y: 0, z: 0}
-  wiggleRange: {x: 0, y: 0, z: 0}
+  wiggleRange: 0
+  wiggleSpeed: 0
   wiggleCoefficient: 0
+  useSphere: 1
+  boundingBox: {fileID: 0}
 --- !u!224 &1219727712 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2831210308778667112, guid: a4c19f72e80f2c944ab3a2b298623fe3,
@@ -10813,10 +10865,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52b614eb29028a747887016ae4fe6a28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wiggleSpan: {x: 0, y: 0, z: 0}
-  wiggleAmount: {x: 0, y: 0, z: 0}
-  wiggleRange: {x: 0, y: 0, z: 0}
+  wiggleRange: 0
+  wiggleSpeed: 0
   wiggleCoefficient: 0
+  useSphere: 1
+  boundingBox: {fileID: 0}
 --- !u!1001 &1275979689
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12816,10 +12869,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52b614eb29028a747887016ae4fe6a28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wiggleSpan: {x: 0, y: 0, z: 0}
-  wiggleAmount: {x: 0, y: 0, z: 0}
-  wiggleRange: {x: 0, y: 0, z: 0}
+  wiggleRange: 0
+  wiggleSpeed: 0
   wiggleCoefficient: 0
+  useSphere: 1
+  boundingBox: {fileID: 0}
 --- !u!1 &1592285294
 GameObject:
   m_ObjectHideFlags: 0
@@ -13266,7 +13320,7 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 0.41006586, g: 0.70756215, b: 0.9150943, a: 1}
+  m_Color: {r: 0.41176477, g: 0.9137255, b: 0.8167453, a: 1}
   m_Intensity: 1
   m_Range: 7.1
   m_SpotAngle: 30
@@ -13328,10 +13382,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52b614eb29028a747887016ae4fe6a28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wiggleSpan: {x: 0, y: 0, z: 0}
-  wiggleAmount: {x: 0, y: 0, z: 0}
-  wiggleRange: {x: 0, y: 0, z: 0}
-  wiggleCoefficient: 0
+  wiggleRange: 5
+  wiggleSpeed: 0.0003
+  wiggleCoefficient: 0.01
+  useSphere: 0
+  boundingBox: {fileID: 264558679}
 --- !u!224 &1641155082 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2831210308778667112, guid: a4c19f72e80f2c944ab3a2b298623fe3,
@@ -13648,7 +13703,7 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 0.41006586, g: 0.70756215, b: 0.9150943, a: 1}
+  m_Color: {r: 0.43822435, g: 0.41176477, b: 0.9137255, a: 1}
   m_Intensity: 1
   m_Range: 7.1
   m_SpotAngle: 30
@@ -13710,10 +13765,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52b614eb29028a747887016ae4fe6a28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wiggleSpan: {x: 0, y: 0, z: 0}
-  wiggleAmount: {x: 0, y: 0, z: 0}
-  wiggleRange: {x: 0, y: 0, z: 0}
-  wiggleCoefficient: 0
+  wiggleRange: 5
+  wiggleSpeed: 0.0003
+  wiggleCoefficient: 0.01
+  useSphere: 0
+  boundingBox: {fileID: 264558679}
 --- !u!1001 &1743998504
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14286,10 +14342,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52b614eb29028a747887016ae4fe6a28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wiggleSpan: {x: 0, y: 0, z: 0}
-  wiggleAmount: {x: 0, y: 0, z: 0}
-  wiggleRange: {x: 0, y: 0, z: 0}
+  wiggleRange: 0
+  wiggleSpeed: 0
   wiggleCoefficient: 0
+  useSphere: 1
+  boundingBox: {fileID: 0}
 --- !u!1 &1782849666
 GameObject:
   m_ObjectHideFlags: 0
@@ -14572,10 +14629,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52b614eb29028a747887016ae4fe6a28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wiggleSpan: {x: 0, y: 0, z: 0}
-  wiggleAmount: {x: 0, y: 0, z: 0}
-  wiggleRange: {x: 0, y: 0, z: 0}
+  wiggleRange: 0
+  wiggleSpeed: 0
   wiggleCoefficient: 0
+  useSphere: 1
+  boundingBox: {fileID: 0}
 --- !u!1 &1795737458
 GameObject:
   m_ObjectHideFlags: 0
@@ -14668,10 +14726,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52b614eb29028a747887016ae4fe6a28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wiggleSpan: {x: 0, y: 0, z: 0}
-  wiggleAmount: {x: 0, y: 0, z: 0}
-  wiggleRange: {x: 0, y: 0, z: 0}
+  wiggleRange: 0
+  wiggleSpeed: 0
   wiggleCoefficient: 0
+  useSphere: 1
+  boundingBox: {fileID: 0}
 --- !u!1 &1811801560
 GameObject:
   m_ObjectHideFlags: 0
@@ -14911,10 +14970,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52b614eb29028a747887016ae4fe6a28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wiggleSpan: {x: 0, y: 0, z: 0}
-  wiggleAmount: {x: 0, y: 0, z: 0}
-  wiggleRange: {x: 0, y: 0, z: 0}
+  wiggleRange: 0
+  wiggleSpeed: 0
   wiggleCoefficient: 0
+  useSphere: 1
+  boundingBox: {fileID: 0}
 --- !u!114 &1834277782 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 810343680198333609, guid: 632e41e39fee12e468109b1b9971e8e7,
@@ -15427,10 +15487,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52b614eb29028a747887016ae4fe6a28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wiggleSpan: {x: 0, y: 0, z: 0}
-  wiggleAmount: {x: 0, y: 0, z: 0}
-  wiggleRange: {x: 0, y: 0, z: 0}
+  wiggleRange: 0
+  wiggleSpeed: 0
   wiggleCoefficient: 0
+  useSphere: 1
+  boundingBox: {fileID: 0}
 --- !u!1 &1893793794
 GameObject:
   m_ObjectHideFlags: 0
@@ -16049,7 +16110,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1966436808}
   m_LocalRotation: {x: -0.5000001, y: -0.49999985, z: -0.5000002, w: -0.49999994}
-  m_LocalPosition: {x: -3, y: 0, z: 0}
+  m_LocalPosition: {x: -3, y: 1.79, z: 0}
   m_LocalScale: {x: 10.281615, y: 10.2813, z: 10.281298}
   m_Children: []
   m_Father: {fileID: 1596374284}
@@ -16128,10 +16189,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52b614eb29028a747887016ae4fe6a28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wiggleSpan: {x: 0, y: 0, z: 0}
-  wiggleAmount: {x: 0, y: 0, z: 0}
-  wiggleRange: {x: 0, y: 0, z: 0}
-  wiggleCoefficient: 0
+  wiggleRange: 5
+  wiggleSpeed: 0.0003
+  wiggleCoefficient: 0.01
+  useSphere: 0
+  boundingBox: {fileID: 264558679}
 --- !u!1 &1990170137
 GameObject:
   m_ObjectHideFlags: 0
@@ -16401,10 +16463,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52b614eb29028a747887016ae4fe6a28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wiggleSpan: {x: 0, y: 0, z: 0}
-  wiggleAmount: {x: 0, y: 0, z: 0}
-  wiggleRange: {x: 0, y: 0, z: 0}
+  wiggleRange: 0
+  wiggleSpeed: 0
   wiggleCoefficient: 0
+  useSphere: 1
+  boundingBox: {fileID: 0}
 --- !u!1 &2043732157
 GameObject:
   m_ObjectHideFlags: 0

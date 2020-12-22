@@ -207,6 +207,7 @@ public class PhysicalButton : MonoBehaviour
 
     private void OnMouseDown()
     {
+        GetComponent<UIWiggler>().WigglerPaused = true;
         clicked = true;
         if (clickCoroutine != null)
             StopCoroutine(clickCoroutine);
@@ -215,6 +216,7 @@ public class PhysicalButton : MonoBehaviour
     }
     private void OnMouseUp()
     {
+        GetComponent<UIWiggler>().WigglerPaused = false;
         clicked = false;
         if (clickCoroutine != null)
             StopCoroutine(clickCoroutine);
