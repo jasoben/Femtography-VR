@@ -6,6 +6,7 @@ using UnityEngine;
 public class MenuManagerObject : ScriptableObject
 {
     public bool isActive, isFlashing, isOn;
+    public string toolTipTitle;
 
     private void OnEnable()
     {

@@ -1265,6 +1265,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2102474766}
     m_Modifications:
+    - target: {fileID: -6373454457696916105, guid: f9fcb5c964dbb844881a3bb65d3cc243,
+        type: 3}
+      propertyPath: menuManagerObject
+      value: 
+      objectReference: {fileID: 11400000, guid: e9ae14da14c4f0f428e6a41421ba8e78,
+        type: 2}
     - target: {fileID: 962030284, guid: f9fcb5c964dbb844881a3bb65d3cc243, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0.4999997
@@ -1416,6 +1422,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2102474766}
     m_Modifications:
+    - target: {fileID: -6373454457696916105, guid: f9fcb5c964dbb844881a3bb65d3cc243,
+        type: 3}
+      propertyPath: menuManagerObject
+      value: 
+      objectReference: {fileID: 11400000, guid: 3fb99d3caf793c749baa42236aadba79,
+        type: 2}
     - target: {fileID: 962030283, guid: f9fcb5c964dbb844881a3bb65d3cc243, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -1813,7 +1825,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1986,8 +1998,8 @@ RectTransform:
   m_Father: {fileID: 1208533025}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -3290,6 +3302,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuManagerObject: {fileID: 11400000, guid: 285c468670814c3469ab7b9c0ab807da, type: 2}
+  toolTipObjectReference: {fileID: 0}
+  showText: {fileID: 0}
+  showMenu: {fileID: 0}
+  flashingScaleCoefficient: 0
 --- !u!114 &432914540
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3702,6 +3718,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuManagerObject: {fileID: 11400000, guid: 190bd204fc962f8478b6b2f525e9482d, type: 2}
+  toolTipObjectReference: {fileID: 0}
+  showText: {fileID: 0}
+  showMenu: {fileID: 0}
+  flashingScaleCoefficient: 0
 --- !u!114 &470421760
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3903,6 +3923,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuManagerObject: {fileID: 11400000, guid: 81ce50e4c18cb6640974a63f20ed3704, type: 2}
+  toolTipObjectReference: {fileID: 0}
+  showText: {fileID: 0}
+  showMenu: {fileID: 0}
+  flashingScaleCoefficient: 0
 --- !u!114 &475814552
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4812,6 +4836,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2102474766}
     m_Modifications:
+    - target: {fileID: 417236534479984582, guid: 4bee4112bf023c84cbccfcdf38c0ae02,
+        type: 3}
+      propertyPath: menuManagerObject
+      value: 
+      objectReference: {fileID: 11400000, guid: b9bc314bc365d284c88795f5befdb5ee,
+        type: 2}
     - target: {fileID: 989498336330376970, guid: 4bee4112bf023c84cbccfcdf38c0ae02,
         type: 3}
       propertyPath: m_SizeDelta.x
@@ -5357,7 +5387,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -6348,7 +6378,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &662313143
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6385,6 +6415,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuManagerObject: {fileID: 11400000, guid: ffdffe9e57d40bd4583b56215e4c2daf, type: 2}
+  toolTipObjectReference: {fileID: 0}
+  showText: {fileID: 0}
+  showMenu: {fileID: 0}
+  flashingScaleCoefficient: 0
 --- !u!114 &662313145
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6577,6 +6611,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2102474766}
     m_Modifications:
+    - target: {fileID: 417236534479984582, guid: 4bee4112bf023c84cbccfcdf38c0ae02,
+        type: 3}
+      propertyPath: menuManagerObject
+      value: 
+      objectReference: {fileID: 11400000, guid: 190bd204fc962f8478b6b2f525e9482d,
+        type: 2}
     - target: {fileID: 989498336330376970, guid: 4bee4112bf023c84cbccfcdf38c0ae02,
         type: 3}
       propertyPath: m_SizeDelta.x
@@ -6630,7 +6670,7 @@ PrefabInstance:
     - target: {fileID: 3762979267140462263, guid: 4bee4112bf023c84cbccfcdf38c0ae02,
         type: 3}
       propertyPath: m_textInfo.lineCount
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3762979267140462263, guid: 4bee4112bf023c84cbccfcdf38c0ae02,
         type: 3}
@@ -6640,7 +6680,7 @@ PrefabInstance:
     - target: {fileID: 3762979267140462263, guid: 4bee4112bf023c84cbccfcdf38c0ae02,
         type: 3}
       propertyPath: m_firstOverflowCharacterIndex
-      value: 17
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 8110566319559112869, guid: 4bee4112bf023c84cbccfcdf38c0ae02,
         type: 3}
@@ -6798,6 +6838,7 @@ GameObject:
   - component: {fileID: 702884568}
   - component: {fileID: 702884570}
   - component: {fileID: 702884569}
+  - component: {fileID: 702884572}
   m_Layer: 5
   m_Name: Tooltip
   m_TagString: Untagged
@@ -6821,7 +6862,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -130.5, y: -117.8}
+  m_AnchoredPosition: {x: -170, y: -120}
   m_SizeDelta: {x: 300, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &702884569
@@ -6868,6 +6909,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 702884567}
   m_CullTransparentMesh: 0
+--- !u!114 &702884572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 702884567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55c3822f56a3d7f4a8b77cd031e90589, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toolTipObject: {fileID: 11400000, guid: eabb19c504eef4f429cedc25b769428c, type: 2}
 --- !u!1001 &720430193
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7036,7 +7090,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -7209,6 +7263,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuManagerObject: {fileID: 11400000, guid: b9bc314bc365d284c88795f5befdb5ee, type: 2}
+  toolTipObjectReference: {fileID: 0}
+  showText: {fileID: 0}
+  showMenu: {fileID: 0}
+  flashingScaleCoefficient: 0
 --- !u!114 &796729204
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7715,6 +7773,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuManagerObject: {fileID: 11400000, guid: f6dc79d7ff4602f4caad7b6be3eb8317, type: 2}
+  toolTipObjectReference: {fileID: 0}
+  showText: {fileID: 0}
+  showMenu: {fileID: 0}
+  flashingScaleCoefficient: 0
 --- !u!114 &878997994
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7926,6 +7988,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2102474766}
     m_Modifications:
+    - target: {fileID: -6373454457696916105, guid: f9fcb5c964dbb844881a3bb65d3cc243,
+        type: 3}
+      propertyPath: menuManagerObject
+      value: 
+      objectReference: {fileID: 11400000, guid: f6dc79d7ff4602f4caad7b6be3eb8317,
+        type: 2}
     - target: {fileID: 962030283, guid: f9fcb5c964dbb844881a3bb65d3cc243, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -8949,6 +9017,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2102474766}
     m_Modifications:
+    - target: {fileID: -6373454457696916105, guid: f9fcb5c964dbb844881a3bb65d3cc243,
+        type: 3}
+      propertyPath: menuManagerObject
+      value: 
+      objectReference: {fileID: 11400000, guid: 81ce50e4c18cb6640974a63f20ed3704,
+        type: 2}
     - target: {fileID: 962030285, guid: f9fcb5c964dbb844881a3bb65d3cc243, type: 3}
       propertyPath: m_textInfo.characterCount
       value: 6
@@ -9066,6 +9140,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2102474766}
     m_Modifications:
+    - target: {fileID: -6373454457696916105, guid: f9fcb5c964dbb844881a3bb65d3cc243,
+        type: 3}
+      propertyPath: menuManagerObject
+      value: 
+      objectReference: {fileID: 11400000, guid: 285c468670814c3469ab7b9c0ab807da,
+        type: 2}
     - target: {fileID: 962030285, guid: f9fcb5c964dbb844881a3bb65d3cc243, type: 3}
       propertyPath: m_textInfo.characterCount
       value: 5
@@ -9267,6 +9347,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2102474766}
     m_Modifications:
+    - target: {fileID: -6373454457696916105, guid: f9fcb5c964dbb844881a3bb65d3cc243,
+        type: 3}
+      propertyPath: menuManagerObject
+      value: 
+      objectReference: {fileID: 11400000, guid: 63a6a29a2b6bc474aabd322b3002c332,
+        type: 2}
     - target: {fileID: 962030284, guid: f9fcb5c964dbb844881a3bb65d3cc243, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0.4999997
@@ -9600,6 +9686,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuManagerObject: {fileID: 11400000, guid: f6dc79d7ff4602f4caad7b6be3eb8317, type: 2}
+  toolTipObjectReference: {fileID: 0}
+  showText: {fileID: 0}
+  showMenu: {fileID: 0}
+  flashingScaleCoefficient: 0
 --- !u!114 &1142777680
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10223,7 +10313,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1219300749
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10260,6 +10350,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuManagerObject: {fileID: 11400000, guid: 7fa1bccb8321f1941bde033fae9d0a54, type: 2}
+  toolTipObjectReference: {fileID: 0}
+  showText: {fileID: 0}
+  showMenu: {fileID: 0}
+  flashingScaleCoefficient: 0
 --- !u!114 &1219300751
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10884,6 +10978,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuManagerObject: {fileID: 11400000, guid: 0f3bc6f13d14c8f43b8de4352342db93, type: 2}
+  toolTipObjectReference: {fileID: 0}
+  showText: {fileID: 0}
+  showMenu: {fileID: 0}
+  flashingScaleCoefficient: 0
 --- !u!114 &1273731426
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11949,6 +12047,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2102474766}
     m_Modifications:
+    - target: {fileID: 417236534479984582, guid: 4bee4112bf023c84cbccfcdf38c0ae02,
+        type: 3}
+      propertyPath: menuManagerObject
+      value: 
+      objectReference: {fileID: 11400000, guid: d3c66a4693c4024428bed735f5925748,
+        type: 2}
     - target: {fileID: 989498336330376970, guid: 4bee4112bf023c84cbccfcdf38c0ae02,
         type: 3}
       propertyPath: m_SizeDelta.x
@@ -12834,6 +12938,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuManagerObject: {fileID: 11400000, guid: 8b887fef078fe114ead3e03518ba852d, type: 2}
+  toolTipObjectReference: {fileID: 0}
+  showText: {fileID: 0}
+  showMenu: {fileID: 0}
+  flashingScaleCoefficient: 0
 --- !u!114 &1590592944
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13488,6 +13596,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2102474766}
     m_Modifications:
+    - target: {fileID: -6373454457696916105, guid: f9fcb5c964dbb844881a3bb65d3cc243,
+        type: 3}
+      propertyPath: menuManagerObject
+      value: 
+      objectReference: {fileID: 11400000, guid: 8b887fef078fe114ead3e03518ba852d,
+        type: 2}
     - target: {fileID: 962030284, guid: f9fcb5c964dbb844881a3bb65d3cc243, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.08996199
@@ -14307,6 +14421,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuManagerObject: {fileID: 11400000, guid: e9ae14da14c4f0f428e6a41421ba8e78, type: 2}
+  toolTipObjectReference: {fileID: 0}
+  showText: {fileID: 0}
+  showMenu: {fileID: 0}
+  flashingScaleCoefficient: 0
 --- !u!114 &1774505332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14627,6 +14745,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuManagerObject: {fileID: 11400000, guid: d3c66a4693c4024428bed735f5925748, type: 2}
+  toolTipObjectReference: {fileID: 0}
+  showText: {fileID: 0}
+  showMenu: {fileID: 0}
+  flashingScaleCoefficient: 0
 --- !u!114 &1793553119
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14935,6 +15057,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuManagerObject: {fileID: 11400000, guid: 63a6a29a2b6bc474aabd322b3002c332, type: 2}
+  toolTipObjectReference: {fileID: 0}
+  showText: {fileID: 0}
+  showMenu: {fileID: 0}
+  flashingScaleCoefficient: 0
 --- !u!114 &1811801565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15383,6 +15509,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuManagerObject: {fileID: 11400000, guid: 7b736e6bcd9badc46a51076bb5ff8cc5, type: 2}
+  toolTipObjectReference: {fileID: 0}
+  showText: {fileID: 0}
+  showMenu: {fileID: 0}
+  flashingScaleCoefficient: 0
 --- !u!114 &1864855968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15911,6 +16041,32 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2102474766}
     m_Modifications:
+    - target: {fileID: -6373454457696916105, guid: f9fcb5c964dbb844881a3bb65d3cc243,
+        type: 3}
+      propertyPath: menuManagerObject
+      value: 
+      objectReference: {fileID: 11400000, guid: 0f3bc6f13d14c8f43b8de4352342db93,
+        type: 2}
+    - target: {fileID: -6373454457696916105, guid: f9fcb5c964dbb844881a3bb65d3cc243,
+        type: 3}
+      propertyPath: flashingScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6373454457696916105, guid: f9fcb5c964dbb844881a3bb65d3cc243,
+        type: 3}
+      propertyPath: flashingScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6373454457696916105, guid: f9fcb5c964dbb844881a3bb65d3cc243,
+        type: 3}
+      propertyPath: flashingScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6373454457696916105, guid: f9fcb5c964dbb844881a3bb65d3cc243,
+        type: 3}
+      propertyPath: flashingScaleCoefficient
+      value: 1.2
+      objectReference: {fileID: 0}
     - target: {fileID: 962030287, guid: f9fcb5c964dbb844881a3bb65d3cc243, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -16877,6 +17033,7 @@ GameObject:
   - component: {fileID: 2126987838}
   - component: {fileID: 2126987841}
   - component: {fileID: 2126987840}
+  - component: {fileID: 2126987842}
   m_Layer: 0
   m_Name: MenuManager
   m_TagString: Untagged
@@ -17954,6 +18111,37 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+--- !u!114 &2126987842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2126987821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86dd175dc768941409f779cc3531c879, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  multiEventListener: 0
+  activateBoolOnOrOff: 0
+  checkWhetherToActivate: {fileID: 0}
+  Event: {fileID: 11400000, guid: 253ac8605a82a0f49a5947966a12a432, type: 2}
+  Events: []
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 0960ffc0614a228418076e68edd9fed1, type: 2}
+        m_MethodName: SetBool
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1001 &2146646802
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18069,6 +18257,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2102474766}
     m_Modifications:
+    - target: {fileID: 417236534479984582, guid: 4bee4112bf023c84cbccfcdf38c0ae02,
+        type: 3}
+      propertyPath: menuManagerObject
+      value: 
+      objectReference: {fileID: 11400000, guid: 7b736e6bcd9badc46a51076bb5ff8cc5,
+        type: 2}
     - target: {fileID: 2469840230273880190, guid: 4bee4112bf023c84cbccfcdf38c0ae02,
         type: 3}
       propertyPath: m_Mesh
