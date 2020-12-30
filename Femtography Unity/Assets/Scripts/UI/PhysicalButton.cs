@@ -5,7 +5,7 @@ using TMPro;
 
 public class PhysicalButton : MonoBehaviour
 {
-    public Color regularTextColor, highlightTextColor, regularButtonColor, highlightButtonColor, toggledColor;
+    public Color regularTextColor, highlightTextColor, regularButtonColor, highlightButtonColor, disabledColor;
 
     private Color startFadeButtonColor, endFadeButtonColor, startFadeTextColor, endFadeTextColor,
         currentFadingButtonColor, currentFadingTextColor, unToggledColor;
@@ -20,12 +20,16 @@ public class PhysicalButton : MonoBehaviour
     public float fadeSpeed, clickDistance;
 
     bool canFadeIn = true, canFadeOut, isFadingIn, clicked, isToggled;
+    
+    public bool IsToggled { get { return isToggled; } set { isToggled = value; } }
 
     IEnumerator FadeInCoroutine, FadeOutCoroutine, clickCoroutine, scalingCoroutine;
 
     public Vector3 originalUITextOrImagePosition, clickedUITextOrImagePosition, originalUIHotKeyPosition, clickUIHotKeyPosition;
 
     Vector3 endScale, normalScale;
+
+    GameObject checkedBox;
 
     // Start is called before the first frame update
     void Start()
@@ -43,10 +47,20 @@ public class PhysicalButton : MonoBehaviour
         normalScale = transform.localScale;
         normalScaleSpeed = scaleSpeed;
 
+        if (GetComponent<UIHelper>() != null)
+            GetComponent<UIHelper>().SetScale();// set scale values for this component before shrinking button
         if (isScalable)
             transform.localScale = Vector3.zero;
 
         StartCoroutine(FadeUI());
+
+        if (isToggle)
+        {
+            checkedBox = transform.Find("Checked").gameObject;
+            isToggled = GetComponent<UIHelper>().menuManagerObject.isOn;
+            StartCoroutine(ScaleToggle());
+        }
+
     }
 
     // Update is called once per frame
@@ -190,19 +204,25 @@ public class PhysicalButton : MonoBehaviour
 
     private void OnMouseEnter()
     {
-        isFadingIn = true;
-        FadeInCoroutine = FadeUI();
-        if (FadeOutCoroutine != null)
-            StopCoroutine(FadeOutCoroutine);
-        StartCoroutine(FadeInCoroutine);
+        if (GetComponent<UIHelper>().menuManagerObject.isActive)
+        {
+            isFadingIn = true;
+            FadeInCoroutine = FadeUI();
+            if (FadeOutCoroutine != null)
+                StopCoroutine(FadeOutCoroutine);
+            StartCoroutine(FadeInCoroutine);
+        }
     }
     private void OnMouseExit()
     {
-        isFadingIn = false;
-        FadeOutCoroutine = FadeUI();
-        if (FadeInCoroutine != null)
-            StopCoroutine(FadeInCoroutine);
-        StartCoroutine(FadeOutCoroutine);
+        if (GetComponent<UIHelper>().menuManagerObject.isActive)
+        {
+            isFadingIn = false;
+            FadeOutCoroutine = FadeUI();
+            if (FadeInCoroutine != null)
+                StopCoroutine(FadeInCoroutine);
+            StartCoroutine(FadeOutCoroutine);
+        }
     }
 
     private void OnMouseDown()
@@ -223,18 +243,91 @@ public class PhysicalButton : MonoBehaviour
         clickCoroutine = ClickUI();
         StartCoroutine(clickCoroutine);
 
-        isToggled = !isToggled;
-
         if (isToggle)
         {
-            if (isToggled)
+            SetToggle();
+        }
+    }
+
+    public void SetToggle()
+    {
+        isToggled = !isToggled;
+        StartCoroutine(ScaleToggle());
+    }
+
+    public void SetToggle(bool isOn)
+    {
+        isToggled = isOn;
+        StartCoroutine(ScaleToggle());
+    }
+
+    IEnumerator ScaleToggle()
+    {
+        Vector3 startSize = default;
+        Vector3 endSize = default;
+        float scaleAmount = 0;
+        if (!isToggled)
+        {
+            startSize = Vector3.one;
+            endSize = Vector3.zero;
+        }
+        else if (isToggled)
+        {
+            startSize = Vector3.zero;
+            endSize = Vector3.one;
+        }
+
+        while (true)
+        {
+            checkedBox.transform.localScale = Vector3.Lerp(startSize, endSize, scaleAmount);
+            scaleAmount += fadeSpeed * 20;
+
+            if (scaleAmount > 1)
             {
-                regularButtonColor = toggledColor;
-            }
-            else if (!isToggled)
+                yield break;
+            } else
+                yield return new WaitForEndOfFrame();
+        }
+    }
+
+    public void EnableDisable()
+    {
+        StopAllCoroutines();
+        StartCoroutine(SetEnabledOrDisabled());
+    }
+    IEnumerator SetEnabledOrDisabled()
+    {
+        float fadeAmount = 0;
+        Color startColor, endColor, currentColor;
+        bool isEnabled = GetComponent<UIHelper>().menuManagerObject.isActive;
+
+        if (isEnabled)
+        {
+            startColor = disabledColor;
+            endColor = regularButtonColor;
+        }
+        else
+        {
+            startColor = regularButtonColor;
+            endColor = disabledColor;
+        }
+
+        while (true)
+        {
+            currentColor = Color.Lerp(startColor, endColor, fadeAmount);
+            materialPropertyBlock.SetColor("Color_", currentColor);
+            materialPropertyBlock.SetColor("GlowColor", currentColor);
+            foreach(TextMeshPro textMeshPro in GetComponentsInChildren<TextMeshPro>())
             {
-                regularButtonColor = unToggledColor;
+                textMeshPro.color = currentColor;
             }
+            GetComponent<Renderer>().SetPropertyBlock(materialPropertyBlock);
+            fadeAmount += .05f;
+
+            if (fadeAmount > 1)
+                yield break;
+            else
+                yield return new WaitForEndOfFrame();
         }
     }
 }

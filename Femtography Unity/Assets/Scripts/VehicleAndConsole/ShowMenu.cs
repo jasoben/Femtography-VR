@@ -14,10 +14,12 @@ public class ShowMenu : MonoBehaviour
     bool isTransmuting, openOrClose, highLighting;
     public UnityEvent openMenu, closeMenu;
     Renderer displayTubeRenderer, sphereRenderer;
+    public GlobalBool menuOpen;
 
     // Start is called before the first frame update
     void Start()
     {
+        menuOpen.boolValue = false;
         Console.SetActive(false);
         currentHightlightAmount = unHighlightAmount;
         displayTubePropertyBlock = new MaterialPropertyBlock();
@@ -46,6 +48,8 @@ public class ShowMenu : MonoBehaviour
 
         if (openOrClose) // If it's open, we reverse the procedure
         {
+            menuOpen.boolValue = false; // we set this here so the menu shrinks correctly the instant it "close menu"
+            // is initiated.
             closeMenu.Invoke();
             Console.SetActive(false);
             currentWidth = endWidth;
@@ -84,6 +88,7 @@ public class ShowMenu : MonoBehaviour
                 isTransmuting = false;
                 openMenu.Invoke();
                 GetComponent<PhysicalButton>().SetAlpha();
+                menuOpen.boolValue = true; 
                 yield break;
             } 
             else if (openOrClose && currentWidth > startWidth)

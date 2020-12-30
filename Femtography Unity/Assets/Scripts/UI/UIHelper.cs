@@ -13,7 +13,7 @@ public class UIHelper : MonoBehaviour
 
     public ObjectReference toolTipObjectReference;
 
-    public GlobalBool showText, showMenu;
+    public GlobalBool showText, menuOpen;
 
     bool referenceObjectSet;
 
@@ -29,6 +29,9 @@ public class UIHelper : MonoBehaviour
     void Start()
     {
         toolTips = XmlParser.Read<ToolTipText>("assets/XML/toolTips.xml");
+    }
+    public void SetScale()
+    {
         startScale = transform.localScale;
         flashingScale = startScale * flashingScaleCoefficient;
     }
@@ -44,17 +47,24 @@ public class UIHelper : MonoBehaviour
             referenceObjectSet = true;
             toolTipTextObject = toolTipObjectReference.referencedGameObject.GetComponent<Text>();
         }
-        if (referenceObjectSet)
+        if (referenceObjectSet && menuOpen.boolValue)
         {
             if (menuManagerObject.isFlashing)
             {
                 transform.localScale = Vector3.Lerp(startScale, flashingScale, FlashingController.FlashLerp);
             }
         }
+        if (menuManagerObject.isActive != GetComponent<BoxCollider>().enabled) // if the 
+            // value changes 
+        {
+            GetComponent<BoxCollider>().enabled = menuManagerObject.isActive;
+            GetComponent<PhysicalButton>().EnableDisable();
+        }
     }
 
     public void ToggleOnOrOff(bool onOrOff)
     {
+        GetComponent<PhysicalButton>().SetToggle(onOrOff);
     }
 
     private void OnMouseEnter()

@@ -19,14 +19,10 @@ public class ToggleHelper : MonoBehaviour
         
     }
 
-    public void ChangeToggle(bool isOn)
-    {
-        GetComponent<Toggle>().isOn = isOn;
-    }
 
     public void ChangeMouseLookStatus()
     {
-        bool isOn = GetComponent<Toggle>().isOn;
+        bool isOn = GetComponent<PhysicalButton>().IsToggled;
         if (isOn)
             mouseLookOn.Invoke();
         else
