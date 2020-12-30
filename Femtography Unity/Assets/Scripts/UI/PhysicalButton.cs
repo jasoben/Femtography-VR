@@ -222,7 +222,8 @@ public class PhysicalButton : MonoBehaviour
             if (FadeInCoroutine != null)
                 StopCoroutine(FadeInCoroutine);
             StartCoroutine(FadeOutCoroutine);
-        }
+        } else
+            EnableDisable();
     }
 
     private void OnMouseDown()
@@ -297,7 +298,7 @@ public class PhysicalButton : MonoBehaviour
     }
     IEnumerator SetEnabledOrDisabled()
     {
-        float fadeAmount = 0;
+        float fadeAmount = 0, startAlpha, endAlpha, currentAlpha;
         Color startColor, endColor, currentColor;
         bool isEnabled = GetComponent<UIHelper>().menuManagerObject.isActive;
 
@@ -305,24 +306,35 @@ public class PhysicalButton : MonoBehaviour
         {
             startColor = disabledColor;
             endColor = regularButtonColor;
+            startAlpha = regularAlphaAmount;
+            endAlpha = .2f;
         }
         else
         {
             startColor = regularButtonColor;
             endColor = disabledColor;
+            startAlpha = .2f;
+            endAlpha = regularAlphaAmount;
         }
 
         while (true)
         {
             currentColor = Color.Lerp(startColor, endColor, fadeAmount);
+            currentAlpha = Mathf.Lerp(startAlpha, endAlpha, fadeAmount);
             materialPropertyBlock.SetColor("Color_", currentColor);
             materialPropertyBlock.SetColor("GlowColor", currentColor);
-            foreach(TextMeshPro textMeshPro in GetComponentsInChildren<TextMeshPro>())
-            {
-                textMeshPro.color = currentColor;
-            }
+            materialPropertyBlock.SetFloat("Alpha_", currentAlpha);
             GetComponent<Renderer>().SetPropertyBlock(materialPropertyBlock);
-            fadeAmount += .05f;
+            if (GetComponentInChildren<TextMeshPro>() != null)
+            {
+                foreach(TextMeshPro textMeshPro in GetComponentsInChildren<TextMeshPro>())
+                {
+                    textMeshPro.color = currentColor + new Color(0,0,0,.1f);
+                }
+            }    
+            if (GetComponentInChildren<SpriteRenderer>() != null)
+                GetComponentInChildren<SpriteRenderer>().color = currentColor + new Color(0,0,0,.1f);
+            fadeAmount += .01f;
 
             if (fadeAmount > 1)
                 yield break;

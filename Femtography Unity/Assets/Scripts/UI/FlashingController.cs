@@ -5,7 +5,7 @@ using UnityEngine;
 public static class FlashingController
 {
     public static float FlashLerp { get; set; }
-    static float flashSpeed = .005f;
+    static float flashSpeed = .014f;
     static int upOrDown;
 
     public static void Flashing()

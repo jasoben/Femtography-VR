@@ -52,13 +52,32 @@ public class UIHelper : MonoBehaviour
             if (menuManagerObject.isFlashing)
             {
                 transform.localScale = Vector3.Lerp(startScale, flashingScale, FlashingController.FlashLerp);
-            }
+            } else if (!menuManagerObject.isFlashing)
+                StartCoroutine(ReturnToNormalScale());
         }
         if (menuManagerObject.isActive != GetComponent<BoxCollider>().enabled) // if the 
             // value changes 
         {
-            GetComponent<BoxCollider>().enabled = menuManagerObject.isActive;
             GetComponent<PhysicalButton>().EnableDisable();
+            GetComponent<BoxCollider>().enabled = menuManagerObject.isActive;
+        }
+    }
+
+    IEnumerator ReturnToNormalScale()
+    {
+        Vector3 currentStartScale = transform.localScale, currentScale;
+        float scaleAmount = 0;
+
+        while (true)
+        {
+            currentScale = Vector3.Lerp(currentStartScale, startScale, scaleAmount);
+            transform.localScale = currentScale;
+            scaleAmount += .05f;
+
+            if (scaleAmount > 1)
+                yield break;
+            else
+                yield return new WaitForEndOfFrame();
         }
     }
 
