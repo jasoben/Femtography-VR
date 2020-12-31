@@ -6,7 +6,8 @@ using UnityEngine.UI;
 
 public class ToggleHelper : MonoBehaviour
 {
-    public UnityEvent mouseLookOn, mouseLookOff;
+    public UnityEvent boolOn, boolOff;
+    public GlobalBool globalBool;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,12 +21,13 @@ public class ToggleHelper : MonoBehaviour
     }
 
 
-    public void ChangeMouseLookStatus()
+    public void ToggleOnOrOff()
     {
-        bool isOn = GetComponent<PhysicalButton>().IsToggled;
-        if (isOn)
-            mouseLookOn.Invoke();
+        globalBool.boolValue = !globalBool.boolValue;
+        GetComponent<PhysicalButton>().SetToggle(globalBool.boolValue);
+        if (globalBool.boolValue)
+            boolOn.Invoke();
         else
-            mouseLookOff.Invoke();
+            boolOff.Invoke();
     }
 }

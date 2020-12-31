@@ -204,7 +204,8 @@ public class PhysicalButton : MonoBehaviour
 
     private void OnMouseEnter()
     {
-        if (GetComponent<UIHelper>().menuManagerObject.isActive)
+        if (GetComponent<UIHelper>() == null ||
+            GetComponent<UIHelper>().menuManagerObject.isActive)
         {
             isFadingIn = true;
             FadeInCoroutine = FadeUI();
@@ -215,7 +216,8 @@ public class PhysicalButton : MonoBehaviour
     }
     private void OnMouseExit()
     {
-        if (GetComponent<UIHelper>().menuManagerObject.isActive)
+        if (GetComponent<UIHelper>() == null ||
+            GetComponent<UIHelper>().menuManagerObject.isActive)
         {
             isFadingIn = false;
             FadeOutCoroutine = FadeUI();
@@ -228,7 +230,8 @@ public class PhysicalButton : MonoBehaviour
 
     private void OnMouseDown()
     {
-        GetComponent<UIWiggler>().WigglerPaused = true;
+        if (GetComponent<UIWiggler>() != null)
+            GetComponent<UIWiggler>().WigglerPaused = true;
         clicked = true;
         if (clickCoroutine != null)
             StopCoroutine(clickCoroutine);
@@ -237,7 +240,8 @@ public class PhysicalButton : MonoBehaviour
     }
     private void OnMouseUp()
     {
-        GetComponent<UIWiggler>().WigglerPaused = false;
+        if (GetComponent<UIWiggler>() != null)
+            GetComponent<UIWiggler>().WigglerPaused = false;
         clicked = false;
         if (clickCoroutine != null)
             StopCoroutine(clickCoroutine);
@@ -296,16 +300,19 @@ public class PhysicalButton : MonoBehaviour
         StopAllCoroutines();
         StartCoroutine(SetEnabledOrDisabled());
     }
+
     IEnumerator SetEnabledOrDisabled()
     {
         float fadeAmount = 0, startAlpha, endAlpha, currentAlpha;
-        Color startColor, endColor, currentColor;
+        Color startColor, endColor, currentColor, startTextColor, endTextColor, currentTextColor;
         bool isEnabled = GetComponent<UIHelper>().menuManagerObject.isActive;
 
         if (isEnabled)
         {
             startColor = disabledColor;
             endColor = regularButtonColor;
+            startTextColor = disabledColor + new Color(0, 0, 0, .1f);
+            endTextColor = regularTextColor;
             startAlpha = regularAlphaAmount;
             endAlpha = .2f;
         }
@@ -313,6 +320,8 @@ public class PhysicalButton : MonoBehaviour
         {
             startColor = regularButtonColor;
             endColor = disabledColor;
+            startTextColor = regularTextColor;
+            endTextColor = disabledColor + new Color(0, 0, 0, .1f);
             startAlpha = .2f;
             endAlpha = regularAlphaAmount;
         }
@@ -320,20 +329,26 @@ public class PhysicalButton : MonoBehaviour
         while (true)
         {
             currentColor = Color.Lerp(startColor, endColor, fadeAmount);
+            currentTextColor = Color.Lerp(startTextColor, endTextColor, fadeAmount);
             currentAlpha = Mathf.Lerp(startAlpha, endAlpha, fadeAmount);
+
             materialPropertyBlock.SetColor("Color_", currentColor);
             materialPropertyBlock.SetColor("GlowColor", currentColor);
             materialPropertyBlock.SetFloat("Alpha_", currentAlpha);
+
             GetComponent<Renderer>().SetPropertyBlock(materialPropertyBlock);
+
             if (GetComponentInChildren<TextMeshPro>() != null)
             {
                 foreach(TextMeshPro textMeshPro in GetComponentsInChildren<TextMeshPro>())
                 {
-                    textMeshPro.color = currentColor + new Color(0,0,0,.1f);
+                    textMeshPro.color = currentTextColor;
                 }
             }    
+
             if (GetComponentInChildren<SpriteRenderer>() != null)
-                GetComponentInChildren<SpriteRenderer>().color = currentColor + new Color(0,0,0,.1f);
+                GetComponentInChildren<SpriteRenderer>().color = currentTextColor;
+
             fadeAmount += .01f;
 
             if (fadeAmount > 1)

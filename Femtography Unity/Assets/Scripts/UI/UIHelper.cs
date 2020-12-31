@@ -83,7 +83,6 @@ public class UIHelper : MonoBehaviour
 
     public void ToggleOnOrOff(bool onOrOff)
     {
-        GetComponent<PhysicalButton>().SetToggle(onOrOff);
     }
 
     private void OnMouseEnter()
