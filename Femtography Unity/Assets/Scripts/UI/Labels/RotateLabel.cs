@@ -5,6 +5,7 @@ using UnityEngine;
 public class RotateLabel : MonoBehaviour
 {
     public Vector3 rotationAxis;
+    public FloatReference gameSpeed;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,7 +15,7 @@ public class RotateLabel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(rotationAxis);
+        transform.Rotate(rotationAxis * gameSpeed.Value);
     }
 
     public void UpdateScale(float newScale)

@@ -13,6 +13,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationAxis: {x: 0, y: 0.2, z: 0}
+  gameSpeed:
+    UseConstant: 0
+    ConstantValue: 0
+    variableSlider: {fileID: 11400000, guid: c13976bcb832ad14ea2881716f86cf7d, type: 2}
 --- !u!1 &3151662850940820242
 GameObject:
   m_ObjectHideFlags: 0
@@ -157,6 +161,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   multiEventListener: 0
+  activateBoolOnOrOff: 0
+  checkWhetherToActivate: {fileID: 0}
   Event: {fileID: 11400000, guid: 4e44e1bc3c6aa7e43b08b62e475d15bf, type: 2}
   Events: []
   Response:
