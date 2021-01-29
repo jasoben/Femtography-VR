@@ -24,7 +24,7 @@ public class ToggleHelper : MonoBehaviour
     public void ToggleOnOrOff()
     {
         globalBool.boolValue = !globalBool.boolValue;
-        GetComponent<PhysicalButton>().SetToggle(globalBool.boolValue);
+        GetComponent<PhysicalToggle>().SetToggle(globalBool.boolValue);
         if (globalBool.boolValue)
             boolOn.Invoke();
         else
