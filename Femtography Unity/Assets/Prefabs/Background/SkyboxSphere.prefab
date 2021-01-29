@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 7192403218386534213}
   - component: {fileID: 7192403218386534212}
   - component: {fileID: 274910114}
-  - component: {fileID: 6758731144417480029}
   m_Layer: 31
   m_Name: SkyboxSphere
   m_TagString: Untagged
@@ -57,7 +56,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
   m_RenderingLayerMask: 3221225472
   m_RendererPriority: 0
   m_Materials:
@@ -107,19 +105,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b0fe1e6f4747bb43aaf4f55634d81c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &6758731144417480029
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7192403218386534215}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49874b4f76d6d4b40bc5d27cfddd818f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  simSpeed:
-    UseConstant: 0
-    ConstantValue: 0
-    variableSlider: {fileID: 11400000, guid: c13976bcb832ad14ea2881716f86cf7d, type: 2}
