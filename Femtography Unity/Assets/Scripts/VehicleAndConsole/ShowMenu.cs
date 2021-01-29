@@ -56,18 +56,16 @@ public class ShowMenu : MonoBehaviour
             currentAlpha = endAlpha;
             newShiftSpeed = -shiftSpeed;
             GetComponent<PhysicalButton>().regularAlphaAmount = .2f;
-            foreach(PhysicalButton physicalButton in transform.parent.gameObject.GetComponentsInChildren<PhysicalButton>())
+            foreach(UIScaler uiScaler in transform.parent.gameObject.GetComponentsInChildren<UIScaler>())
             {
-                if (physicalButton.isScalable)
-                    physicalButton.EnglargeOrShrink(false);
+                uiScaler.EnglargeOrShrink(false);
             }
         }
         else
         {
-            foreach(PhysicalButton physicalButton in transform.parent.gameObject.GetComponentsInChildren<PhysicalButton>())
+            foreach(UIScaler uiScaler in transform.parent.gameObject.GetComponentsInChildren<UIScaler>())
             {
-                if (physicalButton.isScalable)
-                    physicalButton.EnglargeOrShrink(true);
+                uiScaler.EnglargeOrShrink(true);
             }
         }
 

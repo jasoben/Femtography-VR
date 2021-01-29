@@ -11,23 +11,17 @@ public class PhysicalButton : MonoBehaviour
         currentFadingButtonColor, currentFadingTextColor, unToggledColor;
     MaterialPropertyBlock materialPropertyBlock;
 
-    public bool isScalable;
+    public float regularAlphaAmount, highlightAlphaAmount;
 
-    public float regularAlphaAmount, highlightAlphaAmount, scaleSpeed;
-
-    private float startAlpha, endAlpha, currentAlpha, fadeCounter = 0, normalScaleSpeed;
+    private float startAlpha, endAlpha, currentAlpha, fadeCounter = 0;
 
     public float fadeSpeed, clickDistance;
 
     bool canFadeIn = true, canFadeOut, isFadingIn, clicked;
-    
 
-    IEnumerator FadeInCoroutine, FadeOutCoroutine, clickCoroutine, scalingCoroutine;
+    IEnumerator FadeInCoroutine, FadeOutCoroutine, clickCoroutine;
 
     public Vector3 originalUITextOrImagePosition, clickedUITextOrImagePosition, originalUIHotKeyPosition, clickUIHotKeyPosition;
-
-    Vector3 endScale, normalScale;
-
 
     // Start is called before the first frame update
     protected void Start()
@@ -42,56 +36,7 @@ public class PhysicalButton : MonoBehaviour
         originalUITextOrImagePosition = transform.localPosition;
         clickedUITextOrImagePosition = originalUITextOrImagePosition + clickedUITextOrImagePosition;
 
-        normalScale = transform.localScale;
-        normalScaleSpeed = scaleSpeed;
-
-        if (GetComponent<UIHelper>() != null)
-            GetComponent<UIHelper>().SetScale();// set scale values for this component before shrinking button
-        if (isScalable)
-            transform.localScale = Vector3.zero;
-
         StartCoroutine(FadeUI());
-    }
-
-    public void EnglargeOrShrink(bool isEnlarging)
-    {
-        float randomScaleSpeedModifier = Random.Range(-.005f, .005f);
-        scaleSpeed = normalScaleSpeed + randomScaleSpeedModifier;
-        if (isEnlarging)
-        {
-            endScale = normalScale;
-            if (scalingCoroutine != null)
-                StopCoroutine(scalingCoroutine);
-
-            scalingCoroutine = UIScaler();
-            StartCoroutine(scalingCoroutine);
-        }    
-
-        else if (!isEnlarging)
-        {
-            endScale = Vector3.zero; 
-            if (scalingCoroutine != null)
-                StopCoroutine(scalingCoroutine);
-
-            scalingCoroutine = UIScaler();
-            StartCoroutine(scalingCoroutine);
-        }    
-    }
-
-    IEnumerator UIScaler() // shrink or grow UI element
-    {
-        float scaleFactor = 0;
-        while (true)
-        {
-            transform.localScale = Vector3.Lerp(transform.localScale, endScale, scaleFactor);
-            scaleFactor += scaleSpeed;
-
-            if (scaleFactor > 1)
-                yield break;
-
-            else
-                yield return new WaitForEndOfFrame();
-        }
     }
 
     IEnumerator FadeUI()
@@ -213,7 +158,7 @@ public class PhysicalButton : MonoBehaviour
             EnableDisable();
     }
 
-    private void OnMouseDown()
+    protected void OnMouseDown()
     {
         if (GetComponent<UIWiggler>() != null)
             GetComponent<UIWiggler>().WigglerPaused = true;

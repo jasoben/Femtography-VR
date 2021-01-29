@@ -221,6 +221,8 @@ GameObject:
   - component: {fileID: 1947304794785352867}
   - component: {fileID: 2469840231937028179}
   - component: {fileID: 3784726210252589602}
+  - component: {fileID: 7565966097589578939}
+  - component: {fileID: 1131301876998090753}
   m_Layer: 19
   m_Name: GlowyToggle
   m_TagString: Untagged
@@ -341,10 +343,8 @@ MonoBehaviour:
   regularButtonColor: {r: 0.6, g: 0.54509807, b: 0.8980393, a: 0.34901962}
   highlightButtonColor: {r: 0.92549026, g: 0.7058824, b: 0.054901965, a: 0.5882353}
   disabledColor: {r: 0.46226418, g: 0.46226418, b: 0.46226418, a: 0.2784314}
-  isScalable: 1
   regularAlphaAmount: 0.09
   highlightAlphaAmount: 0.5
-  scaleSpeed: 0.01
   fadeSpeed: 0.003
   clickDistance: 0.001
   originalUITextOrImagePosition: {x: 0, y: 0, z: 0}
@@ -396,6 +396,59 @@ MonoBehaviour:
   wiggleCoefficient: 0.01
   useSphere: 1
   boundingBox: {fileID: 0}
+--- !u!114 &7565966097589578939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3352871971995764704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d8dc53892f07374f8b6701e1bf9a658, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boolOn:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  boolOff:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  globalBool: {fileID: 0}
+--- !u!114 &1131301876998090753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3352871971995764704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a2a6e3b50e619d4fbfd3685da0ecd92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6371815593667398969
 GameObject:
   m_ObjectHideFlags: 0
