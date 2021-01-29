@@ -11,7 +11,7 @@ public class PhysicalButton : MonoBehaviour
         currentFadingButtonColor, currentFadingTextColor, unToggledColor;
     MaterialPropertyBlock materialPropertyBlock;
 
-    public bool isScalable;
+    public bool isToggle, isScalable;
 
     public float regularAlphaAmount, highlightAlphaAmount, scaleSpeed;
 
@@ -19,8 +19,9 @@ public class PhysicalButton : MonoBehaviour
 
     public float fadeSpeed, clickDistance;
 
-    bool canFadeIn = true, canFadeOut, isFadingIn, clicked;
+    bool canFadeIn = true, canFadeOut, isFadingIn, clicked, isToggled;
     
+    public bool IsToggled { get { return isToggled; } set { isToggled = value; } }
 
     IEnumerator FadeInCoroutine, FadeOutCoroutine, clickCoroutine, scalingCoroutine;
 
@@ -28,9 +29,10 @@ public class PhysicalButton : MonoBehaviour
 
     Vector3 endScale, normalScale;
 
+    GameObject checkedBox;
 
     // Start is called before the first frame update
-    protected void Start()
+    void Start()
     {
         materialPropertyBlock = new MaterialPropertyBlock();
         currentFadingButtonColor = regularButtonColor;// look to the Coroutine FadeUI to see why we set these here
@@ -51,6 +53,19 @@ public class PhysicalButton : MonoBehaviour
             transform.localScale = Vector3.zero;
 
         StartCoroutine(FadeUI());
+
+        if (isToggle)
+        {
+            checkedBox = transform.Find("Checked").gameObject;
+            isToggled = GetComponent<UIHelper>().menuManagerObject.isOn;
+            StartCoroutine(ScaleToggle());
+        }
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
     }
 
     public void EnglargeOrShrink(bool isEnlarging)
@@ -105,7 +120,7 @@ public class PhysicalButton : MonoBehaviour
                 endFadeButtonColor = highlightButtonColor;
 
                 startFadeTextColor = currentFadingTextColor;
-                if (GetType() == typeof(PhysicalToggle))
+                if (isToggle)
                 {
                     endFadeTextColor = highlightButtonColor; // if it is a toggle the text should be the same color
                     // as the button, instead of a high contrast color against the button
@@ -223,7 +238,7 @@ public class PhysicalButton : MonoBehaviour
         clickCoroutine = ClickUI();
         StartCoroutine(clickCoroutine);
     }
-    protected void OnMouseUp()
+    private void OnMouseUp()
     {
         if (GetComponent<UIWiggler>() != null)
             GetComponent<UIWiggler>().WigglerPaused = false;
@@ -232,8 +247,53 @@ public class PhysicalButton : MonoBehaviour
             StopCoroutine(clickCoroutine);
         clickCoroutine = ClickUI();
         StartCoroutine(clickCoroutine);
+
+        if (isToggle)
+        {
+            SetToggle();
+        }
     }
 
+    public void SetToggle()
+    {
+        isToggled = !isToggled;
+        StartCoroutine(ScaleToggle());
+    }
+
+    public void SetToggle(bool isOn)
+    {
+        isToggled = isOn;
+        StartCoroutine(ScaleToggle());
+    }
+
+    IEnumerator ScaleToggle()
+    {
+        Vector3 startSize = default;
+        Vector3 endSize = default;
+        float scaleAmount = 0;
+        if (!isToggled)
+        {
+            startSize = Vector3.one;
+            endSize = Vector3.zero;
+        }
+        else if (isToggled)
+        {
+            startSize = Vector3.zero;
+            endSize = Vector3.one;
+        }
+
+        while (true)
+        {
+            checkedBox.transform.localScale = Vector3.Lerp(startSize, endSize, scaleAmount);
+            scaleAmount += fadeSpeed * 20;
+
+            if (scaleAmount > 1)
+            {
+                yield break;
+            } else
+                yield return new WaitForEndOfFrame();
+        }
+    }
 
     public void EnableDisable()
     {
