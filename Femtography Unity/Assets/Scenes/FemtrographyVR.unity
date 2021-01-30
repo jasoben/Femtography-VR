@@ -1723,6 +1723,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Console: {fileID: 943628576}
   Display: {fileID: 1596374285}
+  MenuObjectsParent: {fileID: 2102474765}
   startWidth: 10.5
   endWidth: 1
   shiftSpeed: 0.2
@@ -6250,6 +6251,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4462284997343632771, guid: b6c0a1e8678eb624d81997553ac65782,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6c0a1e8678eb624d81997553ac65782, type: 3}
 --- !u!4 &626287814 stripped
@@ -8164,7 +8170,7 @@ GameObject:
   - component: {fileID: 926946683}
   - component: {fileID: 926946684}
   m_Layer: 19
-  m_Name: MenuObjects
+  m_Name: MenuUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17256,7 +17262,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2102474766}
   m_Layer: 19
-  m_Name: ButtonsAndToggles
+  m_Name: MenuObjects
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19697,6 +19703,26 @@ PrefabInstance:
         type: 3}
       propertyPath: sliderDepth
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4462284997343632771, guid: b6c0a1e8678eb624d81997553ac65782,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5511712691721519193, guid: b6c0a1e8678eb624d81997553ac65782,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5511712691721519193, guid: b6c0a1e8678eb624d81997553ac65782,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5511712691721519193, guid: b6c0a1e8678eb624d81997553ac65782,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6c0a1e8678eb624d81997553ac65782, type: 3}

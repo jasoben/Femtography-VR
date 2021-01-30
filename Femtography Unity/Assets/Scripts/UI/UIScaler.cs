@@ -15,7 +15,7 @@ public class UIScaler : MonoBehaviour
 
         if (GetComponent<UIHelper>() != null)
             GetComponent<UIHelper>().SetScale();// set scale values for this component before shrinking button
-        transform.localScale = Vector3.zero;
+        transform.localScale = new Vector3(.01f, .01f, .01f);
     }
     public void EnglargeOrShrink(bool isEnlarging)
     {
@@ -33,7 +33,7 @@ public class UIScaler : MonoBehaviour
 
         else if (!isEnlarging)
         {
-            endScale = Vector3.zero; 
+            endScale = new Vector3(.01f, .01f, .01f); 
             if (scalingCoroutine != null)
                 StopCoroutine(scalingCoroutine);
 

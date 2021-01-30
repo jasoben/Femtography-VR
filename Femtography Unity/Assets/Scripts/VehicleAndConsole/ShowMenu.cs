@@ -4,10 +4,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityStandardAssets.Utility;
+using System.Linq;
 
 public class ShowMenu : MonoBehaviour
 {
-    public GameObject Console, Display;
+    public GameObject Console, Display, MenuObjectsParent;
     public float startWidth, endWidth, shiftSpeed, startAlpha, endAlpha, highlightAmount, unHighlightAmount, highlightSpeed;
     float currentHightlightAmount;
     MaterialPropertyBlock displayTubePropertyBlock, spherePropertyBlock;
@@ -15,10 +16,16 @@ public class ShowMenu : MonoBehaviour
     public UnityEvent openMenu, closeMenu;
     Renderer displayTubeRenderer, sphereRenderer;
     public GlobalBool menuOpen;
+    List<MeshRenderer> menuObjectRenderers = new List<MeshRenderer>();
+    List<Collider> menuObjectColliders = new List<Collider>();
 
     // Start is called before the first frame update
     void Start()
     {
+
+        menuObjectRenderers = MenuObjectsParent.GetComponentsInChildren<MeshRenderer>().ToList();
+        menuObjectColliders = MenuObjectsParent.GetComponentsInChildren<Collider>().ToList();
+
         menuOpen.boolValue = false;
         Console.SetActive(false);
         currentHightlightAmount = unHighlightAmount;
@@ -65,6 +72,7 @@ public class ShowMenu : MonoBehaviour
         {
             foreach(UIScaler uiScaler in transform.parent.gameObject.GetComponentsInChildren<UIScaler>())
             {
+                SetActiveMenuObjects(true);// show them when opening (hide happens at the end of this coroutine)
                 uiScaler.EnglargeOrShrink(true);
             }
         }
@@ -86,7 +94,7 @@ public class ShowMenu : MonoBehaviour
                 isTransmuting = false;
                 openMenu.Invoke();
                 GetComponent<PhysicalButton>().SetAlpha();
-                menuOpen.boolValue = true; 
+                menuOpen.boolValue = true;
                 yield break;
             } 
             else if (openOrClose && currentWidth > startWidth)
@@ -94,6 +102,7 @@ public class ShowMenu : MonoBehaviour
                 openOrClose = false;
                 isTransmuting = false;
                 GetComponent<PhysicalButton>().SetAlpha();
+                SetActiveMenuObjects(false);// hide them when closed (open happens at the start of this coroutine)
                 yield break;
             }
             else
@@ -101,6 +110,17 @@ public class ShowMenu : MonoBehaviour
         }
     }
 
+    private void SetActiveMenuObjects(bool isEnabled)
+    {
+        foreach(MeshRenderer meshRenderer in menuObjectRenderers)
+        {
+            meshRenderer.enabled = isEnabled;
+        }
+        foreach(Collider collider in menuObjectColliders)
+        {
+            collider.enabled = isEnabled;
+        }
+    }
 
     private void Update()
     {

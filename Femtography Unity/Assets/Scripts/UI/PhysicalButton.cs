@@ -144,7 +144,7 @@ public class PhysicalButton : MonoBehaviour
             StartCoroutine(FadeInCoroutine);
         }
     }
-    private void OnMouseExit()
+    protected void OnMouseExit()
     {
         if (GetComponent<UIHelper>() == null ||
             GetComponent<UIHelper>().menuManagerObject.isActive)
