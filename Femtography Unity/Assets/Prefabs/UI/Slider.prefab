@@ -51,10 +51,6 @@ MonoBehaviour:
   highlightAlphaAmount: 1
   fadeSpeed: 0.003
   clickDistance: 0.001
-  originalUITextOrImagePosition: {x: 0, y: 0, z: 0}
-  clickedUITextOrImagePosition: {x: 0, y: 0, z: 0}
-  originalUIHotKeyPosition: {x: 0, y: 0, z: 0}
-  clickUIHotKeyPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &2071618279550875961
 GameObject:
   m_ObjectHideFlags: 0
@@ -193,7 +189,7 @@ GameObject:
   - component: {fileID: 3169397810501171453}
   - component: {fileID: 4462284997343632771}
   m_Layer: 0
-  m_Name: Q2SliderBlob
+  m_Name: SliderBlob
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -294,11 +290,10 @@ MonoBehaviour:
   highlightAlphaAmount: 1
   fadeSpeed: 0.003
   clickDistance: 0.001
-  originalUITextOrImagePosition: {x: 0, y: 0, z: 0}
-  clickedUITextOrImagePosition: {x: 0, y: 0, z: 0.01}
-  originalUIHotKeyPosition: {x: 0, y: 0, z: 0}
-  clickUIHotKeyPosition: {x: 0, y: 0, z: 0}
-  sliderDepth: 0
+  sliderVariable:
+    UseConstant: 1
+    ConstantValue: 0
+    variableSlider: {fileID: 0}
 --- !u!1 &3476161020426343856
 GameObject:
   m_ObjectHideFlags: 0

@@ -21,11 +21,14 @@ public class PhysicalButton : MonoBehaviour
 
     IEnumerator FadeInCoroutine, FadeOutCoroutine, clickCoroutine;
 
-    public Vector3 originalUITextOrImagePosition, clickedUITextOrImagePosition, originalUIHotKeyPosition, clickUIHotKeyPosition;
+    protected Vector3 originalUITextOrImagePosition, clickedUITextOrImagePosition; // move it slightly when clicked
 
     // Start is called before the first frame update
     protected void Start()
     {
+        originalUITextOrImagePosition = Vector3.zero;
+        clickedUITextOrImagePosition = new Vector3(0, 0, .01f);
+
         materialPropertyBlock = new MaterialPropertyBlock();
         currentFadingButtonColor = regularButtonColor;// look to the Coroutine FadeUI to see why we set these here
         currentFadingTextColor = regularTextColor;
@@ -132,7 +135,7 @@ public class PhysicalButton : MonoBehaviour
         }
     }
 
-    private void OnMouseEnter()
+    protected void OnMouseEnter()
     {
         if (GetComponent<UIHelper>() == null ||
             GetComponent<UIHelper>().menuManagerObject.isActive)

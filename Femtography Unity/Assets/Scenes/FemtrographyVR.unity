@@ -1795,10 +1795,6 @@ MonoBehaviour:
   highlightAlphaAmount: 1
   fadeSpeed: 0.003
   clickDistance: 0.001
-  originalUITextOrImagePosition: {x: 0, y: 0, z: 0}
-  clickedUITextOrImagePosition: {x: 0, y: 0, z: 0.01}
-  originalUIHotKeyPosition: {x: 0, y: 0, z: 0}
-  clickUIHotKeyPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &235064625
 GameObject:
   m_ObjectHideFlags: 0
@@ -6254,8 +6250,19 @@ PrefabInstance:
     - target: {fileID: 4462284997343632771, guid: b6c0a1e8678eb624d81997553ac65782,
         type: 3}
       propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4462284997343632771, guid: b6c0a1e8678eb624d81997553ac65782,
+        type: 3}
+      propertyPath: sliderVariable.UseConstant
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4462284997343632771, guid: b6c0a1e8678eb624d81997553ac65782,
+        type: 3}
+      propertyPath: sliderVariable.variableSlider
+      value: 
+      objectReference: {fileID: 11400000, guid: c13976bcb832ad14ea2881716f86cf7d,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6c0a1e8678eb624d81997553ac65782, type: 3}
 --- !u!4 &626287814 stripped
@@ -19707,22 +19714,33 @@ PrefabInstance:
     - target: {fileID: 4462284997343632771, guid: b6c0a1e8678eb624d81997553ac65782,
         type: 3}
       propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4462284997343632771, guid: b6c0a1e8678eb624d81997553ac65782,
+        type: 3}
+      propertyPath: sliderVariable.UseConstant
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4462284997343632771, guid: b6c0a1e8678eb624d81997553ac65782,
+        type: 3}
+      propertyPath: sliderVariable.variableSlider
+      value: 
+      objectReference: {fileID: 11400000, guid: e002644c9083b4e42a7dc48def63aebb,
+        type: 2}
     - target: {fileID: 5511712691721519193, guid: b6c0a1e8678eb624d81997553ac65782,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5
+      value: -0.005
       objectReference: {fileID: 0}
     - target: {fileID: 5511712691721519193, guid: b6c0a1e8678eb624d81997553ac65782,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5511712691721519193, guid: b6c0a1e8678eb624d81997553ac65782,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6c0a1e8678eb624d81997553ac65782, type: 3}

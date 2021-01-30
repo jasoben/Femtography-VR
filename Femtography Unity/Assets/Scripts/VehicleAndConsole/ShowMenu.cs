@@ -16,14 +16,14 @@ public class ShowMenu : MonoBehaviour
     public UnityEvent openMenu, closeMenu;
     Renderer displayTubeRenderer, sphereRenderer;
     public GlobalBool menuOpen;
-    List<MeshRenderer> menuObjectRenderers = new List<MeshRenderer>();
+    List<Renderer> menuObjectRenderers = new List<Renderer>();
     List<Collider> menuObjectColliders = new List<Collider>();
 
     // Start is called before the first frame update
     void Start()
     {
 
-        menuObjectRenderers = MenuObjectsParent.GetComponentsInChildren<MeshRenderer>().ToList();
+        menuObjectRenderers = MenuObjectsParent.GetComponentsInChildren<Renderer>().ToList();
         menuObjectColliders = MenuObjectsParent.GetComponentsInChildren<Collider>().ToList();
 
         menuOpen.boolValue = false;
@@ -112,9 +112,9 @@ public class ShowMenu : MonoBehaviour
 
     private void SetActiveMenuObjects(bool isEnabled)
     {
-        foreach(MeshRenderer meshRenderer in menuObjectRenderers)
+        foreach(Renderer renderer in menuObjectRenderers)
         {
-            meshRenderer.enabled = isEnabled;
+            renderer.enabled = isEnabled;
         }
         foreach(Collider collider in menuObjectColliders)
         {

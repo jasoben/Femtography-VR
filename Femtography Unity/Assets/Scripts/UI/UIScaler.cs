@@ -5,17 +5,19 @@ using UnityEngine;
 public class UIScaler : MonoBehaviour
 {
     float scaleSpeed = .01f, normalScaleSpeed;
-    Vector3 endScale, normalScale;
+    Vector3 endScale, normalScale, shrunkenScale;
     IEnumerator scalingCoroutine;
     // Start is called before the first frame update
     void Start()
     {
+        shrunkenScale = new Vector3(.0001f, .0001f, .0001f);// we need this to be non-zero b/c otherwise it 
+            // messes up local positions in scaled objects
         normalScale = transform.localScale;
         normalScaleSpeed = scaleSpeed;
 
         if (GetComponent<UIHelper>() != null)
             GetComponent<UIHelper>().SetScale();// set scale values for this component before shrinking button
-        transform.localScale = new Vector3(.01f, .01f, .01f);
+        transform.localScale = shrunkenScale;
     }
     public void EnglargeOrShrink(bool isEnlarging)
     {
@@ -33,7 +35,7 @@ public class UIScaler : MonoBehaviour
 
         else if (!isEnlarging)
         {
-            endScale = new Vector3(.01f, .01f, .01f); 
+            endScale = shrunkenScale; 
             if (scalingCoroutine != null)
                 StopCoroutine(scalingCoroutine);
 
