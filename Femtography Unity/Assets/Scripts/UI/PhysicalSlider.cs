@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PhysicalSlider : PhysicalButton
 {
@@ -10,6 +11,7 @@ public class PhysicalSlider : PhysicalButton
     bool mouseDown, mouseExit;
     GameObject startPositionObject, endPositionObject, litCylinder, litStartSphere, litEndSphere;
     public FloatReference sliderVariable;
+    public UnityEvent newValueSet;
     // Start is called before the first frame update
     new void Start()
     {
@@ -108,6 +110,7 @@ public class PhysicalSlider : PhysicalButton
             base.OnMouseExit();// since this is a slider we activate this since sometimes the mouse is 
                 // outside the collider when released, thus "OnMouseExit()" won't fire (see boolean below)
         mouseDown = false;
+        newValueSet.Invoke();
     }
     private new void OnMouseExit()
     {

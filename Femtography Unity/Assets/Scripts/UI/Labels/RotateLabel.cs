@@ -6,6 +6,7 @@ public class RotateLabel : MonoBehaviour
 {
     public Vector3 rotationAxis;
     public FloatReference gameSpeed;
+    float clampedGameSpeed;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,7 +16,8 @@ public class RotateLabel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(rotationAxis * gameSpeed.Value);
+        clampedGameSpeed = Mathf.Clamp(gameSpeed.Value, .3f, 1f);
+        transform.Rotate(rotationAxis * clampedGameSpeed);
     }
 
     public void UpdateScale(float newScale)
