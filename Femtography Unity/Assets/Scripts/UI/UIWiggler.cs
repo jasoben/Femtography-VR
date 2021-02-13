@@ -6,7 +6,7 @@ public class UIWiggler : MonoBehaviour
 {
     // This wiggles UI around a bit to preserve the appearance of the liquid display
 
-    Vector3 startPosition, endPosition, currentStartPosition;
+    Vector3 startPosition, endPosition, currentStartPosition, currentRelativePosition;
     public float wiggleRange, wiggleSpeed, wiggleCoefficient;
     private Vector2 xBounds, yBounds, zBounds;
     float wiggleCounter;
@@ -18,17 +18,18 @@ public class UIWiggler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        startPosition = transform.position;
-        currentStartPosition = transform.position;
+        startPosition = transform.localPosition;
+        currentStartPosition = transform.localPosition;
         wiggleRange = wiggleRange * wiggleCoefficient;
 
         if (useSphere)
             endPosition = (Random.insideUnitSphere * wiggleRange) + startPosition;
         else
         {
-            xBounds = new Vector2(boundingBox.bounds.center.x - boundingBox.bounds.extents.x, boundingBox.bounds.center.x + boundingBox.bounds.extents.x);
-            yBounds = new Vector2(boundingBox.bounds.center.y - boundingBox.bounds.extents.y, boundingBox.bounds.center.y + boundingBox.bounds.extents.y);
-            zBounds = new Vector2(boundingBox.bounds.center.z - boundingBox.bounds.extents.z, boundingBox.bounds.center.z + boundingBox.bounds.extents.z);
+            Vector3 relativeBoundsCenter = transform.InverseTransformPoint(boundingBox.bounds.center);
+            xBounds = new Vector2(relativeBoundsCenter.x - boundingBox.bounds.extents.x, relativeBoundsCenter.x + boundingBox.bounds.extents.x);
+            yBounds = new Vector2(relativeBoundsCenter.y - boundingBox.bounds.extents.y, relativeBoundsCenter.y + boundingBox.bounds.extents.y);
+            zBounds = new Vector2(relativeBoundsCenter.z - boundingBox.bounds.extents.z, relativeBoundsCenter.z + boundingBox.bounds.extents.z);
 
             endPosition = new Vector3(Random.Range(xBounds.x, xBounds.y),
                 Random.Range(yBounds.x, yBounds.y),
@@ -43,7 +44,8 @@ public class UIWiggler : MonoBehaviour
     {
         if (!WigglerPaused)
         {
-            transform.position = Vector3.Slerp(currentStartPosition, endPosition, wiggleCounter);
+            currentRelativePosition = Vector3.Slerp(currentStartPosition, endPosition, wiggleCounter);
+            transform.position = transform.parent.TransformPoint(currentRelativePosition);
             wiggleCounter += wiggleSpeed;
         }
 
@@ -58,7 +60,7 @@ public class UIWiggler : MonoBehaviour
                     Random.Range(zBounds.x, zBounds.y));
             }
 
-            currentStartPosition = transform.position;
+            currentStartPosition = transform.localPosition;
             wiggleCounter = 0;
         }
     }

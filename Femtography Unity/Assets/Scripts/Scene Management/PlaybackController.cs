@@ -29,6 +29,16 @@ public class PlaybackController : MonoBehaviour
             savedSpeed = playbackSpeed.Value;
         playbackSpeed.Value = 0;
     }
+    public void SlowToStop()
+    {
+        savedSpeed = playbackSpeed.Value;
+        GetComponent<UTIL_SmoothChanger>().StartSmoothChange(savedSpeed, .02f, 0);
+    }
+    public void SlowToValue(float value)
+    {
+        savedSpeed = playbackSpeed.Value;
+        GetComponent<UTIL_SmoothChanger>().StartSmoothChange(savedSpeed, .02f, value);
+    }
 
     public void PauseAtEvents()
     {

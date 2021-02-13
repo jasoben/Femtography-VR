@@ -197,6 +197,7 @@ public class PhysicalButton : MonoBehaviour
 
         if (isEnabled)
         {
+            startColor = GetComponent<Renderer>().material.GetColor("Color_");
             startColor = disabledColor;
             endColor = regularButtonColor;
             startTextColor = disabledColor + new Color(0, 0, 0, .1f);
@@ -206,7 +207,7 @@ public class PhysicalButton : MonoBehaviour
         }
         else
         {
-            startColor = regularButtonColor;
+            startColor = highlightButtonColor;// We want it to fade from it's "active" color when disabling
             endColor = disabledColor;
             startTextColor = regularTextColor;
             endTextColor = disabledColor + new Color(0, 0, 0, .1f);
@@ -237,7 +238,7 @@ public class PhysicalButton : MonoBehaviour
             if (GetComponentInChildren<SpriteRenderer>() != null)
                 GetComponentInChildren<SpriteRenderer>().color = currentTextColor;
 
-            fadeAmount += .01f;
+            fadeAmount += .03f;
 
             if (fadeAmount > 1)
                 yield break;

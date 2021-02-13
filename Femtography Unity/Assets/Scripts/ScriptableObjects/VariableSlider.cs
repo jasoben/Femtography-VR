@@ -13,4 +13,5 @@ public class VariableSlider : ScriptableObject
     {
         value = thisValue;
     }
+
 }

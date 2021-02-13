@@ -102,11 +102,11 @@ public class MasterControlScript : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.T))
         {
-            //playbackCanvasSlider.value += .01f;
+            playbackSpeed.Value += .01f;
         }
         if (Input.GetKey(KeyCode.G))
         {
-            //playbackCanvasSlider.value -= .01f;
+            playbackSpeed.Value -= .01f;
         }
         if (Input.GetKey(KeyCode.Space))
         {

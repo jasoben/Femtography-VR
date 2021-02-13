@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PhysicalSlider : PhysicalButton
 {
-    float zPos;
+    float zPos, valueLastFrame;
     Vector3 startPosRelative, endPosRelative, projectedMousePosition, litCylinderStartScale;
     bool mouseDown, mouseExit;
     GameObject startPositionObject, endPositionObject, litCylinder, litStartSphere, litEndSphere;
@@ -14,6 +14,8 @@ public class PhysicalSlider : PhysicalButton
     new void Start()
     {
         base.Start();
+
+        valueLastFrame = sliderVariable.Value;
 
         startPositionObject = transform.parent.Find("StartPoint").gameObject;
         endPositionObject = transform.parent.Find("EndPoint").gameObject;
@@ -118,6 +120,21 @@ public class PhysicalSlider : PhysicalButton
     // Update is called once per frame
     void Update()
     {
+        if (sliderVariable.Value != valueLastFrame &&
+            sliderVariable.Value <= 1 &&
+            sliderVariable.Value >= 0)
+        {
+            float distanceStartToEnd = transform.parent.InverseTransformPoint(endPositionObject.transform.position).x
+                - transform.parent.InverseTransformPoint(startPositionObject.transform.position).x;
+            float sliderBlobPositionX = transform.parent.InverseTransformPoint(startPositionObject.transform.position).x
+                + (distanceStartToEnd * sliderVariable.Value);
+
+            transform.position = transform.parent.TransformPoint(sliderBlobPositionX, 0, 0);
+
+            LightSliderTrack();
+        } 
+
+        valueLastFrame = sliderVariable.Value;
         
     }
 }
