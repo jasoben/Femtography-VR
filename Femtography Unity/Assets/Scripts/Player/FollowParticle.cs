@@ -14,6 +14,8 @@ public class FollowParticle : MonoBehaviour
     public GameEvent vehicleBackAtStart;
 
     public FloatReference playBackSpeed;
+    private bool shouldReturn;
+    private bool shouldFollow;
 
     // Start is called before the first frame update
     void Start()
@@ -23,9 +25,7 @@ public class FollowParticle : MonoBehaviour
 
     public void ReturnToPosition()
     {
-        StopAllCoroutines();
-        if (isFollowingParticles.boolValue)
-            StartCoroutine(ReturnToPosCoroutine());
+        shouldReturn = true;
     }
 
     IEnumerator ReturnToPosCoroutine()
@@ -51,7 +51,6 @@ public class FollowParticle : MonoBehaviour
 
     public void SetParticle(string particleTag)
     {
-        StopAllCoroutines();
         if (particleTag != "null")
         {
             Particle = GameObject.FindGameObjectWithTag(particleTag);
@@ -62,27 +61,41 @@ public class FollowParticle : MonoBehaviour
                 FollowOffsetPosition = new Vector3(50, -50, -40);
 
             if (isFollowingParticles.boolValue)
-                StartCoroutine(WaitThenStartFollow());
+                shouldFollow = true;
         } else if (particleTag == "null")
             Particle = null;
     }
 
-    IEnumerator WaitThenStartFollow()
+    // Update is called once per frame
+    void Update()
     {
-        yield return new WaitForSeconds(.2f);
-        while (true)
+    }
+
+    private void FixedUpdate()
+    {
+        if (shouldReturn)
+        {
+            shouldFollow = false;
+            Vector3 newPos = Vector3.MoveTowards(transform.position, playerFinalPosition.transform.position, moveSpeed * playBackSpeed.Value);
+            transform.position = newPos;
+
+            Quaternion newRot = Quaternion.Lerp(transform.rotation, Quaternion.identity, .05f * playBackSpeed.Value);
+            transform.rotation = newRot;
+
+            if ((Vector3.Distance(transform.position, playerFinalPosition.transform.position) < 1) &&
+                Quaternion.Angle(transform.rotation, Quaternion.identity) < 1)
+            {
+                shouldReturn = false;
+                vehicleBackAtStart.Raise();
+            } 
+        }
+        if (shouldFollow)
         {
             Vector3 newPosition = Particle.transform.position + FollowOffsetPosition;
             transform.position = Vector3.Lerp(transform.position, newPosition, .05f);
             Vector3 directionTowardsParticle = Particle.transform.position - transform.position;
             Quaternion lookAtParticle = Quaternion.LookRotation(directionTowardsParticle);
             transform.rotation = Quaternion.Lerp(transform.rotation, lookAtParticle, .1f);
-            yield return new WaitForFixedUpdate();
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
     }
 }

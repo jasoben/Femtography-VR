@@ -35,7 +35,7 @@ namespace UnityStandardAssets.Utility
         }
 
 
-        private void Update()
+        private void FixedUpdate()
         {
             // we make initial calculations from the original local rotation
             transform.localRotation = m_OriginalRotation;

@@ -19,7 +19,7 @@ public class PhysicalButton : MonoBehaviour
 
     bool canFadeIn = true, canFadeOut, isFadingIn, clicked;
 
-    IEnumerator FadeInCoroutine, FadeOutCoroutine, clickCoroutine;
+    IEnumerator FadeInCoroutine, FadeOutCoroutine, clickCoroutine, enableDisableCoroutine;
 
     protected Vector3 originalUITextOrImagePosition, clickedUITextOrImagePosition; // move it slightly when clicked
 
@@ -185,8 +185,21 @@ public class PhysicalButton : MonoBehaviour
 
     public void EnableDisable()
     {
-        StopAllCoroutines();
-        StartCoroutine(SetEnabledOrDisabled());
+        StopLocalCoroutines();
+        enableDisableCoroutine = SetEnabledOrDisabled();
+        StartCoroutine(enableDisableCoroutine);
+    }
+
+    void StopLocalCoroutines()
+    {
+        if (FadeOutCoroutine != null)
+            StopCoroutine(FadeOutCoroutine);
+        if (FadeInCoroutine != null)
+            StopCoroutine(FadeInCoroutine);
+        if (clickCoroutine != null)
+            StopCoroutine(clickCoroutine);
+        if (enableDisableCoroutine != null)
+            StopCoroutine(enableDisableCoroutine);
     }
 
     IEnumerator SetEnabledOrDisabled()

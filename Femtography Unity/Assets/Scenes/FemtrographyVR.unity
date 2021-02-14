@@ -6330,7 +6330,7 @@ PrefabInstance:
     - target: {fileID: 4462284997343632771, guid: b6c0a1e8678eb624d81997553ac65782,
         type: 3}
       propertyPath: newValueSet.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4462284997343632771, guid: b6c0a1e8678eb624d81997553ac65782,
         type: 3}
@@ -16087,7 +16087,6 @@ GameObject:
   - component: {fileID: 1838065920}
   - component: {fileID: 1838065919}
   - component: {fileID: 1838065918}
-  - component: {fileID: 1838065922}
   - component: {fileID: 1838065921}
   - component: {fileID: 1838065923}
   m_Layer: 0
@@ -16226,32 +16225,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &1838065922
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1838065916}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a944068959b92b4e9ca9b11e7ef3b0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playBackSpeed:
-    UseConstant: 0
-    ConstantValue: 0
-    variableSlider: {fileID: 11400000, guid: c13976bcb832ad14ea2881716f86cf7d, type: 2}
-  materialsToAdjust:
-  - {fileID: 2100000, guid: d416ef997c7c36547b9699b0b6ee9c9e, type: 2}
-  - {fileID: 2100000, guid: c4548a61c8e51e441b2e0664dd2c974d, type: 2}
-  - {fileID: 2100000, guid: 87b874e46fe9a4b45a9ce62b2d8e9120, type: 2}
-  - {fileID: 2100000, guid: 71ec56b4cd877cf449ed2da1f54efb96, type: 2}
-  - {fileID: 2100000, guid: 42e6cb15a40535443853d3e44d28038b, type: 2}
-  - {fileID: 2100000, guid: 3905421f1c6c2284bb8bbca9ca9a4195, type: 2}
-  - {fileID: 2100000, guid: 158b0e3dbc0bb594d98c6970c8d3612d, type: 2}
-  - {fileID: 2100000, guid: 1fbd848f15bbb8b43a886ec5c76b07e0, type: 2}
-  - {fileID: 2100000, guid: b9e8d2e28802d3d4685f4997d190f997, type: 2}
 --- !u!114 &1838065923
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16272,7 +16245,7 @@ MonoBehaviour:
   Response:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1838065922}
+      - m_Target: {fileID: 0}
         m_MethodName: SetNewSpeedValue
         m_Mode: 1
         m_Arguments:

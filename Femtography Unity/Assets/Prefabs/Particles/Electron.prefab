@@ -383,6 +383,7 @@ GameObject:
   - component: {fileID: 2040432843133082339}
   - component: {fileID: 2040432843133082338}
   - component: {fileID: 2040432843133082341}
+  - component: {fileID: 6206095003916791596}
   m_Layer: 17
   m_Name: PhysicalParticle
   m_TagString: Untagged
@@ -451,6 +452,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &6206095003916791596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2040432843133082343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b512888e06646bb40808e02260f90fa3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameSpeed: {fileID: 11400000, guid: c13976bcb832ad14ea2881716f86cf7d, type: 2}
 --- !u!1 &2590084492255153014
 GameObject:
   m_ObjectHideFlags: 0

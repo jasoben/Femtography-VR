@@ -6,7 +6,7 @@ using UnityEngine.Events;
 
 public class PhysicalSlider : PhysicalButton
 {
-    float zPos, valueLastFrame;
+    float zPos, sliderPosRelativeToWidth;
     Vector3 startPosRelative, endPosRelative, projectedMousePosition, litCylinderStartScale;
     bool mouseDown, mouseExit;
     GameObject startPositionObject, endPositionObject, litCylinder, litStartSphere, litEndSphere;
@@ -17,7 +17,7 @@ public class PhysicalSlider : PhysicalButton
     {
         base.Start();
 
-        valueLastFrame = sliderVariable.Value;
+        sliderPosRelativeToWidth = sliderVariable.Value;
 
         startPositionObject = transform.parent.Find("StartPoint").gameObject;
         endPositionObject = transform.parent.Find("EndPoint").gameObject;
@@ -29,6 +29,8 @@ public class PhysicalSlider : PhysicalButton
         litCylinderStartScale = litCylinder.transform.localScale;
 
         SetLitColor();
+
+        CalculateBlobPositionAndLightTrack();
 
         startPosRelative = transform.parent.InverseTransformPoint(startPositionObject.transform.position);
         endPosRelative = transform.parent.InverseTransformPoint(endPositionObject.transform.position);
@@ -68,10 +70,10 @@ public class PhysicalSlider : PhysicalButton
         originalUITextOrImagePosition = transform.parent.InverseTransformPoint(projectedMousePosition); // leave the
                                                                                                         // slider where it is instead of returning it to it's zero position like a button (see parent class for 
                                                                                                         // more info on how buttons work)
-        LightSliderTrack();
+        CalculateBlobPositionAndLightTrack();
     }
 
-    private void LightSliderTrack()
+    private void CalculateBlobPositionAndLightTrack()
     {
         float sliderWidth = Vector3.Distance(startPositionObject.transform.position, endPositionObject.transform.position);
         float currentPositionWidth = Vector3.Distance(transform.position, startPositionObject.transform.position);
@@ -100,6 +102,9 @@ public class PhysicalSlider : PhysicalButton
             litEndSphere.SetActive(false);
         }
 
+        percentageWidth = Mathf.Clamp01(percentageWidth);
+
+        sliderPosRelativeToWidth = percentageWidth;
         sliderVariable.Value = percentageWidth;
     }
 
@@ -123,9 +128,7 @@ public class PhysicalSlider : PhysicalButton
     // Update is called once per frame
     void Update()
     {
-        if (sliderVariable.Value != valueLastFrame &&
-            sliderVariable.Value <= 1 &&
-            sliderVariable.Value >= 0)
+        if (sliderVariable.Value != sliderPosRelativeToWidth)
         {
             float distanceStartToEnd = transform.parent.InverseTransformPoint(endPositionObject.transform.position).x
                 - transform.parent.InverseTransformPoint(startPositionObject.transform.position).x;
@@ -134,10 +137,8 @@ public class PhysicalSlider : PhysicalButton
 
             transform.position = transform.parent.TransformPoint(sliderBlobPositionX, 0, 0);
 
-            LightSliderTrack();
+            CalculateBlobPositionAndLightTrack();
         } 
-
-        valueLastFrame = sliderVariable.Value;
         
     }
 }

@@ -27,8 +27,6 @@ public class ProtonController : MonoBehaviour
         {
             particle.opacity.ConstantValue = .1f;
         }
-
-        particle.transformSpeed = 1.5f;
     }
 
     // Update is called once per frame
