@@ -12,8 +12,7 @@ public class TrackWithObject : MonoBehaviour
         
     }
 
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         gameObject.transform.position = objectToTrack.transform.position;
         gameObject.transform.rotation = objectToTrack.transform.rotation;

@@ -14,7 +14,7 @@ public class TransformObject : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (IsTransformActive && CanBeMoved)
             transform.Translate(Vector3.Scale(transform.forward, new Vector3(0,0, particle.transformSpeed * particle.playbackSpeed.Value)));
