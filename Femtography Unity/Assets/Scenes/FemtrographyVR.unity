@@ -19625,16 +19625,42 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1274656032, guid: 632e41e39fee12e468109b1b9971e8e7, type: 3}
       propertyPath: Response.m_PersistentCalls.m_Calls.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1274656032, guid: 632e41e39fee12e468109b1b9971e8e7, type: 3}
       propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
-      value: 1
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1274656032, guid: 632e41e39fee12e468109b1b9971e8e7, type: 3}
       propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1274656032, guid: 632e41e39fee12e468109b1b9971e8e7, type: 3}
+      propertyPath: activateBoolOnOrOff
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1274656032, guid: 632e41e39fee12e468109b1b9971e8e7, type: 3}
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 11400000, guid: 0c349cf2936a6064b800c06cb34ac7b7,
+        type: 2}
+    - target: {fileID: 1274656032, guid: 632e41e39fee12e468109b1b9971e8e7, type: 3}
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: SetBool
+      objectReference: {fileID: 0}
+    - target: {fileID: 1274656032, guid: 632e41e39fee12e468109b1b9971e8e7, type: 3}
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1274656032, guid: 632e41e39fee12e468109b1b9971e8e7, type: 3}
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1274656032, guid: 632e41e39fee12e468109b1b9971e8e7, type: 3}
+      propertyPath: checkWhetherToActivate
+      value: 
+      objectReference: {fileID: 11400000, guid: 0c349cf2936a6064b800c06cb34ac7b7,
+        type: 2}
     - target: {fileID: 810343680198333608, guid: 632e41e39fee12e468109b1b9971e8e7,
         type: 3}
       propertyPath: m_LocalPosition.x

@@ -36,11 +36,11 @@ public class FollowParticle : MonoBehaviour
             Vector3 newPos = Vector3.MoveTowards(transform.position, playerFinalPosition.transform.position, moveSpeed * playBackSpeed.Value);
             transform.position = newPos;
 
-            Quaternion newRot = Quaternion.Lerp(transform.rotation, Quaternion.identity, .05f * playBackSpeed.Value);
+            Quaternion newRot = Quaternion.Lerp(transform.rotation, playerFinalPosition.transform.rotation, .05f * playBackSpeed.Value);
             transform.rotation = newRot;
 
             if ((Vector3.Distance(transform.position, playerFinalPosition.transform.position) < 1) &&
-                Quaternion.Angle(transform.rotation, Quaternion.identity) < 1)
+                Quaternion.Angle(transform.rotation, playerFinalPosition.transform.rotation) < 1)
             {
                 vehicleBackAtStart.Raise();
                 yield break;
@@ -79,11 +79,11 @@ public class FollowParticle : MonoBehaviour
             Vector3 newPos = Vector3.MoveTowards(transform.position, playerFinalPosition.transform.position, moveSpeed * playBackSpeed.Value);
             transform.position = newPos;
 
-            Quaternion newRot = Quaternion.Lerp(transform.rotation, Quaternion.identity, .05f * playBackSpeed.Value);
+            Quaternion newRot = Quaternion.Lerp(transform.rotation, playerFinalPosition.transform.rotation, .05f * playBackSpeed.Value);
             transform.rotation = newRot;
 
             if ((Vector3.Distance(transform.position, playerFinalPosition.transform.position) < 1) &&
-                Quaternion.Angle(transform.rotation, Quaternion.identity) < 1)
+                Quaternion.Angle(transform.rotation, playerFinalPosition.transform.rotation) < 1)
             {
                 shouldReturn = false;
                 vehicleBackAtStart.Raise();

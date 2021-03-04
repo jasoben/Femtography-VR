@@ -48,9 +48,9 @@ public class ProtonController : MonoBehaviour
         }
     }
 
-    public void AdjustTransformSpeed(float adjustment)
+    public void AdjustTransformSpeed(float newSpeed)
     {
-        particle.transformSpeed += adjustment;
+        particle.transformSpeed = newSpeed;
     }
 
     public void AdjustJiggleSpeed(float adjustment)

@@ -67,8 +67,14 @@ public class Teleporter : MonoBehaviour
     {
         playerVehicle.transform.position = teleportLocations[currentLocation].transform.position;
         playerVehicle.transform.rotation = teleportLocations[currentLocation].transform.rotation;
+
+        // The following is so the vehicle returns to the new position after following particles along their path
+        playerVehicle.GetComponent<FollowParticle>().playerFinalPosition.transform.position = playerVehicle.transform.position;
+        playerVehicle.GetComponent<FollowParticle>().playerFinalPosition.transform.rotation = playerVehicle.transform.rotation;
+
         teleportLocations[currentLocation].SetActive(false);
         teleportLocations[previousLocation].SetActive(false);
+
         teleportFinished.Invoke();
     }
 
