@@ -16,22 +16,25 @@ public class LockOrUnlockCamera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
     }
     public void LockOrUnlock(bool isLocked)
     {
         if (isLocked)
-            LockCamera();
+            LockCameraAndFaceForward();
         else
             UnLockCamera();
     }
 
-    void LockCamera()
+    public void LockCamera()
+    {
+        simpleMouseRotator.enabled = false;
+    }
+    void LockCameraAndFaceForward()
     {
         simpleMouseRotator.enabled = false;
         transform.rotation = transform.parent.transform.rotation; // Set the forward rotation to the vehicles rotation
     }
-    void UnLockCamera()
+    public void UnLockCamera()
     {
         simpleMouseRotator.enabled = true;
     }
