@@ -17,7 +17,7 @@ public class PhysicalButton : MonoBehaviour
 
     public float fadeSpeed, clickDistance;
 
-    bool canFadeIn = true, canFadeOut, isFadingIn, clicked;
+    bool canFadeIn = true, canFadeOut, isFadingIn, clicked, firstRunThrough;
 
     IEnumerator FadeInCoroutine, FadeOutCoroutine, clickCoroutine, enableDisableCoroutine;
 
@@ -39,12 +39,17 @@ public class PhysicalButton : MonoBehaviour
         originalUITextOrImagePosition = transform.localPosition;
         clickedUITextOrImagePosition = originalUITextOrImagePosition + clickedUITextOrImagePosition;
 
+        firstRunThrough = true;
         StartCoroutine(FadeUI());
     }
 
     IEnumerator FadeUI()
     {
-        fadeCounter = 0;
+        if (firstRunThrough)
+            fadeCounter = .9f; // The first time we run this we want it to happen quickly because it 
+        // sets everything to the default values
+        else
+            fadeCounter = 0;
         while (true)
         {
             if (isFadingIn)
@@ -99,6 +104,7 @@ public class PhysicalButton : MonoBehaviour
 
             if (fadeCounter > 1)
             {
+                firstRunThrough = false;
                 yield break;
             } else
                 yield return new WaitForEndOfFrame();
@@ -137,8 +143,7 @@ public class PhysicalButton : MonoBehaviour
 
     protected void OnMouseEnter()
     {
-        if (GetComponent<UIHelper>() == null ||
-            GetComponent<UIHelper>().menuManagerObject.isActive)
+        if (GetComponent<UIHelper>() != null && GetComponent<UIHelper>().menuManagerObject.isActive) 
         {
             isFadingIn = true;
             FadeInCoroutine = FadeUI();
@@ -206,7 +211,9 @@ public class PhysicalButton : MonoBehaviour
     {
         float fadeAmount = 0, startAlpha, endAlpha, currentAlpha;
         Color startColor, endColor, currentColor, startTextColor, endTextColor, currentTextColor;
-        bool isEnabled = GetComponent<UIHelper>().menuManagerObject.isActive;
+        bool isEnabled = false;
+        if (GetComponent<UIHelper>() != null)
+            isEnabled = GetComponent<UIHelper>().menuManagerObject.isActive;
 
         if (isEnabled)
         {

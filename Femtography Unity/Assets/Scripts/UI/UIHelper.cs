@@ -29,6 +29,7 @@ public class UIHelper : MonoBehaviour
     void Start()
     {
         toolTips = XmlParser.Read<ToolTipText>("assets/XML/toolTips.xml");
+        menuManagerObject.SetActive(false);
     }
     public void SetScale()
     {
@@ -55,11 +56,11 @@ public class UIHelper : MonoBehaviour
             } else if (!menuManagerObject.isFlashing)
                 StartCoroutine(ReturnToNormalScale());
         }
-        if (menuManagerObject.isActive != GetComponent<BoxCollider>().enabled) // if the 
+        if (menuManagerObject.isActive != GetComponent<Collider>().enabled) // if the 
             // value changes 
         {
             GetComponent<PhysicalButton>().EnableDisable();
-            GetComponent<BoxCollider>().enabled = menuManagerObject.isActive;
+            GetComponent<Collider>().enabled = menuManagerObject.isActive;
         }
     }
 

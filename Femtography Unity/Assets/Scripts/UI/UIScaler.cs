@@ -17,6 +17,10 @@ public class UIScaler : MonoBehaviour
 
         if (GetComponent<UIHelper>() != null)
             GetComponent<UIHelper>().SetScale();// set scale values for this component before shrinking button
+        if (GetComponentInChildren<UIHelper>() != null)
+            GetComponentInChildren<UIHelper>().SetScale();// set scale values for this component before shrinking button
+        // (We use "InChildren" for cases when this references a Slider or Toggle, which are slightly different from
+        // a regular button)
         transform.localScale = shrunkenScale;
     }
     public void EnglargeOrShrink(bool isEnlarging)
