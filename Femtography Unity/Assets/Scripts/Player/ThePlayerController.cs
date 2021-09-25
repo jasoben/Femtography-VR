@@ -16,10 +16,6 @@ public class ThePlayerController : MonoBehaviour
     {
         vehicleIsInFinalPosition.boolValue = false;
         //followElectron.boolValue = false;
-        if (XRDevice.isPresent)
-            VRorNot.boolValue = true;
-        else
-            VRorNot.boolValue = false;
     }
 
     public void DetermineMoveOrNot()

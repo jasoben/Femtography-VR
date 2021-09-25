@@ -1,13 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ShrinkField : MonoBehaviour
 {
-    GameObject player;
     public float shrinkSpeed;
 
-    public GameObject growRoom;
+    public GameObject growRoom, shrinkText;
+    GameObject player;
+
+    public Text superScript;
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +28,9 @@ public class ShrinkField : MonoBehaviour
     {
         GetComponent<MeshRenderer>().enabled = true;
         player = other.gameObject;
+        player.SetActive(false);
+        growRoom.SetActive(true);
+        shrinkText.SetActive(true);
 
         StartCoroutine(ShrinkCharacter());
     }
@@ -32,20 +38,20 @@ public class ShrinkField : MonoBehaviour
     IEnumerator ShrinkCharacter()
     {
         float shrinkage = 0;
-        Vector3 playerSize = player.transform.localScale;
-        float cameraField = Camera.main.fieldOfView;
 
-        Vector3 roomSize = growRoom.transform.localScale;
-        Vector3 roomFinalSize = growRoom.transform.localScale * 100;
+        Vector3 cameraStart = growRoom.transform.TransformPoint(new Vector3(0, .5f, 0));
+        Vector3 cameraEnd = growRoom.transform.TransformPoint(new Vector3(0, -.5f, 0));
 
-        player.SetActive(false);
-        growRoom.SetActive(true);
+        float startSizeSuperScript = 0;
+        float endSizeSuperScript = -10;
 
         while (true)
         {
             shrinkage += shrinkSpeed;
 
-            growRoom.transform.localScale = Vector3.Lerp(roomSize, roomFinalSize, shrinkage);
+            Camera.main.transform.position = Vector3.Lerp(cameraStart, cameraEnd, shrinkage);
+
+            superScript.text = Mathf.Lerp(startSizeSuperScript, endSizeSuperScript, shrinkage).ToString("#.##");
 
             if (shrinkage > 1)
                 yield break;

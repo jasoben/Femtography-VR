@@ -22,10 +22,10 @@ public class Teleporter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.T) && teleporter.isActive)
-        {
-            teleporterActivated.Invoke();
-        }
+        //if (Input.GetKeyDown(KeyCode.T) && teleporter.isActive)
+        //{
+        //    teleporterActivated.Invoke();
+        //}
     }
 
     public void GotoNextLocation()

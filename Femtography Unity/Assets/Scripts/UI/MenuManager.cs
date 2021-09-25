@@ -33,45 +33,45 @@ public class MenuManager : MonoBehaviour
     private void Update()
     {
         FlashingController.Flashing(); // Change the global flashing variable
-        if (Input.GetKeyDown(KeyCode.F) && !electronInTransit.boolValue)
-        {
-            if (isFollowingParticles.boolValue)
-                setUnFollow.Invoke();
-            else if (!isFollowingParticles.boolValue)
-                setFollow.Invoke();
-        }
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            if (keyEventsToggle.isOn && !isFirstPlayThrough.boolValue)
-            {
-                setNoKeyEvents.Invoke();
-            }
-            else if (!keyEventsToggle.isOn && !isFirstPlayThrough.boolValue)
-            {
-                setKeyEvents.Invoke();
-            }
-        }
-        if (Input.GetKeyDown(KeyCode.O))
-        {
-            if (textToggle.isOn)
-            {
-                textNo.Invoke();
-            }
-            else if (!textToggle.isOn)
-            {
-                textYes.Invoke();
-            }
-        }
-        if (Input.GetKeyDown(KeyCode.M))
-        {
-            if (mouseLookBool.boolValue)
-            {
-                mouseLookOff.Invoke();
-            }
-            else if (!mouseLookBool.boolValue)
-            {
-                mouseLookOn.Invoke();
-            }
-        }
+        //if (Input.GetKeyDown(KeyCode.F) && !electronInTransit.boolValue)
+        //{
+        //    if (isFollowingParticles.boolValue)
+        //        setUnFollow.Invoke();
+        //    else if (!isFollowingParticles.boolValue)
+        //        setFollow.Invoke();
+        //}
+        //if (Input.GetKeyDown(KeyCode.K))
+        //{
+        //    if (keyEventsToggle.isOn && !isFirstPlayThrough.boolValue)
+        //    {
+        //        setNoKeyEvents.Invoke();
+        //    }
+        //    else if (!keyEventsToggle.isOn && !isFirstPlayThrough.boolValue)
+        //    {
+        //        setKeyEvents.Invoke();
+        //    }
+        //}
+        //if (Input.GetKeyDown(KeyCode.O))
+        //{
+        //    if (textToggle.isOn)
+        //    {
+        //        textNo.Invoke();
+        //    }
+        //    else if (!textToggle.isOn)
+        //    {
+        //        textYes.Invoke();
+        //    }
+        //}
+        //if (Input.GetKeyDown(KeyCode.M))
+        //{
+        //    if (mouseLookBool.boolValue)
+        //    {
+        //        mouseLookOff.Invoke();
+        //    }
+        //    else if (!mouseLookBool.boolValue)
+        //    {
+        //        mouseLookOn.Invoke();
+        //    }
+        //}
     }
 }

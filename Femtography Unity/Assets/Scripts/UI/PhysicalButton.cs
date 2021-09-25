@@ -152,6 +152,11 @@ public class PhysicalButton : MonoBehaviour
             StartCoroutine(FadeInCoroutine);
         }
     }
+
+    public void OnHover()
+    {
+        OnMouseEnter();
+    }
     protected void OnMouseExit()
     {
         if (GetComponent<UIHelper>() == null ||
@@ -164,6 +169,11 @@ public class PhysicalButton : MonoBehaviour
             StartCoroutine(FadeOutCoroutine);
         } else
             EnableDisable();
+    }
+
+    public void OnHoverExit()
+    {
+        OnMouseExit();
     }
 
     protected void OnMouseDown()

@@ -68,50 +68,50 @@ public class MasterControlScript : MonoBehaviour
         //playbackSpeed.variableSlider.value = playbackCanvasSlider.value;
         //q2slider.variableSlider.value = q2CanvasSlider.value;
 
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            StartPlaying.Invoke();
-        }
-        if (Input.GetKeyDown(KeyCode.U))
-        {
-            StopPlaying.Invoke();
-        }
+        //if (Input.GetKeyDown(KeyCode.P))
+        //{
+        //    StartPlaying.Invoke();
+        //}
+        //if (Input.GetKeyDown(KeyCode.U))
+        //{
+        //    StopPlaying.Invoke();
+        //}
 
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            launchElectron.Invoke();
-        }
+        //if (Input.GetKeyDown(KeyCode.L))
+        //{
+        //    launchElectron.Invoke();
+        //}
 
-        if (Input.GetKeyDown(KeyCode.I))
-        {
-            initializeEvent.Invoke();
-        }
+        //if (Input.GetKeyDown(KeyCode.I))
+        //{
+        //    initializeEvent.Invoke();
+        //}
 
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            ResetTheProgram();
-        }
+        //if (Input.GetKeyDown(KeyCode.R))
+        //{
+        //    ResetTheProgram();
+        //}
 
-        if (Input.GetKey(KeyCode.Y))
-        {
-            //q2CanvasSlider.value += .01f;
-        }
-        if (Input.GetKey(KeyCode.H))
-        {
-            //q2CanvasSlider.value -= .01f;
-        }
-        if (Input.GetKey(KeyCode.T))
-        {
-            playbackSpeed.Value += .01f;
-        }
-        if (Input.GetKey(KeyCode.G))
-        {
-            playbackSpeed.Value -= .01f;
-        }
-        if (Input.GetKey(KeyCode.Space))
-        {
-            showMenu.Invoke();
-        }
+        //if (Input.GetKey(KeyCode.Y))
+        //{
+        //    //q2CanvasSlider.value += .01f;
+        //}
+        //if (Input.GetKey(KeyCode.H))
+        //{
+        //    //q2CanvasSlider.value -= .01f;
+        //}
+        //if (Input.GetKey(KeyCode.T))
+        //{
+        //    playbackSpeed.Value += .01f;
+        //}
+        //if (Input.GetKey(KeyCode.G))
+        //{
+        //    playbackSpeed.Value -= .01f;
+        //}
+        //if (Input.GetKey(KeyCode.Space))
+        //{
+        //    showMenu.Invoke();
+        //}
     }
 
     public void ResetTheProgram()
