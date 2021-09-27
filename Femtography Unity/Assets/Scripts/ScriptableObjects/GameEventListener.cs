@@ -5,8 +5,11 @@ using UnityEngine.Events;
 
 public class GameEventListener : MonoBehaviour
 {
-    public bool multiEventListener, activateBoolOnOrOff; // The multiEventListener allows us to respond to multiple events in the same way;
-    // activateBoolOnOrOff says whether we want checkWhetherToActivate (below) to be on or off
+    [Tooltip("Should this listener listen for multiple events prior to firing?")]
+    public bool multiEventListener; // The multiEventListener allows us to respond to multiple events in the same way;
+    [Tooltip("Should we check the bool in Check Whether to Activate below before firing?")]
+    public bool activateBoolOnOrOff;
+    // activateBoolOnOrOff says whe, activateBoolOnOrOffther we want checkWhetherToActivate (below) to be on or off
     public GlobalBool checkWhetherToActivate; // This allows us to check a bool value before we invoke the event
     public GameEvent Event;
 

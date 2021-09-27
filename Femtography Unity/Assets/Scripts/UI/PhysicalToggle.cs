@@ -16,9 +16,9 @@ public class PhysicalToggle : PhysicalButton
         StartCoroutine(ScaleToggle());
     }
 
-    protected new void OnMouseUp()
+    public new void OnSelectEnd()
     {
-        base.OnMouseUp();
+        base.OnSelectEnd();
         SetToggle();
     }
     public void SetToggle()

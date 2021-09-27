@@ -6,9 +6,8 @@ using UnityEngine.Events;
 
 public class PhysicalSlider : PhysicalButton
 {
-    float zPos, sliderPosRelativeToWidth;
-    Vector3 startPosRelative, endPosRelative, projectedMousePosition, litCylinderStartScale;
-    bool mouseDown, mouseExit;
+    float sliderPosRelativeToWidth;
+    Vector3 projectedPosition, litCylinderStartScale;
     GameObject startPositionObject, endPositionObject, litCylinder, litStartSphere, litEndSphere;
     public FloatReference sliderVariable;
     public UnityEvent newValueSet;
@@ -31,9 +30,6 @@ public class PhysicalSlider : PhysicalButton
         SetLitColor();
 
         CalculateBlobPositionAndLightTrack();
-
-        startPosRelative = transform.parent.InverseTransformPoint(startPositionObject.transform.position);
-        endPosRelative = transform.parent.InverseTransformPoint(endPositionObject.transform.position);
     }
 
     void SetLitColor()
@@ -48,26 +44,12 @@ public class PhysicalSlider : PhysicalButton
         litEndSphere.GetComponent<Renderer>().SetPropertyBlock(litProperty);
     }
 
-    private new void OnMouseDown()
+    public void UpdateSliderPosition(Vector3 trackerPosition)
     {
-        base.OnMouseDown();
-        zPos = Camera.main.WorldToScreenPoint(gameObject.transform.position).z;
-        mouseDown = true;
-    }
-    private new void OnMouseEnter()
-    {
-        base.OnMouseEnter();
-        mouseExit = false;
-    }
-    private void OnMouseDrag()
-    {
-        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(
-            new Vector3(Input.mousePosition.x, Input.mousePosition.y, zPos));
-
-        projectedMousePosition = Math3d.ProjectPointOnLineSegment(startPositionObject.transform.position,
-            endPositionObject.transform.position, mousePosition);
-        transform.position = projectedMousePosition;
-        originalUITextOrImagePosition = transform.parent.InverseTransformPoint(projectedMousePosition); // leave the
+        projectedPosition = Math3d.ProjectPointOnLineSegment(startPositionObject.transform.position,
+            endPositionObject.transform.position, trackerPosition);
+        transform.position = projectedPosition;
+        originalUITextOrImagePosition = transform.parent.InverseTransformPoint(projectedPosition); // leave the
                                                                                                         // slider where it is instead of returning it to it's zero position like a button (see parent class for 
                                                                                                         // more info on how buttons work)
         CalculateBlobPositionAndLightTrack();
@@ -108,22 +90,9 @@ public class PhysicalSlider : PhysicalButton
         sliderVariable.Value = percentageWidth;
     }
 
-    private new void OnMouseUp()
+    public void SetNewValue()
     {
-        base.OnMouseUp();
-        if (mouseExit == true)
-            base.OnMouseExit();// since this is a slider we activate this since sometimes the mouse is 
-                // outside the collider when released, thus "OnMouseExit()" won't fire (see boolean below)
-        mouseDown = false;
         newValueSet.Invoke();
-    }
-    private new void OnMouseExit()
-    {
-        mouseExit = true;
-        if (!mouseDown) // since this is a slider we don't want the MouseExit animation to trigger if 
-                // the user is still holding down the button, since users don't keep their cursor directly
-                // over slider gizmos while dragging
-            base.OnMouseExit();
     }
     // Update is called once per frame
     void Update()

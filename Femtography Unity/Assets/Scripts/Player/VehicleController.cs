@@ -5,11 +5,11 @@ using UnityEngine.Events;
 using UnityEngine.UI;
 using UnityEngine.XR;
 
-public class ThePlayerController : MonoBehaviour
+public class VehicleController : MonoBehaviour
 {
     public Particle particle;
     public GlobalBool VRorNot, followParticles, vehicleIsInFinalPosition;
-    public UnityEvent disableFollowToggle;
+    public UnityEvent vehicleInMotion, vehicleStopped;
 
     // Start is called before the first frame update
     void Start()
@@ -23,7 +23,7 @@ public class ThePlayerController : MonoBehaviour
         if (followParticles.boolValue && !vehicleIsInFinalPosition.boolValue)
         {
             BroadcastMessage("StartMoving"); // talk to the Transform Object component
-            disableFollowToggle.Invoke();
+            vehicleInMotion.Invoke();
         }
     }
 

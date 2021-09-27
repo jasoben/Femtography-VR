@@ -23,6 +23,9 @@ public class PhysicalButton : MonoBehaviour
 
     protected Vector3 originalUITextOrImagePosition, clickedUITextOrImagePosition; // move it slightly when clicked
 
+    [Tooltip("UI Helper is required for some, but not all, physical buttons to use some of their methods")]
+    public bool ignoreUIHelper;
+
     // Start is called before the first frame update
     protected void Start()
     {
@@ -141,9 +144,10 @@ public class PhysicalButton : MonoBehaviour
         }
     }
 
-    protected void OnMouseEnter()
+    public void OnHover()
     {
-        if (GetComponent<UIHelper>() != null && GetComponent<UIHelper>().menuManagerObject.isActive) 
+        if ((GetComponent<UIHelper>() != null && GetComponent<UIHelper>().menuManagerObject.isActive) || 
+            ignoreUIHelper)
         {
             isFadingIn = true;
             FadeInCoroutine = FadeUI();
@@ -153,14 +157,11 @@ public class PhysicalButton : MonoBehaviour
         }
     }
 
-    public void OnHover()
+    public void OnHoverExit()
     {
-        OnMouseEnter();
-    }
-    protected void OnMouseExit()
-    {
-        if (GetComponent<UIHelper>() == null ||
-            GetComponent<UIHelper>().menuManagerObject.isActive)
+        if ((GetComponent<UIHelper>() == null ||
+            GetComponent<UIHelper>().menuManagerObject.isActive) || 
+            ignoreUIHelper)
         {
             isFadingIn = false;
             FadeOutCoroutine = FadeUI();
@@ -171,12 +172,7 @@ public class PhysicalButton : MonoBehaviour
             EnableDisable();
     }
 
-    public void OnHoverExit()
-    {
-        OnMouseExit();
-    }
-
-    protected void OnMouseDown()
+    public void OnSelect()
     {
         if (GetComponent<UIWiggler>() != null)
             GetComponent<UIWiggler>().WigglerPaused = true;
@@ -186,7 +182,7 @@ public class PhysicalButton : MonoBehaviour
         clickCoroutine = ClickUI();
         StartCoroutine(clickCoroutine);
     }
-    protected void OnMouseUp()
+    public void OnSelectEnd()
     {
         if (GetComponent<UIWiggler>() != null)
             GetComponent<UIWiggler>().WigglerPaused = false;
