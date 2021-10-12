@@ -108,27 +108,27 @@ public class InterferenceScreenVertexTracker : MonoBehaviour
         //if (Mathf.Abs(transform.position.z) > Mathf.Abs(zPos) + .1f ||
         //    Mathf.Abs(transform.position.z) < Mathf.Abs(zPos) - .1f) // If it moves out of range, we redefine the region
         //    // we wish to examine
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            recalibratingText.SetActive(true);
-            zPos = transform.position.z;
-            if (regionDefined)
-                Invoke("DefineRegion", .1f);
-        }
+        //if (Input.GetKeyDown(KeyCode.R))
+        //{
+        //    recalibratingText.SetActive(true);
+        //    zPos = transform.position.z;
+        //    if (regionDefined)
+        //        Invoke("DefineRegion", .1f);
+        //}
 
         // This will move the "screen" forward or backwards depending on which direction we want to go
-        if (Input.GetKey(KeyCode.F))
-        {
-            transform.position += new Vector3(0, 0, zMovementAmount);
-        }
-        if (Input.GetKey(KeyCode.V))
-        {
-            transform.position -= new Vector3(0, 0, zMovementAmount);
-            if (transform.position.z < 0)
-            {
-                transform.position = new Vector3(transform.position.x, transform.position.y, 0);
-            }
-        }
+        //if (Input.GetKey(KeyCode.F))
+        //{
+        //    transform.position += new Vector3(0, 0, zMovementAmount);
+        //}
+        //if (Input.GetKey(KeyCode.V))
+        //{
+        //    transform.position -= new Vector3(0, 0, zMovementAmount);
+        //    if (transform.position.z < 0)
+        //    {
+        //        transform.position = new Vector3(transform.position.x, transform.position.y, 0);
+        //    }
+        //}
     }
 
     //Search for the peak vertices

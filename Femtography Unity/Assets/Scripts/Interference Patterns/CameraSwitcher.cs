@@ -45,12 +45,12 @@ public class CameraSwitcher : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            transform.position = cameraPositions[currentPosition].transform.position;
-            GetComponent<RotateAroundObject>().centerObject = centerObjects[currentPosition];
-            currentPosition++;
-        }
+        //if (Input.GetKeyDown(KeyCode.C))
+        //{
+        //    transform.position = cameraPositions[currentPosition].transform.position;
+        //    GetComponent<RotateAroundObject>().centerObject = centerObjects[currentPosition];
+        //    currentPosition++;
+        //}
 
         // In the position where we can see both the cube and the sphere, we want to see the two lines
         // superimposed 

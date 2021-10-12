@@ -15,11 +15,11 @@ H:/Github/Femtography-VR/Femtography Unity
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-50004
+53308
 Successfully changed project path to: H:/Github/Femtography-VR/Femtography Unity
 H:/Github/Femtography-VR/Femtography Unity
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 94.45 ms, found 8 plugins.
+Refreshing native plugins compatible for Editor in 100.14 ms, found 8 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.7f1 (dd97f2c94397)
 [Subsystems] Discovering subsystems at path D:/Program Files 2/2020.3.7f1/Editor/Data/Resources/UnitySubsystems
@@ -36,124 +36,54 @@ Initialize mono
 Mono path[0] = 'D:/Program Files 2/2020.3.7f1/Editor/Data/Managed'
 Mono path[1] = 'D:/Program Files 2/2020.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'D:/Program Files 2/2020.3.7f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56144
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56524
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: D:/Program Files 2/2020.3.7f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: D:/Program Files 2/2020.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001461 seconds.
+Registered in 0.001492 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 86.06 ms, found 8 plugins.
+Refreshing native plugins compatible for Editor in 91.49 ms, found 8 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.425 seconds
+- Completed reload, in  1.551 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.010237 seconds.
+Registered in 0.011170 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 92.17 ms, found 8 plugins.
+Refreshing native plugins compatible for Editor in 89.52 ms, found 8 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.609 seconds
+- Completed reload, in  1.430 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 2.08 ms, found 8 plugins.
+Refreshing native plugins compatible for Editor in 1.62 ms, found 8 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 4937 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 213.8 MB.
-System memory in use after: 213.9 MB.
+System memory in use before: 215.1 MB.
+System memory in use after: 215.2 MB.
 
 Unloading 59 unused Assets to reduce memory usage. Loaded Objects now: 5373.
-Total: 7.487100 ms (FindLiveObjects: 0.598700 ms CreateObjectMapping: 0.162200 ms MarkObjects: 6.582900 ms  DeleteObjects: 0.141700 ms)
+Total: 6.830300 ms (FindLiveObjects: 0.737400 ms CreateObjectMapping: 0.137600 ms MarkObjects: 5.757000 ms  DeleteObjects: 0.196400 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/Materials/Vehicle/computer glass.mat
-  artifactKey: Guid(652c7e2cc9fc17f4bbdb6ab36bc25b1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Vehicle/computer glass.mat using Guid(652c7e2cc9fc17f4bbdb6ab36bc25b1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e8b9d8c6b6c9a6eff5a473adf4ba23f') in 0.232813 seconds
-  Import took 0.270825 seconds .
+  path: Assets/Scenes/Interference Patterns/InterferencePatterns.unity
+  artifactKey: Guid(72258ebd51861764599ba9e8da709a33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Interference Patterns/InterferencePatterns.unity using Guid(72258ebd51861764599ba9e8da709a33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5fa83704d0e5332dc02f041525ac8089') in 0.023602 seconds
+  Import took 0.054073 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000217 seconds.
-  path: Assets/Materials/Vehicle/Metal_floor (Rust Low).mat
-  artifactKey: Guid(401ad4983cc206c4f923a26dd2542db1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Vehicle/Metal_floor (Rust Low).mat using Guid(401ad4983cc206c4f923a26dd2542db1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5593e50a93c73d67a4788df47018905') in 0.902202 seconds
-  Import took 0.921873 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000241 seconds.
-  path: Assets/Materials/Vehicle/very clear.mat
-  artifactKey: Guid(93c9ee60194817f45ad55b6d82d0be48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Vehicle/very clear.mat using Guid(93c9ee60194817f45ad55b6d82d0be48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '30e2a12342e9add619503269332728a8') in 0.189363 seconds
-  Import took 0.209677 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000246 seconds.
-  path: Assets/Materials/Vehicle/Teleport.shadergraph
-  artifactKey: Guid(a44a3fdbc18fb1a41af38dcad670e4ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Vehicle/Teleport.shadergraph using Guid(a44a3fdbc18fb1a41af38dcad670e4ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba73774874633f2c33bada5ca813e514') in 0.007579 seconds
-  Import took 0.026164 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000200 seconds.
-  path: Assets/Materials/Vehicle/mostly clear.mat
-  artifactKey: Guid(8066a1c71bb2cc94f8c552e20139f67d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Vehicle/mostly clear.mat using Guid(8066a1c71bb2cc94f8c552e20139f67d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5515a83440c7a4d0ff684ebe4d3ddb84') in 0.012108 seconds
-  Import took 0.027962 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000217 seconds.
-  path: Assets/Materials/Vehicle/Teleport.mat
-  artifactKey: Guid(38dde931d2cc3fa45a5572d0726e881f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Vehicle/Teleport.mat using Guid(38dde931d2cc3fa45a5572d0726e881f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b6ecad699253052927f3a23e4bdf4bc4') in 0.019607 seconds
-  Import took 0.026312 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000234 seconds.
-  path: Assets/Materials/Vehicle/BrushedMetal.mat
-  artifactKey: Guid(6a35076f7c77fba4e91a98c2bae42212) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Vehicle/BrushedMetal.mat using Guid(6a35076f7c77fba4e91a98c2bae42212) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd83a1ad546b0f875f88c27e6c524eec6') in 0.019120 seconds
-  Import took 0.037800 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000212 seconds.
-  path: Assets/Materials/Vehicle/DistortTest.mat
-  artifactKey: Guid(1b6e7187c22b1eb4c804e81ae65aa664) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Vehicle/DistortTest.mat using Guid(1b6e7187c22b1eb4c804e81ae65aa664) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40e2d7e9f09b2ecde2bc50d8c73d97a6') in 0.054312 seconds
-  Import took 0.073957 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.010613 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.43 ms, found 8 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.219 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 2.12 ms, found 8 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4740 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 201.2 MB.
-System memory in use after: 201.6 MB.
-
-Unloading 49 unused Assets to reduce memory usage. Loaded Objects now: 5454.
-Total: 8.253200 ms (FindLiveObjects: 1.312500 ms CreateObjectMapping: 0.322500 ms MarkObjects: 6.494900 ms  DeleteObjects: 0.121600 ms)
+  Time since last request: 0.000207 seconds.
+  path: Assets/Scenes/Interference Patterns
+  artifactKey: Guid(8736492fd74bbb94dba3882c2982eb40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Interference Patterns using Guid(8736492fd74bbb94dba3882c2982eb40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e48b1cba0b2e3d06a6cbf636ce63344') in 0.006966 seconds
+  Import took 0.047121 seconds .
 
