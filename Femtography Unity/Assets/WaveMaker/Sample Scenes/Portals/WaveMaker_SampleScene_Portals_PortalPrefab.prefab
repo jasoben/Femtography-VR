@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2237276137059451511}
   - component: {fileID: 2237276137059451510}
-  - component: {fileID: 2237276137059451513}
   - component: {fileID: 2237276137059451512}
   - component: {fileID: 2237276137059451515}
   m_Layer: 0
@@ -46,19 +45,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2237276137059451514}
   m_Mesh: {fileID: 0}
---- !u!65 &2237276137059451513
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2237276137059451514}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 5, y: 0.01, z: 10}
-  m_Center: {x: 2.5, y: 0, z: 5}
 --- !u!23 &2237276137059451512
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -73,6 +59,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -84,6 +71,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -108,22 +96,47 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a47a33022acfda148b7f9169c2643783, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Descriptor: {fileID: 11400000, guid: 5dea040243c4b7d45995437990fbe6dd, type: 2}
+  OnInitialized:
+    m_PersistentCalls:
+      m_Calls: []
+  OnUninitialized:
+    m_PersistentCalls:
+      m_Calls: []
+  OnAwakeStatusChanged:
+    m_PersistentCalls:
+      m_Calls: []
   substeps: 1
-  damping: 2
-  propagationSpeed: 3.11
-  verticalPushScale: 1
-  horizontalPushScale: 1
-  waveSmoothness: 0.7
-  interactorSpeedClamp: 100
+  damping: 1.26
+  propagationSpeed: 4
+  waveSmoothness: 0.9
+  speedTweak: 1
   collisionDetectionHeight: 0.1
-  showLogMessages: 0
-  drawInteractionDebugRays: 0
-  drawGrid: 0
-  _width: 5
-  _depth: 10
-  _sampleSizeX: 0.10204082
-  _sampleSizeZ: 0.1010101
+  showDetailedLogMessages: 0
+  interactionType: 0
+  verticalPushScale: 0.5
+  horizontalPushScale: 0.5
+  interactorMaximumSpeedClamp: 150
+  interactorMinimumSpeedClamp: 0.001
+  simulate: 1
+  getAffectedByInteractors: 1
+  buoyancy: 1
+  horizontalBuoyancy: 1
+  detectionDepth: 5
+  density: 1
+  buoyancyDamping: 0.8
+  nMaxCellsPerInteractor: 32
+  nMaxInteractorsDetected: 1
+  nMaxInteractorsPerCell: 1
+  effectScale: 1
+  supersamplingType: 1
+  showSettingWarningLogs: 1
+  _descriptor: {fileID: 11400000, guid: 5dea040243c4b7d45995437990fbe6dd, type: 2}
+  _size_ls:
+    x: 5
+    y: 10
+  _sampleSize_ls:
+    x: 0.12820514
+    y: 0.12658228
 --- !u!1 &2237276138200456510
 GameObject:
   m_ObjectHideFlags: 0
@@ -178,6 +191,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -189,6 +203,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -255,6 +270,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -266,6 +282,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -332,6 +349,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -343,6 +361,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -409,6 +428,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -420,6 +440,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0

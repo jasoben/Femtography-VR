@@ -1,89 +1,187 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
+
+#if UNITY_2018 || MATHEMATICS_INSTALLED
+using Unity.Mathematics;
+#endif
 
 namespace WaveMaker
 {
+    [HelpURL("http://wavemaker.lidia-martinez.com/")]
     public class WaveMakerInteractor : MonoBehaviour
     {
-        public Vector3 LinearVelocity { get; private set; }
-        public Vector3 AngularVelocity { get; private set; }
-        public Vector3 CenterOfMass { get { return usesRigidBody ? transform.TransformPoint(rb.centerOfMass) : transform.position; } }
+#if UNITY_2018 || (MATHEMATICS_INSTALLED && BURST_INSTALLED && COLLECTIONS_INSTALLED)
 
-        [Tooltip("This will make velocity values change softer, making the response of the WaveMaker object softer too. Disable for efficiency gain")]
+        public event System.EventHandler OnDisabledOrDestroyed;
+
+        public bool Initialized { get; private set; }
+        public NativeCollider NativeCollider { get; private set; }
+        public float3 LinearVelocity { get; private set; }
+        public float3 AngularVelocity { get; private set; }
+        public Rigidbody RigidBody { get { return associatedCollider != null ? associatedCollider.attachedRigidbody : null; } }
+
+        public Collider AssociatedCollider
+        {
+            get { return associatedCollider; }
+            set {
+                if (value is MeshCollider)
+                    Utils.LogError("Mesh colliders are currently not supported in WaveMaker Interactors.", gameObject);
+                else
+                    associatedCollider = value;
+            }
+        }
+
+        [SerializeField]
+        [Tooltip("Each interactor component is associated with just one collider in the same gameObject")]
+        Collider associatedCollider;
+
+        [Header("Only for surfaces using Velocity mode")]
+        [Tooltip("Shows the linear and angular velocies in the scene view during play")]
+        public bool showSpeed = false;
+
+        [Tooltip("This will make velocity values change softly, making the response of the WaveMaker object softer too.")]
         public bool speedDampening = false;
 
         [Tooltip("Higher value means slower velocity change")]
         [Range(0, 1)]
         public float speedDampValue = 0f;
 
-        [Tooltip("Shows the linear and angular velocies in the scene view during play")]
-        public bool showVelocities = false;
+        float4 _lastPosition;
+        quaternion _lastRotation;
 
-        Vector3 _lastPosition;
-        Quaternion _lastRotation;
-        Rigidbody rb;
-
-        /// <summary>
-        /// Only Non Kinematic rigid bodies allow to calculate some values needed. Otherwise we do it by hand.
-        /// </summary>
-        bool usesRigidBody = false;
-
-        void Awake()
+        private void Awake()
         {
-            _lastPosition = transform.position;
-            _lastRotation = transform.rotation;
-            UpdateRigidBodyStatus();
-
-            var meshColliders = GetComponents<MeshCollider>();
-            foreach (var mesh in meshColliders)
-            {
-                if (!mesh.convex)
-                {
-                    mesh.enabled = false;
-                    Debug.LogError("WaveMaker - (" + gameObject.name + ") has a mesh collider that is not convex. Mesh colliders are slow in contact, but it will slow down any WaveMaker surface it touches even more. Disabled!");
-                }
-            }
+            Initialized = false;
         }
 
-        void FixedUpdate()
+        private void Reset()
         {
-            if (showVelocities)
+            if (associatedCollider == null)
+                associatedCollider = GetFirstUnusedCollider();
+        }
+
+        void Update()
+        {
+            if (showSpeed)
             {
                 UpdateVelocities();
-                Debug.DrawRay(transform.position, LinearVelocity, Color.red);
-                Debug.DrawRay(transform.position, AngularVelocity, Color.blue);
+                Debug.DrawRay(transform.position, LinearVelocity.xyz, Color.red);
+                Debug.DrawRay(transform.position, AngularVelocity.xyz, Color.blue);
             }
         }
 
+        public void Initialize()
+        {
+            Initialized = false;
+            if (associatedCollider == null)
+            {
+                Utils.LogWarning("Interactor disabled. No collider attached.", gameObject);
+                enabled = false;
+                return;
+            }
+
+            if (RigidBody == null)
+            {
+                Utils.LogWarning("Without rigidbody in this or any parent, this interactor will not be detected by any surface. To manually make the surfaces detect it without RB, use AddInteractor and RemoveInteractor in the Surface API.", gameObject);
+                return;
+            }
+
+            _lastPosition = new float4(transform.position, 0);
+            _lastRotation = transform.rotation;
+            Initialized = true;
+
+            UpdateNativeCollider();
+        }
+
+        internal static WaveMakerInteractor GetRelatedInteractor(Collider collider)
+        {
+#if UNITY_2019_2_OR_NEWER
+            if (!collider.TryGetComponent<WaveMakerInteractor>(out _))
+                return null;
+#endif
+
+            foreach (var interactor in collider.GetComponents<WaveMakerInteractor>())
+                if (interactor.AssociatedCollider == collider)
+                    return interactor;
+
+            return null;
+        }
+
+        internal Collider GetFirstUnusedCollider()
+        {
+            var others = GetComponents<WaveMakerInteractor>();
+            var colliders = GetComponents<Collider>();
+
+            foreach (var col in colliders)
+            {
+                bool found = false;
+                if (col as MeshCollider != null)
+                    continue;
+
+                foreach (var interactor in others)
+                {
+                    if (interactor != this && interactor.AssociatedCollider == col)
+                    {
+                        found = true;
+                        break;
+                    }
+                }
+
+                if (!found)
+                    return col;
+            }
+
+            return null;
+        }
+
+        public void UpdateNativeCollider()
+        {
+            if (!Initialized)
+                return;
+
+            NativeCollider = new NativeCollider(associatedCollider);
+        }
+
+        /// <summary>
+        /// Only used when the Velocity Based interaction mode is enabled. In Occupancy mode, the RigidBody velocity is taken
+        /// </summary>
         public void UpdateVelocities()
         {
-            Vector3 oldLinearVelocity = LinearVelocity;
+            float3 oldLinearVelocity = LinearVelocity;
 
-            if (usesRigidBody)
+            if (RigidBody != null && !RigidBody.isKinematic && RigidBody.useGravity)
             {
-                LinearVelocity = rb.velocity;
-                AngularVelocity = rb.angularVelocity;
+                LinearVelocity = RigidBody.velocity;
+                AngularVelocity = RigidBody.angularVelocity;
             }
             else
             {
-                LinearVelocity = (transform.position - _lastPosition) / Time.fixedDeltaTime;
-                _lastPosition = transform.position;
+                var curPos = new float4(transform.position, 0);
+                LinearVelocity = ((curPos - _lastPosition) / Time.fixedDeltaTime).xyz;
+                _lastPosition = curPos;
 
-                AngularVelocity = WaveMakerUtils.GetAngularVelocity(_lastRotation, transform.rotation);
+                AngularVelocity = Utils.GetAngularVelocity(_lastRotation, transform.rotation);
                 _lastRotation = transform.rotation;
             }
 
+            //TODO: Damping only works on velocity based mode
             if (speedDampening)
-                LinearVelocity = Vector3.Lerp(oldLinearVelocity, LinearVelocity, 1 - speedDampValue);
+                LinearVelocity = math.lerp(oldLinearVelocity, LinearVelocity, 1 - speedDampValue);
         }
 
-        /// <summary>
-        /// Call this if you make changes to the interactor after execution, attach a rigidbody or change the kinematic status of it.
-        /// </summary>
-        public void UpdateRigidBodyStatus()
+        private void OnEnable()
         {
-            rb = GetComponent<Rigidbody>();
-            usesRigidBody = rb != null && !rb.isKinematic;
+            if (!Application.isPlaying)
+                return;
+
+            Initialize();
         }
+
+        private void OnDisable()
+        {
+            Initialized = false;
+            OnDisabledOrDestroyed?.Invoke(this, null);
+        }
+
+#endif
     }
 }

@@ -38,13 +38,13 @@ public class InterferenceScreenVertexTracker : MonoBehaviour
     {
         while(true)
         {
-            if (!waveMakerSurface.Initialized)
+            if (!waveMakerSurface.IsInitialized)
             {
                 yield return new WaitForEndOfFrame();
             }
             else
             {
-                mesh = waveMakerSurface.Mesh_;
+                mesh = waveMakerSurface.MeshManager.Mesh;
                 meshConversionMatrix = waveMakerSurface.transform.localToWorldMatrix;
                 regionDefined = DefineRegion();
                 StartCoroutine(FindHighestVerts());
@@ -62,7 +62,7 @@ public class InterferenceScreenVertexTracker : MonoBehaviour
 
         nearbyVertices.Clear();
 
-        mesh = waveMakerSurface.Mesh_; // The mesh is constantly updated, so we need to keep it updated here
+        mesh = waveMakerSurface.MeshManager.Mesh; // The mesh is constantly updated, so we need to keep it updated here
         Vector3 worldPositionOfMeshVert;
         bool foundNearbyVerts = false;
 
@@ -155,7 +155,7 @@ public class InterferenceScreenVertexTracker : MonoBehaviour
                         new Vector3(1, amplitudeScale, 1));
                     i++; 
                 }
-                mesh = waveMakerSurface.Mesh_;
+                mesh = waveMakerSurface.MeshManager.Mesh;
                 vertices = mesh.vertices;
 
                 lineRenderer.SetPositions(lineOfHighVerts);
@@ -192,7 +192,6 @@ public class InterferenceScreenVertexTracker : MonoBehaviour
             }
         }
     }
-    */
 
     private void OnValidate()
     {
@@ -200,4 +199,5 @@ public class InterferenceScreenVertexTracker : MonoBehaviour
         if (regionDefined)
             DefineRegion();
     }
+    */
 }
