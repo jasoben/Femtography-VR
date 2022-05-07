@@ -201,28 +201,6 @@ Transform:
   m_Father: {fileID: 3476161020426343857}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5856502675845214123
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 474721888114509965}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c3bfe628a2486446815a3c97631fd53, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  regularTextColor: {r: 0.8516615, g: 0.8330811, b: 0.9150943, a: 0.64705884}
-  highlightTextColor: {r: 0, g: 0, b: 0, a: 1}
-  regularButtonColor: {r: 0.6, g: 0.54509807, b: 0.8980393, a: 0.12156863}
-  highlightButtonColor: {r: 0.9245283, g: 0.7075694, b: 0.056692798, a: 1}
-  disabledColor: {r: 0.46226418, g: 0.46226418, b: 0.46226418, a: 0.2784314}
-  regularAlphaAmount: 0.1
-  highlightAlphaAmount: 1
-  fadeSpeed: 0.003
-  clickDistance: 0.001
-  ignoreUIHelper: 0
 --- !u!1 &758302088787832867
 GameObject:
   m_ObjectHideFlags: 0
@@ -573,6 +551,9 @@ MonoBehaviour:
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
+  m_InteractionLayers:
+    m_Bits: 4294967295
+  m_SelectMode: 0
   m_CustomReticle: {fileID: 0}
   m_FirstHoverEntered:
     m_PersistentCalls:
@@ -584,6 +565,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_HoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FirstSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastSelectExited:
     m_PersistentCalls:
       m_Calls: []
   m_SelectEntered:
@@ -1067,3 +1054,25 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 745315893141452252}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5856502675845214123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 474721888114509965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c3bfe628a2486446815a3c97631fd53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  regularTextColor: {r: 0.8516615, g: 0.8330811, b: 0.9150943, a: 0.64705884}
+  highlightTextColor: {r: 0, g: 0, b: 0, a: 1}
+  regularButtonColor: {r: 0.6, g: 0.54509807, b: 0.8980393, a: 0.12156863}
+  highlightButtonColor: {r: 0.9245283, g: 0.7075694, b: 0.056692798, a: 1}
+  disabledColor: {r: 0.46226418, g: 0.46226418, b: 0.46226418, a: 0.2784314}
+  regularAlphaAmount: 0.1
+  highlightAlphaAmount: 1
+  fadeSpeed: 0.003
+  clickDistance: 0.001
+  ignoreUIHelper: 0
