@@ -2276,7 +2276,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 196593964}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 93.042694, y: 104.43185, z: -240.84488}
+  m_LocalPosition: {x: 93.13272, y: 105.56185, z: -240.98488}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 1711972822}
@@ -2309,15 +2309,15 @@ PositionConstraint:
   m_GameObject: {fileID: 196593964}
   m_Enabled: 1
   m_Weight: 1
-  m_TranslationAtRest: {x: 93.042694, y: 104.43185, z: -240.84488}
-  m_TranslationOffset: {x: -1.5699997, y: -0.15000153, z: 14.610001}
+  m_TranslationAtRest: {x: 93.13272, y: 105.56185, z: -240.98488}
+  m_TranslationOffset: {x: 0, y: 0, z: 0}
   m_AffectTranslationX: 1
   m_AffectTranslationY: 1
   m_AffectTranslationZ: 1
   m_IsContraintActive: 1
   m_IsLocked: 1
   m_Sources:
-  - sourceTransform: {fileID: 788379695}
+  - sourceTransform: {fileID: 2146455619}
     weight: 1
 --- !u!4 &199814686 stripped
 Transform:
@@ -2403,6 +2403,30 @@ MonoBehaviour:
       - m_Target: {fileID: 233698845}
         m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
         m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 0f3bc6f13d14c8f43b8de4352342db93, type: 2}
+        m_TargetAssemblyTypeName: MenuManagerObject, Assembly-CSharp
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: ffdffe9e57d40bd4583b56215e4c2daf, type: 2}
+        m_TargetAssemblyTypeName: MenuManagerObject, Assembly-CSharp
+        m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5014,7 +5038,6 @@ MonoBehaviour:
   toolTipObjectReference: {fileID: 0}
   showText: {fileID: 0}
   menuOpen: {fileID: 0}
-  startActive: 0
   flashingScaleCoefficient: 0
 --- !u!114 &432914540
 MonoBehaviour:
@@ -5631,7 +5654,6 @@ MonoBehaviour:
   toolTipObjectReference: {fileID: 0}
   showText: {fileID: 0}
   menuOpen: {fileID: 0}
-  startActive: 0
   flashingScaleCoefficient: 0
 --- !u!114 &470421760
 MonoBehaviour:
@@ -5841,7 +5863,6 @@ MonoBehaviour:
   toolTipObjectReference: {fileID: 0}
   showText: {fileID: 0}
   menuOpen: {fileID: 0}
-  startActive: 0
   flashingScaleCoefficient: 0
 --- !u!114 &475814552
 MonoBehaviour:
@@ -9569,7 +9590,6 @@ MonoBehaviour:
   toolTipObjectReference: {fileID: 0}
   showText: {fileID: 0}
   menuOpen: {fileID: 0}
-  startActive: 0
   flashingScaleCoefficient: 0
 --- !u!114 &662313145
 MonoBehaviour:
@@ -10478,7 +10498,6 @@ MonoBehaviour:
   toolTipObjectReference: {fileID: 0}
   showText: {fileID: 0}
   menuOpen: {fileID: 0}
-  startActive: 0
   flashingScaleCoefficient: 0
 --- !u!114 &796729204
 MonoBehaviour:
@@ -11008,7 +11027,6 @@ MonoBehaviour:
   toolTipObjectReference: {fileID: 0}
   showText: {fileID: 0}
   menuOpen: {fileID: 0}
-  startActive: 0
   flashingScaleCoefficient: 0
 --- !u!114 &878997994
 MonoBehaviour:
@@ -13777,7 +13795,6 @@ MonoBehaviour:
   toolTipObjectReference: {fileID: 0}
   showText: {fileID: 0}
   menuOpen: {fileID: 0}
-  startActive: 0
   flashingScaleCoefficient: 0
 --- !u!114 &1142777680
 MonoBehaviour:
@@ -14977,7 +14994,6 @@ MonoBehaviour:
   toolTipObjectReference: {fileID: 0}
   showText: {fileID: 0}
   menuOpen: {fileID: 0}
-  startActive: 0
   flashingScaleCoefficient: 0
 --- !u!114 &1219300751
 MonoBehaviour:
@@ -15868,7 +15884,6 @@ MonoBehaviour:
   toolTipObjectReference: {fileID: 0}
   showText: {fileID: 0}
   menuOpen: {fileID: 0}
-  startActive: 0
   flashingScaleCoefficient: 0
 --- !u!114 &1273731426
 MonoBehaviour:
@@ -17160,7 +17175,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1461412903
 RectTransform:
   m_ObjectHideFlags: 0
@@ -18698,7 +18713,6 @@ MonoBehaviour:
   toolTipObjectReference: {fileID: 0}
   showText: {fileID: 0}
   menuOpen: {fileID: 0}
-  startActive: 0
   flashingScaleCoefficient: 0
 --- !u!114 &1590592944
 MonoBehaviour:
@@ -20769,7 +20783,6 @@ MonoBehaviour:
   toolTipObjectReference: {fileID: 0}
   showText: {fileID: 0}
   menuOpen: {fileID: 0}
-  startActive: 0
   flashingScaleCoefficient: 0
 --- !u!114 &1774505332
 MonoBehaviour:
@@ -21664,7 +21677,6 @@ MonoBehaviour:
   toolTipObjectReference: {fileID: 0}
   showText: {fileID: 0}
   menuOpen: {fileID: 0}
-  startActive: 0
   flashingScaleCoefficient: 0
 --- !u!114 &1793553119
 MonoBehaviour:
@@ -22209,7 +22221,6 @@ MonoBehaviour:
   toolTipObjectReference: {fileID: 0}
   showText: {fileID: 0}
   menuOpen: {fileID: 0}
-  startActive: 0
   flashingScaleCoefficient: 0
 --- !u!114 &1811801565
 MonoBehaviour:
@@ -22739,7 +22750,6 @@ MonoBehaviour:
   toolTipObjectReference: {fileID: 0}
   showText: {fileID: 0}
   menuOpen: {fileID: 0}
-  startActive: 0
   flashingScaleCoefficient: 0
 --- !u!114 &1864855968
 MonoBehaviour:
@@ -24736,7 +24746,7 @@ PrefabInstance:
     - target: {fileID: 6598815579406187037, guid: 9f5a24a380916d14db9775daab4fe333,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f5a24a380916d14db9775daab4fe333, type: 3}
@@ -26466,6 +26476,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 703b02d21ba673549acc5297abf1bc34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &2146455619 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5300636202133268083, guid: b9623f000689cf943b5158810deff7c8,
+    type: 3}
+  m_PrefabInstance: {fileID: 4805049509699699687}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2146646802
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28441,7 +28457,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: 
 --- !u!222 &5663178391707150035
 CanvasRenderer:
   m_ObjectHideFlags: 0
