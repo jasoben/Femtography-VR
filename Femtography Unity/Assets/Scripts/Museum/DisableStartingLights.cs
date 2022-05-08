@@ -23,7 +23,10 @@ public class DisableStartingLights : MonoBehaviour
         for (int i = 0; i < startingLights.Length; i++)
         {
             startingLights[i].GetComponent<Renderer>().enabled = false;
-            startingLights[i].GetComponentInChildren<Light>().enabled = false;
+            foreach (Light light in startingLights[i].GetComponentsInChildren<Light>())
+            {
+                light.enabled = false;
+            }
             startingLights[i].GetComponent<AudioSource>().Play();
             await Task.Delay(3000);
             startingLights[i].SetActive(false);
