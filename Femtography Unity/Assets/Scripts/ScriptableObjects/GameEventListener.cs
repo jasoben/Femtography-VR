@@ -7,7 +7,7 @@ public class GameEventListener : MonoBehaviour
 {
     [Tooltip("Should this listener listen for multiple events prior to firing?")]
     public bool multiEventListener; // The multiEventListener allows us to respond to multiple events in the same way;
-    [Tooltip("Should we check the bool in Check Whether to Activate below before firing?")]
+    [Tooltip("True if we want the 'Check Whether to Activate' bool to be true, false if we want it to be false")]
     public bool activateBoolOnOrOff;
     // activateBoolOnOrOff says whe, activateBoolOnOrOffther we want checkWhetherToActivate (below) to be on or off
     public GlobalBool checkWhetherToActivate; // This allows us to check a bool value before we invoke the event

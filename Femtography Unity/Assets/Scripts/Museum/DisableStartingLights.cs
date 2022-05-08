@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 public class DisableStartingLights : MonoBehaviour
 {
-    public GameEvent startingLightsOff;
+    public GameEvent startingLightsOff, totalDarkness;
     GameObject[] startingLights;
     // Start is called before the first frame update
     void Start()
@@ -28,10 +28,11 @@ public class DisableStartingLights : MonoBehaviour
                 light.enabled = false;
             }
             startingLights[i].GetComponent<AudioSource>().Play();
-            await Task.Delay(3000);
+            await Task.Delay(2000);
             startingLights[i].SetActive(false);
         }
-        await Task.Delay(2000);
+        totalDarkness.Raise();
+        await Task.Delay(3000);
         startingLightsOff.Raise();
     }
 

@@ -16,6 +16,7 @@ public class UIHelper : MonoBehaviour
     public GlobalBool showText, menuOpen;
 
     bool referenceObjectSet;
+    public bool startActive = false;
 
     Text toolTipTextObject;
 
@@ -29,7 +30,8 @@ public class UIHelper : MonoBehaviour
     void Start()
     {
         toolTips = XmlParser.Read<ToolTipText>("assets/XML/toolTips.xml");
-        menuManagerObject.SetActive(false);
+        if (!startActive)
+            menuManagerObject.SetActive(false);
     }
     public void SetScale()
     {

@@ -7,6 +7,7 @@ public class UIScaler : MonoBehaviour
     float scaleSpeed = .01f, normalScaleSpeed;
     Vector3 endScale, normalScale, shrunkenScale;
     IEnumerator scalingCoroutine;
+    public bool startShrunken = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +22,8 @@ public class UIScaler : MonoBehaviour
             GetComponentInChildren<UIHelper>().SetScale();// set scale values for this component before shrinking button
         // (We use "InChildren" for cases when this references a Slider or Toggle, which are slightly different from
         // a regular button)
-        transform.localScale = shrunkenScale;
+        if (startShrunken)
+            transform.localScale = shrunkenScale;
     }
     public void EnglargeOrShrink(bool isEnlarging)
     {

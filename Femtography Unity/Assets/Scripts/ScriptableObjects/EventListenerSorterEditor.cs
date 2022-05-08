@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
+#if UNITY_EDITOR
 [CustomEditor(typeof(EventListenerSorter))]
 public class EventListenerSorterEditor : Editor
 {
@@ -18,3 +19,4 @@ public class EventListenerSorterEditor : Editor
         }
     }
 }
+#endif

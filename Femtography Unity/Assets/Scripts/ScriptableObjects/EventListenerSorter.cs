@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEditor;
 using System.Linq;
 
+#if UNITY_EDITOR
 public class EventListenerSorter : MonoBehaviour
 {
     public void Sort()
@@ -34,3 +35,4 @@ public class EventListenerSorter : MonoBehaviour
          }
     }
 }
+#endif
