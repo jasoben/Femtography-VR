@@ -436,7 +436,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3c99fe890ff9c8f4c812a100f6864415, type: 2}
+  - {fileID: 2100000, guid: bbcb910bae1105045ae32874df139ccb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -517,6 +517,7 @@ MonoBehaviour:
     type: 2}
   showText: {fileID: 11400000, guid: 9c4cb6f7f89bc9544a0ee86309d048a6, type: 2}
   menuOpen: {fileID: 11400000, guid: 0960ffc0614a228418076e68edd9fed1, type: 2}
+  startActive: 0
   flashingScaleCoefficient: 1.2
 --- !u!114 &2798898650901721770
 MonoBehaviour:
@@ -700,6 +701,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a2a6e3b50e619d4fbfd3685da0ecd92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startShrunken: 1
 --- !u!1 &4823963862661513008
 GameObject:
   m_ObjectHideFlags: 0
@@ -1034,7 +1036,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3c99fe890ff9c8f4c812a100f6864415, type: 2}
+      objectReference: {fileID: 2100000, guid: bbcb910bae1105045ae32874df139ccb, type: 2}
     - target: {fileID: 919132149155446097, guid: 3ff24ff084409f941856abcc4f2a362d,
         type: 3}
       propertyPath: m_Name

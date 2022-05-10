@@ -11,7 +11,7 @@ public class CustomCameraSettings : MonoBehaviour
     {
         for (int i = 0; i < 31; i++)
         { 
-            customDistances[i] = 500; 
+            customDistances[i] = 800; 
         }
 
         customDistances[10] = 3000; // Special consideration for the "detector" object

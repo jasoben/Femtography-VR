@@ -15,11 +15,15 @@ public class DetectorMeshCollisionSensor : MonoBehaviour
     {
         detectionSound = gameObject.AddComponent<AudioSource>();
         detectionSound.clip = transform.parent.parent.GetComponent<AudioSource>().clip;
+        //Adding until I can sort out the problem with the rendering on the Quest
+        GetComponent<Renderer>().material = detected;
+        GetComponent<Renderer>().enabled = false;
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        GetComponent<Renderer>().material = detected;
+        //GetComponent<Renderer>().material = detected;
+        GetComponent<Renderer>().enabled = true;
         detectionSound.Play();
         StartCoroutine("ResetColor");
     }
@@ -41,9 +45,10 @@ public class DetectorMeshCollisionSensor : MonoBehaviour
         {
             yield return new WaitForSeconds(.01f);
             elapsedTime += .01f * playbackSpeed.Value;
-            if (elapsedTime > 1.5f)
+            if (elapsedTime > .5f)
             {
-                GetComponent<Renderer>().material = undetected;
+                //GetComponent<Renderer>().material = undetected;
+                GetComponent<Renderer>().enabled = false;
                 yield break;
             }
         }

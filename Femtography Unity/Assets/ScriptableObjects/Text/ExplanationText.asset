@@ -1,0 +1,78 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7aeab6f78f96b9408b92e83d7a5d971, type: 3}
+  m_Name: ExplanationText
+  m_EditorClassIdentifier: 
+  titles:
+  - Blank
+  - Introduction
+  - Initialized
+  - FirstElectronFired
+  - DriveByPhoton
+  - CollisionWithProton
+  - SecondPhotonReleased
+  - IncreaseQ2
+  customTexts:
+  - 
+  - "Welcome to the FemtoNET Explorer. We begin our journey floating in VERY SMALL
+    SPACE. You'll notice that geometry gets a bit... wobbly down here, which is why
+    our coordinate plane is shifting around like a mildly turbulent sea. Particles
+    flit in and out of existence due to WEIRD QUANTUM WEIRDNESS. \r\n\r\nPress \"Initialize\"
+    to begin."
+  - "We load in an electron and, in the distance, a particle detector. (These are
+    not simulated to scale-- in reality the detector is SIGNIFICANTLY larger; if
+    the electron were a baseball, the detector would be the size of the earth.) \r\n\r\nPress
+    \"Launch\" to send the electron into the detector."
+  - 'The electron fires into the detector and... something is detected. Let''s follow
+    it and see where it goes.
+
+    
+
+    Check "Follow Particles" and then "Launch"
+    another.'
+  - 'When the electron is near to the proton, it releases a high-energy photon. The
+    photon continues towards the proton, while the electron is deflected.
+
+    
+
+    Click
+    "Play" when you''re ready to see the next step.'
+  - "The photon collides with the proton and the proton is both deflected and charged
+    with energy from the photon. \r\n\r\nClick \"Play\" when you're ready to see
+    the next step."
+  - 'The proton releases a high-energy photon a few moments later to shed the excess
+    energy. The proton and the high-energy photon are then both detected by the detector.
+
+    
+
+    Click
+    "Play" when you''re ready to see the next step.'
+  - 'Try adjusting the sliders. As you increase q^2 (aka momentum transfer), we are
+    able to see more of the interior of the proton. Quarks and anti-quarks come in
+    and out of existence. This is just an illustration of the process-- to learn
+    how we actually "see" the interior of the proton, visit the museum exhibit on
+    "Interference Patterns".
+
+    
+
+    You can also speed up or slow down the
+    simulation with the speed slider.
+
+    
+
+    Try turning off "Follow Particle"
+    to watch the particles from your current vantage point.
+
+    
+
+    Finally,
+    use the teleport button to change your vantage point.'
