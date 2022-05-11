@@ -28,11 +28,11 @@ public class DisableStartingLights : MonoBehaviour
                 light.enabled = false;
             }
             startingLights[i].GetComponent<AudioSource>().Play();
-            await Task.Delay(2000);
+            await Task.Delay(1000);
             startingLights[i].SetActive(false);
         }
         totalDarkness.Raise();
-        await Task.Delay(3000);
+        await Task.Delay(2000);
         startingLightsOff.Raise();
     }
 

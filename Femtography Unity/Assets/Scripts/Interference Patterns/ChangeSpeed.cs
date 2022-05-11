@@ -7,13 +7,13 @@ public class ChangeSpeed : MonoBehaviour
 {
     WaveMakerSurface waveMakerSurface;
     public WaveMakerGOMover waveMakerGOMover;
-    float waveMakerGoVelocity;
+    float waveMakerGoHeight;
     // Start is called before the first frame update
     void Start()
     {
         waveMakerSurface = GetComponent<WaveMakerSurface>();
         if (waveMakerGOMover != null)
-            waveMakerGoVelocity = waveMakerGOMover.translationSpeed.y;
+            waveMakerGoHeight = waveMakerGOMover.translationDistance.y;
     }
 
     // Update is called once per frame
@@ -26,7 +26,7 @@ public class ChangeSpeed : MonoBehaviour
     {
         waveMakerSurface.speedTweak = newSpeed;
         if (waveMakerGOMover != null)
-            waveMakerGOMover.translationSpeed.y = waveMakerGoVelocity * newSpeed;
+            waveMakerGOMover.translationDistance.y = waveMakerGoHeight / newSpeed;
 
     }
 }
