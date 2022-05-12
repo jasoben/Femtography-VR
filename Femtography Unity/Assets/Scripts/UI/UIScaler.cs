@@ -27,6 +27,7 @@ public class UIScaler : MonoBehaviour
     }
     public void EnglargeOrShrink(bool isEnlarging)
     {
+        Debug.Log(isEnlarging);
         float randomScaleSpeedModifier = Random.Range(-.005f, .005f);
         scaleSpeed = normalScaleSpeed + randomScaleSpeedModifier;
         if (isEnlarging)

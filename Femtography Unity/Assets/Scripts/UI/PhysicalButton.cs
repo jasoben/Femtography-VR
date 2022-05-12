@@ -25,6 +25,7 @@ public class PhysicalButton : MonoBehaviour
 
     [Tooltip("UI Helper is required for some, but not all, physical buttons to use some of their methods")]
     public bool ignoreUIHelper;
+    public bool disableOnClick = false;
 
     // Start is called before the first frame update
     protected void Start()

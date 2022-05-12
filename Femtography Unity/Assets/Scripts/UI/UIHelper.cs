@@ -26,6 +26,8 @@ public class UIHelper : MonoBehaviour
 
     Vector3 startScale, flashingScale;
 
+    public bool ignoreMenuOpen = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -50,7 +52,7 @@ public class UIHelper : MonoBehaviour
             referenceObjectSet = true;
             toolTipTextObject = toolTipObjectReference.referencedGameObject.GetComponent<Text>();
         }
-        if (referenceObjectSet && menuOpen.boolValue)
+        if (referenceObjectSet && menuOpen.boolValue && !ignoreMenuOpen)
         {
             if (menuManagerObject.isFlashing)
             {

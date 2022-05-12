@@ -1,9 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class ClickCounter : MonoBehaviour
+public class EventCounter : MonoBehaviour
 {
     [SerializeField]
     private EventAtNumberOfClicks[] eventAtNumberOfClicks;
@@ -24,15 +25,18 @@ public class ClickCounter : MonoBehaviour
     public void AddClickCount()
     {
         numberOfClick++;
-        CheckClickEvents();
+        CheckCount();
     }
 
-    void CheckClickEvents()
+    async Task CheckCount()
     {
         foreach (EventAtNumberOfClicks eventAtNumberOfClick in eventAtNumberOfClicks)
         {
             if (numberOfClick == eventAtNumberOfClick.clickCountToExecuteEvent)
+            {
+                await Task.Delay(eventAtNumberOfClick.pauseTime);
                 eventAtNumberOfClick.eventToExecute.Invoke();
+            }
         }
     }
 }
@@ -41,5 +45,6 @@ public class ClickCounter : MonoBehaviour
 public class EventAtNumberOfClicks
 {
     public int clickCountToExecuteEvent;
+    public int pauseTime = 0;
     public UnityEvent eventToExecute;
 }
