@@ -493,6 +493,7 @@ MonoBehaviour:
   fadeSpeed: 0.003
   clickDistance: 0.001
   ignoreUIHelper: 0
+  disableOnClick: 0
   sliderVariable:
     UseConstant: 0
     ConstantValue: 0
@@ -519,6 +520,7 @@ MonoBehaviour:
   menuOpen: {fileID: 11400000, guid: 0960ffc0614a228418076e68edd9fed1, type: 2}
   startActive: 0
   flashingScaleCoefficient: 1.2
+  ignoreMenuOpen: 0
 --- !u!114 &2798898650901721770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -554,8 +556,16 @@ MonoBehaviour:
     m_Bits: 4294967295
   m_InteractionLayers:
     m_Bits: 4294967295
+  m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_CustomReticle: {fileID: 0}
+  m_AllowGazeInteraction: 0
+  m_AllowGazeSelect: 0
+  m_OverrideGazeTimeToSelect: 0
+  m_GazeTimeToSelect: 0.5
+  m_OverrideTimeToAutoDeselectGaze: 0
+  m_TimeToAutoDeselectGaze: 3
+  m_AllowGazeAssistance: 0
   m_FirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -610,6 +620,9 @@ MonoBehaviour:
   m_Deactivated:
     m_PersistentCalls:
       m_Calls: []
+  m_StartingHoverFilters: []
+  m_StartingSelectFilters: []
+  m_StartingInteractionStrengthFilters: []
   m_OnFirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -1078,3 +1091,4 @@ MonoBehaviour:
   fadeSpeed: 0.003
   clickDistance: 0.001
   ignoreUIHelper: 0
+  disableOnClick: 0

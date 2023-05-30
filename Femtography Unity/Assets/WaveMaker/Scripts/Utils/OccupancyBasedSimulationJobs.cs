@@ -59,7 +59,7 @@ namespace WaveMaker
         [ReadOnly] public float buoyancyDamping;
         [ReadOnly] public float3 scale_l2w;
         [ReadOnly] public float fixedDeltaTime;
-        [ReadOnly] public NativeHashMap<int, int> colliderToRbIndices;
+        [ReadOnly] public NativeParallelHashMap<int, int> colliderToRbIndices;
         [ReadOnly] public bool exportForces;
 
         public void Execute(int interactorIndex)
@@ -242,7 +242,7 @@ namespace WaveMaker
         [ReadOnly] public IntegerPair offset;
         [ReadOnly] public bool affectSurface;
         [ReadOnly] public bool buoyancyEnabled;
-        [ReadOnly] public NativeHashMap<int, int> colliderToRbIndices;
+        [ReadOnly] public NativeParallelHashMap<int, int> colliderToRbIndices;
         [ReadOnly] public int nMaxCellsPerInteractor;
         [ReadOnly] public float smoothedBorder_ws;
 
@@ -346,7 +346,7 @@ namespace WaveMaker
         }
 
         internal static void CollapseOccupanciesByRigidBody(ref NativeArray<InteractionData> dataPerInteractor,
-                                                in NativeHashMap<int, int> colliderToRbIndices, in NativeList<HitDistance> botTopHitOrder)
+                                                in NativeParallelHashMap<int, int> colliderToRbIndices, in NativeList<HitDistance> botTopHitOrder)
         {
             int nInteractors = dataPerInteractor.Length;
 

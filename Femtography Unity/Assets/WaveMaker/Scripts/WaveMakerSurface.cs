@@ -329,10 +329,10 @@ namespace WaveMaker
         internal List<Rigidbody> _rigidbodies;
 
         /// <summary>Used to correlate InstanceIDs of the Colliders detected and the local index assigned</summary>
-        internal NativeHashMap<int, int> _colliderIdsToIndices;
+        internal NativeParallelHashMap<int, int> _colliderIdsToIndices;
 
         /// <summary>Used to correlate collider local index and the rigidbody local index assigned</summary>
-        internal NativeHashMap<int, int> _colliderToRbIndices;
+        internal NativeParallelHashMap<int, int> _colliderToRbIndices;
 
         internal NativeList<NativeCollider> _interactorColliders;
         internal NativeList<RigidBodyData> _rigidBodyData;
@@ -766,8 +766,8 @@ namespace WaveMaker
 
             _interactorsDetected = new List<WaveMakerInteractor>(nMaxInteractorsDetected);
             _rigidbodies = new List<Rigidbody>(nMaxInteractorsDetected);
-            _colliderIdsToIndices = new NativeHashMap<int, int>(nMaxInteractorsDetected, Allocator.Persistent);
-            _colliderToRbIndices = new NativeHashMap<int, int>(nMaxInteractorsDetected, Allocator.Persistent);
+            _colliderIdsToIndices = new NativeParallelHashMap<int, int>(nMaxInteractorsDetected, Allocator.Persistent);
+            _colliderToRbIndices = new NativeParallelHashMap<int, int>(nMaxInteractorsDetected, Allocator.Persistent);
             _interactorColliders = new NativeList<NativeCollider>(nMaxInteractorsDetected, Allocator.Persistent);
             _rigidBodyData = new NativeList<RigidBodyData>(nMaxInteractorsDetected, Allocator.Persistent);
             _velocityData = new NativeList<VelocityData>(nMaxInteractorsDetected, Allocator.Persistent);
