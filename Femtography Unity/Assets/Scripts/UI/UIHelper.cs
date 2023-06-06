@@ -6,6 +6,9 @@ using UnityEngine.EventSystems;
 
 public class UIHelper : MonoBehaviour
 {
+    [TextArea]
+    [SerializeField] string AboutThisComponent = "This component helps coordinate menu actions that occur outside the menu object, such as keypresses, etc.";
+    [Space]
     public MenuManagerObject menuManagerObject;// Sometimes the menu is active and sometimes it isn't, so we enable
     // and disable objects through ScriptableObject data instead of directly. See the "MenuManager" under "Control Objects" 
     // in the hierarchy.

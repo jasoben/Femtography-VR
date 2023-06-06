@@ -8,7 +8,7 @@ public class PhysicalSlider : PhysicalButton
 {
     float sliderPosRelativeToWidth;
     Vector3 projectedPosition, litCylinderStartScale;
-    GameObject startPositionObject, endPositionObject, litCylinder, litStartSphere, litEndSphere;
+    [SerializeField] GameObject startPositionObject, endPositionObject, litCylinder, litStartSphere, litEndSphere;
     public FloatReference sliderVariable;
     public UnityEvent newValueSet;
     // Start is called before the first frame update
@@ -18,13 +18,6 @@ public class PhysicalSlider : PhysicalButton
 
         sliderPosRelativeToWidth = sliderVariable.Value;
 
-        startPositionObject = transform.parent.Find("StartPoint").gameObject;
-        endPositionObject = transform.parent.Find("EndPoint").gameObject;
-
-        litCylinder = transform.parent.Find("LitSliderTrack").Find("Cylinder").gameObject;
-        litStartSphere = transform.parent.Find("LitSliderTrack").Find("StartSphere").gameObject;
-        litEndSphere = transform.parent.Find("LitSliderTrack").Find("EndSphere").gameObject;
-
         litCylinderStartScale = litCylinder.transform.localScale;
 
         SetLitColor();
@@ -32,7 +25,7 @@ public class PhysicalSlider : PhysicalButton
         CalculateBlobPositionAndLightTrack();
     }
 
-    void SetLitColor()
+    public void SetLitColor()
     {
         MaterialPropertyBlock litProperty = new MaterialPropertyBlock();
         litProperty.SetColor("Color_", GetComponent<PhysicalButton>().highlightButtonColor);
@@ -50,7 +43,6 @@ public class PhysicalSlider : PhysicalButton
             endPositionObject.transform.position, trackerPosition);
         transform.position = projectedPosition;
         originalUITextOrImagePosition = transform.parent.InverseTransformPoint(projectedPosition); // leave the
-                                                                                                        // slider where it is instead of returning it to it's zero position like a button (see parent class for 
                                                                                                         // more info on how buttons work)
         CalculateBlobPositionAndLightTrack();
     }
