@@ -37,10 +37,6 @@ public class PhysicalSlider : PhysicalButton
         litEndSphere.GetComponent<Renderer>().SetPropertyBlock(litProperty);
     }
 
-    public void TestEffect()
-    {
-        Debug.Log("hovering");
-    }
 
     public void UpdateSliderPosition(Vector3 trackerPosition)
     {
