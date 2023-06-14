@@ -63,7 +63,7 @@ public class UIHelper : MonoBehaviour
             } else if (!menuManagerObject.isFlashing)
                 StartCoroutine(ReturnToNormalScale());
         }
-        if (menuManagerObject.isActive != GetComponent<Collider>().enabled) // if the 
+        if (GetComponent<Collider>() != null && menuManagerObject.isActive != GetComponent<Collider>().enabled) // if the 
             // value changes 
         {
             GetComponent<PhysicalButton>().EnableDisable();
