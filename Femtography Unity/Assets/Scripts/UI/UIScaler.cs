@@ -8,6 +8,15 @@ public class UIScaler : MonoBehaviour
     Vector3 endScale, normalScale, shrunkenScale;
     IEnumerator scalingCoroutine;
     public bool startShrunken = true;
+    [Tooltip("Do we want this to be gathered in the ShowMenu TransmuteMenu method?")]
+    [SerializeField] bool includeInListOfMenuButtons = true; // We gather all the buttons
+
+    public bool IncludeInListOfMenuButtons { get => includeInListOfMenuButtons; }
+
+    // to shrink them together in ShowMenu
+    // but some we'd prefer to leave out.                                                             // we'd prefer to leave out.
+
+
     // Start is called before the first frame update
     void Start()
     {
