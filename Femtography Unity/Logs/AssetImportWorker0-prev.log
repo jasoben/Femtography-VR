@@ -15,7 +15,7 @@ H:/Github/Femtography-VR/Femtography Unity
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-59672
+62012
 Successfully changed project path to: H:/Github/Femtography-VR/Femtography Unity
 H:/Github/Femtography-VR/Femtography Unity
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -49,12 +49,12 @@ H:/Github/Femtography-VR/Femtography Unity
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [20584] Host "[IP] 192.168.1.129 [Port] 0 [Flags] 2 [Guid] 2198094804 [EditorId] 2198094804 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-L8L46BD) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [36660] Host "[IP] 192.168.1.129 [Port] 0 [Flags] 2 [Guid] 1433470796 [EditorId] 1433470796 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-L8L46BD) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [20584] Host "[IP] 192.168.1.129 [Port] 0 [Flags] 2 [Guid] 2198094804 [EditorId] 2198094804 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-L8L46BD) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [36660] Host "[IP] 192.168.1.129 [Port] 0 [Flags] 2 [Guid] 1433470796 [EditorId] 1433470796 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-L8L46BD) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-Refreshing native plugins compatible for Editor in 30.07 ms, found 12 plugins.
-Preloading 1 native plugins for Editor in 0.34 ms.
+Refreshing native plugins compatible for Editor in 30.14 ms, found 12 plugins.
+Preloading 1 native plugins for Editor in 0.38 ms.
 Initialize engine version: 2022.3.0f1 (fb119bb0b476)
 [Subsystems] Discovering subsystems at path D:/Program Files 2/2022.3.0f1/Editor/Data/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path H:/Github/Femtography-VR/Femtography Unity/Assets
@@ -69,49 +69,49 @@ Initialize mono
 Mono path[0] = 'D:/Program Files 2/2022.3.0f1/Editor/Data/Managed'
 Mono path[1] = 'D:/Program Files 2/2022.3.0f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'D:/Program Files 2/2022.3.0f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56112
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56948
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: D:/Program Files 2/2022.3.0f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: D:/Program Files 2/2022.3.0f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
 Register platform support module: D:/Program Files 2/2022.3.0f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.005704 seconds.
-- Loaded All Assemblies, in  0.261 seconds
+Registered in 0.006140 seconds.
+- Loaded All Assemblies, in  0.234 seconds
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
-Android Extension - Scanning For ADB Devices 251 ms
+Android Extension - Scanning For ADB Devices 289 ms
 Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.478 seconds
-Domain Reload Profiling: 738ms
-	BeginReloadAssembly (88ms)
+- Finished resetting the current domain, in  0.534 seconds
+Domain Reload Profiling: 767ms
+	BeginReloadAssembly (61ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (23ms)
+	RebuildCommonClasses (24ms)
 	RebuildNativeTypeToScriptingClass (7ms)
-	initialDomainReloadingComplete (37ms)
-	LoadAllAssembliesAndSetupDomain (105ms)
-		LoadAssemblies (88ms)
+	initialDomainReloadingComplete (40ms)
+	LoadAllAssembliesAndSetupDomain (100ms)
+		LoadAssemblies (61ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (102ms)
-			TypeCache.Refresh (102ms)
-				TypeCache.ScanAssembly (94ms)
+		AnalyzeDomain (98ms)
+			TypeCache.Refresh (97ms)
+				TypeCache.ScanAssembly (89ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
 			ResolveRequiredComponents (0ms)
-	FinalizeReload (478ms)
+	FinalizeReload (534ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (441ms)
+		SetupLoadedEditorAssemblies (493ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (341ms)
+			InitializePlatformSupportModulesInManaged (384ms)
 			SetLoadedEditorAssemblies (2ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (1ms)
-			ProcessInitializeOnLoadAttributes (65ms)
-			ProcessInitializeOnLoadMethodAttributes (31ms)
+			BeforeProcessingInitializeOnLoad (2ms)
+			ProcessInitializeOnLoadAttributes (69ms)
+			ProcessInitializeOnLoadMethodAttributes (35ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -120,8 +120,8 @@ Domain Reload Profiling: 738ms
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory is not a mono symbol file
-- Loaded All Assemblies, in  0.628 seconds
-Refreshing native plugins compatible for Editor in 24.43 ms, found 12 plugins.
+- Loaded All Assemblies, in  0.764 seconds
+Refreshing native plugins compatible for Editor in 19.46 ms, found 12 plugins.
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
 Native extension for WebGL target not found
@@ -134,41 +134,41 @@ System.Reflection.TargetInvocationException: Exception has been thrown by the ta
   at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00083] in <6aa56e57ab504395b555cf3ed50fa53d>:0 
   at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in <6aa56e57ab504395b555cf3ed50fa53d>:0 
   at UnityEditor.EditorAssemblies.ProcessInitializeOnLoadMethodAttributes () [0x000a5] in <4911eca47f294e18a7b3306f02701303>:0 
-0x00007ff7c785da0d (Unity) StackWalker::GetCurrentCallstack
-0x00007ff7c78629b9 (Unity) StackWalker::ShowCallstack
-0x00007ff7c8845c71 (Unity) GetStacktrace
-0x00007ff7c8f07552 (Unity) DebugStringToFile
-0x00007ff7c67902a6 (Unity) DebugLogHandler_CUSTOM_Internal_Log
-0x00000182724cb7f3 (Mono JIT Code) (wrapper managed-to-native) UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
-0x00000182724cb72b (Mono JIT Code) UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-0x00000182724c8f80 (Mono JIT Code) UnityEngine.Logger:Log (UnityEngine.LogType,object)
-0x00000182724c8e45 (Mono JIT Code) UnityEngine.Debug:LogError (object)
-0x00000182724ba053 (Mono JIT Code) UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-0x000001826313315d (Mono JIT Code) (wrapper runtime-invoke) object:runtime_invoke_void (object,intptr,intptr,intptr)
-0x00007ff9c04fe084 (mono-2.0-bdwgc) mono_jit_runtime_invoke (at C:/build/output/Unity-Technologies/mono/mono/mini/mini-runtime.c:3445)
-0x00007ff9c043eb84 (mono-2.0-bdwgc) do_runtime_invoke (at C:/build/output/Unity-Technologies/mono/mono/metadata/object.c:3066)
-0x00007ff9c043ed1c (mono-2.0-bdwgc) mono_runtime_invoke (at C:/build/output/Unity-Technologies/mono/mono/metadata/object.c:3113)
-0x00007ff7c777c4c4 (Unity) scripting_method_invoke
-0x00007ff7c775b144 (Unity) ScriptingInvocation::Invoke
-0x00007ff7c7755d95 (Unity) ScriptingInvocation::Invoke<void>
-0x00007ff7c78a0e8b (Unity) Scripting::UnityEditor::EditorAssembliesProxy::ProcessInitializeOnLoadMethodAttributes
-0x00007ff7c774fd60 (Unity) MonoManager::SetupLoadedEditorAssemblies
-0x00007ff7c7745879 (Unity) MonoManager::FinalizeReload
-0x00007ff7c8b4181a (Unity) ScriptingInitializer::FinalizeReload
-0x00007ff7c86ef8eb (Unity) LoadUserAssemblies
-0x00007ff7c8befe3f (Unity) <lambda_e4c09a862f47a773e31babb76239f51f>::operator()
-0x00007ff7c8c292e2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)>,asio::io_context::basic_executor_type<std::allocator<void>,0> >::do_complete
-0x00007ff7c8c1528e (Unity) asio::detail::win_iocp_io_context::do_one
-0x00007ff7c8c16ebe (Unity) asio::detail::win_iocp_io_context::run
-0x00007ff7c8c2768c (Unity) IOService::Run
-0x00007ff7c8bfc07f (Unity) AssetImportWorkerClient::Run
-0x00007ff7c8bc6d87 (Unity) RunAssetImportWorkerClientV2
-0x00007ff7c8bc6e0b (Unity) RunAssetImporterV2
-0x00007ff7c83b2d51 (Unity) Application::InitializeProject
-0x00007ff7c8850f75 (Unity) WinMain
-0x00007ff7c9c35d2e (Unity) __scrt_common_main_seh
-0x00007ffa698526ad (KERNEL32) BaseThreadInitThunk
-0x00007ffa6b40a9f8 (ntdll) RtlUserThreadStart
+0x00007ff6b75fda0d (Unity) StackWalker::GetCurrentCallstack
+0x00007ff6b76029b9 (Unity) StackWalker::ShowCallstack
+0x00007ff6b85e5c71 (Unity) GetStacktrace
+0x00007ff6b8ca7552 (Unity) DebugStringToFile
+0x00007ff6b65302a6 (Unity) DebugLogHandler_CUSTOM_Internal_Log
+0x000002af7a86c7a3 (Mono JIT Code) (wrapper managed-to-native) UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+0x000002af7a86c6db (Mono JIT Code) UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+0x000002af7a869f30 (Mono JIT Code) UnityEngine.Logger:Log (UnityEngine.LogType,object)
+0x000002af7a869df5 (Mono JIT Code) UnityEngine.Debug:LogError (object)
+0x000002af7a85aed3 (Mono JIT Code) UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
+0x000002af6b5f315d (Mono JIT Code) (wrapper runtime-invoke) object:runtime_invoke_void (object,intptr,intptr,intptr)
+0x00007ffbeb20e084 (mono-2.0-bdwgc) mono_jit_runtime_invoke (at C:/build/output/Unity-Technologies/mono/mono/mini/mini-runtime.c:3445)
+0x00007ffbeb14eb84 (mono-2.0-bdwgc) do_runtime_invoke (at C:/build/output/Unity-Technologies/mono/mono/metadata/object.c:3066)
+0x00007ffbeb14ed1c (mono-2.0-bdwgc) mono_runtime_invoke (at C:/build/output/Unity-Technologies/mono/mono/metadata/object.c:3113)
+0x00007ff6b751c4c4 (Unity) scripting_method_invoke
+0x00007ff6b74fb144 (Unity) ScriptingInvocation::Invoke
+0x00007ff6b74f5d95 (Unity) ScriptingInvocation::Invoke<void>
+0x00007ff6b7640e8b (Unity) Scripting::UnityEditor::EditorAssembliesProxy::ProcessInitializeOnLoadMethodAttributes
+0x00007ff6b74efd60 (Unity) MonoManager::SetupLoadedEditorAssemblies
+0x00007ff6b74e5879 (Unity) MonoManager::FinalizeReload
+0x00007ff6b88e181a (Unity) ScriptingInitializer::FinalizeReload
+0x00007ff6b848f8eb (Unity) LoadUserAssemblies
+0x00007ff6b898fe3f (Unity) <lambda_e4c09a862f47a773e31babb76239f51f>::operator()
+0x00007ff6b89c92e2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)>,asio::io_context::basic_executor_type<std::allocator<void>,0> >::do_complete
+0x00007ff6b89b528e (Unity) asio::detail::win_iocp_io_context::do_one
+0x00007ff6b89b6ebe (Unity) asio::detail::win_iocp_io_context::run
+0x00007ff6b89c768c (Unity) IOService::Run
+0x00007ff6b899c07f (Unity) AssetImportWorkerClient::Run
+0x00007ff6b8966d87 (Unity) RunAssetImportWorkerClientV2
+0x00007ff6b8966e0b (Unity) RunAssetImporterV2
+0x00007ff6b8152d51 (Unity) Application::InitializeProject
+0x00007ff6b85f0f75 (Unity) WinMain
+0x00007ff6b99d5d2e (Unity) __scrt_common_main_seh
+0x00007ffca4ea26ad (KERNEL32) BaseThreadInitThunk
+0x00007ffca636a9f8 (ntdll) RtlUserThreadStart
 
 Mono: successfully reloaded assembly
 Package Manager log level set to [2]
@@ -178,207 +178,635 @@ Package Manager log level set to [2]
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
-- Finished resetting the current domain, in  0.905 seconds
-Domain Reload Profiling: 1532ms
-	BeginReloadAssembly (111ms)
+- Finished resetting the current domain, in  1.148 seconds
+Domain Reload Profiling: 1911ms
+	BeginReloadAssembly (97ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (4ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (15ms)
-	RebuildCommonClasses (23ms)
+		CreateAndSetChildDomain (19ms)
+	RebuildCommonClasses (25ms)
 	RebuildNativeTypeToScriptingClass (7ms)
-	initialDomainReloadingComplete (31ms)
-	LoadAllAssembliesAndSetupDomain (455ms)
-		LoadAssemblies (272ms)
+	initialDomainReloadingComplete (30ms)
+	LoadAllAssembliesAndSetupDomain (605ms)
+		LoadAssemblies (316ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (249ms)
-			TypeCache.Refresh (215ms)
-				TypeCache.ScanAssembly (202ms)
-			ScanForSourceGeneratedMonoScriptInfo (25ms)
-			ResolveRequiredComponents (9ms)
-	FinalizeReload (905ms)
+		AnalyzeDomain (337ms)
+			TypeCache.Refresh (298ms)
+				TypeCache.ScanAssembly (279ms)
+			ScanForSourceGeneratedMonoScriptInfo (28ms)
+			ResolveRequiredComponents (11ms)
+	FinalizeReload (1148ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (770ms)
+		SetupLoadedEditorAssemblies (975ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (20ms)
+			SetLoadedEditorAssemblies (3ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (64ms)
+			ProcessInitializeOnLoadAttributes (412ms)
+			ProcessInitializeOnLoadMethodAttributes (474ms)
+			AfterProcessingInitializeOnLoad (2ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (7ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+Refreshing native plugins compatible for Editor in 16.86 ms, found 12 plugins.
+Preloading 1 native plugins for Editor in 0.04 ms.
+Unloading 6397 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 163 unused Assets / (398.3 KB). Loaded Objects now: 6848.
+Memory consumption went from 276.1 MB to 275.7 MB.
+Total: 7.108900 ms (FindLiveObjects: 0.455400 ms CreateObjectMapping: 0.186300 ms MarkObjects: 6.082900 ms  DeleteObjects: 0.383400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: e54d7ab0439102e2317fc1e4b246158d -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 52093.402079 seconds.
+  path: Assets/Materials/Museum/CheckerBoard.shadergraph
+  artifactKey: Guid(aadc6a9904212bc48b73c06087af7cdb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Museum/CheckerBoard.shadergraph using Guid(aadc6a9904212bc48b73c06087af7cdb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a37bf94f3c22cca1f6e0004567befad') in 0.011843 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 421.228658 seconds.
+  path: Assets/Materials/Museum/CheckerBoard.shadergraph
+  artifactKey: Guid(aadc6a9904212bc48b73c06087af7cdb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Museum/CheckerBoard.shadergraph using Guid(aadc6a9904212bc48b73c06087af7cdb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '607c87069bd7a4c7b929495adc5b4f1f') in 0.001153 seconds
+Number of updated asset objects reloaded before import = 1
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.550 seconds
+Refreshing native plugins compatible for Editor in 14.27 ms, found 12 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object
+  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x0003d] in .\Library\PackageCache\com.unity.xr.oculus@4.0.0\Runtime\OculusLoader.cs:282 
+  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x0007b] in .\Library\PackageCache\com.unity.xr.oculus@4.0.0\Runtime\OculusLoader.cs:267 
+  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <6aa56e57ab504395b555cf3ed50fa53d>:0 
+   --- End of inner exception stack trace ---
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00083] in <6aa56e57ab504395b555cf3ed50fa53d>:0 
+  at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in <6aa56e57ab504395b555cf3ed50fa53d>:0 
+  at UnityEditor.EditorAssemblies.ProcessInitializeOnLoadMethodAttributes () [0x000a5] in <4911eca47f294e18a7b3306f02701303>:0 
+0x00007ff6b75fda0d (Unity) StackWalker::GetCurrentCallstack
+0x00007ff6b76029b9 (Unity) StackWalker::ShowCallstack
+0x00007ff6b85e5c71 (Unity) GetStacktrace
+0x00007ff6b8ca7552 (Unity) DebugStringToFile
+0x00007ff6b65302a6 (Unity) DebugLogHandler_CUSTOM_Internal_Log
+0x000002ad86fd00a3 (Mono JIT Code) (wrapper managed-to-native) UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+0x000002ad86fcff5b (Mono JIT Code) UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+0x000002ad86fcd470 (Mono JIT Code) UnityEngine.Logger:Log (UnityEngine.LogType,object)
+0x000002ad86fcd335 (Mono JIT Code) UnityEngine.Debug:LogError (object)
+0x000002ad86fbd463 (Mono JIT Code) UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
+0x000002af797d315d (Mono JIT Code) (wrapper runtime-invoke) object:runtime_invoke_void (object,intptr,intptr,intptr)
+0x00007ffbeb20e084 (mono-2.0-bdwgc) mono_jit_runtime_invoke (at C:/build/output/Unity-Technologies/mono/mono/mini/mini-runtime.c:3445)
+0x00007ffbeb14eb84 (mono-2.0-bdwgc) do_runtime_invoke (at C:/build/output/Unity-Technologies/mono/mono/metadata/object.c:3066)
+0x00007ffbeb14ed1c (mono-2.0-bdwgc) mono_runtime_invoke (at C:/build/output/Unity-Technologies/mono/mono/metadata/object.c:3113)
+0x00007ff6b751c4c4 (Unity) scripting_method_invoke
+0x00007ff6b74fb144 (Unity) ScriptingInvocation::Invoke
+0x00007ff6b74f5d95 (Unity) ScriptingInvocation::Invoke<void>
+0x00007ff6b7640e8b (Unity) Scripting::UnityEditor::EditorAssembliesProxy::ProcessInitializeOnLoadMethodAttributes
+0x00007ff6b74efd60 (Unity) MonoManager::SetupLoadedEditorAssemblies
+0x00007ff6b74e5879 (Unity) MonoManager::FinalizeReload
+0x00007ff6b88e181a (Unity) ScriptingInitializer::FinalizeReload
+0x00007ff6b848f8eb (Unity) LoadUserAssemblies
+0x00007ff6b898fb95 (Unity) <lambda_b37b41f03089e3cb3f55061bbc93253d>::operator()
+0x00007ff6b89c92e2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)>,asio::io_context::basic_executor_type<std::allocator<void>,0> >::do_complete
+0x00007ff6b89b528e (Unity) asio::detail::win_iocp_io_context::do_one
+0x00007ff6b89b6ef4 (Unity) asio::detail::win_iocp_io_context::run
+0x00007ff6b89c768c (Unity) IOService::Run
+0x00007ff6b899c07f (Unity) AssetImportWorkerClient::Run
+0x00007ff6b8966d87 (Unity) RunAssetImportWorkerClientV2
+0x00007ff6b8966e0b (Unity) RunAssetImporterV2
+0x00007ff6b8152d51 (Unity) Application::InitializeProject
+0x00007ff6b85f0f75 (Unity) WinMain
+0x00007ff6b99d5d2e (Unity) __scrt_common_main_seh
+0x00007ffca4ea26ad (KERNEL32) BaseThreadInitThunk
+0x00007ffca636a9f8 (ntdll) RtlUserThreadStart
+
+Mono: successfully reloaded assembly
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+- Finished resetting the current domain, in  1.129 seconds
+Domain Reload Profiling: 1677ms
+	BeginReloadAssembly (116ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (5ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (40ms)
+	RebuildCommonClasses (23ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (20ms)
+	LoadAllAssembliesAndSetupDomain (382ms)
+		LoadAssemblies (233ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (191ms)
+			TypeCache.Refresh (182ms)
+				TypeCache.ScanAssembly (170ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (9ms)
+	FinalizeReload (1129ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (516ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (16ms)
+			SetLoadedEditorAssemblies (2ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (57ms)
+			ProcessInitializeOnLoadAttributes (313ms)
+			ProcessInitializeOnLoadMethodAttributes (126ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (7ms)
+Refreshing native plugins compatible for Editor in 13.66 ms, found 12 plugins.
+Preloading 1 native plugins for Editor in 0.03 ms.
+Unloading 6154 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 109 unused Assets / (357.6 KB). Loaded Objects now: 6866.
+Memory consumption went from 230.0 MB to 229.7 MB.
+Total: 6.596100 ms (FindLiveObjects: 0.394800 ms CreateObjectMapping: 0.297700 ms MarkObjects: 5.647800 ms  DeleteObjects: 0.255200 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: e54d7ab0439102e2317fc1e4b246158d -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.568 seconds
+Refreshing native plugins compatible for Editor in 14.31 ms, found 12 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object
+  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x0003d] in .\Library\PackageCache\com.unity.xr.oculus@4.0.0\Runtime\OculusLoader.cs:282 
+  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x0007b] in .\Library\PackageCache\com.unity.xr.oculus@4.0.0\Runtime\OculusLoader.cs:267 
+  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <6aa56e57ab504395b555cf3ed50fa53d>:0 
+   --- End of inner exception stack trace ---
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00083] in <6aa56e57ab504395b555cf3ed50fa53d>:0 
+  at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in <6aa56e57ab504395b555cf3ed50fa53d>:0 
+  at UnityEditor.EditorAssemblies.ProcessInitializeOnLoadMethodAttributes () [0x000a5] in <4911eca47f294e18a7b3306f02701303>:0 
+0x00007ff6b75fda0d (Unity) StackWalker::GetCurrentCallstack
+0x00007ff6b76029b9 (Unity) StackWalker::ShowCallstack
+0x00007ff6b85e5c71 (Unity) GetStacktrace
+0x00007ff6b8ca7552 (Unity) DebugStringToFile
+0x00007ff6b65302a6 (Unity) DebugLogHandler_CUSTOM_Internal_Log
+0x000002ad86e65b63 (Mono JIT Code) (wrapper managed-to-native) UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+0x000002ad86e65a7b (Mono JIT Code) UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+0x000002ad86e62f90 (Mono JIT Code) UnityEngine.Logger:Log (UnityEngine.LogType,object)
+0x000002ad86e62e55 (Mono JIT Code) UnityEngine.Debug:LogError (object)
+0x000002ad86e53183 (Mono JIT Code) UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
+0x000002af7a805dbd (Mono JIT Code) (wrapper runtime-invoke) object:runtime_invoke_void (object,intptr,intptr,intptr)
+0x00007ffbeb20e084 (mono-2.0-bdwgc) mono_jit_runtime_invoke (at C:/build/output/Unity-Technologies/mono/mono/mini/mini-runtime.c:3445)
+0x00007ffbeb14eb84 (mono-2.0-bdwgc) do_runtime_invoke (at C:/build/output/Unity-Technologies/mono/mono/metadata/object.c:3066)
+0x00007ffbeb14ed1c (mono-2.0-bdwgc) mono_runtime_invoke (at C:/build/output/Unity-Technologies/mono/mono/metadata/object.c:3113)
+0x00007ff6b751c4c4 (Unity) scripting_method_invoke
+0x00007ff6b74fb144 (Unity) ScriptingInvocation::Invoke
+0x00007ff6b74f5d95 (Unity) ScriptingInvocation::Invoke<void>
+0x00007ff6b7640e8b (Unity) Scripting::UnityEditor::EditorAssembliesProxy::ProcessInitializeOnLoadMethodAttributes
+0x00007ff6b74efd60 (Unity) MonoManager::SetupLoadedEditorAssemblies
+0x00007ff6b74e5879 (Unity) MonoManager::FinalizeReload
+0x00007ff6b88e181a (Unity) ScriptingInitializer::FinalizeReload
+0x00007ff6b848f8eb (Unity) LoadUserAssemblies
+0x00007ff6b898fb95 (Unity) <lambda_b37b41f03089e3cb3f55061bbc93253d>::operator()
+0x00007ff6b89c92e2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)>,asio::io_context::basic_executor_type<std::allocator<void>,0> >::do_complete
+0x00007ff6b89b528e (Unity) asio::detail::win_iocp_io_context::do_one
+0x00007ff6b89b6ef4 (Unity) asio::detail::win_iocp_io_context::run
+0x00007ff6b89c768c (Unity) IOService::Run
+0x00007ff6b899c07f (Unity) AssetImportWorkerClient::Run
+0x00007ff6b8966d87 (Unity) RunAssetImportWorkerClientV2
+0x00007ff6b8966e0b (Unity) RunAssetImporterV2
+0x00007ff6b8152d51 (Unity) Application::InitializeProject
+0x00007ff6b85f0f75 (Unity) WinMain
+0x00007ff6b99d5d2e (Unity) __scrt_common_main_seh
+0x00007ffca4ea26ad (KERNEL32) BaseThreadInitThunk
+0x00007ffca636a9f8 (ntdll) RtlUserThreadStart
+
+Mono: successfully reloaded assembly
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+- Finished resetting the current domain, in  1.132 seconds
+Domain Reload Profiling: 1699ms
+	BeginReloadAssembly (119ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (4ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (43ms)
+	RebuildCommonClasses (23ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (21ms)
+	LoadAllAssembliesAndSetupDomain (396ms)
+		LoadAssemblies (226ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (213ms)
+			TypeCache.Refresh (183ms)
+				TypeCache.ScanAssembly (172ms)
+			ScanForSourceGeneratedMonoScriptInfo (22ms)
+			ResolveRequiredComponents (8ms)
+	FinalizeReload (1132ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (513ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (17ms)
+			SetLoadedEditorAssemblies (2ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (56ms)
+			ProcessInitializeOnLoadAttributes (309ms)
+			ProcessInitializeOnLoadMethodAttributes (127ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (8ms)
+Refreshing native plugins compatible for Editor in 15.41 ms, found 12 plugins.
+Preloading 1 native plugins for Editor in 0.04 ms.
+Unloading 6154 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 109 unused Assets / (374.0 KB). Loaded Objects now: 6883.
+Memory consumption went from 230.1 MB to 229.7 MB.
+Total: 7.109700 ms (FindLiveObjects: 0.492700 ms CreateObjectMapping: 0.401200 ms MarkObjects: 5.944900 ms  DeleteObjects: 0.269900 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: e54d7ab0439102e2317fc1e4b246158d -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.551 seconds
+Refreshing native plugins compatible for Editor in 14.38 ms, found 12 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object
+  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x0003d] in .\Library\PackageCache\com.unity.xr.oculus@4.0.0\Runtime\OculusLoader.cs:282 
+  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x0007b] in .\Library\PackageCache\com.unity.xr.oculus@4.0.0\Runtime\OculusLoader.cs:267 
+  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <6aa56e57ab504395b555cf3ed50fa53d>:0 
+   --- End of inner exception stack trace ---
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00083] in <6aa56e57ab504395b555cf3ed50fa53d>:0 
+  at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in <6aa56e57ab504395b555cf3ed50fa53d>:0 
+  at UnityEditor.EditorAssemblies.ProcessInitializeOnLoadMethodAttributes () [0x000a5] in <4911eca47f294e18a7b3306f02701303>:0 
+0x00007ff6b75fda0d (Unity) StackWalker::GetCurrentCallstack
+0x00007ff6b76029b9 (Unity) StackWalker::ShowCallstack
+0x00007ff6b85e5c71 (Unity) GetStacktrace
+0x00007ff6b8ca7552 (Unity) DebugStringToFile
+0x00007ff6b65302a6 (Unity) DebugLogHandler_CUSTOM_Internal_Log
+0x000002af7a86a263 (Mono JIT Code) (wrapper managed-to-native) UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+0x000002af7a86a19b (Mono JIT Code) UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+0x000002af7a8679f0 (Mono JIT Code) UnityEngine.Logger:Log (UnityEngine.LogType,object)
+0x000002af7a8678b5 (Mono JIT Code) UnityEngine.Debug:LogError (object)
+0x000002af7a8592c3 (Mono JIT Code) UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
+0x000002ad8a09671d (Mono JIT Code) (wrapper runtime-invoke) object:runtime_invoke_void (object,intptr,intptr,intptr)
+0x00007ffbeb20e084 (mono-2.0-bdwgc) mono_jit_runtime_invoke (at C:/build/output/Unity-Technologies/mono/mono/mini/mini-runtime.c:3445)
+0x00007ffbeb14eb84 (mono-2.0-bdwgc) do_runtime_invoke (at C:/build/output/Unity-Technologies/mono/mono/metadata/object.c:3066)
+0x00007ffbeb14ed1c (mono-2.0-bdwgc) mono_runtime_invoke (at C:/build/output/Unity-Technologies/mono/mono/metadata/object.c:3113)
+0x00007ff6b751c4c4 (Unity) scripting_method_invoke
+0x00007ff6b74fb144 (Unity) ScriptingInvocation::Invoke
+0x00007ff6b74f5d95 (Unity) ScriptingInvocation::Invoke<void>
+0x00007ff6b7640e8b (Unity) Scripting::UnityEditor::EditorAssembliesProxy::ProcessInitializeOnLoadMethodAttributes
+0x00007ff6b74efd60 (Unity) MonoManager::SetupLoadedEditorAssemblies
+0x00007ff6b74e5879 (Unity) MonoManager::FinalizeReload
+0x00007ff6b88e181a (Unity) ScriptingInitializer::FinalizeReload
+0x00007ff6b848f8eb (Unity) LoadUserAssemblies
+0x00007ff6b898fb95 (Unity) <lambda_b37b41f03089e3cb3f55061bbc93253d>::operator()
+0x00007ff6b89c92e2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)>,asio::io_context::basic_executor_type<std::allocator<void>,0> >::do_complete
+0x00007ff6b89b528e (Unity) asio::detail::win_iocp_io_context::do_one
+0x00007ff6b89b6ef4 (Unity) asio::detail::win_iocp_io_context::run
+0x00007ff6b89c768c (Unity) IOService::Run
+0x00007ff6b899c07f (Unity) AssetImportWorkerClient::Run
+0x00007ff6b8966d87 (Unity) RunAssetImportWorkerClientV2
+0x00007ff6b8966e0b (Unity) RunAssetImporterV2
+0x00007ff6b8152d51 (Unity) Application::InitializeProject
+0x00007ff6b85f0f75 (Unity) WinMain
+0x00007ff6b99d5d2e (Unity) __scrt_common_main_seh
+0x00007ffca4ea26ad (KERNEL32) BaseThreadInitThunk
+0x00007ffca636a9f8 (ntdll) RtlUserThreadStart
+
+Mono: successfully reloaded assembly
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+- Finished resetting the current domain, in  1.105 seconds
+Domain Reload Profiling: 1656ms
+	BeginReloadAssembly (115ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (4ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (39ms)
+	RebuildCommonClasses (23ms)
+	RebuildNativeTypeToScriptingClass (7ms)
+	initialDomainReloadingComplete (20ms)
+	LoadAllAssembliesAndSetupDomain (385ms)
+		LoadAssemblies (232ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (196ms)
+			TypeCache.Refresh (188ms)
+				TypeCache.ScanAssembly (176ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (9ms)
+	FinalizeReload (1106ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (514ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (17ms)
+			SetLoadedEditorAssemblies (2ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (56ms)
+			ProcessInitializeOnLoadAttributes (311ms)
+			ProcessInitializeOnLoadMethodAttributes (126ms)
+			AfterProcessingInitializeOnLoad (2ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (8ms)
+Refreshing native plugins compatible for Editor in 15.80 ms, found 12 plugins.
+Preloading 1 native plugins for Editor in 0.04 ms.
+Unloading 6154 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 109 unused Assets / (365.9 KB). Loaded Objects now: 6900.
+Memory consumption went from 230.1 MB to 229.7 MB.
+Total: 6.434000 ms (FindLiveObjects: 0.417400 ms CreateObjectMapping: 0.160800 ms MarkObjects: 5.596700 ms  DeleteObjects: 0.258200 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: e54d7ab0439102e2317fc1e4b246158d -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.555 seconds
+Refreshing native plugins compatible for Editor in 14.44 ms, found 12 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object
+  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x0003d] in .\Library\PackageCache\com.unity.xr.oculus@4.0.0\Runtime\OculusLoader.cs:282 
+  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x0007b] in .\Library\PackageCache\com.unity.xr.oculus@4.0.0\Runtime\OculusLoader.cs:267 
+  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <6aa56e57ab504395b555cf3ed50fa53d>:0 
+   --- End of inner exception stack trace ---
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00083] in <6aa56e57ab504395b555cf3ed50fa53d>:0 
+  at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in <6aa56e57ab504395b555cf3ed50fa53d>:0 
+  at UnityEditor.EditorAssemblies.ProcessInitializeOnLoadMethodAttributes () [0x000a5] in <4911eca47f294e18a7b3306f02701303>:0 
+0x00007ff6b75fda0d (Unity) StackWalker::GetCurrentCallstack
+0x00007ff6b76029b9 (Unity) StackWalker::ShowCallstack
+0x00007ff6b85e5c71 (Unity) GetStacktrace
+0x00007ff6b8ca7552 (Unity) DebugStringToFile
+0x00007ff6b65302a6 (Unity) DebugLogHandler_CUSTOM_Internal_Log
+0x000002ad86fbbca3 (Mono JIT Code) (wrapper managed-to-native) UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+0x000002ad86fbbbbb (Mono JIT Code) UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+0x000002ad86fb90d0 (Mono JIT Code) UnityEngine.Logger:Log (UnityEngine.LogType,object)
+0x000002ad86fb8f95 (Mono JIT Code) UnityEngine.Debug:LogError (object)
+0x000002ad86fa9113 (Mono JIT Code) UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
+0x000002ad86fd4ebd (Mono JIT Code) (wrapper runtime-invoke) object:runtime_invoke_void (object,intptr,intptr,intptr)
+0x00007ffbeb20e084 (mono-2.0-bdwgc) mono_jit_runtime_invoke (at C:/build/output/Unity-Technologies/mono/mono/mini/mini-runtime.c:3445)
+0x00007ffbeb14eb84 (mono-2.0-bdwgc) do_runtime_invoke (at C:/build/output/Unity-Technologies/mono/mono/metadata/object.c:3066)
+0x00007ffbeb14ed1c (mono-2.0-bdwgc) mono_runtime_invoke (at C:/build/output/Unity-Technologies/mono/mono/metadata/object.c:3113)
+0x00007ff6b751c4c4 (Unity) scripting_method_invoke
+0x00007ff6b74fb144 (Unity) ScriptingInvocation::Invoke
+0x00007ff6b74f5d95 (Unity) ScriptingInvocation::Invoke<void>
+0x00007ff6b7640e8b (Unity) Scripting::UnityEditor::EditorAssembliesProxy::ProcessInitializeOnLoadMethodAttributes
+0x00007ff6b74efd60 (Unity) MonoManager::SetupLoadedEditorAssemblies
+0x00007ff6b74e5879 (Unity) MonoManager::FinalizeReload
+0x00007ff6b88e181a (Unity) ScriptingInitializer::FinalizeReload
+0x00007ff6b848f8eb (Unity) LoadUserAssemblies
+0x00007ff6b898fb95 (Unity) <lambda_b37b41f03089e3cb3f55061bbc93253d>::operator()
+0x00007ff6b89c92e2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)>,asio::io_context::basic_executor_type<std::allocator<void>,0> >::do_complete
+0x00007ff6b89b528e (Unity) asio::detail::win_iocp_io_context::do_one
+0x00007ff6b89b6ef4 (Unity) asio::detail::win_iocp_io_context::run
+0x00007ff6b89c768c (Unity) IOService::Run
+0x00007ff6b899c07f (Unity) AssetImportWorkerClient::Run
+0x00007ff6b8966d87 (Unity) RunAssetImportWorkerClientV2
+0x00007ff6b8966e0b (Unity) RunAssetImporterV2
+0x00007ff6b8152d51 (Unity) Application::InitializeProject
+0x00007ff6b85f0f75 (Unity) WinMain
+0x00007ff6b99d5d2e (Unity) __scrt_common_main_seh
+0x00007ffca4ea26ad (KERNEL32) BaseThreadInitThunk
+0x00007ffca636a9f8 (ntdll) RtlUserThreadStart
+
+Mono: successfully reloaded assembly
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+- Finished resetting the current domain, in  1.158 seconds
+Domain Reload Profiling: 1712ms
+	BeginReloadAssembly (114ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (4ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (38ms)
+	RebuildCommonClasses (23ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (21ms)
+	LoadAllAssembliesAndSetupDomain (389ms)
+		LoadAssemblies (229ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (203ms)
+			TypeCache.Refresh (188ms)
+				TypeCache.ScanAssembly (177ms)
+			ScanForSourceGeneratedMonoScriptInfo (6ms)
+			ResolveRequiredComponents (9ms)
+	FinalizeReload (1158ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (538ms)
 			LogAssemblyErrors (0ms)
 			InitializePlatformSupportModulesInManaged (16ms)
 			SetLoadedEditorAssemblies (3ms)
 			RefreshPlugins (0ms)
 			BeforeProcessingInitializeOnLoad (59ms)
-			ProcessInitializeOnLoadAttributes (349ms)
-			ProcessInitializeOnLoadMethodAttributes (342ms)
-			AfterProcessingInitializeOnLoad (2ms)
+			ProcessInitializeOnLoadAttributes (325ms)
+			ProcessInitializeOnLoadMethodAttributes (134ms)
+			AfterProcessingInitializeOnLoad (1ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (6ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
-Refreshing native plugins compatible for Editor in 13.34 ms, found 12 plugins.
+		AwakeInstancesAfterBackupRestoration (8ms)
+Refreshing native plugins compatible for Editor in 13.27 ms, found 12 plugins.
 Preloading 1 native plugins for Editor in 0.03 ms.
-Unloading 6392 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 163 unused Assets / (389.6 KB). Loaded Objects now: 6843.
-Memory consumption went from 273.5 MB to 273.1 MB.
-Total: 7.704600 ms (FindLiveObjects: 0.437300 ms CreateObjectMapping: 0.352100 ms MarkObjects: 6.625300 ms  DeleteObjects: 0.289200 ms)
+Unloading 6154 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 109 unused Assets / (366.1 KB). Loaded Objects now: 6917.
+Memory consumption went from 230.1 MB to 229.8 MB.
+Total: 6.526800 ms (FindLiveObjects: 0.398400 ms CreateObjectMapping: 0.154300 ms MarkObjects: 5.739800 ms  DeleteObjects: 0.233600 ms)
 
+Prepare: number of updated asset objects reloaded= 0
 AssetImportParameters requested are different than current active one (requested -> active):
-  custom:scripting/monoscript/fileName/IJobBurstSchedulable.cs: b6e06c07f5c6bc961caf27d1af5dcc7a -> 
-  custom:scripting/monoscript/fileName/Deprecated.cs: ece3b9aa1db9eb7deda2246778e063e0 -> 4958f48459c0b59212a5643489d0fd9f
-  custom:scripting/monoscript/fileName/CollectionsAllocationExamples.cs: 72ea6f1c8990c690aca4410bcc8d43b6 -> 
-  custom:scripting/monoscript/fileName/FixedList.gen.cs: b9f85e7078e3f4ea022877423329d870 -> 05fbbc7f550e957bc7aed7ca5a31bd41
-  custom:scripting/monoscript/fileName/JobsILPostProcessor.cs: 4c1d7e666fd051e3c7113dad1961ca10 -> 3f303034a10abbfb33aebc2c253ab939
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-codec-MediaFoundation-h265: e54d7ab0439102e2317fc1e4b246158d -> 
-  custom:scripting/monoscript/fileName/UnsafeScratchAllocator.cs: 01f77d5cff43f9c3b7ff3f46c4f36dee -> 4face5614d3825fa48ae79289f69aa1b
-  custom:scripting/monoscript/fileName/BurstCompatibilityTests.cs: 7d7c24becd314d1054104dfc27a7e1e1 -> 
-  custom:scripting/monoscript/fileName/BitField.cs: b82f9795c26d634f972340c254bcbc2b -> 435cec31f980ea5ce1d1e89b13684a57
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:scripting/monoscript/fileName/NativeQueue.cs: 04ccdb70e3fe61b0adb670089775b1a1 -> 81dfa04144b51b77899677497858a357
-  custom:scripting/monoscript/fileName/CecilExtensionMethods.cs: eca819c413a2094aa3b67b629d0ec072 -> 017bd73f50ff4a917914ebf884a3c046
-  custom:scripting/monoscript/fileName/UnsafeUtilityEx.cs: 633ec2e4629f58c9ca328fcd154061ec -> 51fdf80e1733ea661389b0969168e4eb
-  custom:scripting/monoscript/fileName/NativeArrayExtensions.cs: fe9f7490969f9aaf1b5c58af97269bef -> 480ae80e25a67512135651e8db7b75bc
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:scripting/monoscript/fileName/UnsafeParallelHashSetExtensions.gen.cs: b895abf1ff6d1dd7befb4e8a85a82789 -> 08ce05b79144f37e3fa725c81fe15267
-  custom:scripting/monoscript/fileName/UTF8ArrayUnsafeUtility.cs: f1993200a43e577e4281cd674f04c6d8 -> 98dd75294b6f494d8648143302130ee6
-  custom:scripting/monoscript/fileName/EarlyInitHelpers.cs: 29813f4f4abf29aff19e7195c4286a36 -> 83f2ef803587502aa43a764bfaff3766
-  custom:scripting/monoscript/fileName/FixedStringFormat.gen.cs: 38890b5823888ffb1d702d73fcfe2e56 -> bee80dd64417b695a3ab4edd137d6566
-  custom:scripting/monoscript/fileName/NativeSort.cs: 965ff403b3acd574b0cc2a405a3492e0 -> 764ab68303923f171c9d865bbecae455
-  custom:scripting/monoscript/fileName/Unicode.cs: 66944459fa841cd5f2e5e5b715987ea9 -> f97bf556b0d99c0ed9d5ebf00a173353
-  custom:scripting/monoscript/fileName/RegisterGenericJobTypeAttribute.cs: f602a1305eceee1ccf67cea3c3b90dc7 -> 1d60c181f5a8e659e1317e2ca71a691e
-  custom:scripting/monoscript/fileName/UnsafeAppendBuffer.cs: 5df87a068933b42c11333ea2c09a90a6 -> 5a9572fb3414d7d386993b9deda40896
-  custom:scripting/monoscript/fileName/IJobParallelForBurstSchedulable.cs: 62a263188bc9cf02c532293c26fa74bb -> 
-  custom:scripting/monoscript/fileName/NativeParallelMultiHashMap.cs: 458f2b1238121363142cb0d9bfb38cf9 -> f42c3726e76408b5238c46ea25b25f2c
-  custom:scripting/monoscript/fileName/UnsafeBitArray.cs: 8b1bdaea810722acaa2ff4f2725253fe -> abcfe76ff9b3c6727a0af119db7d6cb2
-  custom:scripting/monoscript/fileName/UserError.cs: aad17ad25bb78699106e03be168c7da7 -> e8271dc4b82776e36e2aa534dcd90f5e
   custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:scripting/monoscript/fileName/FixedStringParseMethods.cs: b9c5c6bc186a56f95ff8f60db0da9fea -> fcdca1abcdc2fd593bd0d11b27b9b2c5
-  custom:scripting/monoscript/fileName/JobReflectionDataPostProcessor.cs: d56b9240061bc0f85075ad33f7bb265b -> e1f319111c11d6198fa53d79b59ba6d0
-  custom:scripting/monoscript/fileName/xxHash3.AVX2.cs: fdda91c938d02bed6e1f482b8680a1e1 -> bbc99b1bfd2f994ebd53a189bfb34bc9
-  custom:scripting/monoscript/fileName/UnsafeStream.cs: c7cd97d658f9f034dc47ca5f1dcaf8b2 -> 256399a9cf220f56a541766f1fe0b55f
-  custom:scripting/monoscript/fileName/HeapString.gen.cs: 2f8bea3137363b1eadd89d8db8473288 -> 
-  custom:scripting/monoscript/fileName/AllocatorManager.cs: 1b255756f8afbe39ff0f04443f4ef5d6 -> fa2277be89f5c001f873c15c6093b99f
-  custom:scripting/monoscript/fileName/UnsafeParallelHashSet.cs: 36267d4034e72f7792977df044659488 -> 0ecf0b5b4a9207402e80b603ad9a119c
-  custom:scripting/monoscript/fileName/FixedStringAppendMethods.cs: b9c5c6bc186a56f95ff8f60db0da9fea -> fcdca1abcdc2fd593bd0d11b27b9b2c5
-  custom:scripting/monoscript/fileName/UnsafeParallelHashMap.cs: 5d5864c30facad8e0304a2d29eb316c5 -> 26deb0dc2dc1241f9caca3c77ac3133c
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:scripting/monoscript/fileName/JobsMenu.cs: 2df7b5d475c31ebab4767437c73f47f4 -> 
-  custom:scripting/monoscript/fileName/FixedStringFormatMethods.gen.cs: b9c5c6bc186a56f95ff8f60db0da9fea -> fcdca1abcdc2fd593bd0d11b27b9b2c5
-  custom:scripting/monoscript/fileName/RewindableAllocator.cs: 8b62a2efc1f503316ccf70a39fd844ed -> f5d3f33b65f42aa483d55593c952d1db
   custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:scripting/monoscript/fileName/UnsafeParallelMultiHashMap.cs: e8b870113b04e7a42056f9409dc559c9 -> 94f8e54b68df661c8d45e8cea71cf2f5
-  custom:scripting/monoscript/fileName/NativeStream.cs: 06272c03bf2d87c3c499ea2670889e0a -> 4cf18747cbaec64bafc4dffb1a0c8454
-  custom:scripting/monoscript/fileName/FixedString.gen.cs: fe10abd3f17ffcedc46ad3ee1d799153 -> d2f928251c83a855a881376014d83b13
-  custom:scripting/monoscript/fileName/NativeList.cs: a4b50f61153c9adfd2de2676a637a671 -> c3402f2e6b9e01dc298871eb0e4b6a91
-  custom:scripting/monoscript/fileName/NativeParallelHashMap.cs: e8b870113b04e7a42056f9409dc559c9 -> 94f8e54b68df661c8d45e8cea71cf2f5
-  custom:scripting/monoscript/fileName/NativeParallelHashSet.cs: 36267d4034e72f7792977df044659488 -> 0ecf0b5b4a9207402e80b603ad9a119c
-  custom:scripting/monoscript/fileName/BurstCompatibleAttribute.cs: 5516bac227e59cc058e743022f755993 -> 
-  custom:scripting/monoscript/fileName/UnsafeAtomicCounter.cs: 7400a6c6976e960578ea1e0663a5a7bc -> 9e2f4dbe854338916842c8ff7fbe03de
-  custom:scripting/monoscript/fileName/FixedStringMethods.cs: b9c5c6bc186a56f95ff8f60db0da9fea -> fcdca1abcdc2fd593bd0d11b27b9b2c5
-  custom:scripting/monoscript/fileName/UnsafeNotBurstCompatible.cs: 45b7b795a55a7021f271055f3bab9cbb -> 9920b2dcf54d07855dc87b05b9a22299
-  custom:scripting/monoscript/fileName/IJobParallelForDefer.cs: c8dc5afa7664e89d509b4fb010ba59cc -> e07ef36294e1a6b9a754482355e9fda6
-  custom:scripting/monoscript/fileName/FixedStringInternalMethods.cs: b9c5c6bc186a56f95ff8f60db0da9fea -> fcdca1abcdc2fd593bd0d11b27b9b2c5
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:scripting/monoscript/fileName/IJobParallelForFilter.cs: df20d5af76497ee9382afe3d36f1f1f4 -> 
-  custom:scripting/monoscript/fileName/IJobParallelForBatch.cs: ad36dbe8b9db4f26eed210dde53bb750 -> adecca892a99db28fc24adbe7bd8588e
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:scripting/monoscript/fileName/NativeText.gen.cs: 7959db2d96f0c7fc8f8a2a669eb85d60 -> 3378437e9418f3373bee971ecd3b9445
-  custom:scripting/monoscript/fileName/ConcurrentMask.cs: c539262411251c63a21ef73803af4584 -> d56a0fef284c9e5059f89974aedb695c
-  custom:scripting/monoscript/fileName/NativeReference.cs: 093e06c3a4dec7ddff8658acaa3e1ec0 -> 707aa775b4e3cc858cb239cb84a29e93
-  custom:scripting/monoscript/fileName/NativeNotBurstCompatible.cs: 0a51ebcb2f40a253cc1ed4725493949f -> 8e8b404b4fa69e1b7cea25947e47b9bd
-  custom:scripting/monoscript/fileName/CLILeakDetectionSwitcher.cs: e078d9365ec452e29d684882197e9b34 -> 57bd385706945886454b568fb0644a83
-  custom:scripting/monoscript/fileName/UnsafeRingQueue.cs: bcfc7f01444a1737307396b9706cf593 -> 0cdf409b5aa8d4c25876d72b5c6a3b60
-  custom:scripting/monoscript/fileName/NativeParallelHashMapExtensions.cs: b9019840c5be610a181ef34e2ddbd365 -> 462869b482cb0a426c099c8676c75416
-  custom:scripting/monoscript/fileName/FixedStringUtils.cs: 615b4692935c15496ce08484481db0bb -> 114eb023c5774372990da700f8c2456f
-  custom:scripting/monoscript/fileName/NativeBitArray.cs: 3c2944e878a1117db969fcced8ed2c57 -> 49f79507956a183761c1507d27f1d72b
-  custom:scripting/monoscript/fileName/Memory.cs: 3a1fc630a1762ba3d249699dcc2a7943 -> 24fa5e8e684139a9a6b2bb764c620a28
-  custom:scripting/monoscript/fileName/xxHash3.StreamingState.cs: c37160ac47c119b599190b6c7a43dd9e -> 73af6f62e3ccfaecb2c43562b8c60a23
-  custom:scripting/monoscript/fileName/UnsafeList.cs: 638c6fc022ca3aa24cc63b6730a5c455 -> 2cbf932c5895a21a8a81c7efd4eee03c
-  custom:scripting/monoscript/fileName/CollectionsExamples.cs: 5c3c7e50116fce8e4387bbf68d9603e4 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:scripting/monoscript/fileName/NativeParallelHashSetExtensions.gen.cs: cae86aefd5fe24c4e3302786cea7b783 -> 63db070ab3fd6601a2653ee7ef6af335
-  custom:scripting/monoscript/fileName/xxHash3.cs: 4193607f6e1edd0570d2359862a27850 -> d876f695d67b3d527466020445c50eb8
-  custom:scripting/monoscript/fileName/Attributes.cs: d94dab8e1cad1d516625e289629ba937 -> 9d3861389974f0823e7e341aa6c23dae
-  custom:scripting/monoscript/fileName/DebugView.cs: a53f96815da50de15010b1c479bc70cf -> 0cdf409b5aa8d4c25876d72b5c6a3b60
-  custom:scripting/monoscript/fileName/UnsafeText.cs: 5615c516f201aea71ee957e425a17288 -> 252c4eef6eb1893b89e3a585d7b05a84
-  custom:scripting/monoscript/fileName/ListExtensions.cs: 85d6f2a098bbac5236ee172ce1b3085a -> 7aa01450824b139fec139620e85f6e1f
-  custom:scripting/monoscript/fileName/CollectionHelper.cs: 43c7963f3cd4f164a58eb56b8095def9 -> 1ca9b633c4b3ee37c8eb00c963039ea7
 ========================================================================
-Received Import Request.
-  Time since last request: 513.302069 seconds.
-  path: Assets/Scenes/Museum
-  artifactKey: Guid(ed57e5e61fff10c4ab8cb433c2fa6534) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Museum using Guid(ed57e5e61fff10c4ab8cb433c2fa6534) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aded60948687ec50613066fadd9cc6f4') in 0.001439 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 381.131620 seconds.
-  path: Assets/Models/OculusQuest2controller(right).obj
-  artifactKey: Guid(8c5f411a375e166458484274d3ed46af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/OculusQuest2controller(right).obj using Guid(8c5f411a375e166458484274d3ed46af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7fcbc0233aca92fb4d2d13037392fa45') in 0.005987 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 9
-========================================================================
-Received Import Request.
-  Time since last request: 1323.418828 seconds.
-  path: Assets/Materials/Particles
-  artifactKey: Guid(5a95042bb08a12c4e9d2cc06fea2b77e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Particles using Guid(5a95042bb08a12c4e9d2cc06fea2b77e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f14b321657deae7a0d7db1e7956358f') in 0.000703 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 4.741281 seconds.
-  path: Assets/Materials/Particles/Flashing
-  artifactKey: Guid(28986c2f6dae24c42a98ec08bd96ed34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Particles/Flashing using Guid(28986c2f6dae24c42a98ec08bd96ed34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f6ac72020b074caab81a4ccc116e9fa') in 0.000327 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 49.991367 seconds.
-  path: Assets/Materials/Flashing/Flashing Material.shadergraph
-  artifactKey: Guid(7fc65f3985a0256409fd71989e43e076) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Flashing/Flashing Material.shadergraph using Guid(7fc65f3985a0256409fd71989e43e076) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2fd5cdd5342db8b6b2d455374fff8e0c') in 0.001623 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 6.691134 seconds.
-  path: Assets/Materials/Flashing/Flashing Material.shadergraph
-  artifactKey: Guid(7fc65f3985a0256409fd71989e43e076) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Flashing/Flashing Material.shadergraph using Guid(7fc65f3985a0256409fd71989e43e076) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9e980e1485e0f03424f7867bc25e681f') in 0.001461 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 2347.849067 seconds.
-  path: Assets/Materials/Flashing/Flashing Material.shadergraph
-  artifactKey: Guid(7fc65f3985a0256409fd71989e43e076) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Flashing/Flashing Material.shadergraph using Guid(7fc65f3985a0256409fd71989e43e076) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd522d6a43b75aa5572d2bcae945ecb54') in 0.001782 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 123.872002 seconds.
-  path: Assets/Materials/Flashing/Flashing Material.shadergraph
-  artifactKey: Guid(7fc65f3985a0256409fd71989e43e076) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Flashing/Flashing Material.shadergraph using Guid(7fc65f3985a0256409fd71989e43e076) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f5ec38116ff8de5c1f0905a5876ffcb') in 0.001619 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 746.776855 seconds.
-  path: Assets/Animations/Controller Pointing.anim
-  artifactKey: Guid(6c16c959bb6cda041a83df4a1bec6ed4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animations/Controller Pointing.anim using Guid(6c16c959bb6cda041a83df4a1bec6ed4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ddfd61cab6352851fc109ea7eab7b0f5') in 0.001244 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 43.538275 seconds.
-  path: Assets/Animations/Controller Pointing.anim
-  artifactKey: Guid(6c16c959bb6cda041a83df4a1bec6ed4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animations/Controller Pointing.anim using Guid(6c16c959bb6cda041a83df4a1bec6ed4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '33a5fce3fb501610de5f2eec617c25f6') in 0.000883 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.546 seconds
+Refreshing native plugins compatible for Editor in 14.92 ms, found 12 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object
+  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x0003d] in .\Library\PackageCache\com.unity.xr.oculus@4.0.0\Runtime\OculusLoader.cs:282 
+  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x0007b] in .\Library\PackageCache\com.unity.xr.oculus@4.0.0\Runtime\OculusLoader.cs:267 
+  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <6aa56e57ab504395b555cf3ed50fa53d>:0 
+   --- End of inner exception stack trace ---
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00083] in <6aa56e57ab504395b555cf3ed50fa53d>:0 
+  at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in <6aa56e57ab504395b555cf3ed50fa53d>:0 
+  at UnityEditor.EditorAssemblies.ProcessInitializeOnLoadMethodAttributes () [0x000a5] in <4911eca47f294e18a7b3306f02701303>:0 
+0x00007ff6b75fda0d (Unity) StackWalker::GetCurrentCallstack
+0x00007ff6b76029b9 (Unity) StackWalker::ShowCallstack
+0x00007ff6b85e5c71 (Unity) GetStacktrace
+0x00007ff6b8ca7552 (Unity) DebugStringToFile
+0x00007ff6b65302a6 (Unity) DebugLogHandler_CUSTOM_Internal_Log
+0x000002af7a86a263 (Mono JIT Code) (wrapper managed-to-native) UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+0x000002af7a86a19b (Mono JIT Code) UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+0x000002af7a8679f0 (Mono JIT Code) UnityEngine.Logger:Log (UnityEngine.LogType,object)
+0x000002af7a8678b5 (Mono JIT Code) UnityEngine.Debug:LogError (object)
+0x000002af7a8592c3 (Mono JIT Code) UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
+0x000002ad86f7671d (Mono JIT Code) (wrapper runtime-invoke) object:runtime_invoke_void (object,intptr,intptr,intptr)
+0x00007ffbeb20e084 (mono-2.0-bdwgc) mono_jit_runtime_invoke (at C:/build/output/Unity-Technologies/mono/mono/mini/mini-runtime.c:3445)
+0x00007ffbeb14eb84 (mono-2.0-bdwgc) do_runtime_invoke (at C:/build/output/Unity-Technologies/mono/mono/metadata/object.c:3066)
+0x00007ffbeb14ed1c (mono-2.0-bdwgc) mono_runtime_invoke (at C:/build/output/Unity-Technologies/mono/mono/metadata/object.c:3113)
+0x00007ff6b751c4c4 (Unity) scripting_method_invoke
+0x00007ff6b74fb144 (Unity) ScriptingInvocation::Invoke
+0x00007ff6b74f5d95 (Unity) ScriptingInvocation::Invoke<void>
+0x00007ff6b7640e8b (Unity) Scripting::UnityEditor::EditorAssembliesProxy::ProcessInitializeOnLoadMethodAttributes
+0x00007ff6b74efd60 (Unity) MonoManager::SetupLoadedEditorAssemblies
+0x00007ff6b74e5879 (Unity) MonoManager::FinalizeReload
+0x00007ff6b88e181a (Unity) ScriptingInitializer::FinalizeReload
+0x00007ff6b848f8eb (Unity) LoadUserAssemblies
+0x00007ff6b898fb95 (Unity) <lambda_b37b41f03089e3cb3f55061bbc93253d>::operator()
+0x00007ff6b89c92e2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)>,asio::io_context::basic_executor_type<std::allocator<void>,0> >::do_complete
+0x00007ff6b89b528e (Unity) asio::detail::win_iocp_io_context::do_one
+0x00007ff6b89b6ef4 (Unity) asio::detail::win_iocp_io_context::run
+0x00007ff6b89c768c (Unity) IOService::Run
+0x00007ff6b899c07f (Unity) AssetImportWorkerClient::Run
+0x00007ff6b8966d87 (Unity) RunAssetImportWorkerClientV2
+0x00007ff6b8966e0b (Unity) RunAssetImporterV2
+0x00007ff6b8152d51 (Unity) Application::InitializeProject
+0x00007ff6b85f0f75 (Unity) WinMain
+0x00007ff6b99d5d2e (Unity) __scrt_common_main_seh
+0x00007ffca4ea26ad (KERNEL32) BaseThreadInitThunk
+0x00007ffca636a9f8 (ntdll) RtlUserThreadStart
+
+Mono: successfully reloaded assembly
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+- Finished resetting the current domain, in  1.098 seconds
+Domain Reload Profiling: 1643ms
+	BeginReloadAssembly (113ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (4ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (40ms)
+	RebuildCommonClasses (21ms)
+	RebuildNativeTypeToScriptingClass (7ms)
+	initialDomainReloadingComplete (20ms)
+	LoadAllAssembliesAndSetupDomain (383ms)
+		LoadAssemblies (230ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (193ms)
+			TypeCache.Refresh (185ms)
+				TypeCache.ScanAssembly (173ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (8ms)
+	FinalizeReload (1098ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (511ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (15ms)
+			SetLoadedEditorAssemblies (2ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (56ms)
+			ProcessInitializeOnLoadAttributes (310ms)
+			ProcessInitializeOnLoadMethodAttributes (127ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (8ms)
+Refreshing native plugins compatible for Editor in 14.31 ms, found 12 plugins.
+Preloading 1 native plugins for Editor in 0.03 ms.
+Unloading 6154 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 109 unused Assets / (374.1 KB). Loaded Objects now: 6934.
+Memory consumption went from 230.2 MB to 229.8 MB.
+Total: 6.540300 ms (FindLiveObjects: 0.392100 ms CreateObjectMapping: 0.155900 ms MarkObjects: 5.721200 ms  DeleteObjects: 0.270300 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: e54d7ab0439102e2317fc1e4b246158d -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+TcpMessagingSession - receive error
+AssetImportWorkerClient::OnTransportError - code=10054 error=An existing connection was forcibly closed by the remote host.
