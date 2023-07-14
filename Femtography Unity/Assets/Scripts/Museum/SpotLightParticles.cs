@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
 
-[ExecuteInEditMode]
 public class SpotLightParticles : MonoBehaviour
 {
-    ParticleSystem particleSystem;
+    ParticleSystem pSystem;
 
     List<ParticleSystem.Particle> inside = new List<ParticleSystem.Particle>();
     List<ParticleSystem.Particle> outside = new List<ParticleSystem.Particle>();
@@ -24,13 +23,13 @@ public class SpotLightParticles : MonoBehaviour
     // Start is called before the first frame update
     void OnEnable()
     {
-        particleSystem = GetComponent<ParticleSystem>();
+        pSystem = GetComponent<ParticleSystem>();
     }
 
     private void OnParticleTrigger()
     {
-        int numInside = particleSystem.GetTriggerParticles(ParticleSystemTriggerEventType.Inside, inside);
-        int numOutside = particleSystem.GetTriggerParticles(ParticleSystemTriggerEventType.Outside, outside);
+        int numInside = pSystem.GetTriggerParticles(ParticleSystemTriggerEventType.Inside, inside);
+        int numOutside = pSystem.GetTriggerParticles(ParticleSystemTriggerEventType.Outside, outside);
 
         for (int i = 0; i < numInside; i++)
         {
@@ -58,8 +57,8 @@ public class SpotLightParticles : MonoBehaviour
             particle.startColor = lerpedColor;
             outside[i] = particle;
         }
-        particleSystem.SetTriggerParticles(ParticleSystemTriggerEventType.Inside, inside);
-        particleSystem.SetTriggerParticles(ParticleSystemTriggerEventType.Outside, outside);
+        pSystem.SetTriggerParticles(ParticleSystemTriggerEventType.Inside, inside);
+        pSystem.SetTriggerParticles(ParticleSystemTriggerEventType.Outside, outside);
     }
 
     // Update is called once per frame
