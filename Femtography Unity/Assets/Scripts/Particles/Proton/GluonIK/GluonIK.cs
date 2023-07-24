@@ -20,13 +20,12 @@ public class GluonIK : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        FillBoneList(topBoneRed, redQuarkGluonBones);
-        FillBoneList(topBoneBlue, blueQuarkGluonBones);
-        FillBoneList(topBoneGreen, greenQuarkGluonBones);
-
+        FillBoneList(topBoneRed, out redQuarkGluonBones);
+        FillBoneList(topBoneBlue, out blueQuarkGluonBones);
+        FillBoneList(topBoneGreen, out greenQuarkGluonBones);
     }
 
-    void FillBoneList(GameObject topBoneObject, List<GameObject> gluonBoneList)
+    void FillBoneList(GameObject topBoneObject, out List<GameObject> gluonBoneList)
     {
         gluonBoneList = new List<GameObject>();
         GameObject nextBone = topBoneObject;
@@ -42,7 +41,8 @@ public class GluonIK : MonoBehaviour
     void Update()
     {
         MoveBones(topBoneRed, redQuarkGluonBones, redQuark);
-        
+        MoveBones(topBoneBlue, blueQuarkGluonBones, blueQuark);
+        MoveBones(topBoneGreen, greenQuarkGluonBones, greenQuark);
     }
 
     void MoveBones(GameObject topBoneObject, List<GameObject> bonesList, GameObject quark)
@@ -52,9 +52,9 @@ public class GluonIK : MonoBehaviour
             float lerpAmount = (i + 1) / ((float)bonesList.Count);
 
             bonesList[i].transform.position = Vector3.Lerp(
-                center.transform.position, redQuark.transform.position, lerpAmount);
+                center.transform.position, quark.transform.position, lerpAmount);
             bonesList[i].transform.rotation = Quaternion.LookRotation(topBoneObject.transform.forward,
-                bonesList[i].transform.position - redQuark.transform.position);
+                quark.transform.position - bonesList[i].transform.position);
         }
     }
 
