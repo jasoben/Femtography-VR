@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GluonWiggler : MonoBehaviour
+public class ObjectWiggler : MonoBehaviour
 {
     [SerializeField] float distanceFromStart, speed;
 

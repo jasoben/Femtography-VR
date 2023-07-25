@@ -12,9 +12,6 @@ public class GluonIK : MonoBehaviour
     [SerializeField] GameObject center;
     [SerializeField] GameObject topBoneRed, topBoneBlue, topBoneGreen;
 
-    [SerializeField] float stretch = 2f;
-    [SerializeField] float speed = .01f;
-
     private float[] moveAmounts = new float[5];
 
     // Start is called before the first frame update
