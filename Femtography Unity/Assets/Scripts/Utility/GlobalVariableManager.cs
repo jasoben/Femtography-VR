@@ -4,7 +4,7 @@ using UnityEngine;
 using System.Linq;
 using Codice.CM.SEIDInfo;
 
-public class SpeedController : MonoBehaviour
+public class GlobalVariableManager : MonoBehaviour
 {
     List<MonoBehaviour> speedControllers = new List<MonoBehaviour>();
 
@@ -21,8 +21,6 @@ public class SpeedController : MonoBehaviour
                 speedControllers.Add(obj);
             }
         }
-
-        Debug.Log(speedControllers.Count);
 
         foreach (var obj in speedControllers)
         {

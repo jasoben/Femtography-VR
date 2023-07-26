@@ -2,43 +2,53 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObjectWiggler : MonoBehaviour
+public class ObjectWiggler : MonoBehaviour, ISpeedController
 {
     [SerializeField] float distanceFromStart, speed;
+    float adjustedSpeed;
 
-    Vector3 startPosition, moveDirection;
-    private Vector3 moveRotation;
+    Vector3 localStartPosition, moveDirection, moveRotation, localPosition, worldStartPosition;
     [SerializeField] bool stayStill;
 
     bool isMovingBack = false;
+
+    FloatReference playBackSpeed;
+
+    public void SetSpeedReference(FloatReference _playBackSpeed)
+    {
+        playBackSpeed = _playBackSpeed;
+    }
 
     // Start is called before the first frame update
 
     void Start()
     {
-        startPosition = transform.position;
+        localStartPosition = transform.localPosition;
         moveDirection = Random.insideUnitSphere;
     }
 
     // Update is called once per frame
     void Update()
     {
+        localPosition = transform.localPosition;
+        worldStartPosition = transform.parent.TransformPoint(localStartPosition);
+        adjustedSpeed = speed * playBackSpeed.Value;
+
         if (stayStill)
         {
-            transform.position = startPosition;
             return;
         }
 
-        transform.position += moveDirection * speed;
+        transform.position += moveDirection * adjustedSpeed;
 
-        if (Vector3.Distance(transform.position, startPosition) > distanceFromStart && 
+        if (Vector3.Distance(transform.position, worldStartPosition) > distanceFromStart && 
             !isMovingBack)
         {
-            moveDirection = startPosition - transform.position;
+            moveDirection = worldStartPosition - transform.position;
             isMovingBack = true;
         }
 
-        else if (Vector3.Distance(transform.position, startPosition) < .5f &&
+        else if (Vector3.Distance(transform.position, worldStartPosition) < .5f &&
             isMovingBack)
         {
             moveDirection = Random.insideUnitSphere;
