@@ -131,36 +131,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 445082514508221038, guid: c75135796be429f44a03d54a25b0d42a,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 445082514508221038, guid: c75135796be429f44a03d54a25b0d42a,
-        type: 3}
-      propertyPath: stayStill
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 445082514508221038, guid: c75135796be429f44a03d54a25b0d42a,
-        type: 3}
-      propertyPath: distanceFromStart
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1392404926542434096, guid: c75135796be429f44a03d54a25b0d42a,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4689877386594089876, guid: c75135796be429f44a03d54a25b0d42a,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4689877386594089876, guid: c75135796be429f44a03d54a25b0d42a,
-        type: 3}
-      propertyPath: stayStill
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7974178231925239618, guid: c75135796be429f44a03d54a25b0d42a,
         type: 3}
       propertyPath: m_RootOrder
@@ -221,29 +191,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Proton
       objectReference: {fileID: 0}
-    - target: {fileID: 8786921688412922139, guid: c75135796be429f44a03d54a25b0d42a,
-        type: 3}
-      propertyPath: stayStill
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8899582304378495976, guid: c75135796be429f44a03d54a25b0d42a,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8899582304378495976, guid: c75135796be429f44a03d54a25b0d42a,
-        type: 3}
-      propertyPath: stayStill
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7974178231925239619, guid: c75135796be429f44a03d54a25b0d42a,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1100368153}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c75135796be429f44a03d54a25b0d42a, type: 3}
 --- !u!1 &203844586
 GameObject:
@@ -517,22 +468,3 @@ MonoBehaviour:
     UseConstant: 0
     ConstantValue: 0
     variableSlider: {fileID: 11400000, guid: c13976bcb832ad14ea2881716f86cf7d, type: 2}
---- !u!1 &1100368140 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7974178231925239619, guid: c75135796be429f44a03d54a25b0d42a,
-    type: 3}
-  m_PrefabInstance: {fileID: 37675540}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1100368153
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1100368140}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e380cb8f18e54143914a0bb5455547f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotationSpeed: {x: 0, y: 0.2, z: 0}

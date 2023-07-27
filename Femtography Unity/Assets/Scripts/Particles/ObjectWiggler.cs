@@ -14,6 +14,11 @@ public class ObjectWiggler : MonoBehaviour, ISpeedController
 
     FloatReference playBackSpeed;
 
+    public void RequestInjection(object obj, MonoBehaviour monoBehaviour)
+    {
+        DependencyInjector.InvokeInjectorEvent(obj, monoBehaviour);
+    }
+
     public void SetSpeedReference(FloatReference _playBackSpeed)
     {
         playBackSpeed = _playBackSpeed;
@@ -23,6 +28,7 @@ public class ObjectWiggler : MonoBehaviour, ISpeedController
 
     void Start()
     {
+        RequestInjection(this, this);
         localStartPosition = transform.localPosition;
         moveDirection = Random.insideUnitSphere;
     }

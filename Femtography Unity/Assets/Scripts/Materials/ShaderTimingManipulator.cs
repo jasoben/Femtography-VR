@@ -10,12 +10,21 @@ public class ShaderTimingManipulator : MonoBehaviour
 {
     public VariableSlider gameSpeed;
     float currentTime = 0;
+    Renderer r;
+    MaterialPropertyBlock materialPropertyBlock;
 
+    private void Start()
+    {
+        r = GetComponent<Renderer>();
+        materialPropertyBlock = new MaterialPropertyBlock();
+
+    }
     // Update is called once per frame
     void Update()
     {
         currentTime += Time.deltaTime * gameSpeed.value;
-        GetComponent<Renderer>().material.SetFloat("Time_", currentTime);
+        materialPropertyBlock.SetFloat("Time_", currentTime);
+        r.SetPropertyBlock(materialPropertyBlock);
     }
 
     public float GetTime()
