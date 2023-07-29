@@ -7,7 +7,9 @@ using System.Runtime.CompilerServices;
 
 public class GlobalVariableManager : MonoBehaviour
 {
+    public static GlobalVariableManager Instance;
     public FloatReference playbackSpeed;
+    public float PlayerHeight { get; private set; } = 3.36f;
 
     public void InjectDependency(object sender, MonoBehaviour monoBehaviour)
     {
@@ -26,6 +28,7 @@ public class GlobalVariableManager : MonoBehaviour
     void Awake()
     {
         DependencyInjector.InjectorEvent += InjectDependency;
+        Instance = this;
     }
     private void OnDestroy()
     {

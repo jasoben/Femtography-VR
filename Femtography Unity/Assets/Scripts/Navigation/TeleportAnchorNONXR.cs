@@ -12,10 +12,12 @@ public class TeleportAnchorNONXR : MonoBehaviour, IPointerClickHandler
 
     PointerEventData pointerEventData;
 
+    float playerHeight;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        playerHeight = GlobalVariableManager.Instance.PlayerHeight;
     }
 
     // Update is called once per frame
@@ -30,7 +32,7 @@ public class TeleportAnchorNONXR : MonoBehaviour, IPointerClickHandler
 
         playerObject.transform.position = (new Vector3(
             this.transform.position.x,
-            playerObject.transform.position.y,
+            this.transform.position.y + playerHeight,
             this.transform.position.z
             ));
     }
