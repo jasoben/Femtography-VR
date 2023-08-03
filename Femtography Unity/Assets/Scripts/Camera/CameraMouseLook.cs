@@ -18,7 +18,6 @@ public class CameraMouseLook : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.rotation = Quaternion.Euler(rotation);
     }
 
     public void OnLook(InputAction.CallbackContext context)
@@ -30,6 +29,7 @@ public class CameraMouseLook : MonoBehaviour
 
         rotation.y -= lookValue.x * sensitivity;
         rotation.x += lookValue.y * sensitivity;
+        transform.rotation = Quaternion.Euler(rotation);
     }
 
     public void ActivateMouseLook(InputAction.CallbackContext context)

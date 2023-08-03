@@ -35,6 +35,7 @@ public class TeleportAnchorNONXR : MonoBehaviour, IPointerClickHandler
             this.transform.position.y + playerHeight,
             this.transform.position.z
             ));
+        playerObject.transform.rotation = transform.rotation;
     }
 
     public void OnPointerClick(PointerEventData eventData)
