@@ -9,7 +9,7 @@ public class GlobalVariableManager : MonoBehaviour
 {
     public static GlobalVariableManager Instance;
     public FloatReference playbackSpeed;
-    public float PlayerHeight { get; private set; } = 3.36f;
+    public float PlayerHeight { get; private set; } = 1.75f;
 
     public void InjectDependency(object sender, MonoBehaviour monoBehaviour)
     {
