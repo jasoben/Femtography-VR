@@ -9,6 +9,8 @@ public class TeleportAnchorNONXR : MonoBehaviour, IPointerClickHandler
     GameObject playerObject;
 
     [SerializeField] UnityEvent onClick;
+    [SerializeField] GameObject teleportAnchor;
+    [SerializeField] bool useTeleportAnchor;
 
     PointerEventData pointerEventData;
 
@@ -18,6 +20,16 @@ public class TeleportAnchorNONXR : MonoBehaviour, IPointerClickHandler
     void Start()
     {
         playerHeight = GlobalVariableManager.Instance.PlayerHeight;
+
+        int childCount = transform.childCount;
+
+        if (teleportAnchor != null)
+            return;
+        for (int i = 0; i < childCount; i++)
+        {
+            if (transform.GetChild(i).gameObject.name == "TeleportAnchor")
+                teleportAnchor = transform.GetChild(i).gameObject;
+        }
     }
 
     // Update is called once per frame
@@ -28,19 +40,29 @@ public class TeleportAnchorNONXR : MonoBehaviour, IPointerClickHandler
 
     public void TeleportPlayerToLocation()
     {
+        Vector3 teleportLocation = this.transform.position;
+        Quaternion teleportRotation = transform.rotation;
+
+        if (useTeleportAnchor)
+        {
+            teleportLocation = teleportAnchor.transform.position;
+            teleportRotation = teleportAnchor.transform.rotation;
+        }
+
         playerObject = pointerEventData.pressEventCamera.gameObject;
 
         playerObject.transform.position = (new Vector3(
-            this.transform.position.x,
-            this.transform.position.y + playerHeight,
-            this.transform.position.z
+            teleportLocation.x,
+            teleportLocation.y + playerHeight,
+            teleportLocation.z
             ));
-        playerObject.transform.rotation = transform.rotation;
+        playerObject.transform.rotation = teleportRotation;
     }
 
     public void OnPointerClick(PointerEventData eventData)
     {
         pointerEventData = eventData;
+        TeleportPlayerToLocation();
         onClick.Invoke();
     }
 }

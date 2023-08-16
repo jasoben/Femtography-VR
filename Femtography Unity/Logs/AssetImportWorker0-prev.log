@@ -15,7 +15,7 @@ H:/Github/Femtography-VR/Femtography Unity
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-61014
+55537
 Successfully changed project path to: H:/Github/Femtography-VR/Femtography Unity
 H:/Github/Femtography-VR/Femtography Unity
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -49,12 +49,12 @@ H:/Github/Femtography-VR/Femtography Unity
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [10672] Host "[IP] 192.168.1.129 [Port] 0 [Flags] 2 [Guid] 1720499432 [EditorId] 1720499432 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-L8L46BD) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [43296] Host "[IP] 192.168.1.129 [Port] 0 [Flags] 2 [Guid] 1612510979 [EditorId] 1612510979 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-L8L46BD) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [10672] Host "[IP] 192.168.1.129 [Port] 0 [Flags] 2 [Guid] 1720499432 [EditorId] 1720499432 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-L8L46BD) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [43296] Host "[IP] 192.168.1.129 [Port] 0 [Flags] 2 [Guid] 1612510979 [EditorId] 1612510979 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-L8L46BD) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-Refreshing native plugins compatible for Editor in 37.77 ms, found 12 plugins.
-Preloading 1 native plugins for Editor in 0.48 ms.
+Refreshing native plugins compatible for Editor in 38.22 ms, found 12 plugins.
+Preloading 1 native plugins for Editor in 0.53 ms.
 Initialize engine version: 2022.3.5f1 (9674261d40ee)
 [Subsystems] Discovering subsystems at path C:/Program Files/2022.3.5f1/Editor/Data/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path H:/Github/Femtography-VR/Femtography Unity/Assets
@@ -69,46 +69,46 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/2022.3.5f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/2022.3.5f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/2022.3.5f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56288
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56408
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/2022.3.5f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
 Register platform support module: C:/Program Files/2022.3.5f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.010347 seconds.
-- Loaded All Assemblies, in  0.306 seconds
+Registered in 0.009982 seconds.
+- Loaded All Assemblies, in  0.305 seconds
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.226 seconds
-Domain Reload Profiling: 528ms
+- Finished resetting the current domain, in  0.222 seconds
+Domain Reload Profiling: 523ms
 	BeginReloadAssembly (105ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (24ms)
+	RebuildCommonClasses (26ms)
 	RebuildNativeTypeToScriptingClass (7ms)
-	initialDomainReloadingComplete (52ms)
-	LoadAllAssembliesAndSetupDomain (114ms)
-		LoadAssemblies (103ms)
+	initialDomainReloadingComplete (51ms)
+	LoadAllAssembliesAndSetupDomain (112ms)
+		LoadAssemblies (102ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (103ms)
-			TypeCache.Refresh (103ms)
-				TypeCache.ScanAssembly (94ms)
+		AnalyzeDomain (102ms)
+			TypeCache.Refresh (101ms)
+				TypeCache.ScanAssembly (93ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
 			ResolveRequiredComponents (0ms)
-	FinalizeReload (226ms)
+	FinalizeReload (222ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (189ms)
+		SetupLoadedEditorAssemblies (185ms)
 			LogAssemblyErrors (0ms)
 			InitializePlatformSupportModulesInManaged (75ms)
 			SetLoadedEditorAssemblies (3ms)
 			RefreshPlugins (0ms)
 			BeforeProcessingInitializeOnLoad (1ms)
-			ProcessInitializeOnLoadAttributes (76ms)
-			ProcessInitializeOnLoadMethodAttributes (34ms)
+			ProcessInitializeOnLoadAttributes (73ms)
+			ProcessInitializeOnLoadMethodAttributes (32ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -117,8 +117,8 @@ Domain Reload Profiling: 528ms
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory is not a mono symbol file
-- Loaded All Assemblies, in  0.784 seconds
-Refreshing native plugins compatible for Editor in 21.82 ms, found 12 plugins.
+- Loaded All Assemblies, in  0.736 seconds
+Refreshing native plugins compatible for Editor in 22.42 ms, found 12 plugins.
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
 System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object
@@ -130,39 +130,39 @@ System.Reflection.TargetInvocationException: Exception has been thrown by the ta
   at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00083] in <eef08f56e2e042f1b3027eca477293d9>:0 
   at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in <eef08f56e2e042f1b3027eca477293d9>:0 
   at UnityEditor.EditorAssemblies.ProcessInitializeOnLoadMethodAttributes () [0x000a5] in <bf6080dbf0564cf1b405dfd6e0dac725>:0 
-0x00007ff7ae258e4d (Unity) StackWalker::GetCurrentCallstack
-0x00007ff7ae25ddf9 (Unity) StackWalker::ShowCallstack
-0x00007ff7af22b121 (Unity) GetStacktrace
-0x00007ff7af8ed922 (Unity) DebugStringToFile
-0x00007ff7ad1a97f6 (Unity) DebugLogHandler_CUSTOM_Internal_Log
-0x00000150f80cadf3 (Mono JIT Code) (wrapper managed-to-native) UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
-0x00000150f80cad2b (Mono JIT Code) UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-0x00000150f80c8580 (Mono JIT Code) UnityEngine.Logger:Log (UnityEngine.LogType,object)
-0x00000150f80c8445 (Mono JIT Code) UnityEngine.Debug:LogError (object)
-0x00000150f80b89d3 (Mono JIT Code) UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-0x00000150e95f316d (Mono JIT Code) (wrapper runtime-invoke) object:runtime_invoke_void (object,intptr,intptr,intptr)
-0x00007ff974a7e0d4 (mono-2.0-bdwgc) mono_jit_runtime_invoke (at C:/build/output/Unity-Technologies/mono/mono/mini/mini-runtime.c:3445)
-0x00007ff9749beb74 (mono-2.0-bdwgc) do_runtime_invoke (at C:/build/output/Unity-Technologies/mono/mono/metadata/object.c:3066)
-0x00007ff9749bed0c (mono-2.0-bdwgc) mono_runtime_invoke (at C:/build/output/Unity-Technologies/mono/mono/metadata/object.c:3113)
-0x00007ff7ae177bc4 (Unity) scripting_method_invoke
-0x00007ff7ae156844 (Unity) ScriptingInvocation::Invoke
-0x00007ff7ae151495 (Unity) ScriptingInvocation::Invoke<void>
-0x00007ff7ae29b60b (Unity) Scripting::UnityEditor::EditorAssembliesProxy::ProcessInitializeOnLoadMethodAttributes
-0x00007ff7ae14b050 (Unity) MonoManager::SetupLoadedEditorAssemblies
-0x00007ff7ae140b59 (Unity) MonoManager::FinalizeReload
-0x00007ff7af526fda (Unity) ScriptingInitializer::FinalizeReload
-0x00007ff7af0d54eb (Unity) LoadUserAssemblies
-0x00007ff7af5d5aff (Unity) <lambda_e4c09a862f47a773e31babb76239f51f>::operator()
-0x00007ff7af60f1d2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)>,asio::io_context::basic_executor_type<std::allocator<void>,0> >::do_complete
-0x00007ff7af5fb17e (Unity) asio::detail::win_iocp_io_context::do_one
-0x00007ff7af5fcdae (Unity) asio::detail::win_iocp_io_context::run
-0x00007ff7af60d57c (Unity) IOService::Run
-0x00007ff7af5e1d3f (Unity) AssetImportWorkerClient::Run
-0x00007ff7af5aca27 (Unity) RunAssetImportWorkerClientV2
-0x00007ff7af5acaab (Unity) RunAssetImporterV2
-0x00007ff7aedb12c1 (Unity) Application::InitializeProject
-0x00007ff7af236575 (Unity) WinMain
-0x00007ff7b062133e (Unity) __scrt_common_main_seh
+0x00007ff7ad818e4d (Unity) StackWalker::GetCurrentCallstack
+0x00007ff7ad81ddf9 (Unity) StackWalker::ShowCallstack
+0x00007ff7ae7eb121 (Unity) GetStacktrace
+0x00007ff7aeead922 (Unity) DebugStringToFile
+0x00007ff7ac7697f6 (Unity) DebugLogHandler_CUSTOM_Internal_Log
+0x000002a1e611e733 (Mono JIT Code) (wrapper managed-to-native) UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+0x000002a1e611e64b (Mono JIT Code) UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+0x000002a1e611bb60 (Mono JIT Code) UnityEngine.Logger:Log (UnityEngine.LogType,object)
+0x000002a1e611ba25 (Mono JIT Code) UnityEngine.Debug:LogError (object)
+0x000002a1e610a793 (Mono JIT Code) UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
+0x000002a376e8316d (Mono JIT Code) (wrapper runtime-invoke) object:runtime_invoke_void (object,intptr,intptr,intptr)
+0x00007ff972a5e0d4 (mono-2.0-bdwgc) mono_jit_runtime_invoke (at C:/build/output/Unity-Technologies/mono/mono/mini/mini-runtime.c:3445)
+0x00007ff97299eb74 (mono-2.0-bdwgc) do_runtime_invoke (at C:/build/output/Unity-Technologies/mono/mono/metadata/object.c:3066)
+0x00007ff97299ed0c (mono-2.0-bdwgc) mono_runtime_invoke (at C:/build/output/Unity-Technologies/mono/mono/metadata/object.c:3113)
+0x00007ff7ad737bc4 (Unity) scripting_method_invoke
+0x00007ff7ad716844 (Unity) ScriptingInvocation::Invoke
+0x00007ff7ad711495 (Unity) ScriptingInvocation::Invoke<void>
+0x00007ff7ad85b60b (Unity) Scripting::UnityEditor::EditorAssembliesProxy::ProcessInitializeOnLoadMethodAttributes
+0x00007ff7ad70b050 (Unity) MonoManager::SetupLoadedEditorAssemblies
+0x00007ff7ad700b59 (Unity) MonoManager::FinalizeReload
+0x00007ff7aeae6fda (Unity) ScriptingInitializer::FinalizeReload
+0x00007ff7ae6954eb (Unity) LoadUserAssemblies
+0x00007ff7aeb95aff (Unity) <lambda_e4c09a862f47a773e31babb76239f51f>::operator()
+0x00007ff7aebcf1d2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)>,asio::io_context::basic_executor_type<std::allocator<void>,0> >::do_complete
+0x00007ff7aebbb17e (Unity) asio::detail::win_iocp_io_context::do_one
+0x00007ff7aebbcdae (Unity) asio::detail::win_iocp_io_context::run
+0x00007ff7aebcd57c (Unity) IOService::Run
+0x00007ff7aeba1d3f (Unity) AssetImportWorkerClient::Run
+0x00007ff7aeb6ca27 (Unity) RunAssetImportWorkerClientV2
+0x00007ff7aeb6caab (Unity) RunAssetImporterV2
+0x00007ff7ae3712c1 (Unity) Application::InitializeProject
+0x00007ff7ae7f6575 (Unity) WinMain
+0x00007ff7afbe133e (Unity) __scrt_common_main_seh
 0x00007ffa139d26ad (KERNEL32) BaseThreadInitThunk
 0x00007ffa14c0aa68 (ntdll) RtlUserThreadStart
 
@@ -174,47 +174,47 @@ Package Manager log level set to [2]
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
-- Finished resetting the current domain, in  0.971 seconds
-Domain Reload Profiling: 1745ms
-	BeginReloadAssembly (133ms)
+- Finished resetting the current domain, in  1.148 seconds
+Domain Reload Profiling: 1876ms
+	BeginReloadAssembly (127ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (4ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (18ms)
+		CreateAndSetChildDomain (17ms)
 	RebuildCommonClasses (26ms)
-	RebuildNativeTypeToScriptingClass (7ms)
-	initialDomainReloadingComplete (43ms)
-	LoadAllAssembliesAndSetupDomain (565ms)
-		LoadAssemblies (353ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (41ms)
+	LoadAllAssembliesAndSetupDomain (526ms)
+		LoadAssemblies (333ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (277ms)
-			TypeCache.Refresh (242ms)
-				TypeCache.ScanAssembly (227ms)
-			ScanForSourceGeneratedMonoScriptInfo (26ms)
+		AnalyzeDomain (257ms)
+			TypeCache.Refresh (220ms)
+				TypeCache.ScanAssembly (206ms)
+			ScanForSourceGeneratedMonoScriptInfo (27ms)
 			ResolveRequiredComponents (10ms)
-	FinalizeReload (971ms)
+	FinalizeReload (1149ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (819ms)
+		SetupLoadedEditorAssemblies (998ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (20ms)
-			SetLoadedEditorAssemblies (3ms)
+			InitializePlatformSupportModulesInManaged (21ms)
+			SetLoadedEditorAssemblies (4ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (86ms)
-			ProcessInitializeOnLoadAttributes (367ms)
-			ProcessInitializeOnLoadMethodAttributes (333ms)
+			BeforeProcessingInitializeOnLoad (84ms)
+			ProcessInitializeOnLoadAttributes (385ms)
+			ProcessInitializeOnLoadMethodAttributes (495ms)
 			AfterProcessingInitializeOnLoad (9ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
 		AwakeInstancesAfterBackupRestoration (5ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
-Refreshing native plugins compatible for Editor in 21.79 ms, found 12 plugins.
-Preloading 1 native plugins for Editor in 0.07 ms.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 22.58 ms, found 12 plugins.
+Preloading 1 native plugins for Editor in 0.06 ms.
 Unloading 6657 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 167 unused Assets / (402.9 KB). Loaded Objects now: 7116.
-Memory consumption went from 281.8 MB to 281.4 MB.
-Total: 7.615600 ms (FindLiveObjects: 0.481400 ms CreateObjectMapping: 0.171400 ms MarkObjects: 6.621800 ms  DeleteObjects: 0.340300 ms)
+Unloading 167 unused Assets / (387.4 KB). Loaded Objects now: 7116.
+Memory consumption went from 282.3 MB to 282.0 MB.
+Total: 7.517800 ms (FindLiveObjects: 0.425200 ms CreateObjectMapping: 0.144400 ms MarkObjects: 6.627700 ms  DeleteObjects: 0.319800 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
@@ -231,26 +231,106 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 433238.879573 seconds.
-  path: Assets/Scenes/Museum/Global Volume Profile.asset
-  artifactKey: Guid(39950d1ddadf3e14e9807b63acce3420) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Museum/Global Volume Profile.asset using Guid(39950d1ddadf3e14e9807b63acce3420) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '64eae75286b283e5b3dd53e5be88e4a7') in 0.009162 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 5.133236 seconds.
+  Time since last request: 510951.450858 seconds.
   path: Assets/Scenes/MuseumSettings.lighting
   artifactKey: Guid(293c5851879bd4545b87797813f112f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Scenes/MuseumSettings.lighting using Guid(293c5851879bd4545b87797813f112f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) LightingSettings: switching bake backend from 1 to 2.
- -> (artifact id: 'cf56501a4f123099ef6cbc44917e7f0a') in 0.001125 seconds
+ -> (artifact id: 'b07e6841ff917cce61b1960a14219d64') in 0.003922 seconds
+Number of updated asset objects reloaded before import = 37
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 362.606040 seconds.
+  path: Assets/triggerTest.cs
+  artifactKey: Guid(cbd4d43a64f3dca4d97f06d9c05eb13e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/triggerTest.cs using Guid(cbd4d43a64f3dca4d97f06d9c05eb13e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '096add8f87e43dc3b5b5ec43468031a7') in 0.000684 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.564245 seconds.
+  path: Assets/UniversalRenderPipelineAsset.asset
+  artifactKey: Guid(4d048f8463ea7914596f8926ad2913ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniversalRenderPipelineAsset.asset using Guid(4d048f8463ea7914596f8926ad2913ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d1ed95f13d9adff97c2ce7a8ddc5939') in 0.000830 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 500.707641 seconds.
+  path: Assets/Prefabs/Architecture
+  artifactKey: Guid(c769a7750f1f9f14f92e59bae2cc1c29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Architecture using Guid(c769a7750f1f9f14f92e59bae2cc1c29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e8b773c45bf55f127a117b0513ea7098') in 0.000596 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 24.813022 seconds.
+  path: Assets/Prefabs/Architecture/Stair Tread.prefab
+  artifactKey: Guid(6e2c25e0919bb0447abfd4392d0badd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Architecture/Stair Tread.prefab using Guid(6e2c25e0919bb0447abfd4392d0badd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dac4bf5a41c624b2bdcfcee139e2e04b') in 0.002800 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 21
+========================================================================
+Received Import Request.
+  Time since last request: 3.506396 seconds.
+  path: Assets/Prefabs/Architecture/FemtoMuseum-spiral.prefab
+  artifactKey: Guid(30fe3a6a28d309749a8f8548a4de8c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Architecture/FemtoMuseum-spiral.prefab using Guid(30fe3a6a28d309749a8f8548a4de8c6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c7a1b0af3d4eabaf9085dea0e79e683a') in 0.006546 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1135
+========================================================================
+Received Import Request.
+  Time since last request: 112.778343 seconds.
+  path: Assets/Models/Museum/FemtoMuseum-spiral.skp
+  artifactKey: Guid(f3117647de12f1348bb4fbde7bdd5dfb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Museum/FemtoMuseum-spiral.skp using Guid(f3117647de12f1348bb4fbde7bdd5dfb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed831d0ea6d85523a1d335bd7efdb81e') in 0.009027 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1135
+========================================================================
+Received Import Request.
+  Time since last request: 503.792096 seconds.
+  path: Assets/Scenes/Museum/LightingData.asset
+  artifactKey: Guid(cafe7b2b5bf04c9468d57db68e7dd6fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Museum/LightingData.asset using Guid(cafe7b2b5bf04c9468d57db68e7dd6fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0eb7c0189270cf462d58f9432ca60c7') in 0.043289 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 1
 ========================================================================
 Received Import Request.
-  Time since last request: 507.791878 seconds.
-  path: Assets/Scenes/MuseumSettings.lighting
-  artifactKey: Guid(293c5851879bd4545b87797813f112f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/MuseumSettings.lighting using Guid(293c5851879bd4545b87797813f112f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ae5af123646f2fca4eed7e3c5b32853') in 0.001817 seconds
+  Time since last request: 26.523153 seconds.
+  path: Assets/Scenes/Museum/Lightmap-2_comp_light.exr
+  artifactKey: Guid(5e122c4cbed40ba4095fe755e1a9a2f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Museum/Lightmap-2_comp_light.exr using Guid(5e122c4cbed40ba4095fe755e1a9a2f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f281d074c514deddd1af63f960f1e8d') in 0.043659 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 24.016354 seconds.
+  path: Assets/Scenes/Museum/Lightmap-8_comp_light.exr
+  artifactKey: Guid(5400bbf373f8ff5479c3f95b70681de4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Museum/Lightmap-8_comp_light.exr using Guid(5400bbf373f8ff5479c3f95b70681de4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '549c3fbc7bfbaa221dc12f1ea800ce2f') in 0.026085 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 18.004899 seconds.
+  path: Assets/Scenes/Museum/Lightmap-3_comp_dir.png
+  artifactKey: Guid(da6ed4e3362d72047ab304fc7226e311) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Museum/Lightmap-3_comp_dir.png using Guid(da6ed4e3362d72047ab304fc7226e311) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9cda806de1b6a0edb56f3ec29d988a2e') in 0.021061 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 94.069493 seconds.
+  path: Assets/Scenes/Museum/Lightmap-0_comp_dir.png
+  artifactKey: Guid(ccb43a4e6c343fa4c89350143b99e6a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Museum/Lightmap-0_comp_dir.png using Guid(ccb43a4e6c343fa4c89350143b99e6a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e08db6edd233bfb19d5d273423e6bb83') in 0.004911 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 201.601594 seconds.
+  path: Assets/Models/Museum/proton-base.blend
+  artifactKey: Guid(8721f7644a970754a8d28cabb6b011a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Museum/proton-base.blend using Guid(8721f7644a970754a8d28cabb6b011a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b8cd8f6f44243d709b04956d7ddeda2') in 0.002794 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
