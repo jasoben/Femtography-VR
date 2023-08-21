@@ -25,6 +25,7 @@ public class TeleportAnchorNONXR : MonoBehaviour, IPointerClickHandler
 
         if (teleportAnchor != null)
             return;
+
         for (int i = 0; i < childCount; i++)
         {
             if (transform.GetChild(i).gameObject.name == "TeleportAnchor")
