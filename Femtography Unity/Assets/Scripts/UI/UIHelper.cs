@@ -34,7 +34,7 @@ public class UIHelper : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        toolTips = XmlParser.Read<ToolTipText>("assets/XML/toolTips.xml");
+        //toolTips = XmlParser.Read<ToolTipText>("assets/XML/toolTips.xml");
         if (!startActive)
             menuManagerObject.SetActive(false);
     }

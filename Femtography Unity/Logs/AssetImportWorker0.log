@@ -1,0 +1,774 @@
+Using pre-set license
+Built from '2022.3/staging' branch; Version is '2022.3.7f1 (b16b3b16c7a0) revision 11627323'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 11  (10.0.22621) 64bit Core' Language: 'en' Physical Memory: 65461 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\2022.3.7f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+H:/Github/Femtography-VR/Femtography Unity
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+60892
+Successfully changed project path to: H:/Github/Femtography-VR/Femtography Unity
+H:/Github/Femtography-VR/Femtography Unity
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [41892] Host "[IP] 192.168.1.129 [Port] 0 [Flags] 2 [Guid] 1746467943 [EditorId] 1746467943 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-L8L46BD) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [41892] Host "[IP] 192.168.1.129 [Port] 0 [Flags] 2 [Guid] 1746467943 [EditorId] 1746467943 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-L8L46BD) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+Refreshing native plugins compatible for Editor in 51.30 ms, found 12 plugins.
+Preloading 1 native plugins for Editor in 0.60 ms.
+Initialize engine version: 2022.3.7f1 (b16b3b16c7a0)
+[Subsystems] Discovering subsystems at path C:/Program Files/2022.3.7f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path H:/Github/Femtography-VR/Femtography Unity/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 3060 (ID=0x2487)
+    Vendor:   NVIDIA
+    VRAM:     12124 MB
+    Driver:   31.0.15.3699
+Initialize mono
+Mono path[0] = 'C:/Program Files/2022.3.7f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/2022.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/2022.3.7f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56732
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/2022.3.7f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/2022.3.7f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Register platform support module: C:/Program Files/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.018160 seconds.
+- Loaded All Assemblies, in  0.338 seconds
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Android Extension - Scanning For ADB Devices 301 ms
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.531 seconds
+Domain Reload Profiling: 866ms
+	BeginReloadAssembly (124ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (0ms)
+	RebuildCommonClasses (25ms)
+	RebuildNativeTypeToScriptingClass (7ms)
+	initialDomainReloadingComplete (63ms)
+	LoadAllAssembliesAndSetupDomain (116ms)
+		LoadAssemblies (123ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (112ms)
+			TypeCache.Refresh (111ms)
+				TypeCache.ScanAssembly (101ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (0ms)
+	FinalizeReload (531ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (493ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (393ms)
+			SetLoadedEditorAssemblies (2ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (1ms)
+			ProcessInitializeOnLoadAttributes (64ms)
+			ProcessInitializeOnLoadMethodAttributes (32ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+========================================================================
+Worker process is ready to serve import requests
+Begin MonoManager ReloadAssembly
+Assembly 'Library/ScriptAssemblies/Assembly-CSharp.dll' will not be loaded due to errors:
+Reference has errors 'MenuAssembly'.
+Assembly 'Library/ScriptAssemblies/Assembly-CSharp-Editor.dll' will not be loaded due to errors:
+Reference has errors 'Assembly-CSharp'.
+Assembly 'Library/ScriptAssemblies/MenuAssembly.dll' will not be loaded due to errors:
+Unable to resolve reference 'XMLParser'. Is the assembly missing or incompatible with the current platform?
+Reference validation can be disabled in the Plugin Inspector.
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.981 seconds
+Refreshing native plugins compatible for Editor in 27.71 ms, found 12 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object
+  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x0003d] in .\Library\PackageCache\com.unity.xr.oculus@4.0.0\Runtime\OculusLoader.cs:282 
+  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x0007b] in .\Library\PackageCache\com.unity.xr.oculus@4.0.0\Runtime\OculusLoader.cs:267 
+  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <b89873cb176e44a995a4781c7487d410>:0 
+   --- End of inner exception stack trace ---
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00083] in <b89873cb176e44a995a4781c7487d410>:0 
+  at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in <b89873cb176e44a995a4781c7487d410>:0 
+  at UnityEditor.EditorAssemblies.ProcessInitializeOnLoadMethodAttributes () [0x000a5] in <97436df440ca462884c5332c1d8ebbe7>:0 
+0x00007ff6f5d2229d (Unity) StackWalker::GetCurrentCallstack
+0x00007ff6f5d27249 (Unity) StackWalker::ShowCallstack
+0x00007ff6f6cf33a1 (Unity) GetStacktrace
+0x00007ff6f73b4c02 (Unity) DebugStringToFile
+0x00007ff6f4c38736 (Unity) DebugLogHandler_CUSTOM_Internal_Log
+0x000001f38b097d13 (Mono JIT Code) (wrapper managed-to-native) UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+0x000001f38b097c4b (Mono JIT Code) UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+0x000001f38b0954a0 (Mono JIT Code) UnityEngine.Logger:Log (UnityEngine.LogType,object)
+0x000001f38b095365 (Mono JIT Code) UnityEngine.Debug:LogError (object)
+0x000001f38b07e233 (Mono JIT Code) UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
+0x000001f37f93ea3d (Mono JIT Code) (wrapper runtime-invoke) object:runtime_invoke_void (object,intptr,intptr,intptr)
+0x00007ffcf288e0d4 (mono-2.0-bdwgc) mono_jit_runtime_invoke (at C:/build/output/Unity-Technologies/mono/mono/mini/mini-runtime.c:3445)
+0x00007ffcf27ceb74 (mono-2.0-bdwgc) do_runtime_invoke (at C:/build/output/Unity-Technologies/mono/mono/metadata/object.c:3066)
+0x00007ffcf27ced0c (mono-2.0-bdwgc) mono_runtime_invoke (at C:/build/output/Unity-Technologies/mono/mono/metadata/object.c:3113)
+0x00007ff6f5c39724 (Unity) scripting_method_invoke
+0x00007ff6f5c17944 (Unity) ScriptingInvocation::Invoke
+0x00007ff6f5c12595 (Unity) ScriptingInvocation::Invoke<void>
+0x00007ff6f5d64b3b (Unity) Scripting::UnityEditor::EditorAssembliesProxy::ProcessInitializeOnLoadMethodAttributes
+0x00007ff6f5c0c750 (Unity) MonoManager::SetupLoadedEditorAssemblies
+0x00007ff6f5c020f9 (Unity) MonoManager::FinalizeReload
+0x00007ff6f6fefd8a (Unity) ScriptingInitializer::FinalizeReload
+0x00007ff6f6b9d92b (Unity) LoadUserAssemblies
+0x00007ff6f709e1af (Unity) <lambda_e4c09a862f47a773e31babb76239f51f>::operator()
+0x00007ff6f70d79b2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)>,asio::io_context::basic_executor_type<std::allocator<void>,0> >::do_complete
+0x00007ff6f70c395e (Unity) asio::detail::win_iocp_io_context::do_one
+0x00007ff6f70c558e (Unity) asio::detail::win_iocp_io_context::run
+0x00007ff6f70d5d5c (Unity) IOService::Run
+0x00007ff6f70aa51f (Unity) AssetImportWorkerClient::Run
+0x00007ff6f70750d7 (Unity) RunAssetImportWorkerClientV2
+0x00007ff6f707515b (Unity) RunAssetImporterV2
+0x00007ff6f6879271 (Unity) Application::InitializeProject
+0x00007ff6f6cff1a5 (Unity) WinMain
+0x00007ff6f80e8bae (Unity) __scrt_common_main_seh
+0x00007ffdc6d726ad (KERNEL32) BaseThreadInitThunk
+0x00007ffdc7bcaa68 (ntdll) RtlUserThreadStart
+
+Mono: successfully reloaded assembly
+Package Manager log level set to [2]
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+- Finished resetting the current domain, in  1.184 seconds
+Domain Reload Profiling: 2154ms
+	BeginReloadAssembly (173ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (4ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (22ms)
+	RebuildCommonClasses (30ms)
+	RebuildNativeTypeToScriptingClass (31ms)
+	initialDomainReloadingComplete (48ms)
+	LoadAllAssembliesAndSetupDomain (688ms)
+		LoadAssemblies (545ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (261ms)
+			TypeCache.Refresh (216ms)
+				TypeCache.ScanAssembly (191ms)
+			ScanForSourceGeneratedMonoScriptInfo (34ms)
+			ResolveRequiredComponents (10ms)
+	FinalizeReload (1184ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (997ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (25ms)
+			SetLoadedEditorAssemblies (3ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (98ms)
+			ProcessInitializeOnLoadAttributes (420ms)
+			ProcessInitializeOnLoadMethodAttributes (441ms)
+			AfterProcessingInitializeOnLoad (10ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (6ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
+Refreshing native plugins compatible for Editor in 35.27 ms, found 12 plugins.
+Preloading 1 native plugins for Editor in 0.09 ms.
+Unloading 7242 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 171 unused Assets / (1.2 MB). Loaded Objects now: 7695.
+Memory consumption went from 285.9 MB to 284.6 MB.
+Total: 8.758900 ms (FindLiveObjects: 0.485800 ms CreateObjectMapping: 0.159700 ms MarkObjects: 7.586900 ms  DeleteObjects: 0.525000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:scripting/monoscript/fileName/CameraMouseLook.cs: e7acf80310c3d9cf50c30f127643aea3 -> 
+  custom:scripting/monoscript/fileName/VolumetricShadowHD.cs: 3c45937c328863abe4c43198c25cdd29 -> 
+  custom:scripting/monoscript/fileName/AlphaAdjuster.cs: 5546e1eb3953969f5692616c2cf4f912 -> 
+  custom:scripting/monoscript/fileName/MeshGenerator.cs: de2d50b968cfba590c162e4621fe858d -> 
+  custom:scripting/monoscript/fileName/TableMapperBase.cs: 90647cc400823b41df847a6cbfc29026 -> 
+  custom:scripting/monoscript/fileName/UIVirtualTouchZone.cs: 2cf58d9131af5a78d9083ae59546d69c -> 
+  custom:scripting/monoscript/fileName/TestMoveSphere.cs: 0d05f97515d8f8941884157cacc2d228 -> 
+  custom:scripting/monoscript/fileName/CloudCreator.cs: ab3473feb91c06bad24b57189ff87443 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:scripting/monoscript/fileName/ITableGenerator.cs: a365ef8661dfa458ca17969f9e6ec3f0 -> 
+  custom:scripting/monoscript/fileName/FirstPersonStarterAssetsDeployMenu.cs: 90647cc400823b41df847a6cbfc29026 -> 
+  custom:scripting/monoscript/fileName/SortingLayerAndOrderDrawer.cs: cf7939168a4032420960a7eaf61415c2 -> 
+  custom:scripting/monoscript/fileName/BatchingHelper.cs: c50d6a916edd1bb5a25406410cd80a71 -> 
+  custom:scripting/monoscript/fileName/EffectPulse.cs: 8d576aa1b5eb4355aaa30f4249f8a9d6 -> 
+  custom:scripting/monoscript/fileName/Editor_EffectPulse.cs: cdc152cc594fa4b8bf01ae0a085240e7 -> 
+  custom:scripting/monoscript/fileName/Row.cs: 3b5fff14dbed9a26f1130010cd8d068a -> 
+  custom:scripting/monoscript/fileName/DebugMessage.cs: 4eedfd08fa1c9925c3c4a70704d3e203 -> 
+  custom:scripting/monoscript/fileName/TriggerZone.cs: b7c38a5cbf481e8731fceb3d8cd74a95 -> 
+  custom:scripting/monoscript/fileName/RestEntered.cs: 5b573ad93e84bf045ee3feda81e8131d -> 
+  custom:scripting/monoscript/fileName/Editor_VolumetricLightBeamHD.cs: 727a8fa1d29515d27451625cff420243 -> 
+  custom:scripting/monoscript/fileName/Editor_DynamicOcclusionAbstractBase.cs: 90647cc400823b41df847a6cbfc29026 -> 
+  custom:scripting/monoscript/fileName/ListConverter.cs: 90647cc400823b41df847a6cbfc29026 -> 
+  custom:scripting/monoscript/fileName/EditorStrings.cs: 74a46af929697e08402151b3b7f1b8f4 -> 
+  custom:scripting/monoscript/fileName/RealTimeReflection.cs: 4731b9232caed0e1b06b5e908f689016 -> 
+  custom:scripting/monoscript/fileName/Noise3D.cs: 183fce1b8b1c5fcc7b5402fd40880838 -> 
+  custom:scripting/monoscript/fileName/RotateLabel.cs: 7a6468fc04272d3e13181d2fd795099f -> 
+  custom:scripting/monoscript/fileName/Installer.cs: f795acb96c8534b03fb4adc3b2873312 -> 
+  custom:scripting/monoscript/fileName/DetectorMeshCollisionMapper.cs: 2397052ff1f8fac0bcc1068bb3b5a6f5 -> 
+  custom:scripting/monoscript/fileName/UIVirtualJoystick.cs: 940ec13d5cec07955291b086529e4dd6 -> 
+  custom:scripting/monoscript/fileName/RotateAroundObject.cs: aff7888434d7f91b4bb9d0517d11e0d0 -> 
+  custom:scripting/monoscript/fileName/CachedLightProperties.cs: 68763381c274c066dae8ea507e8615a7 -> 
+  custom:scripting/monoscript/fileName/TableAttribute.cs: 04949eeababa55d92c9848e5ecc1ee64 -> 
+  custom:scripting/monoscript/fileName/Mapping.cs: a4f5025685902db8e0f27017c4a482d5 -> 
+  custom:scripting/monoscript/fileName/HighlightNullAttribute.cs: e94125403b6e2d3119af0452d173fb77 -> 
+  custom:scripting/monoscript/fileName/TestSetWaveValues.cs: 9c129ca68d4cf600206c79a558d3cb7d -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:scripting/monoscript/fileName/Editor_DynamicOcclusionDepthBuffer.cs: 464071d212d6e4d18df5cc8e7f953d62 -> 
+  custom:scripting/monoscript/fileName/Table.cs: 4b9cdbcc90f81a080a740ff41777dc79 -> 
+  custom:scripting/monoscript/fileName/ShrinkField.cs: c7e2134b382cbb580e58a19dd05a33f1 -> 
+  custom:scripting/monoscript/fileName/InterceptCreateSessionFeatureEditor.cs: 4e87199cefaef57e4550eee992819cec -> 
+  custom:scripting/monoscript/fileName/HideAllPointers.cs: fe858ebaac979cf9bc708c98ff141f06 -> 
+  custom:scripting/monoscript/fileName/EditorData.cs: c8fe954bb1ee5b75fa14b6366042a5b2 -> 
+  custom:scripting/monoscript/fileName/DynamicOcclusionDepthBuffer.cs: cbef730cb37a9772fc167c04cc08a96a -> 
+  custom:scripting/monoscript/fileName/Vector3Converter.cs: f4b588e43d707c1e9a23b575d3a46cce -> 
+  custom:scripting/monoscript/fileName/FreeCameraController.cs: a6ecdd4646be0b92e454e1760337b9d2 -> 
+  custom:scripting/monoscript/fileName/DetectorMeshCollisionSensor.cs: e02d7182dcdb413d8526b786d2f7c797 -> 
+  custom:scripting/monoscript/fileName/Document.cs: 3f26b5e5d8ddcff1c9e00a315b37f96e -> 
+  custom:scripting/monoscript/fileName/MaterialManager.cs: 030594416e9ef433356a9aa71f34f158 -> 
+  custom:scripting/monoscript/fileName/PhysicalToggle.cs: cd1f6eb339dd91fb4a3258647674a196 -> 
+  custom:scripting/monoscript/fileName/Editor_TriggerZone.cs: 99235bd7680f2d1eab055ec07bf583dc -> 
+  custom:scripting/monoscript/fileName/GluonIK.cs: 78ba07df7db428a1a7e8ec67237fb5cf -> 469fce7ad0bd0e9b89170d1c31061592
+  custom:scripting/monoscript/fileName/VariousLights.cs: ae839015e466f6a7c4961cd6407bca10 -> 
+  custom:scripting/monoscript/fileName/Editor_TrackRealtimeChangesOnLightHD.cs: 903fc80afa631477fa45e0d63b1fda83 -> 
+  custom:scripting/monoscript/fileName/PhotonDetectionEventRaiser.cs: f5708f022d8cac4e42574eb238145c02 -> 
+  custom:scripting/monoscript/fileName/ShaderProperties.cs: 7efba5e529851539adfa1d148140dff3 -> 
+  custom:scripting/monoscript/fileName/DummyMaterial.cs: 1c73984e76d7bc9907284da4c2efb65c -> 
+  custom:scripting/monoscript/fileName/ShaderKeywords.cs: bdd232a7e6c0e73e11c8f39e13b4013d -> 
+  custom:scripting/monoscript/fileName/Editor_VolumetricLightBeamSD.cs: 78c841c540c44aa76d950a34b5998c5c -> 
+  custom:scripting/monoscript/fileName/Readme.cs: 5aedf578fb2663036982fb7b05aaf325 -> 
+  custom:scripting/monoscript/fileName/DistanceScaling.cs: c1a9dafb9fd2f6ba8638c5ff3d25e7db -> 
+  custom:scripting/monoscript/fileName/TargetList.cs: 90647cc400823b41df847a6cbfc29026 -> 
+  custom:scripting/monoscript/fileName/WhoEnabledMe.cs: 0e5747fbe3dcf7c8a00162a9a6f45eb8 -> 
+  custom:scripting/monoscript/fileName/CSVTests.cs: a38743885b952cc9f630b37e192024e8 -> 
+  custom:scripting/monoscript/fileName/DisableXR.cs: 5421052604f1c6ff53b1ea4de15d532b -> 
+  custom:scripting/precompiled-assembly-types:XMLParser: 2203f212a680b8eed9a91cd691ea8c73 -> 
+  custom:scripting/monoscript/fileName/EditorPrefsStrings.cs: e55aaa34d078c56fbe18dba48b95e9bb -> 
+  custom:scripting/monoscript/fileName/DynamicOcclusionRaycasting.cs: 814d88d1b985c2e73b046d4b810925d2 -> 
+  custom:scripting/monoscript/fileName/UIVirtualButton.cs: 4484a5293e7a4abb96c3b06b8d8dca11 -> 
+  custom:scripting/monoscript/fileName/EffectAbstractBase.cs: e9b28b07bed5c167615c8ef53c90badf -> 
+  custom:scripting/monoscript/fileName/PhysicalSlider.cs: 1e2d94cdc886516e0abd59a749e446e4 -> 
+  custom:scripting/monoscript/fileName/SpotLightParticles.cs: 0d07241cfd8cabdac7a376f50ceae1bc -> 
+  custom:scripting/monoscript/fileName/IGenerator.cs: 815939dd2e72a7289fb1bd724aa97286 -> 
+  custom:scripting/monoscript/fileName/Editor_CommonSD.cs: 2daa946bcb2aa319e41b5ad4c0c27215 -> 
+  custom:scripting/monoscript/fileName/FollowParticle.cs: 08963f40deb7e6dac98468831d81f34b -> 
+  custom:scripting/monoscript/fileName/SwitchObjects.cs: f79942c8982510ee1000bde341a20b9b -> 
+  custom:scripting/monoscript/fileName/testAnimation.cs: 453c7604de9c3992c362a2393364ee8b -> 
+  custom:scripting/monoscript/fileName/MobileDisableAutoSwitchControls.cs: 6080624f52a6a8173325efe0ce361f18 -> 
+  custom:scripting/monoscript/fileName/Editor_EffectFlicker.cs: 0ab5bd4a249d56845603c89117b78900 -> 
+  custom:scripting/monoscript/fileName/Validator.cs: 9b4ad418b5f49905a71f0acda080708e -> 
+  custom:scripting/monoscript/fileName/Consts.cs: 0539688f7f9ae046952c859b7c847b65 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:scripting/monoscript/fileName/TestVisualSwitcher.cs: 9dd15680d20fcdd83d3ef4ee1c6bbc07 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:scripting/monoscript/fileName/PolygonHelper.cs: 2c5a01b4681b08cd140434f8aafc0b99 -> 
+  custom:scripting/monoscript/fileName/rotatamabob.cs: ce0d4fb7507184686eec0e1fc316329a -> 
+  custom:scripting/monoscript/fileName/Vector2Converter.cs: 3b2d972aee6d2591f33d81dda0547d97 -> 
+  custom:scripting/monoscript/fileName/IConverter.cs: 2cb65d7b38c1ffea745c2353662df59b -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:scripting/monoscript/fileName/PhotonController.cs: 8325377efe40fae9195de9430cd70958 -> 
+  custom:scripting/monoscript/fileName/ResolutionController.cs: fba84a63ca185125ee6208ba4d4218d8 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:scripting/monoscript/fileName/SharedStringCollection.cs: 1bc2624808a60246e400af205a941395 -> 
+  custom:scripting/monoscript/fileName/Elevator.cs: df7fc75167eccd47a991cd23eb4892ec -> 
+  custom:scripting/monoscript/fileName/BasicRigidBodyPush.cs: 834b632457fae9d11b7ee6ae6006cbf8 -> 
+  custom:scripting/monoscript/fileName/Editor_EffectAbstractBase.cs: 90647cc400823b41df847a6cbfc29026 -> 
+  custom:scripting/monoscript/fileName/OnBuildTargetChanged.cs: 82e7161e50c9c7a7652cda32ae63e944 -> 
+  custom:scripting/monoscript/fileName/Teleporter.cs: d985ce36f855c981e05b242e07fef67e -> 
+  custom:scripting/monoscript/fileName/PhysicalButton.cs: 0ac9ff8975fc1ae82f5e48d1bd25be59 -> 
+  custom:scripting/monoscript/fileName/XmlParser.cs: 3626cb6ddd8e731feba820371fe71194 -> 
+  custom:scripting/monoscript/fileName/ToolTipReferencer.cs: 12c243b73c8b66582209d4d7ff02869f -> 
+  custom:scripting/monoscript/fileName/WorkSheet.cs: 7897023a8b0a9ec2d977ea2ecff9af58 -> 
+  custom:scripting/monoscript/fileName/SkewingHandleSD.cs: a062a129bfba8dfc19213fe3c92b9ecc -> 
+  custom:scripting/monoscript/fileName/ShiftScreen.cs: 199b8d9c5f023fee9af8117a9710ee95 -> 
+  custom:scripting/monoscript/fileName/InterceptCreateSessionFeature.cs: 7c2fed1facc1b3a91516c9a0992af20d -> 
+  custom:scripting/monoscript/fileName/ScreenPortionController.cs: d230cd129f849f8a451c386be3a687da -> 
+  custom:scripting/monoscript/fileName/QuadTextWriter.cs: 7df254332d41643b123018de2e82749f -> 
+  custom:scripting/monoscript/fileName/UIScaler.cs: 828d3c47af0ab9ae86aad45ed8774639 -> 
+  custom:scripting/monoscript/fileName/Jiggler.cs: b798a57f9a47f919b0021a87049eefcd -> 
+  custom:scripting/monoscript/fileName/DictionaryConverter.cs: 90647cc400823b41df847a6cbfc29026 -> 
+  custom:scripting/monoscript/fileName/VolumetricLightBeamHD2D.cs: 6623579c25e94ffb0520de1f56e3e5da -> 
+  custom:scripting/monoscript/fileName/TeleportAnchorNONXR.cs: 688e0c7fc2ab584ece9286fabf933614 -> 
+  custom:scripting/monoscript/fileName/Editor_VolumetricLightBeamAbstractBase.cs: c17eab94857d1283d8b0454f9cc9c0d7 -> 
+  custom:scripting/monoscript/fileName/SetLightIntensity.cs: dbdf23facf810ad433975a95caa7d08d -> 
+  custom:scripting/monoscript/fileName/DebugUI.cs: e13ff77035aea116ac231af30a6b9bed -> 398639f868eabde8ec4cfa5a98e2d32c
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/StarterAssetsInputs.cs: 109cc5d80cf92b9046134880b5edcf1b -> 
+  custom:scripting/monoscript/fileName/MenuManager.cs: ba38e22e4f3cea0d3c4ba5188800c776 -> 0343bcd059e803f90b5a61786ef257ee
+  custom:scripting/monoscript/fileName/SceneSwitcher.cs: 82650212eef756784afd1b30cb6bafc7 -> 
+  custom:scripting/monoscript/fileName/DestroyEverything.cs: 7a2db9e1ccb7142caac714204526a07c -> 
+  custom:scripting/monoscript/fileName/MovementController.cs: 786b136cc9274983d50687619556ba89 -> 
+  custom:scripting/monoscript/fileName/PhotonCollisionLight.cs: ffdfe2559a21adc4fd6f16bd41485b66 -> 
+  custom:scripting/monoscript/fileName/RaymarchingQuality.cs: e410d89bcbaf92c02353ebff0df70972 -> 
+  custom:scripting/monoscript/fileName/triggerTest.cs: 3566986854cfbfc084772d0455429020 -> 
+  custom:scripting/monoscript/fileName/Editor_SkewingHandleSD.cs: 43e3b6ee23d8b41d0472854304a4df9d -> 
+  custom:scripting/monoscript/fileName/ObjectDestroyer.cs: 752bc778340b97c573f39e4a7c42aa0b -> 
+  custom:scripting/monoscript/fileName/VehicleController.cs: 17a24dfd165d9690af46d864c418a3f5 -> 
+  custom:scripting/monoscript/fileName/BeamGeometryAbstractBase.cs: 5a5ac35ca855a4dfbf2885cd7321e4aa -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/precompiled-assembly-types:Assembly-CSharp-Editor: c20afed434309baef5134ac8132b92b8 -> 
+  custom:scripting/monoscript/fileName/BeamGeometrySD.cs: fc72164f275771cb1c04d5aaae63af47 -> 
+  custom:scripting/monoscript/fileName/TeleportXR.cs: c2c16ac3e897e2943f77e00d6974e2fa -> 
+  custom:scripting/monoscript/fileName/Rotator.cs: e5b2192ce91f3f7e4c7f5761ead2523c -> 
+  custom:scripting/monoscript/fileName/DynamicOcclusionAbstractBase.cs: d935118d22cad75ba8322b0834aca7c4 -> 
+  custom:scripting/monoscript/fileName/CameraSwitcher.cs: d4d0a679d1263230c4a1ac060d839216 -> 5294375be82a1ad31289f79614bdae50
+  custom:scripting/monoscript/fileName/GrowOverTime.cs: f1532072854091516b130bf8b9cec770 -> 
+  custom:scripting/monoscript/fileName/ValueConverter.cs: ceb082e4482009ec822abf44bfa15b31 -> 
+  custom:scripting/monoscript/fileName/SRPHelper.cs: 1d1cd3d72df7d8999b91cce7a36358b6 -> 
+  custom:scripting/precompiled-assembly-types:Assembly-CSharp: 011e6fada4ef1eb56a6175546cc16f38 -> 
+  custom:scripting/monoscript/fileName/ActivateNewTextBar.cs: c3760d9330c8414bc92ad90453f069d3 -> 
+  custom:scripting/monoscript/fileName/UtilsBeamProps.cs: 22963f6cbfa1a38cf85932ba54997edd -> 
+  custom:scripting/monoscript/fileName/TransformUtils.cs: a56d247f1d9013a7f72588fc014d0330 -> 
+  custom:scripting/monoscript/fileName/ParticleSystemController.cs: 3da3990358627f0dc9235d7b330103da -> 
+  custom:scripting/monoscript/fileName/MinMaxRangeFloat.cs: 3248f5b1945bb33a75e3e2abb1166d75 -> 
+  custom:scripting/monoscript/fileName/ExplanationText.cs: 0a1480e63807c26f787eb738dadf92c6 -> 
+  custom:scripting/monoscript/fileName/ButtonController.cs: 49ed66e17e28474020ea64357a046f1c -> 
+  custom:scripting/monoscript/fileName/ProtonController.cs: dca5a1669c6c01e41ca8fb773e028a1b -> 
+  custom:scripting/monoscript/fileName/VolumetricCookieHD.cs: 16ee042fe148bc57d13248dacdace234 -> 
+  custom:scripting/monoscript/fileName/SliderFX.cs: 64460797f50c3e6af741447aaac591b9 -> 
+  custom:scripting/monoscript/fileName/User.cs: 9944ed405f5aca62b79ad7835a26efcb -> 
+  custom:video-codec-MediaFoundation-h265: e54d7ab0439102e2317fc1e4b246158d -> 
+  custom:scripting/monoscript/fileName/FlashingController.cs: 7ff949c2f8ad9d43d59f6ef10ad817f5 -> 
+  custom:scripting/monoscript/fileName/ShowIdentityText.cs: 6990590c1de289c2670efa6e65849a13 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:scripting/monoscript/fileName/ColorConverter.cs: d80139d36f8fab657c0fc88c02cae8ad -> 
+  custom:scripting/monoscript/fileName/VariableController.cs: e647e9354ace831a4fbac5f6ca812828 -> 
+  custom:scripting/monoscript/fileName/Editor_Common.cs: ace7e201c62ef789291807eb659eecf0 -> 
+  custom:scripting/monoscript/fileName/AssignCameraFromPrefab.cs: 93b9d510d956e609ef9a09e2635eea0a -> 
+  custom:scripting/monoscript/fileName/MasterControlScript.cs: d2641a44761de94ac9a01ff4649b8802 -> 
+  custom:scripting/monoscript/fileName/ToggleTooltip.cs: 3e2053896cdf2b5760fe01fbdd905ab8 -> 
+  custom:scripting/monoscript/fileName/EditorMenuItems.cs: 38c7607e6ec1a913462a788b0d18878f -> 
+  custom:scripting/monoscript/fileName/ShaderTimingManipulator.cs: 2a0dabd571e7459c8b0ae2d94a97d21d -> 
+  custom:scripting/monoscript/fileName/UIWiggler.cs: e9bf5eb28e6701f3dbf405155bd60cb0 -> 
+  custom:scripting/monoscript/fileName/EventCounter.cs: 6fc73c2704a04b3957768b067e4a7bcf -> 
+  custom:scripting/monoscript/fileName/RectConverter.cs: ada6146e45976e9474b923e6261339b6 -> 
+  custom:scripting/monoscript/fileName/Editor_VolumetricDustParticles.cs: d044ab38d78fc3b6498e70fe3ca1b915 -> 
+  custom:scripting/monoscript/fileName/ButtonToggleScope.cs: b6805bc9c416a570e81e783a05086ed2 -> 
+  custom:scripting/monoscript/fileName/StarterAssetsDeployMenu.cs: f6abf41bee2cce11d88ef37a7d2ac4c0 -> 
+  custom:scripting/monoscript/fileName/CustomCameraSettings.cs: 047fbd7ffb5290751e90b08a032aae4a -> 
+  custom:scripting/monoscript/fileName/TestMoveThroughParticles.cs: 306362f4aef2ca163de18e93ebf4e94b -> 
+  custom:scripting/monoscript/fileName/EditorExtensions.cs: 99ca053b7280dfdc287129c2facc944a -> 
+  custom:scripting/monoscript/fileName/Address.cs: 775c879e8512a58176cb0a1d1a7fed1e -> 
+  custom:scripting/monoscript/fileName/ColumnAttribute.cs: 17a47892fd5b64f1cc2bd72d3707fd1a -> 
+  custom:scripting/monoscript/fileName/Utils.cs: a8e78e7794ee1cbf91417d32d70f2170 -> 86c1d1645ef44714c88b8b329e53393a
+  custom:scripting/monoscript/fileName/MaterialModifier.cs: d45dae009a643e706752870db681cf98 -> 
+  custom:CustomObjectIndexerAttribute: d54d2f2da18e7612c182cf67624b6b12 -> 
+  custom:scripting/monoscript/fileName/SpotLightHelper.cs: 66fc3c22c8202baaebf8f43d06f5e936 -> 
+  custom:scripting/monoscript/fileName/PointerMover.cs: 9c3244b69999cb573fed6eec40ff8d80 -> 
+  custom:scripting/monoscript/fileName/GlobalMeshSD.cs: bdaa2600329361397e8248f0270c23c9 -> 
+  custom:scripting/precompiled-assembly-types:MenuAssembly: a0d2340c213bd8fa33939aba9fb1cf85 -> 
+  custom:scripting/monoscript/fileName/TrackRealtimeChangesOnLightHD.cs: e102ea3b53d0b833c39d0df5b5b2ab11 -> 
+  custom:scripting/monoscript/fileName/VolumetricLightBeamHD.cs: 1b174ecd4e96996459d588edc324f428 -> 
+  custom:scripting/monoscript/fileName/OldPhysicalButton.cs: 24b489a82ebf528f5f3ecfb24a104216 -> 
+  custom:scripting/monoscript/fileName/reflectionProbeTest.cs: baa80e7078248d5c1941db65ec3debe1 -> 
+  custom:scripting/monoscript/fileName/FlipLens.cs: 4a88c83ed36cb9b15e30ded250a61b03 -> 
+  custom:scripting/monoscript/fileName/Editor_VolumetricShadowHD.cs: 214c4bae8a1a753c974897626897fe26 -> 
+  custom:scripting/monoscript/fileName/TextLines.cs: 47ea3f5dbe79fd6cc9881e45312d6a52 -> 
+  custom:scripting/monoscript/fileName/Editor_DynamicOcclusionRaycasting.cs: 367b013a8104b48d9d114938e7415b1d -> 
+  custom:scripting/monoscript/fileName/EllipticalOrbit.cs: de83a1dc737035bc9b6394449eb2dfff -> 
+  custom:scripting/monoscript/fileName/ShowMenu.cs: 041306f150fc7747d6ad54949e84d238 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:scripting/monoscript/fileName/MapperBase.cs: 90647cc400823b41df847a6cbfc29026 -> 
+  custom:scripting/monoscript/fileName/WorkBook.cs: 540a918fdb0075bc0965d2a05263798c -> 
+  custom:scripting/monoscript/fileName/TextRotator.cs: f77157e620e6e8db6263521e57f0e055 -> 
+  custom:scripting/monoscript/fileName/ObjectConverter.cs: 74719cc2d62bdfdbb67431295133f3be -> 
+  custom:scripting/monoscript/fileName/RenderQueueDrawer.cs: f1beaf2772226a7fb88e84aa1c5388b9 -> 
+  custom:scripting/monoscript/fileName/CheckIfInsideBeam.cs: 2fb95c18e98fbb140d1f3ef085677c96 -> 
+  custom:scripting/monoscript/fileName/DestroyObject.cs: f59686099cf57bb002d7cb90f7a0f825 -> 
+  custom:scripting/monoscript/fileName/TransformObject.cs: 0e448d4855deba06bda07650fda90571 -> 
+  custom:scripting/monoscript/fileName/LockOrUnlockCamera.cs: 5218c7842ddfc171464f72acaaa22e1d -> 
+  custom:scripting/monoscript/fileName/CameraToggleBeamVisibility.cs: 4dd1dda391cacdff02560ac668be75ac -> 
+  custom:scripting/monoscript/fileName/ObjectWiggler.cs: 4267b2dfec38a8af26bdf7344351338e -> 
+  custom:scripting/monoscript/fileName/FollowCam.cs: decb8ce39e9b0b25254d022de25f42c5 -> 
+  custom:scripting/monoscript/fileName/Config.cs: b3bab070432e31d4b43cadbde9ddf628 -> 
+  custom:scripting/monoscript/fileName/SphericalCloudSpawner.cs: c5aaa5b4bfb214af955000d244e1c078 -> 
+  custom:scripting/monoscript/fileName/MoveSourceOfWave.cs: 86309506f1a635f6260936dccf5af1b2 -> 
+  custom:scripting/monoscript/fileName/FeaturesNotSupportedMessage.cs: cfc11727ca74ba83092f4f008be88692 -> 
+  custom:scripting/monoscript/fileName/LightFluctuator.cs: a5719791430c97aa31bd236a9cdbc1f3 -> 
+  custom:scripting/monoscript/fileName/PlaybackController.cs: 15a9b50552cb1b86af6bf5cca3fa5da7 -> 
+  custom:scripting/monoscript/fileName/VehicleSmoothMove.cs: 17aab016c17af7c02c3ac850e3c366bc -> 
+  custom:scripting/monoscript/fileName/ButtonClick.cs: 7bb65d15d0e686a42dbc19d25762ea93 -> 
+  custom:scripting/monoscript/fileName/RandomQuarkChooser.cs: bd11bb8762d814fa380be7c6853c8a2d -> 
+  custom:scripting/monoscript/fileName/DevelopmentNotes.cs: 78ac1cd556f5fa2744b3d0148616469e -> 
+  custom:scripting/monoscript/fileName/Extensions.cs: 43aad1b0e3e6ba9a66ac34e64768dba0 -> 
+  custom:scripting/monoscript/fileName/ReadmeEditor.cs: ff7ced1e41c1b99ddf5dfefc88f6bd50 -> 
+  custom:scripting/monoscript/fileName/ArrayConverter.cs: 90647cc400823b41df847a6cbfc29026 -> 
+  custom:scripting/monoscript/fileName/Version.cs: f13aa584dabb6f66388742832ac00aea -> 2ea90d0bd9a7e2100b7bd9e5a7cff1d5
+  custom:scripting/monoscript/fileName/Editor_VolumetricCookieHD.cs: 94de3372a49a48d8b7217f891f3a0c93 -> 
+  custom:scripting/monoscript/fileName/SphereCreator.cs: 711f4dccf9409c97ebcf29e414004c78 -> 
+  custom:scripting/monoscript/fileName/GlobalMeshHD.cs: 05dbc86436e0a7800ba800750e514990 -> 
+  custom:scripting/monoscript/fileName/Mapper.cs: e2c227c335c7f0406503c35ea6e25811 -> 
+  custom:scripting/monoscript/fileName/Editor_CommonHD.cs: e7f911ecd5dfcfb6967b0e7bc4a00627 -> 
+  custom:scripting/monoscript/fileName/UICanvasControllerInput.cs: efbd76725fe032d832a1837ce36804c3 -> 
+  custom:scripting/monoscript/fileName/CustomConverter.cs: 90647cc400823b41df847a6cbfc29026 -> 
+  custom:scripting/monoscript/fileName/Color32Converter.cs: 64b6e6cca175551820d033274fc4dd39 -> 
+  custom:scripting/monoscript/fileName/OnBuildPostprocess.cs: b08b0f1fb565a01521b078e0ebc8202f -> 
+  custom:scripting/monoscript/fileName/Editor_VolumetricLightBeamHD2D.cs: accc386dff5cc4087c371dcd5e5fde0a -> 
+  custom:scripting/monoscript/fileName/VolumetricDustParticles.cs: d66fa087efe5f3a1dc241b54c6d0104f -> 
+  custom:scripting/monoscript/fileName/XmlParserComponent.cs: 07aa54000700a1d43f70c8cc9d14a568 -> 
+  custom:scripting/monoscript/fileName/StartActions.cs: ba72fef7b767f53459ee1e678c653822 -> 
+  custom:scripting/monoscript/fileName/Excel2007Tests.cs: b34cfcf61bfad215c0d1e1d106dcabef -> 
+  custom:scripting/monoscript/fileName/SwitchMaterial.cs: d58d9ced681eecbe1091f8d732bb15e5 -> 
+  custom:scripting/monoscript/fileName/GrowSphere.cs: c1c11bafab5a74cd27bee46bfa0096b5 -> 
+  custom:scripting/monoscript/fileName/QuarkForce.cs: 996f98c204cb28d9186676b9b3a7cb39 -> 
+  custom:scripting/monoscript/fileName/ShipMover.cs: 894cf41a98b25f1aedb4df6838e8d00c -> 
+  custom:scripting/monoscript/fileName/ParticleSystemTimeAdjuster.cs: 1cce43263977107e44c29d7040c70e2c -> 
+  custom:scripting/monoscript/fileName/TableMapper.cs: 516c3ae096a25e4f576e35d7d2bb8d9d -> 
+  custom:scripting/monoscript/fileName/ShaderGenerator.cs: 34f2c3dbfdf3f4822d2f3435ccbc5a30 -> 
+  custom:scripting/monoscript/fileName/InterferenceScreenVertexTracker.cs: 7fa8a0116d051fa0f617d0ccfba64e01 -> 
+  custom:scripting/monoscript/fileName/EffectFlicker.cs: 5ed1445dcda823f946939c9d56b8b396 -> 
+  custom:scripting/monoscript/fileName/VolumetricLightBeamSD.cs: 937044f0e2fef2beaec2bb3807d0a5cd -> 
+  custom:scripting/monoscript/fileName/PlatformHelper.cs: ee295d6a887d83e2525ab634cf8c5a35 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:scripting/monoscript/fileName/ToggleHelper.cs: 4b77e59dc35492dbfa7294d574b57b0c -> 
+  custom:scripting/monoscript/fileName/BackGroundTimeDistort.cs: b13720d93e3172843e3b5f849f8e1146 -> 
+  custom:scripting/monoscript/fileName/ChangeSpeed.cs: abd67bcdd054a4b2560288177bc06558 -> 
+  custom:scripting/monoscript/fileName/ShaderSpeedAdjuster.cs: 92fc5fb1491fbe451f546213b1433805 -> 
+  custom:scripting/monoscript/fileName/LightGenerator.cs: d8ef4590c1af7a4a46fab5dd087f73cb -> 
+  custom:scripting/monoscript/fileName/UIHelper.cs: 829a06c17a570479f82c950d8724e335 -> 
+  custom:scripting/monoscript/fileName/OnBuildPreprocess.cs: 8f60b876e061e6dcad74cd534949baad -> 
+  custom:scripting/monoscript/fileName/ICloneable.cs: 90647cc400823b41df847a6cbfc29026 -> 
+  custom:scripting/monoscript/fileName/TestRotateWithXRController.cs: aa5772f0112d88fd067f9e25e29d864c -> 
+  custom:scripting/monoscript/fileName/CloudRandomizer.cs: 2182dee6f4a683abcf06eee0e86334d8 -> 
+  custom:scripting/monoscript/fileName/Editor_Config.cs: b6a624e557bca43297d9ebe0284782ab -> 
+  custom:scripting/monoscript/fileName/FirstPersonController.cs: 9e1eba75299b9410bcb3b05a6daf2444 -> 1e0da09e3242489bf669acc330e4a42a
+  custom:scripting/monoscript/fileName/PhotonDetector.cs: d749e9e136e8b5b9aafa8f2851d8b29d -> 
+  custom:scripting/monoscript/fileName/DisableStartingLights.cs: bb278602db1f2d3d9ef35c5bfeebeda8 -> 
+  custom:scripting/monoscript/fileName/InterceptFeatureInstaller.cs: 811644cb5e2720505af9cbeb71074e92 -> 
+  custom:scripting/monoscript/fileName/OpacityController.cs: be2a64d331c36760a1af8b871ef9ca5c -> 
+  custom:scripting/monoscript/fileName/Range.cs: 843142bba88e75578d031bb0ff2482d6 -> 6403016406936a29c1e23f7a5897e397
+  custom:scripting/monoscript/fileName/TrackObjectToCursor.cs: ea27e3a2d6bbe18e20969b1cc6bd6df9 -> 
+  custom:scripting/monoscript/fileName/TextSwitcher.cs: 9c98d67e8b5030b78b749f976302c40c -> 
+  custom:scripting/monoscript/fileName/Vector4Converter.cs: 573762906ca30547850218ef2e3ed830 -> 
+  custom:scripting/monoscript/fileName/FoldableHeader.cs: c3fc4af97ff4198b7924738bed5cf340 -> 
+  custom:scripting/monoscript/fileName/MoveSpotLight.cs: 7f13c638aa561ee4102925c7939f897f -> 
+  custom:scripting/monoscript/fileName/Cell.cs: f5a666c9130e4347d9454c77d55817e1 -> 
+  custom:scripting/monoscript/fileName/InterceptMessageHandler.cs: c588207887e1b901491a20ba0046917b -> 
+  custom:scripting/monoscript/fileName/BeamGeometryHD.cs: 9eedd9c3040960d2955a7d1fbd85f09e -> 
+  custom:scripting/monoscript/fileName/SetMaterial.cs: e2e53e185b887ad2e4f94b0ef32a62fb -> 
+  custom:scripting/monoscript/fileName/VolumetricLightBeamAbstractBase.cs: b5a0a768319957b2d02af7c98b918b71 -> 
+  custom:scripting/monoscript/fileName/MoveObjectAlongTrack.cs: c2e0518bd4a2f50ac23567c3097351e4 -> 
+  custom:scripting/monoscript/fileName/InstallerEditor.cs: c6c35d6e4597412f1d94444c33499139 -> 
+  custom:scripting/monoscript/fileName/ElectronController.cs: 900d2e38029d37d71ffeebd220277265 -> 
+  custom:scripting/monoscript/fileName/Rotater.cs: fc642edf9db28e826b2e4a4c798b19ba -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.610 seconds
+Refreshing native plugins compatible for Editor in 28.51 ms, found 12 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+No script asset for InterceptCreateSessionFeature. Check that the definition is in a file of the same name and that it compiles properly.
+Refresh completed but there are assets queued up for importing. Check for code that modifies assets which gets called after OnPostProcessAllAssets. Additional details in Log file
+0x00007ff6f5d2229d (Unity) StackWalker::GetCurrentCallstack
+0x00007ff6f5d27249 (Unity) StackWalker::ShowCallstack
+0x00007ff6f6cf33a1 (Unity) GetStacktrace
+0x00007ff6f73b4c02 (Unity) DebugStringToFile
+0x00007ff6f73b493a (Unity) AssertImplementation
+0x00007ff6f7077eeb (Unity) StopAssetImportingV2Internal
+0x00007ff6f7042c37 (Unity) ImportAssetsV2_Internal<core::hash_set<UnityGUID,core::hash<UnityGUID>,std::equal_to<UnityGUID> > >
+0x00007ff6f6fe3af3 (Unity) AssetDatabase::ImportAssets
+0x00007ff6f6fc1429 (Unity) AssetDatabase::WriteRevertAssets
+0x00007ff6f6fc056e (Unity) AssetDatabase::SaveAssets
+0x00007ff6f5422a91 (Unity) AssetDatabase_CUSTOM_SaveAssets
+0x000001f37e12e9d7 (Mono JIT Code) (wrapper managed-to-native) UnityEditor.AssetDatabase:SaveAssets ()
+0x000001f37e1298e3 (Mono JIT Code) UnityEditor.XR.OpenXR.Features.FeatureHelpersInternal:GetAllFeatureInfo (UnityEditor.BuildTargetGroup) (at ./Library/PackageCache/com.unity.xr.openxr@1.8.2/Editor/FeatureSupport/FeatureHelpers.cs:189)
+0x000001f37e128f6b (Mono JIT Code) UnityEditor.XR.OpenXR.Features.FeatureHelpers:RefreshFeatures (UnityEditor.BuildTargetGroup) (at ./Library/PackageCache/com.unity.xr.openxr@1.8.2/Editor/FeatureSupport/FeatureHelpers.cs:29)
+0x000001f37e128c7b (Mono JIT Code) UnityEditor.XR.OpenXR.Samples.InterceptFeature.InterceptFeatureInstaller:.cctor () (at H:/Github/Femtography-VR/Femtography Unity/Assets/Input/XR/OpenXR Plugin/1.1.1/Intercept Feature/Editor/InterceptFeatureInstaller.cs:23)
+0x000001f37e128aad (Mono JIT Code) (wrapper runtime-invoke) object:runtime_invoke_void (object,intptr,intptr,intptr)
+0x00007ffcf288e0d4 (mono-2.0-bdwgc) mono_jit_runtime_invoke (at C:/build/output/Unity-Technologies/mono/mono/mini/mini-runtime.c:3445)
+0x00007ffcf27ceb74 (mono-2.0-bdwgc) do_runtime_invoke (at C:/build/output/Unity-Technologies/mono/mono/metadata/object.c:3066)
+0x00007ffcf27c9c20 (mono-2.0-bdwgc) mono_runtime_class_init_full (at C:/build/output/Unity-Technologies/mono/mono/metadata/object.c:563)
+0x00007ffcf27362f0 (mono-2.0-bdwgc) ves_icall_System_Runtime_CompilerServices_RuntimeHelpers_RunClassConstructor_raw (at C:/build/output/Unity-Technologies/mono/mono/metadata/icall-def.h:756)
+0x000001f38fad8cea (Mono JIT Code) (wrapper managed-to-native) System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (intptr)
+0x000001f38fad8bfb (Mono JIT Code) System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+0x000001f38fad52a3 (Mono JIT Code) UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+0x000001f35a36e458 (Mono JIT Code) (wrapper runtime-invoke) <Module>:runtime_invoke_void_object (object,intptr,intptr,intptr)
+0x00007ffcf288e0d4 (mono-2.0-bdwgc) mono_jit_runtime_invoke (at C:/build/output/Unity-Technologies/mono/mono/mini/mini-runtime.c:3445)
+0x00007ffcf27ceb74 (mono-2.0-bdwgc) do_runtime_invoke (at C:/build/output/Unity-Technologies/mono/mono/metadata/object.c:3066)
+0x00007ffcf27ced0c (mono-2.0-bdwgc) mono_runtime_invoke (at C:/build/output/Unity-Technologies/mono/mono/metadata/object.c:3113)
+0x00007ff6f5c39724 (Unity) scripting_method_invoke
+0x00007ff6f5c17944 (Unity) ScriptingInvocation::Invoke
+0x00007ff6f5c12595 (Unity) ScriptingInvocation::Invoke<void>
+0x00007ff6f5d64ac3 (Unity) Scripting::UnityEditor::EditorAssembliesProxy::ProcessInitializeOnLoadAttributes
+0x00007ff6f5c0c728 (Unity) MonoManager::SetupLoadedEditorAssemblies
+0x00007ff6f5c020f9 (Unity) MonoManager::FinalizeReload
+0x00007ff6f6fefd8a (Unity) ScriptingInitializer::FinalizeReload
+0x00007ff6f6b9d92b (Unity) LoadUserAssemblies
+0x00007ff6f709df05 (Unity) <lambda_b37b41f03089e3cb3f55061bbc93253d>::operator()
+0x00007ff6f70d79b2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)>,asio::io_context::basic_executor_type<std::allocator<void>,0> >::do_complete
+0x00007ff6f70c395e (Unity) asio::detail::win_iocp_io_context::do_one
+0x00007ff6f70c55c4 (Unity) asio::detail::win_iocp_io_context::run
+0x00007ff6f70d5d5c (Unity) IOService::Run
+0x00007ff6f70aa51f (Unity) AssetImportWorkerClient::Run
+0x00007ff6f70750d7 (Unity) RunAssetImportWorkerClientV2
+0x00007ff6f707515b (Unity) RunAssetImporterV2
+0x00007ff6f6879271 (Unity) Application::InitializeProject
+0x00007ff6f6cff1a5 (Unity) WinMain
+0x00007ff6f80e8bae (Unity) __scrt_common_main_seh
+0x00007ffdc6d726ad (KERNEL32) BaseThreadInitThunk
+0x00007ffdc7bcaa68 (ntdll) RtlUserThreadStart
+
+Assets queued for import after Refresh completed:
+	Assets/XR/Settings/Open XR Package Settings.asset
+Asset Pipeline Refresh (id=82e6db7d4d36f254799fe9ea0a2afc9b): Total: 0.005 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Assertion failed on expression: 'm_Ptr'
+0x00007ff6f5d2229d (Unity) StackWalker::GetCurrentCallstack
+0x00007ff6f5d27249 (Unity) StackWalker::ShowCallstack
+0x00007ff6f6cf33a1 (Unity) GetStacktrace
+0x00007ff6f73b4c02 (Unity) DebugStringToFile
+0x00007ff6f73b493a (Unity) AssertImplementation
+0x00007ff6f7042c67 (Unity) ImportAssetsV2_Internal<core::hash_set<UnityGUID,core::hash<UnityGUID>,std::equal_to<UnityGUID> > >
+0x00007ff6f6fe3af3 (Unity) AssetDatabase::ImportAssets
+0x00007ff6f6fc1429 (Unity) AssetDatabase::WriteRevertAssets
+0x00007ff6f6fc056e (Unity) AssetDatabase::SaveAssets
+0x00007ff6f5422a91 (Unity) AssetDatabase_CUSTOM_SaveAssets
+0x000001f37e12e9d7 (Mono JIT Code) (wrapper managed-to-native) UnityEditor.AssetDatabase:SaveAssets ()
+0x000001f37e1298e3 (Mono JIT Code) UnityEditor.XR.OpenXR.Features.FeatureHelpersInternal:GetAllFeatureInfo (UnityEditor.BuildTargetGroup) (at ./Library/PackageCache/com.unity.xr.openxr@1.8.2/Editor/FeatureSupport/FeatureHelpers.cs:189)
+0x000001f37e128f6b (Mono JIT Code) UnityEditor.XR.OpenXR.Features.FeatureHelpers:RefreshFeatures (UnityEditor.BuildTargetGroup) (at ./Library/PackageCache/com.unity.xr.openxr@1.8.2/Editor/FeatureSupport/FeatureHelpers.cs:29)
+0x000001f37e128c7b (Mono JIT Code) UnityEditor.XR.OpenXR.Samples.InterceptFeature.InterceptFeatureInstaller:.cctor () (at H:/Github/Femtography-VR/Femtography Unity/Assets/Input/XR/OpenXR Plugin/1.1.1/Intercept Feature/Editor/InterceptFeatureInstaller.cs:23)
+0x000001f37e128aad (Mono JIT Code) (wrapper runtime-invoke) object:runtime_invoke_void (object,intptr,intptr,intptr)
+0x00007ffcf288e0d4 (mono-2.0-bdwgc) mono_jit_runtime_invoke (at C:/build/output/Unity-Technologies/mono/mono/mini/mini-runtime.c:3445)
+0x00007ffcf27ceb74 (mono-2.0-bdwgc) do_runtime_invoke (at C:/build/output/Unity-Technologies/mono/mono/metadata/object.c:3066)
+0x00007ffcf27c9c20 (mono-2.0-bdwgc) mono_runtime_class_init_full (at C:/build/output/Unity-Technologies/mono/mono/metadata/object.c:563)
+0x00007ffcf27362f0 (mono-2.0-bdwgc) ves_icall_System_Runtime_CompilerServices_RuntimeHelpers_RunClassConstructor_raw (at C:/build/output/Unity-Technologies/mono/mono/metadata/icall-def.h:756)
+0x000001f38fad8cea (Mono JIT Code) (wrapper managed-to-native) System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (intptr)
+0x000001f38fad8bfb (Mono JIT Code) System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+0x000001f38fad52a3 (Mono JIT Code) UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+0x000001f35a36e458 (Mono JIT Code) (wrapper runtime-invoke) <Module>:runtime_invoke_void_object (object,intptr,intptr,intptr)
+0x00007ffcf288e0d4 (mono-2.0-bdwgc) mono_jit_runtime_invoke (at C:/build/output/Unity-Technologies/mono/mono/mini/mini-runtime.c:3445)
+0x00007ffcf27ceb74 (mono-2.0-bdwgc) do_runtime_invoke (at C:/build/output/Unity-Technologies/mono/mono/metadata/object.c:3066)
+0x00007ffcf27ced0c (mono-2.0-bdwgc) mono_runtime_invoke (at C:/build/output/Unity-Technologies/mono/mono/metadata/object.c:3113)
+0x00007ff6f5c39724 (Unity) scripting_method_invoke
+0x00007ff6f5c17944 (Unity) ScriptingInvocation::Invoke
+0x00007ff6f5c12595 (Unity) ScriptingInvocation::Invoke<void>
+0x00007ff6f5d64ac3 (Unity) Scripting::UnityEditor::EditorAssembliesProxy::ProcessInitializeOnLoadAttributes
+0x00007ff6f5c0c728 (Unity) MonoManager::SetupLoadedEditorAssemblies
+0x00007ff6f5c020f9 (Unity) MonoManager::FinalizeReload
+0x00007ff6f6fefd8a (Unity) ScriptingInitializer::FinalizeReload
+0x00007ff6f6b9d92b (Unity) LoadUserAssemblies
+0x00007ff6f709df05 (Unity) <lambda_b37b41f03089e3cb3f55061bbc93253d>::operator()
+0x00007ff6f70d79b2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)>,asio::io_context::basic_executor_type<std::allocator<void>,0> >::do_complete
+0x00007ff6f70c395e (Unity) asio::detail::win_iocp_io_context::do_one
+0x00007ff6f70c55c4 (Unity) asio::detail::win_iocp_io_context::run
+0x00007ff6f70d5d5c (Unity) IOService::Run
+0x00007ff6f70aa51f (Unity) AssetImportWorkerClient::Run
+0x00007ff6f70750d7 (Unity) RunAssetImportWorkerClientV2
+0x00007ff6f707515b (Unity) RunAssetImporterV2
+0x00007ff6f6879271 (Unity) Application::InitializeProject
+0x00007ff6f6cff1a5 (Unity) WinMain
+0x00007ff6f80e8bae (Unity) __scrt_common_main_seh
+0x00007ffdc6d726ad (KERNEL32) BaseThreadInitThunk
+0x00007ffdc7bcaa68 (ntdll) RtlUserThreadStart
+
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object
+  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x0003d] in .\Library\PackageCache\com.unity.xr.oculus@4.0.0\Runtime\OculusLoader.cs:282 
+  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x0007b] in .\Library\PackageCache\com.unity.xr.oculus@4.0.0\Runtime\OculusLoader.cs:267 
+  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <b89873cb176e44a995a4781c7487d410>:0 
+   --- End of inner exception stack trace ---
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00083] in <b89873cb176e44a995a4781c7487d410>:0 
+  at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in <b89873cb176e44a995a4781c7487d410>:0 
+  at UnityEditor.EditorAssemblies.ProcessInitializeOnLoadMethodAttributes () [0x000a5] in <97436df440ca462884c5332c1d8ebbe7>:0 
+0x00007ff6f5d2229d (Unity) StackWalker::GetCurrentCallstack
+0x00007ff6f5d27249 (Unity) StackWalker::ShowCallstack
+0x00007ff6f6cf33a1 (Unity) GetStacktrace
+0x00007ff6f73b4c02 (Unity) DebugStringToFile
+0x00007ff6f4c38736 (Unity) DebugLogHandler_CUSTOM_Internal_Log
+0x000001f37f2c8163 (Mono JIT Code) (wrapper managed-to-native) UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+0x000001f37f2c809b (Mono JIT Code) UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+0x000001f37f2c58f0 (Mono JIT Code) UnityEngine.Logger:Log (UnityEngine.LogType,object)
+0x000001f37f2c57b5 (Mono JIT Code) UnityEngine.Debug:LogError (object)
+0x000001f37f2157b3 (Mono JIT Code) UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
+0x000001f35a36ea3d (Mono JIT Code) (wrapper runtime-invoke) object:runtime_invoke_void (object,intptr,intptr,intptr)
+0x00007ffcf288e0d4 (mono-2.0-bdwgc) mono_jit_runtime_invoke (at C:/build/output/Unity-Technologies/mono/mono/mini/mini-runtime.c:3445)
+0x00007ffcf27ceb74 (mono-2.0-bdwgc) do_runtime_invoke (at C:/build/output/Unity-Technologies/mono/mono/metadata/object.c:3066)
+0x00007ffcf27ced0c (mono-2.0-bdwgc) mono_runtime_invoke (at C:/build/output/Unity-Technologies/mono/mono/metadata/object.c:3113)
+0x00007ff6f5c39724 (Unity) scripting_method_invoke
+0x00007ff6f5c17944 (Unity) ScriptingInvocation::Invoke
+0x00007ff6f5c12595 (Unity) ScriptingInvocation::Invoke<void>
+0x00007ff6f5d64b3b (Unity) Scripting::UnityEditor::EditorAssembliesProxy::ProcessInitializeOnLoadMethodAttributes
+0x00007ff6f5c0c750 (Unity) MonoManager::SetupLoadedEditorAssemblies
+0x00007ff6f5c020f9 (Unity) MonoManager::FinalizeReload
+0x00007ff6f6fefd8a (Unity) ScriptingInitializer::FinalizeReload
+0x00007ff6f6b9d92b (Unity) LoadUserAssemblies
+0x00007ff6f709df05 (Unity) <lambda_b37b41f03089e3cb3f55061bbc93253d>::operator()
+0x00007ff6f70d79b2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)>,asio::io_context::basic_executor_type<std::allocator<void>,0> >::do_complete
+0x00007ff6f70c395e (Unity) asio::detail::win_iocp_io_context::do_one
+0x00007ff6f70c55c4 (Unity) asio::detail::win_iocp_io_context::run
+0x00007ff6f70d5d5c (Unity) IOService::Run
+0x00007ff6f70aa51f (Unity) AssetImportWorkerClient::Run
+0x00007ff6f70750d7 (Unity) RunAssetImportWorkerClientV2
+0x00007ff6f707515b (Unity) RunAssetImporterV2
+0x00007ff6f6879271 (Unity) Application::InitializeProject
+0x00007ff6f6cff1a5 (Unity) WinMain
+0x00007ff6f80e8bae (Unity) __scrt_common_main_seh
+0x00007ffdc6d726ad (KERNEL32) BaseThreadInitThunk
+0x00007ffdc7bcaa68 (ntdll) RtlUserThreadStart
+
+Mono: successfully reloaded assembly
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+- Finished resetting the current domain, in  1.702 seconds
+Domain Reload Profiling: 2302ms
+	BeginReloadAssembly (180ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (4ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (41ms)
+	RebuildCommonClasses (28ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (31ms)
+	LoadAllAssembliesAndSetupDomain (352ms)
+		LoadAssemblies (396ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (55ms)
+			TypeCache.Refresh (14ms)
+				TypeCache.ScanAssembly (4ms)
+			ScanForSourceGeneratedMonoScriptInfo (31ms)
+			ResolveRequiredComponents (10ms)
+	FinalizeReload (1702ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (638ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (25ms)
+			SetLoadedEditorAssemblies (4ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (86ms)
+			ProcessInitializeOnLoadAttributes (358ms)
+			ProcessInitializeOnLoadMethodAttributes (154ms)
+			AfterProcessingInitializeOnLoad (10ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (8ms)
+Refreshing native plugins compatible for Editor in 27.62 ms, found 12 plugins.
+Preloading 1 native plugins for Editor in 0.07 ms.
+Unloading 6999 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 128 unused Assets / (1.2 MB). Loaded Objects now: 7712.
+Memory consumption went from 241.2 MB to 240.0 MB.
+Total: 7.927400 ms (FindLiveObjects: 0.456000 ms CreateObjectMapping: 0.153500 ms MarkObjects: 6.898500 ms  DeleteObjects: 0.418600 ms)
+
+Prepare: number of updated asset objects reloaded= 35
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:scripting/monoscript/fileName/XmlParser.cs: 3626cb6ddd8e731feba820371fe71194 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:video-codec-MediaFoundation-h265: e54d7ab0439102e2317fc1e4b246158d -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:CustomObjectIndexerAttribute: d54d2f2da18e7612c182cf67624b6b12 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:scripting/monoscript/fileName/XmlParserComponent.cs: 07aa54000700a1d43f70c8cc9d14a568 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 26.11 ms, found 12 plugins.
+Preloading 1 native plugins for Editor in 0.07 ms.
+Unloading 17 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 17 unused Assets / (1.2 MB). Loaded Objects now: 7711.
+Memory consumption went from 133.7 MB to 132.5 MB.
+Total: 7.392000 ms (FindLiveObjects: 0.524500 ms CreateObjectMapping: 0.329300 ms MarkObjects: 6.264000 ms  DeleteObjects: 0.273600 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:scripting/monoscript/fileName/XmlParser.cs: 3626cb6ddd8e731feba820371fe71194 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:video-codec-MediaFoundation-h265: e54d7ab0439102e2317fc1e4b246158d -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:CustomObjectIndexerAttribute: d54d2f2da18e7612c182cf67624b6b12 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:scripting/monoscript/fileName/XmlParserComponent.cs: 07aa54000700a1d43f70c8cc9d14a568 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 27.67 ms, found 12 plugins.
+Preloading 1 native plugins for Editor in 0.08 ms.
+Unloading 17 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 17 unused Assets / (1.2 MB). Loaded Objects now: 7711.
+Memory consumption went from 132.6 MB to 131.4 MB.
+Total: 8.110400 ms (FindLiveObjects: 0.455700 ms CreateObjectMapping: 0.151800 ms MarkObjects: 7.226200 ms  DeleteObjects: 0.276000 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:scripting/monoscript/fileName/XmlParser.cs: 3626cb6ddd8e731feba820371fe71194 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:video-codec-MediaFoundation-h265: e54d7ab0439102e2317fc1e4b246158d -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:CustomObjectIndexerAttribute: d54d2f2da18e7612c182cf67624b6b12 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:scripting/monoscript/fileName/XmlParserComponent.cs: 07aa54000700a1d43f70c8cc9d14a568 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
