@@ -5,6 +5,7 @@ using UnityEngine;
 public class RealTimeReflection : MonoBehaviour
 {
     ReflectionProbe reflectionProbe;
+    int frame = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,6 +15,11 @@ public class RealTimeReflection : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        reflectionProbe.RenderProbe();
+        frame++;
+        if (frame > 3)
+        {
+            reflectionProbe.RenderProbe();
+            frame = 0;
+        }
     }
 }
