@@ -6,6 +6,7 @@ public class RealTimeReflection : MonoBehaviour
 {
     ReflectionProbe reflectionProbe;
     int frame = 0;
+    int frameToResetAt = 2;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,7 +17,7 @@ public class RealTimeReflection : MonoBehaviour
     void Update()
     {
         frame++;
-        if (frame > 3)
+        if (frame > frameToResetAt)
         {
             reflectionProbe.RenderProbe();
             frame = 0;
