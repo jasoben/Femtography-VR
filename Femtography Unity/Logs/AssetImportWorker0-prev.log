@@ -15,7 +15,7 @@ H:/Github/Femtography-VR/Femtography Unity
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-55381
+54506
 Successfully changed project path to: H:/Github/Femtography-VR/Femtography Unity
 H:/Github/Femtography-VR/Femtography Unity
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -49,12 +49,12 @@ H:/Github/Femtography-VR/Femtography Unity
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [43556] Host "[IP] 192.168.1.129 [Port] 0 [Flags] 2 [Guid] 1117378039 [EditorId] 1117378039 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-L8L46BD) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [26692] Host "[IP] 192.168.1.129 [Port] 0 [Flags] 2 [Guid] 2855119105 [EditorId] 2855119105 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-L8L46BD) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [43556] Host "[IP] 192.168.1.129 [Port] 0 [Flags] 2 [Guid] 1117378039 [EditorId] 1117378039 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-L8L46BD) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [26692] Host "[IP] 192.168.1.129 [Port] 0 [Flags] 2 [Guid] 2855119105 [EditorId] 2855119105 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-L8L46BD) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-Refreshing native plugins compatible for Editor in 48.56 ms, found 12 plugins.
-Preloading 1 native plugins for Editor in 0.54 ms.
+Refreshing native plugins compatible for Editor in 44.36 ms, found 12 plugins.
+Preloading 1 native plugins for Editor in 0.59 ms.
 Initialize engine version: 2022.3.7f1 (b16b3b16c7a0)
 [Subsystems] Discovering subsystems at path C:/Program Files/2022.3.7f1/Editor/Data/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path H:/Github/Femtography-VR/Femtography Unity/Assets
@@ -69,49 +69,49 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/2022.3.7f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/2022.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/2022.3.7f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56392
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56084
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/2022.3.7f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/2022.3.7f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
 Register platform support module: C:/Program Files/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.011477 seconds.
-- Loaded All Assemblies, in  0.315 seconds
+Registered in 0.014848 seconds.
+- Loaded All Assemblies, in  0.342 seconds
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
-Android Extension - Scanning For ADB Devices 252 ms
+Android Extension - Scanning For ADB Devices 304 ms
 Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.485 seconds
-Domain Reload Profiling: 797ms
-	BeginReloadAssembly (115ms)
+- Finished resetting the current domain, in  0.554 seconds
+Domain Reload Profiling: 893ms
+	BeginReloadAssembly (123ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (25ms)
-	RebuildNativeTypeToScriptingClass (7ms)
-	initialDomainReloadingComplete (54ms)
-	LoadAllAssembliesAndSetupDomain (111ms)
-		LoadAssemblies (114ms)
+		CreateAndSetChildDomain (0ms)
+	RebuildCommonClasses (27ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (60ms)
+	LoadAllAssembliesAndSetupDomain (120ms)
+		LoadAssemblies (122ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (107ms)
-			TypeCache.Refresh (106ms)
-				TypeCache.ScanAssembly (96ms)
+		AnalyzeDomain (116ms)
+			TypeCache.Refresh (115ms)
+				TypeCache.ScanAssembly (103ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
 			ResolveRequiredComponents (0ms)
-	FinalizeReload (486ms)
+	FinalizeReload (555ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (447ms)
+		SetupLoadedEditorAssemblies (515ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (347ms)
+			InitializePlatformSupportModulesInManaged (405ms)
 			SetLoadedEditorAssemblies (2ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (1ms)
-			ProcessInitializeOnLoadAttributes (64ms)
-			ProcessInitializeOnLoadMethodAttributes (32ms)
+			BeforeProcessingInitializeOnLoad (2ms)
+			ProcessInitializeOnLoadAttributes (72ms)
+			ProcessInitializeOnLoadMethodAttributes (34ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -120,8 +120,8 @@ Domain Reload Profiling: 797ms
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory is not a mono symbol file
-- Loaded All Assemblies, in  0.773 seconds
-Refreshing native plugins compatible for Editor in 26.11 ms, found 12 plugins.
+- Loaded All Assemblies, in  0.779 seconds
+Refreshing native plugins compatible for Editor in 25.27 ms, found 12 plugins.
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
 Native extension for WebGL target not found
@@ -134,41 +134,41 @@ System.Reflection.TargetInvocationException: Exception has been thrown by the ta
   at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00083] in <b89873cb176e44a995a4781c7487d410>:0 
   at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in <b89873cb176e44a995a4781c7487d410>:0 
   at UnityEditor.EditorAssemblies.ProcessInitializeOnLoadMethodAttributes () [0x000a5] in <97436df440ca462884c5332c1d8ebbe7>:0 
-0x00007ff623bc229d (Unity) StackWalker::GetCurrentCallstack
-0x00007ff623bc7249 (Unity) StackWalker::ShowCallstack
-0x00007ff624b933a1 (Unity) GetStacktrace
-0x00007ff625254c02 (Unity) DebugStringToFile
-0x00007ff622ad8736 (Unity) DebugLogHandler_CUSTOM_Internal_Log
-0x00000253a0a0dbc3 (Mono JIT Code) (wrapper managed-to-native) UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
-0x00000253a0a0dafb (Mono JIT Code) UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-0x00000253a0a0b350 (Mono JIT Code) UnityEngine.Logger:Log (UnityEngine.LogType,object)
-0x00000253a0a0b215 (Mono JIT Code) UnityEngine.Debug:LogError (object)
-0x00000253a09faa43 (Mono JIT Code) UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-0x00000253924cea3d (Mono JIT Code) (wrapper runtime-invoke) object:runtime_invoke_void (object,intptr,intptr,intptr)
-0x00007ffd1307e0d4 (mono-2.0-bdwgc) mono_jit_runtime_invoke (at C:/build/output/Unity-Technologies/mono/mono/mini/mini-runtime.c:3445)
-0x00007ffd12fbeb74 (mono-2.0-bdwgc) do_runtime_invoke (at C:/build/output/Unity-Technologies/mono/mono/metadata/object.c:3066)
-0x00007ffd12fbed0c (mono-2.0-bdwgc) mono_runtime_invoke (at C:/build/output/Unity-Technologies/mono/mono/metadata/object.c:3113)
-0x00007ff623ad9724 (Unity) scripting_method_invoke
-0x00007ff623ab7944 (Unity) ScriptingInvocation::Invoke
-0x00007ff623ab2595 (Unity) ScriptingInvocation::Invoke<void>
-0x00007ff623c04b3b (Unity) Scripting::UnityEditor::EditorAssembliesProxy::ProcessInitializeOnLoadMethodAttributes
-0x00007ff623aac750 (Unity) MonoManager::SetupLoadedEditorAssemblies
-0x00007ff623aa20f9 (Unity) MonoManager::FinalizeReload
-0x00007ff624e8fd8a (Unity) ScriptingInitializer::FinalizeReload
-0x00007ff624a3d92b (Unity) LoadUserAssemblies
-0x00007ff624f3e1af (Unity) <lambda_e4c09a862f47a773e31babb76239f51f>::operator()
-0x00007ff624f779b2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)>,asio::io_context::basic_executor_type<std::allocator<void>,0> >::do_complete
-0x00007ff624f6395e (Unity) asio::detail::win_iocp_io_context::do_one
-0x00007ff624f6558e (Unity) asio::detail::win_iocp_io_context::run
-0x00007ff624f75d5c (Unity) IOService::Run
-0x00007ff624f4a51f (Unity) AssetImportWorkerClient::Run
-0x00007ff624f150d7 (Unity) RunAssetImportWorkerClientV2
-0x00007ff624f1515b (Unity) RunAssetImporterV2
-0x00007ff624719271 (Unity) Application::InitializeProject
-0x00007ff624b9f1a5 (Unity) WinMain
-0x00007ff625f88bae (Unity) __scrt_common_main_seh
-0x00007ffd71c426ad (KERNEL32) BaseThreadInitThunk
-0x00007ffd7328aa68 (ntdll) RtlUserThreadStart
+0x00007ff7a80d229d (Unity) StackWalker::GetCurrentCallstack
+0x00007ff7a80d7249 (Unity) StackWalker::ShowCallstack
+0x00007ff7a90a33a1 (Unity) GetStacktrace
+0x00007ff7a9764c02 (Unity) DebugStringToFile
+0x00007ff7a6fe8736 (Unity) DebugLogHandler_CUSTOM_Internal_Log
+0x0000022e9c4ce4f3 (Mono JIT Code) (wrapper managed-to-native) UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+0x0000022e9c4ce42b (Mono JIT Code) UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+0x0000022e9c4cbc80 (Mono JIT Code) UnityEngine.Logger:Log (UnityEngine.LogType,object)
+0x0000022e9c4cbb45 (Mono JIT Code) UnityEngine.Debug:LogError (object)
+0x0000022e9c4bb263 (Mono JIT Code) UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
+0x0000022e8a99ea3d (Mono JIT Code) (wrapper runtime-invoke) object:runtime_invoke_void (object,intptr,intptr,intptr)
+0x00007fff4107e0d4 (mono-2.0-bdwgc) mono_jit_runtime_invoke (at C:/build/output/Unity-Technologies/mono/mono/mini/mini-runtime.c:3445)
+0x00007fff40fbeb74 (mono-2.0-bdwgc) do_runtime_invoke (at C:/build/output/Unity-Technologies/mono/mono/metadata/object.c:3066)
+0x00007fff40fbed0c (mono-2.0-bdwgc) mono_runtime_invoke (at C:/build/output/Unity-Technologies/mono/mono/metadata/object.c:3113)
+0x00007ff7a7fe9724 (Unity) scripting_method_invoke
+0x00007ff7a7fc7944 (Unity) ScriptingInvocation::Invoke
+0x00007ff7a7fc2595 (Unity) ScriptingInvocation::Invoke<void>
+0x00007ff7a8114b3b (Unity) Scripting::UnityEditor::EditorAssembliesProxy::ProcessInitializeOnLoadMethodAttributes
+0x00007ff7a7fbc750 (Unity) MonoManager::SetupLoadedEditorAssemblies
+0x00007ff7a7fb20f9 (Unity) MonoManager::FinalizeReload
+0x00007ff7a939fd8a (Unity) ScriptingInitializer::FinalizeReload
+0x00007ff7a8f4d92b (Unity) LoadUserAssemblies
+0x00007ff7a944e1af (Unity) <lambda_e4c09a862f47a773e31babb76239f51f>::operator()
+0x00007ff7a94879b2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)>,asio::io_context::basic_executor_type<std::allocator<void>,0> >::do_complete
+0x00007ff7a947395e (Unity) asio::detail::win_iocp_io_context::do_one
+0x00007ff7a947558e (Unity) asio::detail::win_iocp_io_context::run
+0x00007ff7a9485d5c (Unity) IOService::Run
+0x00007ff7a945a51f (Unity) AssetImportWorkerClient::Run
+0x00007ff7a94250d7 (Unity) RunAssetImportWorkerClientV2
+0x00007ff7a942515b (Unity) RunAssetImporterV2
+0x00007ff7a8c29271 (Unity) Application::InitializeProject
+0x00007ff7a90af1a5 (Unity) WinMain
+0x00007ff7aa498bae (Unity) __scrt_common_main_seh
+0x00007ff80c51257d (KERNEL32) BaseThreadInitThunk
+0x00007ff80dbaaa68 (ntdll) RtlUserThreadStart
 
 Mono: successfully reloaded assembly
 Package Manager log level set to [2]
@@ -178,47 +178,47 @@ Package Manager log level set to [2]
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
-- Finished resetting the current domain, in  1.033 seconds
-Domain Reload Profiling: 1798ms
-	BeginReloadAssembly (160ms)
+- Finished resetting the current domain, in  1.320 seconds
+Domain Reload Profiling: 2088ms
+	BeginReloadAssembly (157ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (4ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (20ms)
-	RebuildCommonClasses (27ms)
-	RebuildNativeTypeToScriptingClass (8ms)
-	initialDomainReloadingComplete (40ms)
-	LoadAllAssembliesAndSetupDomain (529ms)
-		LoadAssemblies (433ms)
+		CreateAndSetChildDomain (19ms)
+	RebuildCommonClasses (26ms)
+	RebuildNativeTypeToScriptingClass (7ms)
+	initialDomainReloadingComplete (43ms)
+	LoadAllAssembliesAndSetupDomain (535ms)
+		LoadAssemblies (426ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (206ms)
-			TypeCache.Refresh (166ms)
-				TypeCache.ScanAssembly (146ms)
-			ScanForSourceGeneratedMonoScriptInfo (28ms)
+		AnalyzeDomain (214ms)
+			TypeCache.Refresh (172ms)
+				TypeCache.ScanAssembly (152ms)
+			ScanForSourceGeneratedMonoScriptInfo (31ms)
 			ResolveRequiredComponents (10ms)
-	FinalizeReload (1033ms)
+	FinalizeReload (1321ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (871ms)
+		SetupLoadedEditorAssemblies (1149ms)
 			LogAssemblyErrors (0ms)
 			InitializePlatformSupportModulesInManaged (23ms)
 			SetLoadedEditorAssemblies (3ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (87ms)
-			ProcessInitializeOnLoadAttributes (376ms)
-			ProcessInitializeOnLoadMethodAttributes (373ms)
-			AfterProcessingInitializeOnLoad (10ms)
+			BeforeProcessingInitializeOnLoad (100ms)
+			ProcessInitializeOnLoadAttributes (396ms)
+			ProcessInitializeOnLoadMethodAttributes (615ms)
+			AfterProcessingInitializeOnLoad (11ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
 		AwakeInstancesAfterBackupRestoration (6ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
-Refreshing native plugins compatible for Editor in 27.02 ms, found 12 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 27.40 ms, found 12 plugins.
 Preloading 1 native plugins for Editor in 0.07 ms.
-Unloading 7228 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 169 unused Assets / (1.2 MB). Loaded Objects now: 7684.
-Memory consumption went from 292.6 MB to 291.3 MB.
-Total: 8.529500 ms (FindLiveObjects: 0.541900 ms CreateObjectMapping: 0.448900 ms MarkObjects: 7.048500 ms  DeleteObjects: 0.489200 ms)
+Unloading 7229 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 169 unused Assets / (1.2 MB). Loaded Objects now: 7685.
+Memory consumption went from 293.1 MB to 291.9 MB.
+Total: 8.572900 ms (FindLiveObjects: 0.493500 ms CreateObjectMapping: 0.440500 ms MarkObjects: 7.148900 ms  DeleteObjects: 0.489100 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
@@ -234,22 +234,22 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 664721.856979 seconds.
-  path: Assets/Models/Museum/female_large_pondering.fbx
-  artifactKey: Guid(72862602056f7b346a8321be9310c931) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Museum/female_large_pondering.fbx using Guid(72862602056f7b346a8321be9310c931) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc3e54367db690835fa43f38d4e3a6b2') in 0.016460 seconds
+  Time since last request: 5567.757751 seconds.
+  path: Assets/Materials/Museum/PaintedStuccoWall.shadergraph
+  artifactKey: Guid(b865552141ebc664bbc15144dddc45f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Museum/PaintedStuccoWall.shadergraph using Guid(b865552141ebc664bbc15144dddc45f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0793567cab8a724591d4d81d4967be4b') in 0.014452 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 67
+Number of asset objects unloaded after import = 1
 ========================================================================
 Received Prepare
-Refreshing native plugins compatible for Editor in 28.06 ms, found 12 plugins.
+Refreshing native plugins compatible for Editor in 23.30 ms, found 12 plugins.
 Preloading 1 native plugins for Editor in 0.08 ms.
 Unloading 17 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 17 unused Assets / (1.2 MB). Loaded Objects now: 7685.
-Memory consumption went from 137.0 MB to 135.8 MB.
-Total: 8.445100 ms (FindLiveObjects: 0.496900 ms CreateObjectMapping: 0.478200 ms MarkObjects: 7.170700 ms  DeleteObjects: 0.298800 ms)
+Unloading 17 unused Assets / (1.2 MB). Loaded Objects now: 7686.
+Memory consumption went from 137.2 MB to 136.1 MB.
+Total: 6.949800 ms (FindLiveObjects: 0.436500 ms CreateObjectMapping: 0.163000 ms MarkObjects: 6.090300 ms  DeleteObjects: 0.259500 ms)
 
-Prepare: number of updated asset objects reloaded= 0
+Prepare: number of updated asset objects reloaded= 1
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -266,273 +266,57 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 16.902617 seconds.
-  path: Assets/Models/Museum/male_large_pondering.fbx
-  artifactKey: Guid(9d396c1be74e07a42a4c50b9fa9fe287) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Museum/male_large_pondering.fbx using Guid(9d396c1be74e07a42a4c50b9fa9fe287) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '848a5e78c6a3489df6fb95ef561fb0e5') in 0.006609 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 67
-========================================================================
-Received Import Request.
-  Time since last request: 8.958976 seconds.
-  path: Assets/Models/Museum/male_large_pondering.fbx
-  artifactKey: Guid(9d396c1be74e07a42a4c50b9fa9fe287) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Museum/male_large_pondering.fbx using Guid(9d396c1be74e07a42a4c50b9fa9fe287) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e2e083665a9599c41dd5ff184e282e14') in 0.002042 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 67
-========================================================================
-Received Import Request.
-  Time since last request: 39.271132 seconds.
-  path: Assets/Models/Museum/female_large_pondering.fbx
-  artifactKey: Guid(72862602056f7b346a8321be9310c931) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Museum/female_large_pondering.fbx using Guid(72862602056f7b346a8321be9310c931) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c8c193354d5de2e94d9c26175de62ff') in 0.002211 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 67
-========================================================================
-Received Import Request.
-  Time since last request: 0.972790 seconds.
-  path: Assets/Models/Museum/female_small_walking.fbx
-  artifactKey: Guid(4505db3d9feedd24ca59c9b49b0eecea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Museum/female_small_walking.fbx using Guid(4505db3d9feedd24ca59c9b49b0eecea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd33be4e85a2611e7594fa77a798fde7b') in 0.002960 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 67
-========================================================================
-Received Import Request.
-  Time since last request: 7.413410 seconds.
-  path: Assets/Models/Museum/female_small_walking.fbx
-  artifactKey: Guid(4505db3d9feedd24ca59c9b49b0eecea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Museum/female_small_walking.fbx using Guid(4505db3d9feedd24ca59c9b49b0eecea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2bcf5487e16a25ca5c79be2aee6c70e6') in 0.002603 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 67
-========================================================================
-Received Import Request.
-  Time since last request: 13.746394 seconds.
-  path: Assets/Models/Museum/female_large_pondering.fbx
-  artifactKey: Guid(72862602056f7b346a8321be9310c931) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Museum/female_large_pondering.fbx using Guid(72862602056f7b346a8321be9310c931) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad9a8c5de9c649caf1d397e47b26794d') in 0.001816 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 67
-========================================================================
-Received Import Request.
-  Time since last request: 5.834327 seconds.
-  path: Assets/Models/Museum/female_small_walking.fbx
-  artifactKey: Guid(4505db3d9feedd24ca59c9b49b0eecea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Museum/female_small_walking.fbx using Guid(4505db3d9feedd24ca59c9b49b0eecea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ad41e33d33928d71e224148b6890a4b') in 0.002015 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 67
-========================================================================
-Received Import Request.
-  Time since last request: 24.617120 seconds.
-  path: Assets/Models/Museum/female_large_pondering.fbx
-  artifactKey: Guid(72862602056f7b346a8321be9310c931) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Museum/female_large_pondering.fbx using Guid(72862602056f7b346a8321be9310c931) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee1861b1b39f0eada20ca8d82be3234f') in 0.001924 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 67
-========================================================================
-Received Import Request.
-  Time since last request: 5.838901 seconds.
-  path: Assets/Models/Museum/female_small_walking.fbx
-  artifactKey: Guid(4505db3d9feedd24ca59c9b49b0eecea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Museum/female_small_walking.fbx using Guid(4505db3d9feedd24ca59c9b49b0eecea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5306d7d2efa6e3fa8637b5c152daf719') in 0.002123 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 67
-========================================================================
-Received Import Request.
-  Time since last request: 12.561935 seconds.
-  path: Assets/Models/Museum/female_large_pondering.fbx
-  artifactKey: Guid(72862602056f7b346a8321be9310c931) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Museum/female_large_pondering.fbx using Guid(72862602056f7b346a8321be9310c931) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea4bfb9a4b84c93ec1f42811930aae0b') in 0.002084 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 67
-========================================================================
-Received Import Request.
-  Time since last request: 6.341199 seconds.
-  path: Assets/Models/Museum/female_small_walking.fbx
-  artifactKey: Guid(4505db3d9feedd24ca59c9b49b0eecea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Museum/female_small_walking.fbx using Guid(4505db3d9feedd24ca59c9b49b0eecea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9bf655d227b4b793e0d506e26f57727f') in 0.002266 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 67
-========================================================================
-Received Import Request.
-  Time since last request: 43.820612 seconds.
-  path: Assets/Models/Museum/female_large_pondering.fbx
-  artifactKey: Guid(72862602056f7b346a8321be9310c931) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Museum/female_large_pondering.fbx using Guid(72862602056f7b346a8321be9310c931) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0e950e1ca8e6689dd745ad73c0099ea') in 0.002060 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 67
-========================================================================
-Received Import Request.
-  Time since last request: 1.651630 seconds.
-  path: Assets/Models/Museum/female_large_sitting.fbx
-  artifactKey: Guid(ba96ceb8e5eeb15439383ea80936bb36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Museum/female_large_sitting.fbx using Guid(ba96ceb8e5eeb15439383ea80936bb36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '62a81d46f839d48c02609287bff62a3c') in 0.002319 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 67
-========================================================================
-Received Import Request.
-  Time since last request: 0.385242 seconds.
-  path: Assets/Models/Museum/female_large_walking.fbx
-  artifactKey: Guid(6ff95a312e45fa1428216a69a00aaec5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Museum/female_large_walking.fbx using Guid(6ff95a312e45fa1428216a69a00aaec5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00c193d485a38cb184d4341274a3c377') in 0.001817 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 67
-========================================================================
-Received Import Request.
-  Time since last request: 2.860295 seconds.
-  path: Assets/Models/Museum/female_small_pondering.fbx
-  artifactKey: Guid(4ef9f2c4141369c46bc8325c1ecce6d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Museum/female_small_pondering.fbx using Guid(4ef9f2c4141369c46bc8325c1ecce6d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd5af2687b11b3b1e519e2b24bbeca07') in 0.001991 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 67
-========================================================================
-Received Import Request.
-  Time since last request: 0.758310 seconds.
-  path: Assets/Models/Museum/female_small_sitting.fbx
-  artifactKey: Guid(050dab2e17d54664e91ae07fdd35aa64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Museum/female_small_sitting.fbx using Guid(050dab2e17d54664e91ae07fdd35aa64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd1532b96715324d629b9b4be4d55bfdf') in 0.002174 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 67
-========================================================================
-Received Import Request.
-  Time since last request: 55.801823 seconds.
-  path: Assets/Models/Museum/male_large_sitting.fbx
-  artifactKey: Guid(ec13563155081714b8e3b011a777782c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Museum/male_large_sitting.fbx using Guid(ec13563155081714b8e3b011a777782c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '670ef9925d14117b6a6fdd18ee0b8aad') in 0.002518 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 67
-========================================================================
-Received Import Request.
-  Time since last request: 1.908417 seconds.
-  path: Assets/Models/Museum/male_small_sitting.fbx
-  artifactKey: Guid(8da2333a7df16bf448e5615a2349f373) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Museum/male_small_sitting.fbx using Guid(8da2333a7df16bf448e5615a2349f373) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e7584350aa25c2f844617f9af3df79e') in 0.002646 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 67
-========================================================================
-Received Import Request.
-  Time since last request: 2.028878 seconds.
-  path: Assets/Models/Museum/male_small_walking.fbx
-  artifactKey: Guid(511a9c5bd2ccd4547a07887c44beb50e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Museum/male_small_walking.fbx using Guid(511a9c5bd2ccd4547a07887c44beb50e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '41fffa63898e4acb5b4e507af0ef572d') in 0.002318 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 67
-========================================================================
-Received Import Request.
-  Time since last request: 4.620204 seconds.
-  path: Assets/Models/Museum/male_large_walking.fbx
-  artifactKey: Guid(e99a929a2237e624f8e1350ba9102679) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Museum/male_large_walking.fbx using Guid(e99a929a2237e624f8e1350ba9102679) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee0bed6829447c578c09bac9f6f2a0f6') in 0.002023 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 67
-========================================================================
-Received Import Request.
-  Time since last request: 27.247418 seconds.
-  path: Assets/Models/Museum/male_large_walking.fbx
-  artifactKey: Guid(e99a929a2237e624f8e1350ba9102679) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Museum/male_large_walking.fbx using Guid(e99a929a2237e624f8e1350ba9102679) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c96c7d7ba25ac1c464d73fa272ef6061') in 0.029060 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 909
-========================================================================
-Received Import Request.
-  Time since last request: 78.986175 seconds.
-  path: Assets/Models/Museum/male_large_walking.fbx
-  artifactKey: Guid(e99a929a2237e624f8e1350ba9102679) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Museum/male_large_walking.fbx using Guid(e99a929a2237e624f8e1350ba9102679) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3fbb753a05adcba9a211c69d20ac1055') in 0.002591 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 67
-========================================================================
-Received Import Request.
-  Time since last request: 27.312572 seconds.
-  path: Assets/Models/Museum/male_human_large.fbx
-  artifactKey: Guid(aa449e1f5c915f149953812beb7d7ddb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Museum/male_human_large.fbx using Guid(aa449e1f5c915f149953812beb7d7ddb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae4df0d72cf74533615b94323e93e38c') in 0.003348 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 67
-========================================================================
-Received Import Request.
-  Time since last request: 7.424695 seconds.
-  path: Assets/Models/Museum/male_human_large.fbx
-  artifactKey: Guid(aa449e1f5c915f149953812beb7d7ddb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Museum/male_human_large.fbx using Guid(aa449e1f5c915f149953812beb7d7ddb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e0c7150dd1fa787c3de6227a779d5901') in 0.003132 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 67
-========================================================================
-Received Import Request.
-  Time since last request: 1205.884964 seconds.
-  path: Assets/Textures/StuccoRoughCast001
-  artifactKey: Guid(40fb23932e5fc2b4eab8738e7fb62c4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Textures/StuccoRoughCast001 using Guid(40fb23932e5fc2b4eab8738e7fb62c4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc767c59d6466490309b3d3efc17bb2c') in 0.000601 seconds
-Number of updated asset objects reloaded before import = 36
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 47.838406 seconds.
-  path: Assets/Materials/Museum/PaintedWall.shadergraph
-  artifactKey: Guid(b865552141ebc664bbc15144dddc45f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Museum/PaintedWall.shadergraph using Guid(b865552141ebc664bbc15144dddc45f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a53f5dc662f4bd172e42d68dcb3a5fb') in 0.001897 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 5.208610 seconds.
+  Time since last request: 21.058360 seconds.
   path: Assets/Materials/Museum/PaintedStuccoWall.shadergraph
   artifactKey: Guid(b865552141ebc664bbc15144dddc45f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Museum/PaintedStuccoWall.shadergraph using Guid(b865552141ebc664bbc15144dddc45f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e762997f1393a6dfbe46fe23f94b3bf') in 0.001784 seconds
+Start importing Assets/Materials/Museum/PaintedStuccoWall.shadergraph using Guid(b865552141ebc664bbc15144dddc45f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4f10de1d0c23262f1118df084a7555d') in 0.005232 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
+Number of asset objects unloaded after import = 1
 ========================================================================
 Received Import Request.
-  Time since last request: 263.503103 seconds.
+  Time since last request: 206.770612 seconds.
+  path: Assets/Models/Museum/FemtoMuseum-spiral.skp
+  artifactKey: Guid(f3117647de12f1348bb4fbde7bdd5dfb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Museum/FemtoMuseum-spiral.skp using Guid(f3117647de12f1348bb4fbde7bdd5dfb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc4620aa5e4abee6ea4e716732967728') in 0.008240 seconds
+Number of updated asset objects reloaded before import = 1
+Number of asset objects unloaded after import = 1137
+========================================================================
+Received Import Request.
+  Time since last request: 37.960976 seconds.
   path: Assets/Materials/Museum/PaintedStuccoWall.shadergraph
   artifactKey: Guid(b865552141ebc664bbc15144dddc45f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Museum/PaintedStuccoWall.shadergraph using Guid(b865552141ebc664bbc15144dddc45f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9049340cda455d2829b9cde1f2d37d9a') in 0.001903 seconds
+Start importing Assets/Materials/Museum/PaintedStuccoWall.shadergraph using Guid(b865552141ebc664bbc15144dddc45f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3adaa9ca0c42d429f8d6504427f97408') in 0.001171 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 26.85 ms, found 12 plugins.
-Preloading 1 native plugins for Editor in 0.07 ms.
-Unloading 17 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 17 unused Assets / (1.2 MB). Loaded Objects now: 7685.
-Memory consumption went from 137.2 MB to 136.0 MB.
-Total: 7.735700 ms (FindLiveObjects: 0.468900 ms CreateObjectMapping: 0.161100 ms MarkObjects: 6.801700 ms  DeleteObjects: 0.303100 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:video-codec-MediaFoundation-h265: e54d7ab0439102e2317fc1e4b246158d -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:CustomObjectIndexerAttribute: d54d2f2da18e7612c182cf67624b6b12 -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+Number of asset objects unloaded after import = 1
 ========================================================================
 Received Import Request.
-  Time since last request: 1644.548057 seconds.
-  path: Assets/Scenes/test scenes/PhotonTest.unity
-  artifactKey: Guid(69a09117d87437b4195eb4bd139f21d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/test scenes/PhotonTest.unity using Guid(69a09117d87437b4195eb4bd139f21d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b8593fbece8891c9752e589e8eed6bc8') in 0.005027 seconds
+  Time since last request: 20.469058 seconds.
+  path: Assets/Textures/StuccoRoughCast001/StuccoRoughCast001_NRM_2K_METALNESS.png
+  artifactKey: Guid(2a7d5d47cd2424b49af42d1945af6db9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/StuccoRoughCast001/StuccoRoughCast001_NRM_2K_METALNESS.png using Guid(2a7d5d47cd2424b49af42d1945af6db9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '459946547353302b7fb54c709b800a54') in 0.022685 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
+Number of asset objects unloaded after import = 1
 ========================================================================
 Received Import Request.
-  Time since last request: 5.619023 seconds.
-  path: Assets/Scenes/test scenes/Test Scene.unity
-  artifactKey: Guid(796282fe4e96d3d4489ea8d5eba948d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/test scenes/Test Scene.unity using Guid(796282fe4e96d3d4489ea8d5eba948d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '599b58deadcf3c0569d947e0035e4a1a') in 0.000510 seconds
+  Time since last request: 11.737518 seconds.
+  path: Assets/Textures/StuccoRoughCast001/StuccoRoughCast001_NRM_2K_METALNESS.png
+  artifactKey: Guid(2a7d5d47cd2424b49af42d1945af6db9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/StuccoRoughCast001/StuccoRoughCast001_NRM_2K_METALNESS.png using Guid(2a7d5d47cd2424b49af42d1945af6db9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '842757e3e575bc38741ee5fdf455b976') in 0.021442 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
+Number of asset objects unloaded after import = 1
 ========================================================================
 Received Import Request.
-  Time since last request: 489.919436 seconds.
-  path: Assets/Scenes/Museum.unity
-  artifactKey: Guid(b0e410ba85d28324fb1e89b83715deee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Museum.unity using Guid(b0e410ba85d28324fb1e89b83715deee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '14c7f45aa626c438e5072c60a3c61ece') in 0.000629 seconds
+  Time since last request: 100.720722 seconds.
+  path: Assets/Textures/StuccoRoughCast001/StuccoRoughCast001_NRM_2K_METALNESS.png
+  artifactKey: Guid(2a7d5d47cd2424b49af42d1945af6db9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/StuccoRoughCast001/StuccoRoughCast001_NRM_2K_METALNESS.png using Guid(2a7d5d47cd2424b49af42d1945af6db9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e8d31fdd58412e8c7696d22776a9446') in 0.022226 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 11.760289 seconds.
+  path: Assets/Textures/StuccoRoughCast001/StuccoRoughCast001_NRM_2K_METALNESS.png
+  artifactKey: Guid(2a7d5d47cd2424b49af42d1945af6db9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/StuccoRoughCast001/StuccoRoughCast001_NRM_2K_METALNESS.png using Guid(2a7d5d47cd2424b49af42d1945af6db9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '95472e60cfa265212eb0e263f95d0f9d') in 0.012852 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1

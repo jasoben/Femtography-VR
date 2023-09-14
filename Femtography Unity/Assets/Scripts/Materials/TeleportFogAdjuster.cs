@@ -49,6 +49,8 @@ public class TeleportFogAdjuster : MonoBehaviour
             edgeLerp -= lerpSpeed;
         }
 
+        edgeLerp = Mathf.Clamp01(edgeLerp);
+
         fogPropertyBlock.SetFloat("_Edge2", Mathf.Lerp(startEdge, endEdge, edgeLerp));
         renderer.SetPropertyBlock(fogPropertyBlock);
     }
