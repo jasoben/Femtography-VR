@@ -28,6 +28,6 @@ public class ObjectRotator : MonoBehaviour, ISpeedController
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(rotationSpeed * playBackSpeed.Value);
+        transform.Rotate(rotationSpeed * playBackSpeed.Value * Time.deltaTime);
     }
 }

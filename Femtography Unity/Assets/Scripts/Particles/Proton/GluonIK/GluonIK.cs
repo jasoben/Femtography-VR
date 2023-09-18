@@ -13,6 +13,7 @@ public class GluonIK : MonoBehaviour
     [SerializeField] GameObject topBoneRed, topBoneBlue, topBoneGreen;
 
     private float[] moveAmounts = new float[5];
+    private float lerpAmount;
 
     // Start is called before the first frame update
     void Start()
@@ -42,11 +43,12 @@ public class GluonIK : MonoBehaviour
         MoveBones(topBoneGreen, greenQuarkGluonBones, greenQuark);
     }
 
+    // This positions the bones at the right point between the center and the quark
     void MoveBones(GameObject topBoneObject, List<GameObject> bonesList, GameObject quark)
     {
         for (int i = 0; i < bonesList.Count; i++)
         {
-            float lerpAmount = (i + 1) / ((float)bonesList.Count);
+            lerpAmount = (i + 1) / ((float)bonesList.Count);
 
             bonesList[i].transform.position = Vector3.Lerp(
                 center.transform.position, quark.transform.position, lerpAmount);

@@ -24,8 +24,8 @@ public class SpotlightMover : MonoBehaviour
     {
         if (isFullyRotated)
         {
-            lerpAmount -= rotationSpeed;
-        } else lerpAmount += rotationSpeed;
+            lerpAmount -= rotationSpeed * Time.deltaTime;
+        } else lerpAmount += rotationSpeed * Time.deltaTime;
 
         gameObject.transform.rotation = Quaternion.Lerp(startRotQuat, endRotQuat, lerpAmount);
 
