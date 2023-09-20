@@ -30,7 +30,7 @@ public class ObjectWiggler : MonoBehaviour, ISpeedController
     {
         RequestInjection(this, this);
         localStartPosition = transform.localPosition;
-        moveDirection = Random.insideUnitSphere * Time.deltaTime;
+        moveDirection = Random.insideUnitSphere;
     }
 
     // Update is called once per frame
@@ -38,7 +38,7 @@ public class ObjectWiggler : MonoBehaviour, ISpeedController
     {
         localPosition = transform.localPosition;
         worldStartPosition = transform.parent.TransformPoint(localStartPosition);
-        adjustedSpeed = speed * playBackSpeed.Value;
+        adjustedSpeed = speed * playBackSpeed.Value * Time.fixedDeltaTime;
 
         if (stayStill)
         {
@@ -53,18 +53,18 @@ public class ObjectWiggler : MonoBehaviour, ISpeedController
             moveDirection = worldStartPosition - transform.position;
             isMovingBack = true;
         }
-        else if (Vector3.Distance(transform.position, worldStartPosition) > 2 * distanceFromStart)
-        {
-            transform.position = worldStartPosition;
-        }
 
         else if (Vector3.Distance(transform.position, worldStartPosition) < .5f &&
             isMovingBack)
         {
-            moveDirection = Random.insideUnitSphere * Time.deltaTime;
+            moveDirection = Random.insideUnitSphere;
             isMovingBack = false;
         }
 
+        //if (Vector3.Distance(transform.position, worldStartPosition) > 3 * distanceFromStart)
+        //{
+        //    transform.position = worldStartPosition;
+        //}
 
     }
 }
