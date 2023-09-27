@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ObjectWiggler : MonoBehaviour, ISpeedController
 {
-    [SerializeField] float distanceFromStart, speed;
+    [SerializeField][Range(0,99)] float maxDistanceFromStart, speed;
     float adjustedSpeed;
 
     Vector3 localStartPosition, moveDirection, moveRotation, localPosition, worldStartPosition;
@@ -38,7 +38,7 @@ public class ObjectWiggler : MonoBehaviour, ISpeedController
     {
         localPosition = transform.localPosition;
         worldStartPosition = transform.parent.TransformPoint(localStartPosition);
-        adjustedSpeed = speed * playBackSpeed.Value * Time.fixedDeltaTime;
+        adjustedSpeed = speed * playBackSpeed.Value * Time.deltaTime;
 
         if (stayStill)
         {
@@ -46,16 +46,20 @@ public class ObjectWiggler : MonoBehaviour, ISpeedController
         }
 
         transform.position += moveDirection * adjustedSpeed;
+        float distanceFromStart = Vector3.Distance(transform.position, worldStartPosition);
 
-        if (Vector3.Distance(transform.position, worldStartPosition) > distanceFromStart && 
-            !isMovingBack)
+        if (distanceFromStart > maxDistanceFromStart && !isMovingBack)
         {
             moveDirection = worldStartPosition - transform.position;
+            moveDirection.Normalize();
             isMovingBack = true;
         }
+        else if (distanceFromStart > maxDistanceFromStart * 2f)
+        {
+            transform.position = worldStartPosition;
+        }
 
-        else if (Vector3.Distance(transform.position, worldStartPosition) < .5f &&
-            isMovingBack)
+        else if (distanceFromStart < .5f && isMovingBack)
         {
             moveDirection = Random.insideUnitSphere;
             isMovingBack = false;
